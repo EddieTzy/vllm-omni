@@ -1524,94 +1524,108 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
                 resampled = torch.multinomial(resample_probs, num_samples=1).squeeze(-1)
                 codes_flat[local_i, row_indices] = resampled.to(codes_flat.dtype)
 
-        # Apply the upstream delay pattern + EOS ramp-down per request.
-        num_codebooks = int(self.config.num_codebooks)
-        bos = int(self.config.audio_stream_bos_id)
-        eos_stream = int(self.config.audio_stream_eos_id)
+        # Experimental CUDA/MRv2 state fusion. V1 and CPU keep their path.
+        if request_ids is not None and hidden.is_cuda:
+            from .integrated_state import RequestStatePool
 
-        # ``audio_row_indices`` and ``self._audio_state`` were initialised
-        # earlier (right after ``is_audio`` was computed) so the RAS check
-        # can reference them.
-
-        # Per-request reset: detect "new request occupied this slot" by
-        # tracking the per-slot output_token_ids length across sample()
-        # calls. Within a request the length monotonically grows; when it
-        # resets to 0 (or goes BELOW the previously-seen high-water mark),
-        # the previous occupant has finished and a new request now owns
-        # the slot. Drop the stale ``_audio_state`` for that slot.
-        if not hasattr(self, "_slot_output_len"):
-            self._slot_output_len: dict[int | str, int] = {}
-        if request_ids is None:
-            output_ids = getattr(sampling_metadata, "output_token_ids", None)
-            for batch_i in audio_row_indices:
-                bi = int(batch_i)
-                current_len = len(output_ids[bi]) if output_ids is not None and bi < len(output_ids) else 0
-                prior_len = self._slot_output_len.get(bi, -1)
-                # A fresh request has either never been seen (prior_len == -1
-                # and we're at step 0) or has length less than the prior
-                # high-water mark.
-                is_new_request = (prior_len > current_len) or (prior_len == -1 and current_len == 0)
-                if is_new_request and bi in self._audio_state:
-                    self._audio_state.pop(bi, None)
-                self._slot_output_len[bi] = current_len
-
-        # Simplification: we DON'T override ``sampler_output.sampled_token_ids``
-        # back to ``audio_eos_token_id`` at ramp-down completion. The vLLM
-        # ``SamplerOutput.sampled_token_ids`` is plumbed through several
-        # downstream structures that may have already cached the GPU pointer;
-        # an in-place mutation here was crashing the worker with exit code
-        # None (silent CUDA error). Instead, ``max_tokens`` (set in the deploy
-        # yaml) is the stop bound while the audio span ramps down naturally.
-        new_codes_flat: list[torch.Tensor] = []
-        for local_i, batch_i in enumerate(audio_row_indices):
-            state_key = self._audio_state_key_for_row(int(batch_i), request_ids)
-            state = self._audio_state.setdefault(
-                state_key,
-                {
-                    "num_delay": 0,
-                    "num_remaining_delays": None,
-                    "audio_out_ids": None,
-                    "should_terminate": False,
-                },
+            if not hasattr(self, "_fused_state_pool"):
+                self._fused_state_pool = RequestStatePool(hidden.device, int(self.config.num_codebooks))
+            packed = self._fused_state_pool.step(
+                codes_flat, audio_row_indices, seeded_rows, request_ids,
+                self._audio_state, bos=int(self.config.audio_stream_bos_id),
+                eos=int(self.config.audio_stream_eos_id),
             )
-            num_delay: int = state["num_delay"]
-            num_remaining_delays: int | None = state["num_remaining_delays"]
-            this_codes = codes_flat[local_i].clone()  # [Q]
+            num_codebooks = int(self.config.num_codebooks)
+            new_codes_flat = list(packed.unbind(0))
+        else:
+            # Apply the upstream delay pattern + EOS ramp-down per request.
+            num_codebooks = int(self.config.num_codebooks)
+            bos = int(self.config.audio_stream_bos_id)
+            eos_stream = int(self.config.audio_stream_eos_id)
 
-            # Leading delay-pattern BOS pad.
-            if num_delay + 1 < num_codebooks:
-                this_codes[num_delay + 1 :] = bos
-                num_delay += 1
+            # ``audio_row_indices`` and ``self._audio_state`` were initialised
+            # earlier (right after ``is_audio`` was computed) so the RAS check
+            # can reference them.
 
-            # Trailing eos ramp-down.
-            if num_remaining_delays is not None:
-                this_codes[: num_codebooks - num_remaining_delays] = eos_stream
-                num_remaining_delays -= 1
-            else:
-                eos_positions = (this_codes == eos_stream).nonzero(as_tuple=False).reshape(-1)
-                if eos_positions.numel() > 0:
-                    last_eos_idx = int(eos_positions[-1].item())
-                    this_codes[: last_eos_idx + 1] = eos_stream
-                    num_remaining_delays = num_codebooks - last_eos_idx - 1
+            # Per-request reset: detect "new request occupied this slot" by
+            # tracking the per-slot output_token_ids length across sample()
+            # calls. Within a request the length monotonically grows; when it
+            # resets to 0 (or goes BELOW the previously-seen high-water mark),
+            # the previous occupant has finished and a new request now owns
+            # the slot. Drop the stale ``_audio_state`` for that slot.
+            if not hasattr(self, "_slot_output_len"):
+                self._slot_output_len: dict[int | str, int] = {}
+            if request_ids is None:
+                output_ids = getattr(sampling_metadata, "output_token_ids", None)
+                for batch_i in audio_row_indices:
+                    bi = int(batch_i)
+                    current_len = len(output_ids[bi]) if output_ids is not None and bi < len(output_ids) else 0
+                    prior_len = self._slot_output_len.get(bi, -1)
+                    # A fresh request has either never been seen (prior_len == -1
+                    # and we're at step 0) or has length less than the prior
+                    # high-water mark.
+                    is_new_request = (prior_len > current_len) or (prior_len == -1 and current_len == 0)
+                    if is_new_request and bi in self._audio_state:
+                        self._audio_state.pop(bi, None)
+                    self._slot_output_len[bi] = current_len
 
-            if num_remaining_delays is not None and num_remaining_delays <= 0:
-                # Keep the completed ramp-down frame, then force audio_eos on
-                # the next LM step. Upstream appends this final codec frame
-                # before applying its LM-token stop override.
-                num_delay = 0
-                num_remaining_delays = None
+            # Simplification: we DON'T override ``sampler_output.sampled_token_ids``
+            # back to ``audio_eos_token_id`` at ramp-down completion. The vLLM
+            # ``SamplerOutput.sampled_token_ids`` is plumbed through several
+            # downstream structures that may have already cached the GPU pointer;
+            # an in-place mutation here was crashing the worker with exit code
+            # None (silent CUDA error). Instead, ``max_tokens`` (set in the deploy
+            # yaml) is the stop bound while the audio span ramps down naturally.
+            new_codes_flat: list[torch.Tensor] = []
+            for local_i, batch_i in enumerate(audio_row_indices):
+                state_key = self._audio_state_key_for_row(int(batch_i), request_ids)
+                state = self._audio_state.setdefault(
+                    state_key,
+                    {
+                        "num_delay": 0,
+                        "num_remaining_delays": None,
+                        "audio_out_ids": None,
+                        "should_terminate": False,
+                    },
+                )
+                num_delay: int = state["num_delay"]
+                num_remaining_delays: int | None = state["num_remaining_delays"]
+                this_codes = codes_flat[local_i].clone()  # [Q]
+
+                # Leading delay-pattern BOS pad.
+                if num_delay + 1 < num_codebooks:
+                    this_codes[num_delay + 1 :] = bos
+                    num_delay += 1
+
+                # Trailing eos ramp-down.
+                if num_remaining_delays is not None:
+                    this_codes[: num_codebooks - num_remaining_delays] = eos_stream
+                    num_remaining_delays -= 1
+                else:
+                    eos_positions = (this_codes == eos_stream).nonzero(as_tuple=False).reshape(-1)
+                    if eos_positions.numel() > 0:
+                        last_eos_idx = int(eos_positions[-1].item())
+                        this_codes[: last_eos_idx + 1] = eos_stream
+                        num_remaining_delays = num_codebooks - last_eos_idx - 1
+
+                if num_remaining_delays is not None and num_remaining_delays <= 0:
+                    # Keep the completed ramp-down frame, then force audio_eos on
+                    # the next LM step. Upstream appends this final codec frame
+                    # before applying its LM-token stop override.
+                    num_delay = 0
+                    num_remaining_delays = None
+                    state["num_delay"] = num_delay
+                    state["num_remaining_delays"] = num_remaining_delays
+                    state["should_terminate"] = True
+
                 state["num_delay"] = num_delay
                 state["num_remaining_delays"] = num_remaining_delays
-                state["should_terminate"] = True
-
-            state["num_delay"] = num_delay
-            state["num_remaining_delays"] = num_remaining_delays
-            # Append to the per-request audio_out_ids buffer.
-            if state["audio_out_ids"] is None:
-                state["audio_out_ids"] = this_codes.unsqueeze(-1).clone()
-            else:
-                state["audio_out_ids"] = torch.cat([state["audio_out_ids"], this_codes.unsqueeze(-1)], dim=-1)
-            new_codes_flat.append(this_codes)
+                # Append to the per-request audio_out_ids buffer.
+                if state["audio_out_ids"] is None:
+                    state["audio_out_ids"] = this_codes.unsqueeze(-1).clone()
+                else:
+                    state["audio_out_ids"] = torch.cat([state["audio_out_ids"], this_codes.unsqueeze(-1)], dim=-1)
+                new_codes_flat.append(this_codes)
 
         # Reassemble the per-position codes tensor with the post-delay-pattern
         # values; `-1` rows mark "no audio code at this position".
@@ -1878,6 +1892,10 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
 
     def on_requests_finished(self, finished_req_ids: Iterable[str]) -> None:
         """Release request-keyed MRv2 audio history when engine rows retire."""
+        finished_req_ids = list(finished_req_ids)
+        pool = getattr(self, "_fused_state_pool", None)
+        if pool is not None:
+            pool.release(finished_req_ids)
         state = getattr(self, "_audio_state", None)
         lengths = getattr(self, "_slot_output_len", None)
         for req_id in finished_req_ids:

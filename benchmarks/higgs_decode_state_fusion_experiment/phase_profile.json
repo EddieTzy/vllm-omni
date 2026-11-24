@@ -1,0 +1,37 @@
+{
+  "routing_only": {
+    "mask": {
+      "median_ms": 4.929018999973778,
+      "mean_ms": 4.925539781083899,
+      "samples": 32
+    },
+    "ras": {
+      "median_ms": 1.7078079999919282,
+      "mean_ms": 1.7093182190137668,
+      "samples": 32
+    },
+    "state": {
+      "median_ms": 1.4753814994037384,
+      "mean_ms": 1.4781845935658566,
+      "samples": 32
+    }
+  },
+  "state_fused": {
+    "mask": {
+      "median_ms": 4.98778799919819,
+      "mean_ms": 4.9790651870580405,
+      "samples": 32
+    },
+    "ras": {
+      "median_ms": 1.7600485007278621,
+      "mean_ms": 1.7636305312862532,
+      "samples": 32
+    },
+    "state": {
+      "median_ms": 0.1996275022975169,
+      "mean_ms": 0.20225353171099414,
+      "samples": 32
+    }
+  },
+  "scope": "Actual dispatch; synthetic head/codes, phase synchronization, C32; not serving throughput"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "Experimental measured snapshot; not a proposed upstream PR",
+  "base_commit": "4dafb464442956996be9633ed036cd24ebfef1d0",
+  "routing_snapshot": "30dcfdc205d17072734328e74c5ca96a882ec548",
+  "branches": {
+    "baseline": "perf/higgs-v2-audio-routing",
+    "candidate": "perf/higgs-v2-triton-state"
+  },
+  "hardware": "One NVIDIA B200, 183359 MiB, driver 580.173.02",
+  "software": {
+    "torch": "2.14.0+cu130",
+    "vllm": "0.34.0",
+    "flashinfer": "0.7.3",
+    "transformers": "5.22.0"
+  },
+  "protocol": "C32 only; A/B/B2/A2 independent boots, 32 warmups and 64 measured requests per boot; no speech-request seed. Baseline already includes audio routing optimization.",
+  "config": {
+    "max_num_seqs_both_stages": 32,
+    "enforce_eager": true,
+    "model_runner": "v2",
+    "async_chunk": false,
+    "tp": 1,
+    "pp": 1,
+    "gpu_memory_utilization": [
+      0.6,
+      0.25
+    ]
+  },
+  "measured_source_sha256": {
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "71ed8c5d353449b31213cafb085f0eff77f16b2d40325ec87302bf3087fe1543",
+    "vllm_omni/model_executor/models/higgs_audio_v2/integrated_state.py": "61ae212d46f068d56162e2aa28bd4e2b822397c82b4d3af68de1a5d6299611a2"
+  },
+  "baseline_talker_sha256": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a",
+  "validation": {
+    "actual_dispatch_steps": 150,
+    "request_state_checks": 4607,
+    "cpu_marked_regression": "16 passed, 17 warnings",
+    "paired_pcm_equal": "32/32",
+    "paired_normalized_events_equal": "179/179"
+  },
+  "scope": "Raw measured source files preserved byte-for-byte. CPU/V1 remain on existing path. Fixed pool capacity 256 and batched CPU metadata mirrors are experimental limitations. No extra concurrency levels, CUDA-graph or multi-GPU qualification."
+}

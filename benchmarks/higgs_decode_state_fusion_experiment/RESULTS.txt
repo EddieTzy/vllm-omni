@@ -1,0 +1,111 @@
+Higgs v2 Triton decode-state fusion
+
+Decision: retain as an experiment; no second upstream PR opened.
+The state-update component improves, but the measured incremental serving
+gain is small and first-audio p95 increases. More work is needed before
+presenting this as a worthwhile production contribution.
+
+Baseline branch: perf/higgs-v2-audio-routing.
+Candidate branch: perf/higgs-v2-triton-state.
+The baseline ALREADY contains uniform-audio routing from upstream PR #11068.
+This branch stacks one additional state-update optimization on that baseline;
+the earlier routing speedup is not counted again. Compare these two branches
+to inspect only state fusion and its evidence.
+
+Measured source base: 4dafb464442956996be9633ed036cd24ebfef1d0 plus routing
+commit 30dcfdc205d17072734328e74c5ca96a882ec548. Measured model/kernel source
+files are preserved byte-for-byte. SHA256 values: manifest.json.
+
+Implementation:
+One integer-only Triton launch, one program per active request, assembles BOS and
+trailing EOS, preserves the final completed ramp-down frame, updates delay,
+remaining-delay, termination and frame counters, and writes all eight
+codebooks to a bounded 7-frame ring. A duplicated ring exposes chronological
+history as a view; its last column supplies next-step feedback. Emitted frames
+do not alias the reusable ring. Persistent slots use request IDs and are
+released on MRv2 finish callbacks, preserving reordering and slot reuse.
+Sampling, logits masking and RAS random draws stay in their original order.
+CPU and V1 keep the original update path.
+
+Experimental limits:
+The existing CPU logits-mask/termination code still consumes scalar mirrors;
+this version makes one batched GPU-to-CPU metadata copy per update. It does
+not eliminate every host sync. The prototype pool capacity is 256; production
+capacity/preemption handling and a dedicated upstream integration are still
+needed. The measured snapshot is intentionally not reformatted or presented
+as pre-commit-clean production code. No CUDA-graph/multi-GPU qualification.
+
+Hardware/software:
+One NVIDIA B200, 183359 MiB, driver 580.173.02; torch 2.14.0+cu130,
+vLLM 0.34.0, FlashInfer .7.3, transformers 5.22.0.
+Generation model: bosonai/higgs-audio-v2-generation-3B-base
+  @d80c511612b3040ff2877ce3d408747df1739f11.
+Codec: bosonai/higgs-audio-v2-tokenizer
+  @815a03f1b57dcb5ae918db415f22cd0c8a6f0f54.
+Public dataset: zhaochenyang20/seed-tts-eval
+  @8f5e1aa2a35d42f42e940074c1983358b9491f89.
+Same eager MRv2 BF16 two-stage config in both arms: TP=PP=1, no quantization,
+async_chunk=false, max_num_seqs=32 in both stages, GPU fractions .6/.25,
+prefix caching and async scheduling disabled. Stage lengths 4096/65536 and
+batched-token limits 2048/65536; audio temperature=1, top_k=50, top_p=.95,
+max_tokens=1024. No speech-request seed.
+
+Serving protocol:
+C32 ONLY. A/B/B2/A2 independent boots; A/A2 routing-only, B/B2 routing+fusion.
+32 warmups and 64 measured public EN/ZH prompts per boot, two waves of 32;
+all requests and outputs retained. No extra concurrency sweep. Native C16
+was not rerun for this optimization. All 256 measured requests succeeded.
+Each arm also passed an HTTP stream-disconnect followed by WAV recovery;
+this is not a server abort-acknowledgement or leak-proof claim.
+
+Both boots, no best-run selection:
+  audio seconds/s: routing [30.080643,29.879984], fused [30.520425,30.424286].
+  mean latency s: routing [3.348870,3.239920], fused [3.281755,3.174651].
+  mean RTF: routing [.798960,.794165], fused [.761499,.747504].
+  first-audio p50 s: routing [3.247130,3.294413], fused [3.280776,3.197158].
+  first-audio p95 s: routing [4.345705,4.125970], fused [4.387869,4.289517].
+Boot means:
+  audio seconds/s: 29.980314 ->30.472355, +1.641%.
+  mean end-to-end latency: 3.294395s ->3.228203s, -2.009%.
+  mean per-request RTF: .796562 ->.754502, -5.280%.
+  first-audio p50: 3.270772s ->3.238967s, -0.972%.
+  first-audio p95: 4.235837s ->4.338693s, +2.428% (worse).
+RTF is mean(request latency/audio duration), not inverse aggregate throughput.
+Latency includes HTTP, queueing, talker and codec; first audio arrives near
+completion in this deployment. Unseeded output lengths vary. Two boots give
+descriptive ranges, not a formal performance confidence interval.
+The earlier routing experiment ran native C16 phases before raw C32, while
+this experiment runs C32 only; do not add percentages or directly join their
+absolute numbers as a single end-to-end comparison.
+
+Validation:
+Initial integer-kernel CPU-reference parity on B200: 998 cases.
+Actual original/fused _dispatch_audio_codes with synthetic codes on CUDA:
+150 consecutive steps, 4607 request-state checks, 85 request identities,
+reordering, partial prefill, non-audio rows, EOS, cleanup and slot reuse.
+History stays within 7 frames; the pool is fully released at test end.
+Actual public model, matched C32 admission and initial audio RNG:
+32/32 complete PCM byte-identical, 32/32 emitted-code histories identical,
+179/179 normalized sampling/RNG events identical. Common diagnostic scheduling
+and tracing are excluded from serving performance measurements.
+Existing Higgs MRv2 regression module: 16 passed, 17 warnings in .10s.
+Full repository CI and full perceptual/speaker-quality suites were not run.
+
+Phase diagnostic (not serving measurements):
+Actual dispatch, synthetic logits/codes, synchronized phase timings, C32,
+16 warmup steps +32 measured steps; excludes real head and sampling work.
+Median state update: 1.475382ms ->.199628ms.
+Median mask: 4.929019ms ->4.987788ms; RAS: 1.707808ms ->1.760049ms.
+This supports further investigation of mask/RAS and host boundaries, not a
+claim that their synthetic times equal full-model fractions. A diagnostic
+wrapper's first run failed before measurement due to indentation; it was
+fixed and the failed log retained locally. Serving results were unaffected.
+
+Archive:
+serving_results.json: every performance arm and aggregate metric.
+paired_results.json: full-model PCM hashes and matched sampling-trace result.
+phase_profile.json: synchronized synthetic-dispatch component diagnostic.
+manifest.json: source identity, protocol, software and validation counts.
+Raw PCM, complete logs, telemetry and local controllers remain in the
+experiment workspace. No generated audio or private access files uploaded.
+AI assistance: Codex assisted with implementation, validation and writing.
