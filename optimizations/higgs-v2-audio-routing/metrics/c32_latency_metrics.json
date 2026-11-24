@@ -1,0 +1,55 @@
+{
+  "arms": {
+    "A": {
+      "audio_seconds_per_wall_second": 17.50003100770353,
+      "rtf_per_request_mean": 1.2056111433388021,
+      "e2e_mean_seconds": 4.949771946359334,
+      "ttfa_mean_seconds": 4.949373822468772,
+      "ttfa_p50_seconds": 4.967000055499739,
+      "ttfa_p95_seconds": 6.426697085948943
+    },
+    "A2": {
+      "audio_seconds_per_wall_second": 18.533232452507438,
+      "rtf_per_request_mean": 1.2110056107555716,
+      "e2e_mean_seconds": 5.148189778374984,
+      "ttfa_mean_seconds": 5.147810361484403,
+      "ttfa_p50_seconds": 5.048519694500101,
+      "ttfa_p95_seconds": 7.057325849550124
+    },
+    "B": {
+      "audio_seconds_per_wall_second": 27.651552305073015,
+      "rtf_per_request_mean": 0.784392155982505,
+      "e2e_mean_seconds": 3.346567962484386,
+      "ttfa_mean_seconds": 3.346105859406208,
+      "ttfa_p50_seconds": 3.379495782000049,
+      "ttfa_p95_seconds": 4.493742277599084
+    },
+    "B2": {
+      "audio_seconds_per_wall_second": 26.68656881548166,
+      "rtf_per_request_mean": 0.793870681193482,
+      "e2e_mean_seconds": 3.3192685829999675,
+      "ttfa_mean_seconds": 3.3188651489374195,
+      "ttfa_p50_seconds": 3.3545819405007933,
+      "ttfa_p95_seconds": 4.525063853548999
+    }
+  },
+  "means": {
+    "baseline": {
+      "audio_seconds_per_wall_second": 18.016631730105484,
+      "rtf_per_request_mean": 1.208308377047187,
+      "e2e_mean_seconds": 5.048980862367159,
+      "ttfa_mean_seconds": 5.048592091976587,
+      "ttfa_p50_seconds": 5.00775987499992,
+      "ttfa_p95_seconds": 6.742011467749533
+    },
+    "candidate": {
+      "audio_seconds_per_wall_second": 27.169060560277337,
+      "rtf_per_request_mean": 0.7891314185879935,
+      "e2e_mean_seconds": 3.3329182727421767,
+      "ttfa_mean_seconds": 3.3324855041718138,
+      "ttfa_p50_seconds": 3.367038861250421,
+      "ttfa_p95_seconds": 4.509403065574041
+    }
+  },
+  "scope": "B200, C32, 64 measured requests per boot, two boots per variant. E2E includes HTTP/queueing/talker/codec; RTF is arithmetic mean of per-request E2E/audio duration, not inverse aggregate throughput. First audio in this tested mode arrives near completion; no incremental streaming claim."
+}

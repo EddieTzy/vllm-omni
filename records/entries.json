@@ -1,0 +1,101 @@
+{
+  "updated_at_utc": "2026-11-24T09:09:01.409788+00:00",
+  "gpu_runs_performed_for_this_update": false,
+  "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
+  "entries": [
+    {
+      "id": "higgs-v2-audio-routing",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "纯音频 norm/MLP 路由",
+      "workflow_category": "pr_submitted",
+      "status": "PR #11068 开放，未合并",
+      "branch": "perf/higgs-v2-audio-routing",
+      "branch_published": true,
+      "head_commit": "130fbadf725639b467cb262a19e4aedaebffca92",
+      "measured_base_commit": "4dafb464442956996be9633ed036cd24ebfef1d0",
+      "measured_source_commit": "30dcfdc205d17072734328e74c5ca96a882ec548",
+      "pr": 11068,
+      "pr_url": "https://github.com/vllm-project/vllm-omni/pull/11068",
+      "pr_head_commit": "c70831d97aea6a1ad038706b2b58af6609cefb26",
+      "profile_evidence_commit": "30aa5bc7d9007cbddbb9ca0cfbd7680526970f49",
+      "result": "B200 eager MRv2, C32 audio吞吐+50.80%；受控32/32 PCM完全一致，非一般质量保证",
+      "change": "在forward入口判断统一音频mask，复用既有None音频路由，减少逐层判断和索引",
+      "code_locations": [
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py",
+          "symbols": [
+            "HiggsAudioV2TalkerForConditionalGeneration.forward",
+            "HiggsAudioV2DecoderLayer._routed_norm",
+            "HiggsAudioV2DecoderLayer._routed_mlp"
+          ]
+        }
+      ],
+      "details": "optimizations/higgs-v2-audio-routing/README.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing"
+    },
+    {
+      "id": "higgs-v2-triton-state",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "Triton状态更新与bounded history",
+      "workflow_category": "measured_tradeoff",
+      "status": "已实现并验证，暂不提第二个PR",
+      "branch": "perf/higgs-v2-triton-state",
+      "branch_published": true,
+      "head_commit": "06549a28d920f033de1bce3d0a89307151974d51",
+      "baseline_branch": "perf/higgs-v2-audio-routing",
+      "baseline_head_commit": "130fbadf725639b467cb262a19e4aedaebffca92",
+      "measured_source_base": "4dafb464442956996be9633ed036cd24ebfef1d0 + routing 30dcfdc205d17072734328e74c5ca96a882ec548",
+      "pr": null,
+      "result": "在路由基线上C32吞吐+1.641%、平均E2E -2.009%、首包P95 +2.428%；增益小且存在回退",
+      "change": "按request ID固定GPU槽位，融合整数delay/EOS/计数及8 codebook历史写入；保留CPU scalar mirror和CPU/V1路径",
+      "code_locations": [
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/integrated_state.py",
+          "symbols": [
+            "RequestStatePool",
+            "_advance"
+          ]
+        },
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py",
+          "symbols": [
+            "_dispatch_audio_codes",
+            "on_requests_finished"
+          ]
+        }
+      ],
+      "details": "optimizations/higgs-v2-triton-state/README.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-triton-state"
+    },
+    {
+      "id": "higgs-v2-packed-feedback",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "批量反馈embedding lookup",
+      "workflow_category": "not_adopted",
+      "status": "停止单独PR，源码与完整实验尚未公开归档",
+      "branch": null,
+      "branch_published": false,
+      "head_commit": null,
+      "pr": null,
+      "result": "历史服务初筛：C32约-2.45%、C1约-1.15%、C16无一致改善；完整per-arm证据未在本次重核",
+      "change": "打包末帧做一次embedding lookup，仍遍历Python请求状态",
+      "evidence_level": "local historical summary; public original artifacts not yet verified",
+      "code_locations": [
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py",
+          "symbols": [
+            "audio feedback embedding helpers"
+          ]
+        }
+      ],
+      "details": "optimizations/higgs-v2-packed-feedback/README.md",
+      "branch_url": null
+    }
+  ]
+}
