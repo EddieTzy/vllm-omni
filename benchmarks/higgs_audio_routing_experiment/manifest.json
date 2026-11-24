@@ -1,0 +1,11 @@
+{
+  "measured_base": "4dafb464442956996be9633ed036cd24ebfef1d0",
+  "measured_routing_commit": "30dcfdc205d17072734328e74c5ca96a882ec548",
+  "baseline_talker_sha256": "df54c3435cafadef9f600babacd90ae3e9ab4bc4064bf0afe6b437772e25f336",
+  "routing_talker_sha256": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a",
+  "upstream_pr": "https://github.com/vllm-project/vllm-omni/pull/11068",
+  "upstream_pr_source_commit": "c70831d",
+  "model": "bosonai/higgs-audio-v2-generation-3B-base@d80c511612b3040ff2877ce3d408747df1739f11",
+  "codec": "bosonai/higgs-audio-v2-tokenizer@815a03f1b57dcb5ae918db415f22cd0c8a6f0f54",
+  "dataset": "zhaochenyang20/seed-tts-eval@8f5e1aa2a35d42f42e940074c1983358b9491f89"
+}

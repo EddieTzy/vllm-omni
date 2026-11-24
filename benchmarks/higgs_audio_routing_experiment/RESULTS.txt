@@ -1,0 +1,88 @@
+Higgs v2 uniform-audio routing
+
+Status: submitted upstream as PR #11068.
+https://github.com/vllm-project/vllm-omni/pull/11068
+This perf branch freezes the measured source and its evidence; the upstream
+PR branch was rebased separately. No second optimization is included here.
+
+Change:
+Resolve the all-audio mask once per forward and reuse the existing direct
+audio norm/MLP path across 28 decoder layers. The baseline already skips
+absent text FFN rows; this removes repeated mask reductions and boolean
+indexing, not previously executed text FFN compute. Text/BOS/mixed paths
+retain tensor masks. One scalar synchronization remains per forward.
+Three production lines plus regression coverage; no API, weight, sampling,
+deployment-default or dependency changes, and no CUDA-graph support claim.
+
+Measured baseline: 4dafb464442956996be9633ed036cd24ebfef1d0.
+Measured routing implementation: 30dcfdc205d17072734328e74c5ca96a882ec548.
+Exact model-source hashes and public model/data revisions: manifest.json.
+The rebased PR source has the same talker hash.
+
+Hardware: one NVIDIA B200, 183359 MiB, driver 580.173.02.
+Software: torch 2.14.0+cu130, vLLM 0.34.0, FlashInfer 0.7.3,
+transformers 5.22.0, vLLM-Omni measured baseline above.
+Both arms: BF16, TP=PP=1, no quantization; two-stage MRv2 eager deployment,
+async_chunk=false, max_num_seqs=32 in both stages, GPU fractions .6/.25,
+prefix caching and async scheduling disabled. Stage max_model_len=4096/65536,
+max_num_batched_tokens=2048/65536. Audio sampling temperature=1, top_k=50,
+top_p=.95, max_tokens=1024; no speech-request seed.
+
+Serving:
+Two independent boots per variant, chronological A/B/A2/B2.
+Public SeedTTS targets fixed before measurement: 32 distinct EN targets of
+6-20 words and 32 distinct ZH targets of 10-36 characters. No voice cloning.
+Native C16: per-completion replacement, 16 warmups +32 measured per language.
+Raw C32: streaming PCM client, 32 warmups +64 measured in two waves of 32,
+interleaved EN/ZH. These protocols differ and are reported separately.
+No additional concurrency levels were benchmarked for this archive.
+
+Audio seconds per wall second, both boots retained:
+  C16 EN: baseline [11.851311,11.984413], routing [18.481960,17.947013].
+  C16 ZH: baseline [12.229137,12.106688], routing [19.682195,18.370311].
+  C32: baseline [17.500031,18.533232], routing [27.651552,26.686569].
+C32 boot-mean changes:
+  audio seconds/s: 18.016632 ->27.169061, +50.800%.
+  mean per-request RTF: 1.208308 ->0.789131, -34.691%.
+  mean end-to-end latency: 5.048981s ->3.332918s, -33.988%.
+  first-audio p50: 5.007760s ->3.367039s, -32.764%.
+  first-audio p95: 6.742011s ->4.509403s, -33.115%.
+All measured requests succeeded. RTF is mean(request latency/audio duration),
+not inverse aggregate throughput. Latency includes HTTP, queueing and both
+stages. First audio arrives near completion in this tested deployment.
+Peak GPU memory sampled every 200ms across warmups/workloads:
+baseline [110990,111012] MiB, routing [110970,110966] MiB.
+Configured pools are included; no memory reduction claim.
+
+Correctness and validation:
+Existing Higgs MRv2 regression module: 16 passed, 17 warnings. The two new
+all-audio cases fail on the original implementation; text/BOS controls pass.
+All applicable pre-commit hooks passed for the two PR files, including mypy.
+Actual BF16 norm/MLP shadowing: 32424 strict comparisons across 28 layers
+and 386 all-audio forwards, all bitwise equal.
+Controlled real-model C32 A/B/A2 with common canonical admission and initial
+audio RNG: 32/32 complete PCM, 32/32 code histories and all 179 normalized
+sampling/RNG events equal. Diagnostic overhead is not performance evidence.
+Detailed PCM hashes: controlled_output_equivalence.json.
+
+Quality interpretation:
+All 256 unseeded raw outputs were ASR-scored, zero exclusions. Original
+unpaired pooled EN WER: baseline 12/712, routing 11/712. Original unpaired
+ZH CER: baseline 7/1176, routing 13/1176. Preserve these raw observations;
+they compare different stochastic samples and are not a paired regression
+test. Fixed-order repeated ASR retained the same normalized rates. Frozen
+logits/RNG replay demonstrated request-row/random-draw coupling. Under the
+controlled matched batch/RNG test, all outputs were byte-identical and CER
+was 24/588 in all three arms, including the high-error utterance. That
+different controlled workload is not an absolute quality improvement.
+The original boots did not record full RNG trajectories; their exact sample
+histories cannot be reconstructed. No general perceptual/speaker-quality
+noninferiority, deterministic-seed API, TP/multi-GPU or full-CI claim is made.
+
+Archive:
+serving_results.json retains every boot's aggregate serving/quality data.
+c32_latency_metrics.json gives per-boot latency/RTF and exact definitions.
+Raw PCM, transcripts, full logs, deployment assets and local controllers
+remain in the experiment workspace; no generated audio is uploaded here.
+This branch adds only this optimization and its aggregate evidence.
+AI assistance: Codex assisted with implementation, validation and writing.

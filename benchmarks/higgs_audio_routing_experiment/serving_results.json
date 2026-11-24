@@ -1,0 +1,286 @@
+{
+  "arms": {
+    "A": {
+      "raw_c32": {
+        "concurrency": 32,
+        "requests": 64,
+        "wall_seconds": 15.222830169999725,
+        "audio_seconds_per_second": 17.50003100770353,
+        "ttfa_p50_seconds": 4.967000055499739,
+        "ttfa_p95_seconds": 6.426697085948943
+      },
+      "raw_c32_request_throughput": 4.20421165350235,
+      "native_c16": {
+        "en": {
+          "audio_throughput": 11.851310604783064,
+          "request_throughput": 3.010812475016339,
+          "median_audio_ttfp_ms": 4024.2232870004955,
+          "p95_audio_ttfp_ms": 6080.696923699907
+        },
+        "zh": {
+          "audio_throughput": 12.229136788522851,
+          "request_throughput": 2.644852509007375,
+          "median_audio_ttfp_ms": 4749.008101999607,
+          "p95_audio_ttfp_ms": 6215.703547400153
+        }
+      },
+      "quality": {
+        "en": {
+          "lang": "en",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.014044943820224719,
+          "wer_per_sample_mean": 0.009672619047619048,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.037579929461828546,
+          "wer_per_sample_p95": 0.06428571428571418,
+          "wer_per_sample_max": 0.16666666666666666,
+          "wer_below_50_corpus": 0.014044943820224719,
+          "wer_below_50_per_sample_mean": 0.009672619047619048,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 4.560249620781292,
+          "latency_median_s": 4.398714334000033,
+          "latency_p95_s": 6.418634169299275,
+          "rtf_mean": 1.2256802092082244,
+          "audio_duration_mean_s": 3.78
+        },
+        "zh": {
+          "lang": "zh",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.006802721088435374,
+          "wer_per_sample_mean": 0.006747159090909091,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.0239142076098482,
+          "wer_per_sample_p95": 0.045454545454545456,
+          "wer_per_sample_max": 0.125,
+          "wer_below_50_corpus": 0.006802721088435374,
+          "wer_below_50_per_sample_mean": 0.006747159090909091,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 5.339294271937376,
+          "latency_median_s": 5.498748232999787,
+          "latency_p95_s": 6.305052436349342,
+          "rtf_mean": 1.1855420774693801,
+          "audio_duration_mean_s": 4.545
+        }
+      },
+      "sampled_gpu_max_MiB": 110990.0
+    },
+    "B": {
+      "raw_c32": {
+        "concurrency": 32,
+        "requests": 64,
+        "wall_seconds": 10.11299463099931,
+        "audio_seconds_per_second": 27.651552305073015,
+        "ttfa_p50_seconds": 3.379495782000049,
+        "ttfa_p95_seconds": 4.493742277599084
+      },
+      "raw_c32_request_throughput": 6.328491444445262,
+      "native_c16": {
+        "en": {
+          "audio_throughput": 18.481960094070033,
+          "request_throughput": 4.836626782877339,
+          "median_audio_ttfp_ms": 2413.744413499444,
+          "p95_audio_ttfp_ms": 3887.2220815002033
+        },
+        "zh": {
+          "audio_throughput": 19.68219465691462,
+          "request_throughput": 4.470685895948806,
+          "median_audio_ttfp_ms": 2903.163646000394,
+          "p95_audio_ttfp_ms": 4084.732014749352
+        }
+      },
+      "quality": {
+        "en": {
+          "lang": "en",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.011235955056179775,
+          "wer_per_sample_mean": 0.00863095238095238,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.02900068173019949,
+          "wer_per_sample_p95": 0.06666666666666667,
+          "wer_per_sample_max": 0.14285714285714285,
+          "wer_below_50_corpus": 0.011235955056179775,
+          "wer_below_50_per_sample_mean": 0.00863095238095238,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 3.1728767710625903,
+          "latency_median_s": 3.082140062500912,
+          "latency_p95_s": 4.5959131795503705,
+          "rtf_mean": 0.7990427672361478,
+          "audio_duration_mean_s": 4.10625
+        },
+        "zh": {
+          "lang": "zh",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.008503401360544218,
+          "wer_per_sample_mean": 0.008235254329004328,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.024908949105614822,
+          "wer_per_sample_p95": 0.04642857142857142,
+          "wer_per_sample_max": 0.125,
+          "wer_below_50_corpus": 0.008503401360544218,
+          "wer_below_50_per_sample_mean": 0.008235254329004328,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 3.5202591539061814,
+          "latency_median_s": 3.5284136159998525,
+          "latency_p95_s": 4.294073992100221,
+          "rtf_mean": 0.7697415447288622,
+          "audio_duration_mean_s": 4.6325
+        }
+      },
+      "sampled_gpu_max_MiB": 110970.0
+    },
+    "A2": {
+      "raw_c32": {
+        "concurrency": 32,
+        "requests": 64,
+        "wall_seconds": 14.890009107000878,
+        "audio_seconds_per_second": 18.533232452507438,
+        "ttfa_p50_seconds": 5.048519694500101,
+        "ttfa_p95_seconds": 7.057325849550124
+      },
+      "raw_c32_request_throughput": 4.298184073635586,
+      "native_c16": {
+        "en": {
+          "audio_throughput": 11.98441314017494,
+          "request_throughput": 2.936456512140874,
+          "median_audio_ttfp_ms": 4303.848809499868,
+          "p95_audio_ttfp_ms": 6672.689444699699
+        },
+        "zh": {
+          "audio_throughput": 12.106688262158098,
+          "request_throughput": 2.66227339464719,
+          "median_audio_ttfp_ms": 4614.092062500276,
+          "p95_audio_ttfp_ms": 6858.932346149777
+        }
+      },
+      "quality": {
+        "en": {
+          "lang": "en",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.019662921348314606,
+          "wer_per_sample_mean": 0.018589917027417028,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.053752786150117714,
+          "wer_per_sample_p95": 0.12539682539682537,
+          "wer_per_sample_max": 0.25,
+          "wer_below_50_corpus": 0.019662921348314606,
+          "wer_below_50_per_sample_mean": 0.018589917027417028,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 4.742614571593776,
+          "latency_median_s": 4.460937059500793,
+          "latency_p95_s": 6.927933812749598,
+          "rtf_mean": 1.2333303600025078,
+          "audio_duration_mean_s": 3.915
+        },
+        "zh": {
+          "lang": "zh",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.00510204081632653,
+          "wer_per_sample_mean": 0.004329004329004329,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.01346304686647698,
+          "wer_per_sample_p95": 0.045454545454545456,
+          "wer_per_sample_max": 0.047619047619047616,
+          "wer_below_50_corpus": 0.00510204081632653,
+          "wer_below_50_per_sample_mean": 0.004329004329004329,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 5.553764985156192,
+          "latency_median_s": 5.484608188000493,
+          "latency_p95_s": 7.14084017830055,
+          "rtf_mean": 1.188680861508635,
+          "audio_duration_mean_s": 4.70875
+        }
+      },
+      "sampled_gpu_max_MiB": 111012.0
+    },
+    "B2": {
+      "raw_c32": {
+        "concurrency": 32,
+        "requests": 64,
+        "wall_seconds": 10.279328222999538,
+        "audio_seconds_per_second": 26.68656881548166,
+        "ttfa_p50_seconds": 3.3545819405007933,
+        "ttfa_p95_seconds": 4.525063853548999
+      },
+      "raw_c32_request_throughput": 6.226087795971225,
+      "native_c16": {
+        "en": {
+          "audio_throughput": 17.94701277498436,
+          "request_throughput": 4.822845220015951,
+          "median_audio_ttfp_ms": 2434.3953769994187,
+          "p95_audio_ttfp_ms": 4331.874923250325
+        },
+        "zh": {
+          "audio_throughput": 18.37031142200709,
+          "request_throughput": 3.913781394835066,
+          "median_audio_ttfp_ms": 3062.9038874994876,
+          "p95_audio_ttfp_ms": 4276.274140199894
+        }
+      },
+      "quality": {
+        "en": {
+          "lang": "en",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.019662921348314606,
+          "wer_per_sample_mean": 0.01752457611832612,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.04730524182677097,
+          "wer_per_sample_p95": 0.13303571428571426,
+          "wer_per_sample_max": 0.18181818181818182,
+          "wer_below_50_corpus": 0.019662921348314606,
+          "wer_below_50_per_sample_mean": 0.01752457611832612,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 3.0571172970309703,
+          "latency_median_s": 2.9245535885002027,
+          "latency_p95_s": 4.409715019949362,
+          "rtf_mean": 0.8149969555485885,
+          "audio_duration_mean_s": 3.8475
+        },
+        "zh": {
+          "lang": "zh",
+          "total_samples": 32,
+          "evaluated": 32,
+          "skipped": 0,
+          "wer_corpus": 0.013605442176870748,
+          "wer_per_sample_mean": 0.012564258658008658,
+          "wer_per_sample_median": 0.0,
+          "wer_per_sample_std": 0.0295318781861688,
+          "wer_per_sample_p95": 0.06785714285714282,
+          "wer_per_sample_max": 0.125,
+          "wer_below_50_corpus": 0.013605442176870748,
+          "wer_below_50_per_sample_mean": 0.012564258658008658,
+          "n_above_50_pct_wer": 0,
+          "pct_above_50_pct_wer": 0.0,
+          "latency_mean_s": 3.5814198689689647,
+          "latency_median_s": 3.5301358324995817,
+          "latency_p95_s": 4.638529421700241,
+          "rtf_mean": 0.7727444068383755,
+          "audio_duration_mean_s": 4.7250000000000005
+        }
+      },
+      "sampled_gpu_max_MiB": 110966.0
+    }
+  },
+  "c32_audio_throughput_change_percent": 50.79988849901562,
+  "scope": "Independent unseeded A/B/A2/B2 boots, all samples kept. Means are boot means, not a best-run comparison. Quality is raw ASR content-error scoring, not a noninferiority certificate."
+}
