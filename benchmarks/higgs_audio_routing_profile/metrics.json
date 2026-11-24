@@ -1,0 +1,798 @@
+{
+  "A": {
+    "c32_forward_host_ms": {
+      "n": 98,
+      "mean": 33.86575509183673,
+      "median": 34.6389525,
+      "p05": 28.64114855,
+      "p95": 35.48849185
+    },
+    "c32_forward_cuda_interval_ms": {
+      "n": 98,
+      "mean": 33.89733845846994,
+      "median": 34.66872024536133,
+      "p05": 28.668540477752686,
+      "p95": 35.518997764587404
+    },
+    "c32_cycles": {
+      "cycle_ms": {
+        "n": 94,
+        "mean": 52.250574,
+        "median": 51.640867,
+        "p05": 43.057577800000004,
+        "p95": 54.4615615
+      },
+      "forward_host_ms": {
+        "n": 94,
+        "mean": 33.89938826595745,
+        "median": 34.6442185,
+        "p05": 28.641131950000002,
+        "p95": 35.50159965
+      },
+      "outside_forward_ms": {
+        "n": 94,
+        "mean": 18.351185734042552,
+        "median": 16.942203,
+        "p05": 14.234194449999997,
+        "p95": 19.396226649999996
+      }
+    },
+    "stages": {
+      "codec.forward": {
+        "calls": 59,
+        "host_ms": {
+          "n": 59,
+          "mean": 17.684541491525422,
+          "median": 10.383374,
+          "p05": 3.5606397000000003,
+          "p95": 30.05008329999998
+        }
+      },
+      "talker.compute_logits": {
+        "calls": 414,
+        "host_ms": {
+          "n": 414,
+          "mean": 0.10129635990338165,
+          "median": 0.0689735,
+          "p05": 0.06148045,
+          "p95": 0.22899304999999998
+        }
+      },
+      "talker.forward": {
+        "calls": 410,
+        "host_ms": {
+          "n": 410,
+          "mean": 35.12405548292683,
+          "median": 33.838982,
+          "p05": 28.9072553,
+          "p95": 43.19665964999999
+        }
+      }
+    },
+    "traces": [
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 43,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 32,
+          "host_ms": 55.954062,
+          "profiled": true,
+          "monotonic_ns": 24723295631836,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 169,
+          "aten::index": 84,
+          "aten::_index_put_impl_": 84,
+          "aten::any": 168,
+          "aten::item": 168,
+          "aten::_local_scalar_dense": 168,
+          "cudaStreamSynchronize": 339,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 396,
+          "cudaLaunchKernel": 1739
+        },
+        "summed_kernel_duration_us": 5986.509,
+        "cpu_routing_annotation_us": 38751.391
+      },
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 232,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 64,
+          "host_ms": 55.241086,
+          "profiled": true,
+          "monotonic_ns": 24732576784347,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 169,
+          "aten::index": 84,
+          "aten::_index_put_impl_": 84,
+          "aten::any": 168,
+          "aten::item": 168,
+          "aten::_local_scalar_dense": 168,
+          "cudaStreamSynchronize": 339,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 396,
+          "cudaLaunchKernel": 1739
+        },
+        "summed_kernel_duration_us": 6082.566,
+        "cpu_routing_annotation_us": 38194.244
+      }
+    ]
+  },
+  "B": {
+    "c32_forward_host_ms": {
+      "n": 89,
+      "mean": 16.701748831460673,
+      "median": 17.068938,
+      "p05": 14.318015800000001,
+      "p95": 17.503459399999997
+    },
+    "c32_forward_cuda_interval_ms": {
+      "n": 89,
+      "mean": 16.737965080175506,
+      "median": 17.121536254882812,
+      "p05": 14.344927978515624,
+      "p95": 17.53336982727051
+    },
+    "c32_cycles": {
+      "cycle_ms": {
+        "n": 85,
+        "mean": 33.47965585882353,
+        "median": 34.193129,
+        "p05": 28.555875,
+        "p95": 35.9201056
+      },
+      "forward_host_ms": {
+        "n": 85,
+        "mean": 16.708049929411764,
+        "median": 17.089727,
+        "p05": 14.316058400000001,
+        "p95": 17.504713199999998
+      },
+      "outside_forward_ms": {
+        "n": 85,
+        "mean": 16.771605929411766,
+        "median": 16.944994,
+        "p05": 14.3613978,
+        "p95": 18.911865199999998
+      }
+    },
+    "stages": {
+      "codec.forward": {
+        "calls": 61,
+        "host_ms": {
+          "n": 61,
+          "mean": 17.2380948852459,
+          "median": 10.369529,
+          "p05": 3.836226,
+          "p95": 31.743893
+        }
+      },
+      "talker.compute_logits": {
+        "calls": 416,
+        "host_ms": {
+          "n": 416,
+          "mean": 0.10372101442307692,
+          "median": 0.070424,
+          "p05": 0.06226275,
+          "p95": 0.24371700000000002
+        }
+      },
+      "talker.forward": {
+        "calls": 412,
+        "host_ms": {
+          "n": 412,
+          "mean": 17.738770169902914,
+          "median": 15.962518,
+          "p05": 14.15427145,
+          "p95": 20.80244654999999
+        }
+      }
+    },
+    "traces": [
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 43,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 32,
+          "host_ms": 29.154925,
+          "profiled": true,
+          "monotonic_ns": 24802980106052,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 1,
+          "aten::all": 1,
+          "aten::item": 1,
+          "aten::_local_scalar_dense": 1,
+          "cudaStreamSynchronize": 4,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 5,
+          "cudaLaunchKernel": 788
+        },
+        "summed_kernel_duration_us": 3985.639,
+        "cpu_routing_annotation_us": 13059.065
+      },
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 232,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 64,
+          "host_ms": 27.516875,
+          "profiled": true,
+          "monotonic_ns": 24808623809826,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 1,
+          "aten::all": 1,
+          "aten::item": 1,
+          "aten::_local_scalar_dense": 1,
+          "cudaStreamSynchronize": 4,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 5,
+          "cudaLaunchKernel": 788
+        },
+        "summed_kernel_duration_us": 3985.478,
+        "cpu_routing_annotation_us": 12296.285
+      }
+    ]
+  },
+  "A2": {
+    "c32_forward_host_ms": {
+      "n": 97,
+      "mean": 34.36466088659794,
+      "median": 35.24799,
+      "p05": 28.604529600000003,
+      "p95": 36.4837788
+    },
+    "c32_forward_cuda_interval_ms": {
+      "n": 97,
+      "mean": 34.4010109459002,
+      "median": 35.27849578857422,
+      "p05": 28.63155860900879,
+      "p95": 36.513465881347656
+    },
+    "c32_cycles": {
+      "cycle_ms": {
+        "n": 93,
+        "mean": 52.35572206451613,
+        "median": 52.166769,
+        "p05": 42.5892458,
+        "p95": 54.55505519999999
+      },
+      "forward_host_ms": {
+        "n": 93,
+        "mean": 34.37755329032258,
+        "median": 35.24799,
+        "p05": 28.5974812,
+        "p95": 36.406376599999994
+      },
+      "outside_forward_ms": {
+        "n": 93,
+        "mean": 17.97816877419355,
+        "median": 16.932744,
+        "p05": 14.041516000000001,
+        "p95": 18.4279904
+      }
+    },
+    "stages": {
+      "codec.forward": {
+        "calls": 64,
+        "host_ms": {
+          "n": 64,
+          "mean": 16.207451875,
+          "median": 9.892386,
+          "p05": 3.48935795,
+          "p95": 28.362017449999996
+        }
+      },
+      "talker.compute_logits": {
+        "calls": 363,
+        "host_ms": {
+          "n": 363,
+          "mean": 0.10808075757575758,
+          "median": 0.071156,
+          "p05": 0.0632316,
+          "p95": 0.2342989
+        }
+      },
+      "talker.forward": {
+        "calls": 359,
+        "host_ms": {
+          "n": 359,
+          "mean": 36.34316776880223,
+          "median": 35.042207,
+          "p05": 28.7240557,
+          "p95": 44.653080499999994
+        }
+      }
+    },
+    "traces": [
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 43,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 32,
+          "host_ms": 56.604053,
+          "profiled": true,
+          "monotonic_ns": 24875614341612,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 169,
+          "aten::index": 84,
+          "aten::_index_put_impl_": 84,
+          "aten::any": 168,
+          "aten::item": 168,
+          "aten::_local_scalar_dense": 168,
+          "cudaStreamSynchronize": 339,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 396,
+          "cudaLaunchKernel": 1739
+        },
+        "summed_kernel_duration_us": 6135.564,
+        "cpu_routing_annotation_us": 39095.562
+      },
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 194,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 64,
+          "host_ms": 56.34016,
+          "profiled": true,
+          "monotonic_ns": 24883508212018,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 169,
+          "aten::index": 84,
+          "aten::_index_put_impl_": 84,
+          "aten::any": 168,
+          "aten::item": 168,
+          "aten::_local_scalar_dense": 168,
+          "cudaStreamSynchronize": 339,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 396,
+          "cudaLaunchKernel": 1739
+        },
+        "summed_kernel_duration_us": 6044.299,
+        "cpu_routing_annotation_us": 38958.601
+      }
+    ]
+  },
+  "B2": {
+    "c32_forward_host_ms": {
+      "n": 107,
+      "mean": 17.062159794392525,
+      "median": 17.385545,
+      "p05": 14.6381546,
+      "p95": 17.7148142
+    },
+    "c32_forward_cuda_interval_ms": {
+      "n": 107,
+      "mean": 17.09268421101793,
+      "median": 17.414688110351562,
+      "p05": 14.664559650421143,
+      "p95": 17.74410915374756
+    },
+    "c32_cycles": {
+      "cycle_ms": {
+        "n": 104,
+        "mean": 33.96592151923077,
+        "median": 34.582028,
+        "p05": 28.762548950000003,
+        "p95": 36.21508075
+      },
+      "forward_host_ms": {
+        "n": 104,
+        "mean": 17.080853836538463,
+        "median": 17.405949,
+        "p05": 14.631750799999999,
+        "p95": 17.718010099999997
+      },
+      "outside_forward_ms": {
+        "n": 104,
+        "mean": 16.88506768269231,
+        "median": 17.0831165,
+        "p05": 14.138899299999999,
+        "p95": 18.60345145
+      }
+    },
+    "stages": {
+      "codec.forward": {
+        "calls": 57,
+        "host_ms": {
+          "n": 57,
+          "mean": 17.73818505263158,
+          "median": 10.250168,
+          "p05": 3.7030406,
+          "p95": 22.610368999999938
+        }
+      },
+      "talker.compute_logits": {
+        "calls": 364,
+        "host_ms": {
+          "n": 364,
+          "mean": 0.10632272802197802,
+          "median": 0.069444,
+          "p05": 0.06013805,
+          "p95": 0.23786599999999994
+        }
+      },
+      "talker.forward": {
+        "calls": 360,
+        "host_ms": {
+          "n": 360,
+          "mean": 18.446591627777778,
+          "median": 16.8763635,
+          "p05": 14.69351705,
+          "p95": 19.27220955000002
+        }
+      }
+    },
+    "traces": [
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 43,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 32,
+          "host_ms": 29.408592,
+          "profiled": true,
+          "monotonic_ns": 24952243853722,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 1,
+          "aten::all": 1,
+          "aten::item": 1,
+          "aten::_local_scalar_dense": 1,
+          "cudaStreamSynchronize": 4,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 5,
+          "cudaLaunchKernel": 788
+        },
+        "summed_kernel_duration_us": 3997.573,
+        "cpu_routing_annotation_us": 13179.248
+      },
+      {
+        "metadata": {
+          "stage": "talker.forward",
+          "step": 75,
+          "shape": [
+            32
+          ],
+          "shape_occurrence": 64,
+          "host_ms": 27.966601,
+          "profiled": true,
+          "monotonic_ns": 24953578497455,
+          "input_ids": [
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016,
+            128016
+          ]
+        },
+        "operator_counts": {
+          "routing._routed_norm": 56,
+          "routing._routed_mlp": 28,
+          "aten::nonzero": 1,
+          "aten::all": 1,
+          "aten::item": 1,
+          "aten::_local_scalar_dense": 1,
+          "cudaStreamSynchronize": 4,
+          "cudaDeviceSynchronize": 1,
+          "cudaMemcpyAsync": 5,
+          "cudaLaunchKernel": 788
+        },
+        "summed_kernel_duration_us": 4000.99,
+        "cpu_routing_annotation_us": 12420.779
+      }
+    ]
+  },
+  "limitations": [
+    "Private instrumentation, not a new uninstrumented serving throughput benchmark.",
+    "CUDA event interval includes launch gaps and same-stream waits; it is not summed kernel execution time.",
+    "Stage intervals can overlap across processes; summing them does not reconstruct request critical paths.",
+    "C32 forward summary conditions on 32 input tokens, drops first 16 occurrences and traced plus next two forwards.",
+    "Same client workload does not imply identical stochastic output lengths or batch trajectories.",
+    "Codec comparison must condition on matching input shape, rather than comparing all-call medians."
+  ]
+}

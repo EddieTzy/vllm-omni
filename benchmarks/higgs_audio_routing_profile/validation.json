@@ -1,0 +1,8 @@
+{
+  "source_config_corpus_hashes": "passed",
+  "all_audio_trace_count": 8,
+  "per_trace_operator_and_input_checks": "passed",
+  "independent_boots": 4,
+  "completed_measured_requests": 128,
+  "completed_warmup_requests": 128
+}

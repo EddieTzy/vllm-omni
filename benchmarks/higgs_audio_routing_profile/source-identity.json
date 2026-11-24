@@ -1,0 +1,13 @@
+{
+  "runtime_python_files_baseline": 2381,
+  "runtime_python_files_patched": 2381,
+  "differences": {
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": {
+      "baseline": "df54c3435cafadef9f600babacd90ae3e9ab4bc4064bf0afe6b437772e25f336",
+      "patched": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a"
+    }
+  },
+  "baseline_commit": "4dafb464442956996be9633ed036cd24ebfef1d0",
+  "measured_routing_commit": "30dcfdc205d17072734328e74c5ca96a882ec548",
+  "current_pr_talker_equivalent_commit": "c70831d97aea6a1ad038706b2b58af6609cefb26"
+}
