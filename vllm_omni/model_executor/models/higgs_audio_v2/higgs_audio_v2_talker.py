@@ -1306,7 +1306,7 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
             sees a stop signal at the right place.
 
         Per-request state (``num_delay``, ``num_remaining_delays``,
-        cumulative ``audio_out_ids: [num_codebooks, T_so_far]``) lives in
+        recent ``audio_out_ids: [num_codebooks, min(T_so_far, 7)]``) lives in
         ``self._audio_state[req_id]``; ``embed_input_ids`` reads it on the
         next step to substitute the audio-token embedding via
         :meth:`embed_audio_codes`.
@@ -1606,11 +1606,14 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
 
             state["num_delay"] = num_delay
             state["num_remaining_delays"] = num_remaining_delays
-            # Append to the per-request audio_out_ids buffer.
+            # Only the latest frame and seven-frame RAS window are consumed.
+            # Keep owned, bounded history; emitted codec frames are separate.
             if state["audio_out_ids"] is None:
                 state["audio_out_ids"] = this_codes.unsqueeze(-1).clone()
             else:
-                state["audio_out_ids"] = torch.cat([state["audio_out_ids"], this_codes.unsqueeze(-1)], dim=-1)
+                state["audio_out_ids"] = torch.cat(
+                    [state["audio_out_ids"][:, -(ras_win_len - 1) :], this_codes.unsqueeze(-1)], dim=-1
+                )
             new_codes_flat.append(this_codes)
 
         # Reassemble the per-position codes tensor with the post-delay-pattern
