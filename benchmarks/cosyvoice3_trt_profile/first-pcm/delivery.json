@@ -1,0 +1,146 @@
+{
+  "unseedtrace": {
+    "clock_offset_bracket_us": 257.99,
+    "requests": [
+      {
+        "request": "3d3d23",
+        "group": "execute_context_1(25)_generation_0(0)",
+        "next_group": "execute_context_3(75)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.508638671875,
+        "copy_us": 1.792,
+        "copy_end_to_pcm_ms": 211.2498642578125,
+        "next_group_duration_ms": 207.331081,
+        "next_group_end_to_pcm_ms": 3.3369150390625
+      },
+      {
+        "request": "861bf6",
+        "group": "execute_context_3(75)_generation_0(0)",
+        "next_group": "execute_context_1(55)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.357404296875,
+        "copy_us": 2.08,
+        "copy_end_to_pcm_ms": 95.7132392578125,
+        "next_group_duration_ms": 81.24855000000001,
+        "next_group_end_to_pcm_ms": 13.85707421875
+      },
+      {
+        "request": "25939f",
+        "group": "execute_context_3(75)_generation_0(0)",
+        "next_group": "execute_context_1(55)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.38063671875,
+        "copy_us": 2.016,
+        "copy_end_to_pcm_ms": 95.38648046875,
+        "next_group_duration_ms": 81.24855000000001,
+        "next_group_end_to_pcm_ms": 13.5535478515625
+      },
+      {
+        "request": "ffb387",
+        "group": "execute_context_3(75)_generation_0(0)",
+        "next_group": "execute_context_1(55)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.3948125,
+        "copy_us": 1.472,
+        "copy_end_to_pcm_ms": 96.4538251953125,
+        "next_group_duration_ms": 81.24855000000001,
+        "next_group_end_to_pcm_ms": 14.635068359375
+      }
+    ]
+  },
+  "trace": {
+    "clock_offset_bracket_us": 324.98,
+    "requests": [
+      {
+        "request": "6e0618",
+        "group": "execute_context_1(25)_generation_0(0)",
+        "next_group": "execute_context_0(0)_generation_0(0)",
+        "group_end_to_copy_end_ms": 1.341642578125,
+        "copy_us": 1.951,
+        "copy_end_to_pcm_ms": 2.49661328125,
+        "next_group_duration_ms": 0.062029,
+        "next_group_end_to_pcm_ms": 3.0646337890625
+      },
+      {
+        "request": "6f9612",
+        "group": "execute_context_1(25)_generation_0(0)",
+        "next_group": "execute_context_0(0)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.395720703125,
+        "copy_us": 1.473,
+        "copy_end_to_pcm_ms": 2.810966796875,
+        "next_group_duration_ms": 0.068392,
+        "next_group_end_to_pcm_ms": 2.3824326171875
+      },
+      {
+        "request": "ba4d89",
+        "group": "execute_context_1(25)_generation_0(0)",
+        "next_group": "execute_context_0(0)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.5264765625,
+        "copy_us": 1.791,
+        "copy_end_to_pcm_ms": 4.3750927734375,
+        "next_group_duration_ms": 0.08499899999999999,
+        "next_group_end_to_pcm_ms": 3.86737109375
+      },
+      {
+        "request": "6d96d4",
+        "group": "execute_context_1(25)_generation_0(0)",
+        "next_group": "execute_context_0(0)_generation_0(0)",
+        "group_end_to_copy_end_ms": 0.43319921875,
+        "copy_us": 1.44,
+        "copy_end_to_pcm_ms": 4.19894140625,
+        "next_group_duration_ms": 0.08321899999999999,
+        "next_group_end_to_pcm_ms": 3.7332392578125
+      }
+    ]
+  },
+  "client_first_read_relative_to_first_followup_start_ms": {
+    "unseed": [
+      [
+        0.20414800000003197,
+        75.05731700000001,
+        75.50582899999995,
+        75.90816700000005
+      ],
+      [
+        2.062470999999732,
+        81.04593799999986,
+        81.64798699999983,
+        82.15561899999989
+      ],
+      [
+        1.1038269999999102,
+        81.8408599999998,
+        81.89874000000009,
+        82.93153699999971
+      ],
+      [
+        1.2465270000000146,
+        85.0416110000001,
+        85.87664599999994,
+        86.50470900000005
+      ]
+    ],
+    "unseed2": [
+      [
+        1.3633290000000216,
+        75.96092900000008,
+        76.28710300000012,
+        76.91338100000007
+      ],
+      [
+        0.947240999999849,
+        78.11304100000007,
+        78.59007100000008,
+        78.77946599999973
+      ],
+      [
+        0.6862410000001091,
+        80.29863599999999,
+        80.92483000000016,
+        81.28505799999994
+      ],
+      [
+        1.3231030000001738,
+        71.12400700000012,
+        72.12833,
+        72.37070700000027
+      ]
+    ]
+  }
+}
