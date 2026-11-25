@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T07:03:51.400498+00:00",
+  "updated_at_utc": "2026-11-25T07:15:30.545261+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -315,6 +315,23 @@
       "details": "records/cosyvoice3.md",
       "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream",
       "trace_count": 0
+    },
+    {
+      "id": "higgs-v3-codec-validation",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v3 TTS 4B",
+      "component": "流式 codec 输入校验",
+      "workflow_category": "not_adopted",
+      "result": "C32 校验同步由两次减为一次。吞吐 36.85 → 35.11 音频秒/秒，首包 P95 373 → 402 毫秒。保留实验，暂不提交。",
+      "branch": "perf/higgs-v3-codec-validation",
+      "branch_published": true,
+      "head_commit": "737f2c47ef0025bf34b5c4dfa4186fb5e2687b8b",
+      "measured_code_commit": "e361a386f887862ffc8bafd2b598d64fed384bc1",
+      "measured_base_commit": "95513b5322fc78fe3b47bd02b9244d30ba6f0e20",
+      "pr": null,
+      "details": "optimizations/higgs-v3-codec-validation/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/737f2c47ef0025bf34b5c4dfa4186fb5e2687b8b/benchmarks/higgs_v3_codec_validation"
     }
   ]
 }

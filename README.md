@@ -18,7 +18,7 @@
 | [已提 PR](#已提-pr) | 1 | 已创建且仍开放，不能记成已合并 |
 | 待验收 | 1 | 有界历史已完成独立分支回归 |
 | [已测有收益或取舍](#已测有收益或取舍) | 2 | 已有实测信号，同时明确回退和限制 |
-| [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 3 | 保留负面结果和停止原因 |
+| [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 4 | 保留负面结果和停止原因 |
 | [CosyVoice3 独立实验归档](records/cosyvoice3.md) | 4 | 含路径诊断、已有选项和原型对照 |
 | 已关闭或归档 | 0 | 已关闭 PR 或被替代的历史版本 |
 
@@ -56,6 +56,7 @@
 | Higgs Audio v2 | 批量反馈 embedding lookup | 组件变快，但历史服务初筛 C32 吞吐约 -2.45%，C1 约 -1.15%，C16 无一致改善；停止单独 PR。代码和完整原始材料尚未发布为 perf 分支。 | [详情与证据限制](optimizations/higgs-v2-packed-feedback/README.md) |
 | Higgs Audio v2 | 批量 RAS 重复检测 | 重复检测变快，C32 吞吐下降 6.45%。 | [详情](optimizations/higgs-v2-ras-repeat/README.md) |
 | Higgs Audio v2 | 保留 CPU 请求状态的 delay 更新融合 | 阶段耗时下降，C32 吞吐下降 11.01%，平均耗时增加 19.02%。 | [详情](optimizations/higgs-v2-delay-state/README.md) |
+| Higgs Audio v3 | 流式 codec 输入校验 | C32 校验同步由两次减为一次。吞吐 36.85 → 35.11 音频秒/秒，首包 P95 373 → 402 毫秒。保留实验，暂不提交。 | [详情](optimizations/higgs-v3-codec-validation/README.md) |
 
 ## 详细记录
 

@@ -1,6 +1,6 @@
-# Higgs Audio v2 的 Perfetto 时间线
+# Higgs Audio 的 Perfetto 时间线
 
-已核对 6 项实验的 22 份 PyTorch Profiler Chrome JSON 时间线。每份文件的 `traceEvents` 都含 CPU 算子和 GPU kernel。下列下载链接固定到各自的 Git 提交。
+已核对 7 项实验的 28 份 PyTorch Profiler Chrome JSON 时间线。每份文件的 `traceEvents` 都含 CPU 算子和 GPU kernel。下列下载链接固定到各自的 Git 提交。
 
 | 实验 | 归档内的时间线 | 原始数据 |
 | --- | --- | --- |
@@ -10,11 +10,12 @@
 | LM 音频模式 mask | A × 1、B × 1 | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/238147bf1b199b099b3e3a6c394f310c14a0c068/benchmarks/higgs_lm_mode_mask_experiment/profile/evidence.tar.gz) |
 | 限制每个请求的音频历史 | A × 1、B × 1 | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/8a33ea3776e29937bde8da11becb2d06811e257b/benchmarks/higgs_bounded_history_experiment/profile/evidence.tar.gz) |
 | 保留 CPU 请求状态的 delay 更新融合 | A × 2、B × 1 | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/7b27a036dbfd2fe97b5369c0100b74fee7e3c492/benchmarks/higgs_delay_state_experiment/profile/evidence.tar.gz) |
+| Higgs v3 流式 codec 校验 | A × 3、B × 3（trace-3、24、80） | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/737f2c47ef0025bf34b5c4dfa4186fb5e2687b8b/benchmarks/higgs_v3_codec_validation/profile/evidence.tar.gz) |
 
 ## 打开一份 trace
 
 1. 下载对应的 `evidence.tar.gz` 并解压。
-2. 在解压目录中找到 `A/trace-1.json` 和 `B/trace-1.json`。音频路由的压缩包在 A、B 目录外还有一层实验路径。
+2. 在解压目录中分别选择 A 和 B 目录下的同编号 trace JSON。音频路由的压缩包在 A、B 目录外还有一层实验路径。
 3. 在 [Perfetto UI](https://ui.perfetto.dev/) 选择 **Open trace file** 打开一个 JSON。可以另开一个标签页查看另一组，按同名 CPU 算子、CUDA kernel 或模型阶段对照。
 
 A、A2 是基线，B、B2 是候选实现。每份 trace 覆盖采集到的诊断步；两端的动态合批和采样工作量可能不同。端到端吞吐和延迟使用各实验独立的无 profiler 服务结果。包中的 `*-meta.json`、`*-ops.json` 和事件 JSONL 供核对采样条件和计数。

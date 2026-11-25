@@ -11,3 +11,4 @@
 - [LM 音频模式 mask](higgs-v2-audio-mode-mask/README.md) · 平均耗时下降 3.21%，吞吐下降 2.69%，两次候选启动的吞吐波动较大。
 - [限制每个请求的音频历史](higgs-v2-bounded-history/README.md) · 内部历史在 200 帧时由 12,800 B 降至 448 B。基线有 40.6 秒长音频，吞吐差异无法归因。
 - [保留 CPU 请求状态的 delay 更新融合](higgs-v2-delay-state/README.md) · 阶段耗时下降，C32 吞吐下降 11.01%，平均耗时增加 19.02%。
+- [Higgs v3 / 流式 codec 校验](higgs-v3-codec-validation/README.md) · C32 校验同步由两次减为一次。吞吐 36.85 → 35.11 音频秒/秒，首包 P95 373 → 402 毫秒。保留实验，暂不提交。
