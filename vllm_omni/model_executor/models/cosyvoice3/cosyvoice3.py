@@ -1911,6 +1911,8 @@ class CosyVoice3Model(
                         streaming_flow_items,
                         n_timesteps=10,
                     )
+                elif len(streaming_flow_items)>1 and hasattr(self.code2wav.decoder.estimator, "trt_engine"):
+                    streaming_results=self.code2wav._cv3_dispatch(streaming_flow_items)
                 else:
                     streaming_results = [
                         self.code2wav.forward_streaming(

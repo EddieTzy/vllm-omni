@@ -268,4 +268,4 @@ def build_flow_estimator_trt(onnx_path: str, device: str | torch.device) -> TrtC
         raise RuntimeError(f"Failed to deserialize flow-estimator TensorRT engine {plan_path}")
     logger.info("Loaded flow-estimator TensorRT engine (%s)", plan_path)
     io_dtype = torch.float16 if strongly_typed else torch.float32
-    return TrtContextWrapper(engine, device=device, io_dtype=io_dtype)
+    return TrtContextWrapper(engine, device=device, io_dtype=io_dtype, trt_concurrent=4)

@@ -352,14 +352,14 @@ class CosyVoice3Code2Wav(nn.Module):
         new_state = {
             "mel": (
                 f0_input_mel.detach().clone()
-                if cosyvoice3_packed_streaming_enabled()
+                if (getattr(self,"_cv3_overlap",False) or cosyvoice3_packed_streaming_enabled())
                 else f0_input_mel.detach().cpu().contiguous()
             ),
             "mel_offset": window_offset - f0_margin,
             "phase_acc": (
                 (
                     new_phase_acc.detach().clone()
-                    if cosyvoice3_packed_streaming_enabled()
+                    if (getattr(self,"_cv3_overlap",False) or cosyvoice3_packed_streaming_enabled())
                     else new_phase_acc.detach().cpu().contiguous()
                 )
                 if new_phase_acc is not None
@@ -802,3 +802,33 @@ class CosyVoice3Code2Wav(nn.Module):
             # Reload original checkpoints only into a fresh model instance.
             compile_cosyvoice3_padded_dit(self.flow_model.decoder.estimator, device)
             logger.info("CosyVoice3 padded DiT compilation configured; first-use compilation occurs during warmup")
+
+def _cv3_dispatch(self, items):
+    device=next(self.flow_model.parameters()).device
+    if not hasattr(self,"_cv3_lanes"):
+        self._cv3_lanes=[torch.cuda.Stream(device=device) for _ in range(4)]
+    caller=torch.cuda.current_stream(device)
+    done=[];results=[]
+    self._cv3_overlap=True
+    try:
+        for i,item in enumerate(items):
+            lane=self._cv3_lanes[i%len(self._cv3_lanes)]
+            lane.wait_stream(caller)
+            with torch.cuda.stream(lane):
+                for tensor in (item['token'],item['prompt_token'],item['prompt_feat'],item['embedding']):
+                    if tensor.is_cuda:tensor.record_stream(lane)
+                audio,state=self.forward_streaming(token=item['token'],prompt_token=item['prompt_token'],prompt_feat=item['prompt_feat'],embedding=item['embedding'],cache_state=item.get('cache_state'),token_offset_tokens=int(item.get('token_offset_tokens',0)),n_timesteps=10,finalize=bool(item.get('finalize',False)))
+                results.append((audio,state))
+                done.append(lane.record_event())
+    finally:
+        self._cv3_overlap=False
+    for (audio,state),event in zip(results,done):
+        caller.wait_event(event);audio.record_stream(caller)
+        if state:
+            for key in ('mel','phase_acc'):
+                x=state.get(key)
+                if isinstance(x,torch.Tensor) and x.is_cuda:
+                    x.record_stream(caller)
+                    state[key]=x.detach().cpu().contiguous()
+    return results
+CosyVoice3Code2Wav._cv3_dispatch=_cv3_dispatch

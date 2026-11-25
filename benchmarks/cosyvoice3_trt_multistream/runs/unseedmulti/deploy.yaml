@@ -1,0 +1,4 @@
+base_config: cosyvoice3.yaml
+stages:
+- stage_id: 0
+  attention_config: {backend: FLASHINFER}
