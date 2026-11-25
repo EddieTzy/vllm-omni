@@ -103,3 +103,15 @@ reproduction/, reusable benchmark client under scripts/. Complete controller
 logs, normalized sampling traces, original clients and generated PCM stay in
 the isolated experiment workspace. No generated audio or credentials uploaded.
 AI assistance: Codex assisted with code, validation, measurements and writing.
+
+2026-11-25 real-service stage attribution follow-up:
+See profile_rtx_20261125/README.md, summary.json and raw trace bundle.
+Same C32 config, A/B/B2/A2, 32 warmup+32 diagnostic requests per boot.
+Boot-mean CPU-wall medians: mask 6.230499->.131270ms (-97.89%),
+MRv2 sample_step 15.968616->9.604702ms (-39.85%).
+Baseline steady trace: 480 H2D scalar copies and 480 stream syncs;
+candidate: one H2D table copy, one stream sync and one Triton kernel.
+Unpaired delay-state variations retained in all five traces.
+This profiles audio logits postprocessing before sampling; RAS and state
+updates are unchanged. Diagnostic stage/cycle timings include instrumentation
+and are separate from the unprofiled throughput/RTF/TTFA results above.

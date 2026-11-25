@@ -66,3 +66,5 @@ PYTHONPATH="$PWD" PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest \
 TTFA is first nonempty PCM bytes, near completion in this tested non-incremental deployment. E2E includes queueing and both model stages. Request RTF is not the inverse of aggregate throughput. C32-only evidence does not establish a scaling curve. No full-model service trace, full ASR/SIM or listening suite, full repository CI, other GPU platform, multi-GPU or graph-mode qualification is claimed.
 
 The first cold baseline setup exceeded the old 240s readiness budget during JIT/autotune. It generated no audio; its log was retained, and fresh r2 correctness arms used 900s. All timed serving arms completed on their first planned run.
+
+Real-service stage attribution and CPU/CUDA traces: [RTX profile](profile_rtx_20261125/README.md).
