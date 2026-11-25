@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T03:40:42.238327+00:00",
+  "updated_at_utc": "2026-11-25T05:47:15.118044+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -123,7 +123,7 @@
       "branch": "perf/higgs-v2-logits-mask",
       "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask",
       "branch_published": true,
-      "head_commit": "4523338bbfb32eee96e28c4a599c6f9cf2b78b5f",
+      "head_commit": "77a2b9b1e704ea356b125a62d0e52f96ec96f9a2",
       "measured_code_commit": "273179aa656aba22a10ff760fbc927b389c857a4",
       "measured_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
       "baseline_contains": "merged routing PR11068; no experimental state fusion",
@@ -151,6 +151,102 @@
       "pr_url": "https://github.com/vllm-project/vllm-omni/pull/11119",
       "pr_head_commit": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
       "pr_base_commit": "a57d6d1a73c694476ae1cc1447bcd765dfd47dd7"
+    },
+    {
+      "id": "higgs-v2-ras-repeat",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "批量 RAS 重复检测",
+      "workflow_category": "not_adopted",
+      "result": "重复检测变快，C32 吞吐下降 6.45%。",
+      "branch": "perf/higgs-v2-ras-repeat",
+      "branch_published": true,
+      "head_commit": "4235cb5bfcb2ba8a3cb109d84d22a40c19f4a9b5",
+      "measured_code_commit": "d509d6e6a6b69fd8d8f06fdbf93e38dd494b04a0",
+      "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+      "pr": null,
+      "details": "optimizations/higgs-v2-ras-repeat/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/4235cb5bfcb2ba8a3cb109d84d22a40c19f4a9b5/benchmarks/higgs_ras_repeat_experiment",
+      "changes_percent": {
+        "audio_seconds_per_second": -6.45273081351907,
+        "mean_e2e_s": 1.2017700230055217,
+        "mean_rtf": -1.5155103177703855,
+        "ttfa_p50_seconds": 3.853066439542774,
+        "ttfa_p95_seconds": 1.2002726671454633
+      }
+    },
+    {
+      "id": "higgs-v2-audio-mode-mask",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "LM 音频模式 mask",
+      "workflow_category": "measured_tradeoff",
+      "result": "平均耗时下降 3.21%，吞吐下降 2.69%，两次候选启动的吞吐波动较大。",
+      "branch": "perf/higgs-v2-audio-mode-mask",
+      "branch_published": true,
+      "head_commit": "238147bf1b199b099b3e3a6c394f310c14a0c068",
+      "measured_code_commit": "fb286b911e7aa752e0a2acc494fb47d56ca66cfc",
+      "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+      "pr": null,
+      "details": "optimizations/higgs-v2-audio-mode-mask/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/238147bf1b199b099b3e3a6c394f310c14a0c068/benchmarks/higgs_lm_mode_mask_experiment",
+      "changes_percent": {
+        "audio_seconds_per_second": -2.6870715477944507,
+        "mean_e2e_s": -3.214434601897287,
+        "mean_rtf": -4.512287642242507,
+        "ttfa_p50_seconds": -2.058498432624689,
+        "ttfa_p95_seconds": -1.4605536718422574
+      }
+    },
+    {
+      "id": "higgs-v2-bounded-history",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "限制每个请求的音频历史",
+      "workflow_category": "ready_for_review",
+      "result": "内部历史在 200 帧时由 12,800 B 降至 448 B。基线有 40.6 秒长音频，吞吐差异无法归因。",
+      "branch": "perf/higgs-v2-history-buffer",
+      "branch_published": true,
+      "head_commit": "8a33ea3776e29937bde8da11becb2d06811e257b",
+      "measured_code_commit": "e62a057054e7b2ad386bbf65325a418c2b1a8452",
+      "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+      "pr": null,
+      "details": "optimizations/higgs-v2-bounded-history/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/8a33ea3776e29937bde8da11becb2d06811e257b/benchmarks/higgs_bounded_history_experiment",
+      "changes_percent": {
+        "audio_seconds_per_second": 61.671964524659195,
+        "mean_e2e_s": -7.789992583979954,
+        "mean_rtf": -0.12524379583170875,
+        "ttfa_p50_seconds": -0.19940360539018043,
+        "ttfa_p95_seconds": 1.1401527976179215
+      }
+    },
+    {
+      "id": "higgs-v2-delay-state",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "保留 CPU 请求状态的 delay 更新融合",
+      "workflow_category": "not_adopted",
+      "result": "阶段耗时下降，C32 吞吐下降 11.01%，平均耗时增加 19.02%。",
+      "branch": "perf/higgs-v2-delay-state",
+      "branch_published": true,
+      "head_commit": "7b27a036dbfd2fe97b5369c0100b74fee7e3c492",
+      "measured_code_commit": "a3e1f766f8c39c29209a6dc144946bff7b2710f8",
+      "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+      "pr": null,
+      "details": "optimizations/higgs-v2-delay-state/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/7b27a036dbfd2fe97b5369c0100b74fee7e3c492/benchmarks/higgs_delay_state_experiment",
+      "changes_percent": {
+        "audio_seconds_per_second": -11.010860589590443,
+        "mean_e2e_s": 19.017662579917438,
+        "mean_rtf": 14.33931370685897,
+        "ttfa_p50_seconds": 15.535372492053767,
+        "ttfa_p95_seconds": 28.274907008813365
+      }
     }
   ]
 }
