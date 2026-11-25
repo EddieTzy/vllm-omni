@@ -1,0 +1,50 @@
+{
+  "base-a": {
+    "concurrency": 32,
+    "requests": 64,
+    "wall_seconds": 7.419814193999628,
+    "audio_seconds_per_second": 36.44296109445319,
+    "ttfa_p50_seconds": 0.3757994010011316,
+    "ttfa_p95_seconds": 0.3985260363004272,
+    "mean_e2e_s": 2.4812799188903796,
+    "mean_rtf": 0.58949386045699,
+    "requests_with_multiple_http_blocks": 64,
+    "max_audio_seconds": 6.92
+  },
+  "cand-b": {
+    "concurrency": 32,
+    "requests": 64,
+    "wall_seconds": 7.583230422998895,
+    "audio_seconds_per_second": 35.73147390829844,
+    "ttfa_p50_seconds": 0.37085846249829046,
+    "ttfa_p95_seconds": 0.39290338474747843,
+    "mean_e2e_s": 2.5996274926720844,
+    "mean_rtf": 0.617446163756286,
+    "requests_with_multiple_http_blocks": 64,
+    "max_audio_seconds": 7.24
+  },
+  "cand-b2": {
+    "concurrency": 32,
+    "requests": 64,
+    "wall_seconds": 7.938704263000545,
+    "audio_seconds_per_second": 34.48421693649645,
+    "ttfa_p50_seconds": 0.3060198669991223,
+    "ttfa_p95_seconds": 0.4104243494006369,
+    "mean_e2e_s": 2.5013507216566495,
+    "mean_rtf": 0.5858327799711174,
+    "requests_with_multiple_http_blocks": 64,
+    "max_audio_seconds": 7.64
+  },
+  "base-a2": {
+    "concurrency": 32,
+    "requests": 64,
+    "wall_seconds": 7.251106898998842,
+    "audio_seconds_per_second": 37.252243521233346,
+    "ttfa_p50_seconds": 0.32955003600000055,
+    "ttfa_p95_seconds": 0.3483253059006529,
+    "mean_e2e_s": 2.3511627607031755,
+    "mean_rtf": 0.5570619768600101,
+    "requests_with_multiple_http_blocks": 64,
+    "max_audio_seconds": 7.04
+  }
+}

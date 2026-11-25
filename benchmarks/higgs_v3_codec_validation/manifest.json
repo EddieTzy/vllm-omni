@@ -1,0 +1,34 @@
+{
+  "base": "95513b5322fc78fe3b47bd02b9244d30ba6f0e20",
+  "candidate": "e361a386f887862ffc8bafd2b598d64fed384bc1",
+  "source_file": "vllm_omni/model_executor/models/higgs_audio_v3/higgs_audio_v3_code2wav.py",
+  "source_sha256": {
+    "95513b5322fc78fe3b47bd02b9244d30ba6f0e20": "c52a8462ca89a45ee1774e01af78891ef6b1133c2304ed2f5aa50b5b9f600a72",
+    "e361a386f887862ffc8bafd2b598d64fed384bc1": "057ab640389fbedde559804ec37dc512676a71aa5e684f22cffd3f7ec7ba46ce"
+  },
+  "model": "bosonai/higgs-audio-v3-tts-4b",
+  "revision": "239f63fb7b02b1aa085f98d9efae5e35cc5523e8",
+  "weight_sha256": "2f7965264c360b38180885006944aa16bd1de20f4e6cff79f6473bfcf8ae3d5a",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition 96 GB",
+  "stack": "driver 580.173.02; torch 2.14.0+cu130; vLLM 0.34.0; Triton 3.8.0; Python 3.12.15",
+  "config": "vllm_omni/deploy/higgs_multimodal_qwen3_high_throughput.yaml",
+  "c32": true,
+  "order": [
+    "base-a",
+    "cand-b",
+    "cand-b2",
+    "base-a2"
+  ],
+  "warmup": 32,
+  "measured": 64,
+  "request_seed": null,
+  "profile_order": [
+    "diag-a",
+    "diag-b"
+  ],
+  "profile_steps": [
+    3,
+    24,
+    80
+  ]
+}

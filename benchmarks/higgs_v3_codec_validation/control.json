@@ -1,0 +1,46 @@
+{
+  "component_only": true,
+  "shapes": [
+    {
+      "batch": 1,
+      "frames": 5,
+      "median_us": {
+        "A": 36.71,
+        "B": 24.6555
+      }
+    },
+    {
+      "batch": 2,
+      "frames": 5,
+      "median_us": {
+        "A": 36.707,
+        "B": 23.352
+      }
+    },
+    {
+      "batch": 8,
+      "frames": 5,
+      "median_us": {
+        "A": 36.766000000000005,
+        "B": 23.7665
+      }
+    },
+    {
+      "batch": 16,
+      "frames": 54,
+      "median_us": {
+        "A": 37.174,
+        "B": 23.6405
+      }
+    },
+    {
+      "batch": 3,
+      "frames": 29,
+      "median_us": {
+        "A": 36.6025,
+        "B": 23.738
+      }
+    }
+  ],
+  "valid_invalid_controls": "passed"
+}

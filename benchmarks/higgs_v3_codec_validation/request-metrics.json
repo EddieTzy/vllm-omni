@@ -1,0 +1,2582 @@
+{
+  "base-a": {
+    "wall_seconds": 7.419814193999628,
+    "requests": [
+      {
+        "request_number": 0,
+        "concurrency": 32,
+        "bytes": 105600,
+        "audio_seconds": 2.2,
+        "elapsed_seconds": 1.383924071000365,
+        "ttfa_seconds": 0.293090718001622,
+        "http_blocks": 4,
+        "pcm_sha256": "bbc7f5bf0c8ee8d4b07acac25abe26147380fffe98837b7f6ad0dfcd6f80a2c2"
+      },
+      {
+        "request_number": 1,
+        "concurrency": 32,
+        "bytes": 245760,
+        "audio_seconds": 5.12,
+        "elapsed_seconds": 2.994494754999323,
+        "ttfa_seconds": 0.3337465059994429,
+        "http_blocks": 6,
+        "pcm_sha256": "99f9330e42740a5173d91cc7ad319cb2ed46aea1133521656c4c335907e97072"
+      },
+      {
+        "request_number": 2,
+        "concurrency": 32,
+        "bytes": 132480,
+        "audio_seconds": 2.76,
+        "elapsed_seconds": 1.6329078770031629,
+        "ttfa_seconds": 0.3680588390016055,
+        "http_blocks": 4,
+        "pcm_sha256": "67ea1ac6bbeb4259be668d2dcd8152ee99202c79b13be4d46acf1191a349d203"
+      },
+      {
+        "request_number": 3,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 3.082685795998259,
+        "ttfa_seconds": 0.3668871669979126,
+        "http_blocks": 7,
+        "pcm_sha256": "fba1a8a8c518cb49ad527b961f576391ea9fdacc7c49db7e8efb684cfa81d513"
+      },
+      {
+        "request_number": 4,
+        "concurrency": 32,
+        "bytes": 297600,
+        "audio_seconds": 6.2,
+        "elapsed_seconds": 3.5597889499986195,
+        "ttfa_seconds": 0.33334978699713247,
+        "http_blocks": 8,
+        "pcm_sha256": "f9ffddff79a32873106d28f7f48f412d09b1db7ae371dd91a17a02b1e6e28fce"
+      },
+      {
+        "request_number": 5,
+        "concurrency": 32,
+        "bytes": 234240,
+        "audio_seconds": 4.88,
+        "elapsed_seconds": 2.9133864369978255,
+        "ttfa_seconds": 0.3803317050005717,
+        "http_blocks": 6,
+        "pcm_sha256": "4caebe2b39b04948bde7f21d7d2a20e5180cd0023155e318227a37456463fed3"
+      },
+      {
+        "request_number": 6,
+        "concurrency": 32,
+        "bytes": 138240,
+        "audio_seconds": 2.88,
+        "elapsed_seconds": 1.678688913998485,
+        "ttfa_seconds": 0.3668158010004845,
+        "http_blocks": 4,
+        "pcm_sha256": "bcf6542d5c29ec5242aee5ad60d9b1b04f42b32551abdaf66c030f2ee8e829dd"
+      },
+      {
+        "request_number": 7,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.8850768720003543,
+        "ttfa_seconds": 0.33293170500110136,
+        "http_blocks": 5,
+        "pcm_sha256": "afb628fa345a3c12c1fe42976d74e42292c31cb223cbe3b40203d4d91eb701f7"
+      },
+      {
+        "request_number": 8,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.9339199179994466,
+        "ttfa_seconds": 0.402882985999895,
+        "http_blocks": 5,
+        "pcm_sha256": "fcc5dca21f4b58fed55abfe2acadda421e12529611c9b5531e55e57e48b2aab0"
+      },
+      {
+        "request_number": 9,
+        "concurrency": 32,
+        "bytes": 197760,
+        "audio_seconds": 4.12,
+        "elapsed_seconds": 2.553161716001341,
+        "ttfa_seconds": 0.37933237200195435,
+        "http_blocks": 5,
+        "pcm_sha256": "6ec3e7711f128dc2f440a1206a597890d5bfbd1f001d1ad35910bda0dd281fe6"
+      },
+      {
+        "request_number": 10,
+        "concurrency": 32,
+        "bytes": 172800,
+        "audio_seconds": 3.6,
+        "elapsed_seconds": 2.138439345999359,
+        "ttfa_seconds": 0.3664869019994512,
+        "http_blocks": 5,
+        "pcm_sha256": "ac12e00f6667a2d7a642944cc8b768c2550de25530217f75bccefe382eab05a2"
+      },
+      {
+        "request_number": 11,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.183375414002512,
+        "ttfa_seconds": 0.40186657800222747,
+        "http_blocks": 5,
+        "pcm_sha256": "707981ecb10806eab0e7d37aa00c6f62e5f61a343ce9b624a2abe65a464f44ef"
+      },
+      {
+        "request_number": 12,
+        "concurrency": 32,
+        "bytes": 170880,
+        "audio_seconds": 3.56,
+        "elapsed_seconds": 2.081956846999674,
+        "ttfa_seconds": 0.365280788999371,
+        "http_blocks": 5,
+        "pcm_sha256": "3be44979cc392f704bd1de3900b637be5cbc05b73d96f6f851d30fc2d39d5062"
+      },
+      {
+        "request_number": 13,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.5904702240004553,
+        "ttfa_seconds": 0.37673399800041807,
+        "http_blocks": 6,
+        "pcm_sha256": "84b3f67a8c8e2f76267b817dcd53539dd353d72cc5aa41a6d85ee5e9fe89096f"
+      },
+      {
+        "request_number": 14,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.4210690280015115,
+        "ttfa_seconds": 0.3778942940007255,
+        "http_blocks": 5,
+        "pcm_sha256": "48cec69ea092eb6153d2cdcbc0417c1df9e71ff63409401fd6c098c5d9f1dbe8"
+      },
+      {
+        "request_number": 15,
+        "concurrency": 32,
+        "bytes": 161280,
+        "audio_seconds": 3.36,
+        "elapsed_seconds": 2.009237808000762,
+        "ttfa_seconds": 0.4009731459991599,
+        "http_blocks": 5,
+        "pcm_sha256": "65fb716b5c9ee8cbc825a15e4dc0a48120e3fb4498f7a6d17b30e3fe77ed9c0b"
+      },
+      {
+        "request_number": 16,
+        "concurrency": 32,
+        "bytes": 126720,
+        "audio_seconds": 2.64,
+        "elapsed_seconds": 1.5947862670000177,
+        "ttfa_seconds": 0.37494801499997266,
+        "http_blocks": 4,
+        "pcm_sha256": "386d29f7dff679a2571ad36a158608bb1aef068708559684281a45e8a6f95bc9"
+      },
+      {
+        "request_number": 17,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.212558798997634,
+        "ttfa_seconds": 0.3644626689965662,
+        "http_blocks": 5,
+        "pcm_sha256": "6bd93e18d38edd14c9d6d9498562ee437222ec86dd4fc12aa343a3fb08e3b1fd"
+      },
+      {
+        "request_number": 18,
+        "concurrency": 32,
+        "bytes": 234240,
+        "audio_seconds": 4.88,
+        "elapsed_seconds": 2.909726398997009,
+        "ttfa_seconds": 0.375499633999425,
+        "http_blocks": 6,
+        "pcm_sha256": "8a7b61ea73c2dee07621bf0488d85807ac57d977a5e10d6680c97aa21af9585d"
+      },
+      {
+        "request_number": 19,
+        "concurrency": 32,
+        "bytes": 205440,
+        "audio_seconds": 4.28,
+        "elapsed_seconds": 2.6408950760014704,
+        "ttfa_seconds": 0.3767111820015998,
+        "http_blocks": 6,
+        "pcm_sha256": "a0b38ebf1e404cd30f0dae2b4891072019a8b53084160af0ef258dec59a3556b"
+      },
+      {
+        "request_number": 20,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.0578156289993785,
+        "ttfa_seconds": 0.3771096079981362,
+        "http_blocks": 7,
+        "pcm_sha256": "f96ef48c0e6e8646a41bb9cfa7204c6494c7637b57d0228039040cc295082c9c"
+      },
+      {
+        "request_number": 21,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.7314852859999519,
+        "ttfa_seconds": 0.377203998999903,
+        "http_blocks": 4,
+        "pcm_sha256": "baed3432c46093529418dc117785979840626d196b98776071d1edfca7583162"
+      },
+      {
+        "request_number": 22,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.5958654589994694,
+        "ttfa_seconds": 0.3759830900016823,
+        "http_blocks": 6,
+        "pcm_sha256": "99c85cb9f6be002690299fcb505113983900edd3930564ffb73fb5eb9668c3e0"
+      },
+      {
+        "request_number": 23,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.6893247759981023,
+        "ttfa_seconds": 0.37393869500010624,
+        "http_blocks": 6,
+        "pcm_sha256": "6977e3f4dee786f2937339e1f394128c567393d3d6a3f2cd222aa48cf0e23b06"
+      },
+      {
+        "request_number": 24,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.560486193997349,
+        "ttfa_seconds": 0.36357039699942106,
+        "http_blocks": 6,
+        "pcm_sha256": "52726e0120628fadfa6b3126f5f2275e459dc02b837feb17769d80520428cfcd"
+      },
+      {
+        "request_number": 25,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.4241753480018815,
+        "ttfa_seconds": 0.37522652500047116,
+        "http_blocks": 5,
+        "pcm_sha256": "0a0d9ced3d26663944bf03a01aa23cae3459c4b11bbbc1a73a991cc86490712f"
+      },
+      {
+        "request_number": 26,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.728062595000665,
+        "ttfa_seconds": 0.3983998639996571,
+        "http_blocks": 6,
+        "pcm_sha256": "5068d8fe4fdfc1cfc8e3264949d2b94227db6fd38e92a6ee17d9140d4cd45ec0"
+      },
+      {
+        "request_number": 27,
+        "concurrency": 32,
+        "bytes": 145920,
+        "audio_seconds": 3.04,
+        "elapsed_seconds": 1.8246625290012162,
+        "ttfa_seconds": 0.37408147899986943,
+        "http_blocks": 4,
+        "pcm_sha256": "d86c08adf04ab65e3afa53a033a2a29cd780fec008409785bd99df1de1771a9f"
+      },
+      {
+        "request_number": 28,
+        "concurrency": 32,
+        "bytes": 184320,
+        "audio_seconds": 3.84,
+        "elapsed_seconds": 2.3201637499987555,
+        "ttfa_seconds": 0.37400768299994525,
+        "http_blocks": 5,
+        "pcm_sha256": "b4185eb967882e0231cbdefba9f5bf4e12121935b018d8c8bfd7524f3853ee1f"
+      },
+      {
+        "request_number": 29,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.7720077560006757,
+        "ttfa_seconds": 0.3985483020005631,
+        "http_blocks": 6,
+        "pcm_sha256": "e0b107ddd93c429396fb626514e3526761abad7ff2dd2b46d520bdbfc6a2bb56"
+      },
+      {
+        "request_number": 30,
+        "concurrency": 32,
+        "bytes": 228480,
+        "audio_seconds": 4.76,
+        "elapsed_seconds": 2.831913354999415,
+        "ttfa_seconds": 0.37532881099832593,
+        "http_blocks": 6,
+        "pcm_sha256": "7eb2ca550f1b9fe473c7869b9f39896507481da6549aab150a21dfc11343d483"
+      },
+      {
+        "request_number": 31,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.0547661620003055,
+        "ttfa_seconds": 0.3727253239994752,
+        "http_blocks": 7,
+        "pcm_sha256": "9b05d1838b6d948585bb2b7cd699d127f73ff0d0a5ee1d93acfa285ee53bc3f9"
+      },
+      {
+        "request_number": 32,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.404852938998374,
+        "ttfa_seconds": 0.3089964409991808,
+        "http_blocks": 6,
+        "pcm_sha256": "cabce652b22d97d83b3f91edaced1879fff2348dac4862b0cab9b018764f448d"
+      },
+      {
+        "request_number": 33,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.584780164001131,
+        "ttfa_seconds": 0.32874737000020104,
+        "http_blocks": 6,
+        "pcm_sha256": "e8c9e1aac3a2deaf41764d1db77ec5997b92efccd6520aa10f6f6e3684860917"
+      },
+      {
+        "request_number": 34,
+        "concurrency": 32,
+        "bytes": 238080,
+        "audio_seconds": 4.96,
+        "elapsed_seconds": 2.8511207830015337,
+        "ttfa_seconds": 0.37776632199893356,
+        "http_blocks": 6,
+        "pcm_sha256": "848b6fddaff61327485e40a2c09656337d93486efd64ce5a0ea1516d615d873e"
+      },
+      {
+        "request_number": 35,
+        "concurrency": 32,
+        "bytes": 192000,
+        "audio_seconds": 4.0,
+        "elapsed_seconds": 2.277099326998723,
+        "ttfa_seconds": 0.36333105899757356,
+        "http_blocks": 5,
+        "pcm_sha256": "aca82dde73ad48ee609f4311cffbff8d01d68b2ea2a28fefb94a6cb3d01dbea0"
+      },
+      {
+        "request_number": 36,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 1.9573152159973688,
+        "ttfa_seconds": 0.36247757299861405,
+        "http_blocks": 5,
+        "pcm_sha256": "5ba86674c6adc73fab453be83f3d47c18e2a04f1e77892d44253e5c78df3cda7"
+      },
+      {
+        "request_number": 37,
+        "concurrency": 32,
+        "bytes": 170880,
+        "audio_seconds": 3.56,
+        "elapsed_seconds": 2.0839756009991106,
+        "ttfa_seconds": 0.3926290349991177,
+        "http_blocks": 5,
+        "pcm_sha256": "f8a6a288b0ea63724c33e1b11a1b25ba574cda07d2900925dbb37ac1e5b13ce5"
+      },
+      {
+        "request_number": 38,
+        "concurrency": 32,
+        "bytes": 157440,
+        "audio_seconds": 3.28,
+        "elapsed_seconds": 1.9330004389994428,
+        "ttfa_seconds": 0.36304686999937985,
+        "http_blocks": 5,
+        "pcm_sha256": "93fb87173a4ce74daf066627653fb4cbbe056478d1c1c2ace5797b7485654625"
+      },
+      {
+        "request_number": 39,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.898334284000157,
+        "ttfa_seconds": 0.36221948099773726,
+        "http_blocks": 5,
+        "pcm_sha256": "135512f1ea1efab69970e0e6b77f94337946b4f8c2236e545755aa9a6581d115"
+      },
+      {
+        "request_number": 40,
+        "concurrency": 32,
+        "bytes": 272640,
+        "audio_seconds": 5.68,
+        "elapsed_seconds": 3.203225752997241,
+        "ttfa_seconds": 0.3930951679976715,
+        "http_blocks": 7,
+        "pcm_sha256": "e0042532f89644500e8c0c35d2916542ca727a8c52c2d26597e653adc3545625"
+      },
+      {
+        "request_number": 41,
+        "concurrency": 32,
+        "bytes": 176640,
+        "audio_seconds": 3.68,
+        "elapsed_seconds": 2.1388396229995124,
+        "ttfa_seconds": 0.39106152600288624,
+        "http_blocks": 5,
+        "pcm_sha256": "c345cd75243d39f4d285a96baa99b175d678b7a9a79071d439bc3ba895fd14ce"
+      },
+      {
+        "request_number": 42,
+        "concurrency": 32,
+        "bytes": 332160,
+        "audio_seconds": 6.92,
+        "elapsed_seconds": 3.8545546699970146,
+        "ttfa_seconds": 0.37646743199729826,
+        "http_blocks": 8,
+        "pcm_sha256": "9c727592fda2788367c642536252b184676d97c7c66797b39d547b425bb57718"
+      },
+      {
+        "request_number": 43,
+        "concurrency": 32,
+        "bytes": 264960,
+        "audio_seconds": 5.52,
+        "elapsed_seconds": 3.1437239830011094,
+        "ttfa_seconds": 0.3921947700000601,
+        "http_blocks": 7,
+        "pcm_sha256": "45d124ed3a68e1c568c7e4e2383ca9de321ef825e79c2422b5660071de9be0f7"
+      },
+      {
+        "request_number": 44,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.8977322619975894,
+        "ttfa_seconds": 0.36161995400107116,
+        "http_blocks": 5,
+        "pcm_sha256": "e7e27049a39260bbd1f8134437b2a611a6b00450bcf9e739d1ec6a91e47c4a79"
+      },
+      {
+        "request_number": 45,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.653890367000713,
+        "ttfa_seconds": 0.38760922700021183,
+        "http_blocks": 6,
+        "pcm_sha256": "0ea2764167da7d645b870d9c766ca1b756198e3c202b9805619599c894c1aa46"
+      },
+      {
+        "request_number": 46,
+        "concurrency": 32,
+        "bytes": 307200,
+        "audio_seconds": 6.4,
+        "elapsed_seconds": 3.6053926770000544,
+        "ttfa_seconds": 0.3895875400012301,
+        "http_blocks": 8,
+        "pcm_sha256": "cf22159bb1b2167898cff9b5989744e86ebb134a009f6e6d82ab1234b048878a"
+      },
+      {
+        "request_number": 47,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.6081013359980716,
+        "ttfa_seconds": 0.39123811600074987,
+        "http_blocks": 6,
+        "pcm_sha256": "2d7b8299dd172d9793a1d3718bc7760012e05f6cb60d011b52245d313d81f6ba"
+      },
+      {
+        "request_number": 48,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.1747676049999427,
+        "ttfa_seconds": 0.3754803100018762,
+        "http_blocks": 5,
+        "pcm_sha256": "ae5baf26d934dd6e764c76652207ceeee98fe9ce24b0cf6c3f21ce3b818ff879"
+      },
+      {
+        "request_number": 49,
+        "concurrency": 32,
+        "bytes": 324480,
+        "audio_seconds": 6.76,
+        "elapsed_seconds": 3.7480035230000794,
+        "ttfa_seconds": 0.36068811400036793,
+        "http_blocks": 8,
+        "pcm_sha256": "d81dda86ba10be3829994d1b3689f72334cddc43ca315969f034aa5cdc824a64"
+      },
+      {
+        "request_number": 50,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.6677371020014107,
+        "ttfa_seconds": 0.37561571200058097,
+        "http_blocks": 4,
+        "pcm_sha256": "03fe987304c9920208beda9d3ed0f448a4f194bbac1b351f13cb8a714edc03cc"
+      },
+      {
+        "request_number": 51,
+        "concurrency": 32,
+        "bytes": 261120,
+        "audio_seconds": 5.44,
+        "elapsed_seconds": 3.111596833998192,
+        "ttfa_seconds": 0.38835228300013114,
+        "http_blocks": 7,
+        "pcm_sha256": "175ae7f5c0a606db59d48ce423d46967fe69931fa8b3539c32346768cc0c36c9"
+      },
+      {
+        "request_number": 52,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.1564992780004104,
+        "ttfa_seconds": 0.3894518800007063,
+        "http_blocks": 5,
+        "pcm_sha256": "0f6d197e7ac7956285ded2d39f9fceb3c2fecdbd4f45ffe9659e261674712ac5"
+      },
+      {
+        "request_number": 53,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 2.826726626000891,
+        "ttfa_seconds": 0.38960033300099894,
+        "http_blocks": 6,
+        "pcm_sha256": "ab5b27fce319d6970f0e801ee4714771286e5fab5357420e376916517d03725b"
+      },
+      {
+        "request_number": 54,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.667660456001613,
+        "ttfa_seconds": 0.387254388002475,
+        "http_blocks": 4,
+        "pcm_sha256": "dee7fcec82748e11e6e9a68a760dc054ebada3c5ff6cee9a34db21814e586ecb"
+      },
+      {
+        "request_number": 55,
+        "concurrency": 32,
+        "bytes": 192000,
+        "audio_seconds": 4.0,
+        "elapsed_seconds": 2.303452831998584,
+        "ttfa_seconds": 0.374293676999514,
+        "http_blocks": 5,
+        "pcm_sha256": "9c73522720864af82cc5f2c2cf49fcad9a6682a0673ce750db93b988cc25a1bc"
+      },
+      {
+        "request_number": 56,
+        "concurrency": 32,
+        "bytes": 247680,
+        "audio_seconds": 5.16,
+        "elapsed_seconds": 2.988693527000578,
+        "ttfa_seconds": 0.3737189950006723,
+        "http_blocks": 7,
+        "pcm_sha256": "1f42e59833694c9ace1de2ae2ff39e0d2ca677bc179f41eb9cab6e6319b734a2"
+      },
+      {
+        "request_number": 57,
+        "concurrency": 32,
+        "bytes": 195840,
+        "audio_seconds": 4.08,
+        "elapsed_seconds": 2.396693619997677,
+        "ttfa_seconds": 0.3863018699994427,
+        "http_blocks": 5,
+        "pcm_sha256": "cf92725aa03cd035f9d2a18512f5b32c9eeabd6a2351a891649bebc85dae7749"
+      },
+      {
+        "request_number": 58,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.2533154010016005,
+        "ttfa_seconds": 0.38878348900107085,
+        "http_blocks": 5,
+        "pcm_sha256": "930eaa104a413332341a679c4fb8593927ea4fbbb5a72ac621d4ffd99514df7f"
+      },
+      {
+        "request_number": 59,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.609010791999026,
+        "ttfa_seconds": 0.3851615299972764,
+        "http_blocks": 6,
+        "pcm_sha256": "01672817f5c038c24d33da5e635883494571ac19a65eefd7058af4e03e2ec1b2"
+      },
+      {
+        "request_number": 60,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.0134115049986576,
+        "ttfa_seconds": 0.3852872290008236,
+        "http_blocks": 7,
+        "pcm_sha256": "5ceee0f9fcd1834ee6c72def170bc75e84e5cf88f0f29a619c848954e82a1073"
+      },
+      {
+        "request_number": 61,
+        "concurrency": 32,
+        "bytes": 199680,
+        "audio_seconds": 4.16,
+        "elapsed_seconds": 2.4018495670025004,
+        "ttfa_seconds": 0.38877806399978,
+        "http_blocks": 6,
+        "pcm_sha256": "a00c29364959d8391707db659ee9c2216fe4dde0d29de2fc9904e248c23aa4aa"
+      },
+      {
+        "request_number": 62,
+        "concurrency": 32,
+        "bytes": 240000,
+        "audio_seconds": 5.0,
+        "elapsed_seconds": 2.87335923199862,
+        "ttfa_seconds": 0.3876029279999784,
+        "http_blocks": 6,
+        "pcm_sha256": "42230affeb02546ddfbb6ab852ba072b22d5b94e5759eefd561fdd8f7e460d5f"
+      },
+      {
+        "request_number": 63,
+        "concurrency": 32,
+        "bytes": 209280,
+        "audio_seconds": 4.36,
+        "elapsed_seconds": 2.521918132002611,
+        "ttfa_seconds": 0.3728209360015171,
+        "http_blocks": 6,
+        "pcm_sha256": "0fdfcb9f106021fd1462dda75b56aa45a9c7add6375331a372b2d7be82b14106"
+      }
+    ]
+  },
+  "cand-b": {
+    "wall_seconds": 7.583230422998895,
+    "requests": [
+      {
+        "request_number": 0,
+        "concurrency": 32,
+        "bytes": 92160,
+        "audio_seconds": 1.92,
+        "elapsed_seconds": 1.3150624240006437,
+        "ttfa_seconds": 0.2874170290015172,
+        "http_blocks": 3,
+        "pcm_sha256": "2fd1df085f25b7ee5645edb75a8424edb8f6cbd5799cd32767add6897a084db2"
+      },
+      {
+        "request_number": 1,
+        "concurrency": 32,
+        "bytes": 240000,
+        "audio_seconds": 5.0,
+        "elapsed_seconds": 3.0703477460010618,
+        "ttfa_seconds": 0.3228770700006862,
+        "http_blocks": 6,
+        "pcm_sha256": "2bef138909a5a8e4d575df893f400ff818f0b76e1320834a5c977808428fbac6"
+      },
+      {
+        "request_number": 2,
+        "concurrency": 32,
+        "bytes": 140160,
+        "audio_seconds": 2.92,
+        "elapsed_seconds": 1.817959765001433,
+        "ttfa_seconds": 0.3592603290016996,
+        "http_blocks": 4,
+        "pcm_sha256": "0908f284ca2a241aaf6856e082680f362dbac31b2488896dd13db173c55c8785"
+      },
+      {
+        "request_number": 3,
+        "concurrency": 32,
+        "bytes": 276480,
+        "audio_seconds": 5.76,
+        "elapsed_seconds": 3.5011216639977647,
+        "ttfa_seconds": 0.35804307899888954,
+        "http_blocks": 7,
+        "pcm_sha256": "0284c23c2afd38fc91b8589f0b49f8ed23a0cce0ef891759c4301530379b0fe1"
+      },
+      {
+        "request_number": 4,
+        "concurrency": 32,
+        "bytes": 282240,
+        "audio_seconds": 5.88,
+        "elapsed_seconds": 3.5705025589995785,
+        "ttfa_seconds": 0.3224351460012258,
+        "http_blocks": 7,
+        "pcm_sha256": "3e3117b8117a7842a86bdcf58f6df5689f37b4339dc889491037ffccf177478a"
+      },
+      {
+        "request_number": 5,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.8924934650021896,
+        "ttfa_seconds": 0.3725218660001701,
+        "http_blocks": 6,
+        "pcm_sha256": "26d891bc9c96a0bd62d5f8e23c0019693e11a2baef59ee804bf65c562a65840e"
+      },
+      {
+        "request_number": 6,
+        "concurrency": 32,
+        "bytes": 151680,
+        "audio_seconds": 3.16,
+        "elapsed_seconds": 1.9597378010003013,
+        "ttfa_seconds": 0.35804547700172407,
+        "http_blocks": 5,
+        "pcm_sha256": "42e444f34f35c8595330a011bcc3c1c1e5d365a8ea812ad34762d4d5f324bf87"
+      },
+      {
+        "request_number": 7,
+        "concurrency": 32,
+        "bytes": 163200,
+        "audio_seconds": 3.4,
+        "elapsed_seconds": 2.1461453219999385,
+        "ttfa_seconds": 0.32195698199939216,
+        "http_blocks": 5,
+        "pcm_sha256": "f48a44ea0a653136a0a1d3ea3ec9fe0bed70adcd9ee8476d1acdafc1bb41e316"
+      },
+      {
+        "request_number": 8,
+        "concurrency": 32,
+        "bytes": 157440,
+        "audio_seconds": 3.28,
+        "elapsed_seconds": 2.065830064999318,
+        "ttfa_seconds": 0.3917041499989864,
+        "http_blocks": 5,
+        "pcm_sha256": "27febebcd1cf70122c762523291dbf17c95b37fefb17245875f0d71bc4b04348"
+      },
+      {
+        "request_number": 9,
+        "concurrency": 32,
+        "bytes": 209280,
+        "audio_seconds": 4.36,
+        "elapsed_seconds": 2.7512447769986466,
+        "ttfa_seconds": 0.3715169719980622,
+        "http_blocks": 6,
+        "pcm_sha256": "544b64a2099761bab518c93d063eab96377c959d1439278ae61301fb9e32c925"
+      },
+      {
+        "request_number": 10,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.4985921290026454,
+        "ttfa_seconds": 0.35771675200157915,
+        "http_blocks": 5,
+        "pcm_sha256": "246215e197a168903a171240967487c287078a30bd392f79d2d0416468e4d93a"
+      },
+      {
+        "request_number": 11,
+        "concurrency": 32,
+        "bytes": 186240,
+        "audio_seconds": 3.88,
+        "elapsed_seconds": 2.4988728949974757,
+        "ttfa_seconds": 0.38056638299894985,
+        "http_blocks": 5,
+        "pcm_sha256": "b136fff7197fc7cf465b3b5f645c35f563997a90a6e51734ef03c0da4467b453"
+      },
+      {
+        "request_number": 12,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.3422031349982717,
+        "ttfa_seconds": 0.35660762999759754,
+        "http_blocks": 5,
+        "pcm_sha256": "33012aacf7477c65897c4bd47484d4a9f94c29c4289b69b11cdcbd12a2b7f470"
+      },
+      {
+        "request_number": 13,
+        "concurrency": 32,
+        "bytes": 151680,
+        "audio_seconds": 3.16,
+        "elapsed_seconds": 1.9586533150031755,
+        "ttfa_seconds": 0.36912337400281103,
+        "http_blocks": 5,
+        "pcm_sha256": "bd57004f00909f41c9ad86e986d96dbab51175ed5d7c4c71815aab7721583ca8"
+      },
+      {
+        "request_number": 14,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 2.0684465230006026,
+        "ttfa_seconds": 0.3701999529985187,
+        "http_blocks": 5,
+        "pcm_sha256": "a41bc23583305011cc160a266b22c7fabc1c9c405f6738d7cd994427dceb21ea"
+      },
+      {
+        "request_number": 15,
+        "concurrency": 32,
+        "bytes": 161280,
+        "audio_seconds": 3.36,
+        "elapsed_seconds": 2.171017363001738,
+        "ttfa_seconds": 0.384941735999746,
+        "http_blocks": 5,
+        "pcm_sha256": "dca7526e74f2c1b8a03b8fced22a3d067317a876f9b8fe1fd2f1a496ab3b9b0f"
+      },
+      {
+        "request_number": 16,
+        "concurrency": 32,
+        "bytes": 126720,
+        "audio_seconds": 2.64,
+        "elapsed_seconds": 1.7129611560012563,
+        "ttfa_seconds": 0.3675809330015909,
+        "http_blocks": 4,
+        "pcm_sha256": "16a5421347ae997ff41bc6c5583556ca3dc0bc60be2dc24bde9c906c3b814c94"
+      },
+      {
+        "request_number": 17,
+        "concurrency": 32,
+        "bytes": 184320,
+        "audio_seconds": 3.84,
+        "elapsed_seconds": 2.3957197520030604,
+        "ttfa_seconds": 0.35579179800333804,
+        "http_blocks": 5,
+        "pcm_sha256": "778c1f669f7171e9221fc1ec4f03d87845998386e11614f91daa78818e489043"
+      },
+      {
+        "request_number": 18,
+        "concurrency": 32,
+        "bytes": 257280,
+        "audio_seconds": 5.36,
+        "elapsed_seconds": 3.2964035300028627,
+        "ttfa_seconds": 0.3679040620008891,
+        "http_blocks": 7,
+        "pcm_sha256": "5188425a7eb182d58293444394872525fd1d525975423284dd616a5bfc196dcc"
+      },
+      {
+        "request_number": 19,
+        "concurrency": 32,
+        "bytes": 197760,
+        "audio_seconds": 4.12,
+        "elapsed_seconds": 2.62270388899924,
+        "ttfa_seconds": 0.3690370439981052,
+        "http_blocks": 5,
+        "pcm_sha256": "e35a786d91cddab36c80c814e2ce79919a2e93645d3d1740853b668e0a0f6459"
+      },
+      {
+        "request_number": 20,
+        "concurrency": 32,
+        "bytes": 247680,
+        "audio_seconds": 5.16,
+        "elapsed_seconds": 3.1747786859996268,
+        "ttfa_seconds": 0.3694756139993842,
+        "http_blocks": 7,
+        "pcm_sha256": "d6df1ca64f1de57d4d97d7a87c46bbbdb48ee023a180e0ac1082328e80c38c96"
+      },
+      {
+        "request_number": 21,
+        "concurrency": 32,
+        "bytes": 184320,
+        "audio_seconds": 3.84,
+        "elapsed_seconds": 2.446402453999326,
+        "ttfa_seconds": 0.37790041100015515,
+        "http_blocks": 5,
+        "pcm_sha256": "77994e2b1754b1c4fc040c6a17ebd1699b93d30e726e4f5dd5792af13802908c"
+      },
+      {
+        "request_number": 22,
+        "concurrency": 32,
+        "bytes": 205440,
+        "audio_seconds": 4.28,
+        "elapsed_seconds": 2.6987928520029527,
+        "ttfa_seconds": 0.3683740119995491,
+        "http_blocks": 6,
+        "pcm_sha256": "0666db30bb63148d49588840db41b956d6d2e06cd084403d8a5d74f375007d3b"
+      },
+      {
+        "request_number": 23,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.888280074999784,
+        "ttfa_seconds": 0.36656208900240017,
+        "http_blocks": 6,
+        "pcm_sha256": "b279a4afea3ca9813c8c5e19d355b46df0eacc374a4b43c9b4128e0072aeb9e1"
+      },
+      {
+        "request_number": 24,
+        "concurrency": 32,
+        "bytes": 167040,
+        "audio_seconds": 3.48,
+        "elapsed_seconds": 2.2070616639975924,
+        "ttfa_seconds": 0.3657558499980951,
+        "http_blocks": 5,
+        "pcm_sha256": "c1e5b17b6482ee3dacb793e566a3002b99210643ab0f1d3a0b46672cc620f8c2"
+      },
+      {
+        "request_number": 25,
+        "concurrency": 32,
+        "bytes": 199680,
+        "audio_seconds": 4.16,
+        "elapsed_seconds": 2.6403573130010045,
+        "ttfa_seconds": 0.36765933600327116,
+        "http_blocks": 6,
+        "pcm_sha256": "69d8adc09a3f5314ed399b8dcb5dcd0cfcf2d986ac871fd9954b71e8c22ecc97"
+      },
+      {
+        "request_number": 26,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 3.0376334029970167,
+        "ttfa_seconds": 0.37735093499941286,
+        "http_blocks": 6,
+        "pcm_sha256": "78a518d9d5e4408d1982152bdf27a4404ca3dd30568f4cefa0e1cc03967fc8c6"
+      },
+      {
+        "request_number": 27,
+        "concurrency": 32,
+        "bytes": 197760,
+        "audio_seconds": 4.12,
+        "elapsed_seconds": 2.6207954120000068,
+        "ttfa_seconds": 0.366661860000022,
+        "http_blocks": 5,
+        "pcm_sha256": "d1bd814ce9043840384788e293906cc92fe8def64aded44dda2a36bd779423a5"
+      },
+      {
+        "request_number": 28,
+        "concurrency": 32,
+        "bytes": 168960,
+        "audio_seconds": 3.52,
+        "elapsed_seconds": 2.2639062749985897,
+        "ttfa_seconds": 0.36656904999836115,
+        "http_blocks": 5,
+        "pcm_sha256": "06bed8b5ac9552584a6beb0fe82b33a590b9e93470720f97db1bb8fa41d06910"
+      },
+      {
+        "request_number": 29,
+        "concurrency": 32,
+        "bytes": 193920,
+        "audio_seconds": 4.04,
+        "elapsed_seconds": 2.601386680998985,
+        "ttfa_seconds": 0.3877726860009716,
+        "http_blocks": 5,
+        "pcm_sha256": "88a126e046ec2b01169429b214da11a3b9613760b88d289eec281a046256057c"
+      },
+      {
+        "request_number": 30,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.20459614399806,
+        "ttfa_seconds": 0.36783866199766635,
+        "http_blocks": 7,
+        "pcm_sha256": "0e1d680beeb3713f1e207c9867cef7ae2fde35a95232ca7ea734abe4e7dc9fa9"
+      },
+      {
+        "request_number": 31,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.209408168000664,
+        "ttfa_seconds": 0.3652407609988586,
+        "http_blocks": 7,
+        "pcm_sha256": "8c49cca46ef64e39932753fbd483aa720f2131af7aa45804314ffd78c198c044"
+      },
+      {
+        "request_number": 32,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.7464935190000688,
+        "ttfa_seconds": 0.2996695149995503,
+        "http_blocks": 6,
+        "pcm_sha256": "301cb1a613fae11ccf78644886a3a3b3dd9587cb92880d1dd4b1662b588359c7"
+      },
+      {
+        "request_number": 33,
+        "concurrency": 32,
+        "bytes": 232320,
+        "audio_seconds": 4.84,
+        "elapsed_seconds": 2.924783155998739,
+        "ttfa_seconds": 0.3308055109991983,
+        "http_blocks": 6,
+        "pcm_sha256": "ac4f596cc70d09c237edb61a53e7ec012effc6c19ffb2dfcb441b53c47125c06"
+      },
+      {
+        "request_number": 34,
+        "concurrency": 32,
+        "bytes": 213120,
+        "audio_seconds": 4.44,
+        "elapsed_seconds": 2.680659737998212,
+        "ttfa_seconds": 0.38275182399956975,
+        "http_blocks": 6,
+        "pcm_sha256": "79a1e678507e9108921b94c1875b07d82daf344128abad9674e3ff92ca9870e3"
+      },
+      {
+        "request_number": 35,
+        "concurrency": 32,
+        "bytes": 147840,
+        "audio_seconds": 3.08,
+        "elapsed_seconds": 1.9090174340017256,
+        "ttfa_seconds": 0.34463434099961887,
+        "http_blocks": 4,
+        "pcm_sha256": "78545152c853827a96b0587ec82ba84a44f4ac5cdeae35d50a5479a392255ee5"
+      },
+      {
+        "request_number": 36,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.8531924480012094,
+        "ttfa_seconds": 0.34392614800162846,
+        "http_blocks": 4,
+        "pcm_sha256": "e6c6441161935d44a5563fe5c21ca9617ae5d7c03e5a18712a1cb0a9adc9840d"
+      },
+      {
+        "request_number": 37,
+        "concurrency": 32,
+        "bytes": 151680,
+        "audio_seconds": 3.16,
+        "elapsed_seconds": 1.9512150319969805,
+        "ttfa_seconds": 0.3933654339998611,
+        "http_blocks": 5,
+        "pcm_sha256": "9ac97194ad5ee3c860733cf2074fc8288bb9d993b36910d3c3621fe17f588240"
+      },
+      {
+        "request_number": 38,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.190464196999528,
+        "ttfa_seconds": 0.344444697999279,
+        "http_blocks": 5,
+        "pcm_sha256": "2149205de104ffe0e291e9f00bea718e465929e87e50124f2329f2d4cb49fc09"
+      },
+      {
+        "request_number": 39,
+        "concurrency": 32,
+        "bytes": 176640,
+        "audio_seconds": 3.68,
+        "elapsed_seconds": 2.214622738003527,
+        "ttfa_seconds": 0.3436264080010005,
+        "http_blocks": 5,
+        "pcm_sha256": "c95b8a9a0a26569fc13352ee83c6f21e80d13c112a4841a72dcb82f50262ed6b"
+      },
+      {
+        "request_number": 40,
+        "concurrency": 32,
+        "bytes": 307200,
+        "audio_seconds": 6.4,
+        "elapsed_seconds": 3.6868530150022707,
+        "ttfa_seconds": 0.39702496199970483,
+        "http_blocks": 8,
+        "pcm_sha256": "e64177213499092ea8279d2fd31ae16631c2d31b89a9aa71d830d0c245aa1c4f"
+      },
+      {
+        "request_number": 41,
+        "concurrency": 32,
+        "bytes": 176640,
+        "audio_seconds": 3.68,
+        "elapsed_seconds": 2.238133494000067,
+        "ttfa_seconds": 0.3919509730003483,
+        "http_blocks": 5,
+        "pcm_sha256": "88c059d3a08fdec35c908248ef56a648a7ec0bd0bfa1a7d94d71e2449522a197"
+      },
+      {
+        "request_number": 42,
+        "concurrency": 32,
+        "bytes": 334080,
+        "audio_seconds": 6.96,
+        "elapsed_seconds": 3.900399756999832,
+        "ttfa_seconds": 0.3815206159997615,
+        "http_blocks": 8,
+        "pcm_sha256": "1e94bef5aebd71c0b0c7900cb44becfeef943f798fbb8b89207c0ef2ad6d7afc"
+      },
+      {
+        "request_number": 43,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 3.0092994489968987,
+        "ttfa_seconds": 0.3929390719968069,
+        "http_blocks": 6,
+        "pcm_sha256": "cfe5435b5b56a4ad3dc443b2dd517332fe353ae6f9a856c5251e234c228072f5"
+      },
+      {
+        "request_number": 44,
+        "concurrency": 32,
+        "bytes": 140160,
+        "audio_seconds": 2.92,
+        "elapsed_seconds": 1.8150658029990154,
+        "ttfa_seconds": 0.34301588800008176,
+        "http_blocks": 4,
+        "pcm_sha256": "8c0db4b06cd99e88f6b0eea1612277e217ecb644988ef0ebcd46186a787ad5a1"
+      },
+      {
+        "request_number": 45,
+        "concurrency": 32,
+        "bytes": 232320,
+        "audio_seconds": 4.84,
+        "elapsed_seconds": 2.951356722998753,
+        "ttfa_seconds": 0.3894552450001356,
+        "http_blocks": 6,
+        "pcm_sha256": "2b7b4e8650a81b566fdeaee93d7fada3c1214b4f07ab79661213e4135047ac47"
+      },
+      {
+        "request_number": 46,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 3.213826051000069,
+        "ttfa_seconds": 0.3904132719981135,
+        "http_blocks": 7,
+        "pcm_sha256": "641d162158854c4e1c2d21add682522667ef74275ff649e0f1190dbe8e9c0e9b"
+      },
+      {
+        "request_number": 47,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.283730690000084,
+        "ttfa_seconds": 0.394909449001716,
+        "http_blocks": 5,
+        "pcm_sha256": "2fac7df57eceaf6c74d16288ed0ed8e5dafc49ef18ea8d480038306648913721"
+      },
+      {
+        "request_number": 48,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.360494419001043,
+        "ttfa_seconds": 0.38061155100149335,
+        "http_blocks": 5,
+        "pcm_sha256": "1f87eaa6b3066d007954b98cd16296e4af17b7c8753f04ec38db6b351ac8dcde"
+      },
+      {
+        "request_number": 49,
+        "concurrency": 32,
+        "bytes": 347520,
+        "audio_seconds": 7.24,
+        "elapsed_seconds": 4.005087206001917,
+        "ttfa_seconds": 0.3419748470005288,
+        "http_blocks": 9,
+        "pcm_sha256": "ebaf1ed70445a286525e5229ed96bbad89847091897aea294e861f2ce147e7e3"
+      },
+      {
+        "request_number": 50,
+        "concurrency": 32,
+        "bytes": 145920,
+        "audio_seconds": 3.04,
+        "elapsed_seconds": 1.906785443003173,
+        "ttfa_seconds": 0.38821702800123603,
+        "http_blocks": 4,
+        "pcm_sha256": "b60f3f5b6a80d8323035fe3be76ca234461d49f15c8d9d9b8e6884682291dfd8"
+      },
+      {
+        "request_number": 51,
+        "concurrency": 32,
+        "bytes": 264960,
+        "audio_seconds": 5.52,
+        "elapsed_seconds": 3.334254075001809,
+        "ttfa_seconds": 0.3892703670026094,
+        "http_blocks": 7,
+        "pcm_sha256": "ab13c10c5484281195ab9dd831c83578267d00fb6b4da49550b456f21ae49d04"
+      },
+      {
+        "request_number": 52,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.267338303001452,
+        "ttfa_seconds": 0.39020416399944224,
+        "http_blocks": 5,
+        "pcm_sha256": "78714780baf14fea446d2f49aa75cc802360caac257a92acbb0df056693b368a"
+      },
+      {
+        "request_number": 53,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.711951303001115,
+        "ttfa_seconds": 0.3903386660022079,
+        "http_blocks": 6,
+        "pcm_sha256": "9bf740f2631ada6bb76368716c6c11e8285c2d13762450cad44b08bf6f6b4fd6"
+      },
+      {
+        "request_number": 54,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.7381573069978913,
+        "ttfa_seconds": 0.3885364109992224,
+        "http_blocks": 4,
+        "pcm_sha256": "1e4d86564a6c7d129e4ac768365c24438d2f758e23527dc079932e6ab64e96eb"
+      },
+      {
+        "request_number": 55,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.266312855997967,
+        "ttfa_seconds": 0.37946772599752876,
+        "http_blocks": 5,
+        "pcm_sha256": "74280d42f0898f3649837fa33ebfa78b7da2539da069d220dc62a5e856986a13"
+      },
+      {
+        "request_number": 56,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 2.980704337001953,
+        "ttfa_seconds": 0.3789060339986463,
+        "http_blocks": 6,
+        "pcm_sha256": "b27180d748ed1f93bc8dfa129f0abbeee1d514d7d09753a92d7fa75712708642"
+      },
+      {
+        "request_number": 57,
+        "concurrency": 32,
+        "bytes": 186240,
+        "audio_seconds": 3.88,
+        "elapsed_seconds": 2.353917516000365,
+        "ttfa_seconds": 0.387852992000262,
+        "http_blocks": 5,
+        "pcm_sha256": "bf36b3e9a29bcb06b63a8dc84d48d7b802aebdf336c23339355547662b35cbdc"
+      },
+      {
+        "request_number": 58,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.381264916002692,
+        "ttfa_seconds": 0.38954010200177436,
+        "http_blocks": 5,
+        "pcm_sha256": "5968a62688d746d85ea1c706bf603fb3e26087abc17f110dce0202423ff2569b"
+      },
+      {
+        "request_number": 59,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.675658863998251,
+        "ttfa_seconds": 0.3869463389964949,
+        "http_blocks": 6,
+        "pcm_sha256": "5d51ae6268a08436f0b2c58f479c8a65fe9849d4c1dcf54a63d78ee6917b941e"
+      },
+      {
+        "request_number": 60,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.1592194340009883,
+        "ttfa_seconds": 0.38691506100076367,
+        "http_blocks": 7,
+        "pcm_sha256": "e3e5f2ca21fe8bcdebfd0b2299562cb36dedc775e071bd965bb2daaa4aa04e5f"
+      },
+      {
+        "request_number": 61,
+        "concurrency": 32,
+        "bytes": 203520,
+        "audio_seconds": 4.24,
+        "elapsed_seconds": 2.5728498680000484,
+        "ttfa_seconds": 0.3927011570012837,
+        "http_blocks": 6,
+        "pcm_sha256": "0b5b900756b994dd6a0e18ee5cd5545f744fb709a9359f12fb70fdfe5bf14316"
+      },
+      {
+        "request_number": 62,
+        "concurrency": 32,
+        "bytes": 272640,
+        "audio_seconds": 5.68,
+        "elapsed_seconds": 3.3867014729985385,
+        "ttfa_seconds": 0.38834401499843807,
+        "http_blocks": 7,
+        "pcm_sha256": "aed7f7afe773dd58d288f74c30fe94b178835f373780caf3d1a1f6dbf0faf803"
+      },
+      {
+        "request_number": 63,
+        "concurrency": 32,
+        "bytes": 240000,
+        "audio_seconds": 5.0,
+        "elapsed_seconds": 3.0569305650024035,
+        "ttfa_seconds": 0.3853833270004543,
+        "http_blocks": 6,
+        "pcm_sha256": "7704fcb287164d38d250af3b5bcfb5ab1ebc19a213091698c645c71e23568d56"
+      }
+    ]
+  },
+  "cand-b2": {
+    "wall_seconds": 7.938704263000545,
+    "requests": [
+      {
+        "request_number": 0,
+        "concurrency": 32,
+        "bytes": 96000,
+        "audio_seconds": 2.0,
+        "elapsed_seconds": 1.2796916709994548,
+        "ttfa_seconds": 0.3104316729986749,
+        "http_blocks": 3,
+        "pcm_sha256": "cfa1837c71396c7e4a68b8de7ec0228b89cd30c16566411fce8ef4521a46e85a"
+      },
+      {
+        "request_number": 1,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 3.009062590997928,
+        "ttfa_seconds": 0.3381177779992868,
+        "http_blocks": 6,
+        "pcm_sha256": "2fbc9fa2aba9498da5fa1df0b06b5a0998b3305286ac4880f8dd0da2d7bab413"
+      },
+      {
+        "request_number": 2,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.664616362999368,
+        "ttfa_seconds": 0.3792904299989459,
+        "http_blocks": 4,
+        "pcm_sha256": "6ab987d8de9a3791828c84a78141df760f8d9c981ef91776a647b4c1a509fa49"
+      },
+      {
+        "request_number": 3,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 3.1687124019990733,
+        "ttfa_seconds": 0.3384260169987101,
+        "http_blocks": 7,
+        "pcm_sha256": "54b8a6806deea63aedcbec0ff71564ed344ee7dea94b400a27e4796a97813c00"
+      },
+      {
+        "request_number": 4,
+        "concurrency": 32,
+        "bytes": 295680,
+        "audio_seconds": 6.16,
+        "elapsed_seconds": 3.712046412998461,
+        "ttfa_seconds": 0.337842560998979,
+        "http_blocks": 8,
+        "pcm_sha256": "e157bd1f1f47ef61db735f275d1a44559b91d6be977f6eb4f7f73d0e59838e8d"
+      },
+      {
+        "request_number": 5,
+        "concurrency": 32,
+        "bytes": 238080,
+        "audio_seconds": 4.96,
+        "elapsed_seconds": 3.0383270510028524,
+        "ttfa_seconds": 0.4104888170004415,
+        "http_blocks": 6,
+        "pcm_sha256": "6f44fc7c3ce6fdffede04a4c3b0abc44d6847ebc57ac58815d401d13b6704ec3"
+      },
+      {
+        "request_number": 6,
+        "concurrency": 32,
+        "bytes": 126720,
+        "audio_seconds": 2.64,
+        "elapsed_seconds": 1.6206806680020236,
+        "ttfa_seconds": 0.3780933560010453,
+        "http_blocks": 4,
+        "pcm_sha256": "52ce9ce367fc9167fecf795ee83fbc9fdd0b91d60a1a6d03f9b93a3d3c08bda8"
+      },
+      {
+        "request_number": 7,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.316970626001421,
+        "ttfa_seconds": 0.3374426449991006,
+        "http_blocks": 5,
+        "pcm_sha256": "7e2ee0dffb196a7feff9145d6bdeed89be5c22d2c17877eb53e389d6aa85387e"
+      },
+      {
+        "request_number": 8,
+        "concurrency": 32,
+        "bytes": 157440,
+        "audio_seconds": 3.28,
+        "elapsed_seconds": 2.0684517490008147,
+        "ttfa_seconds": 0.41502285699971253,
+        "http_blocks": 5,
+        "pcm_sha256": "ab63c3c02bbeaeb901ca6e3afc2e9a23b4f50a7fda4f3b981b3ae9ac06ccb262"
+      },
+      {
+        "request_number": 9,
+        "concurrency": 32,
+        "bytes": 193920,
+        "audio_seconds": 4.04,
+        "elapsed_seconds": 2.6053945000021486,
+        "ttfa_seconds": 0.409514595001383,
+        "http_blocks": 5,
+        "pcm_sha256": "3207513fa482645c8b791792dda45388692974dbc5c54f83baedc4481d71c1ee"
+      },
+      {
+        "request_number": 10,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 2.0294593760008866,
+        "ttfa_seconds": 0.3778454339990276,
+        "http_blocks": 5,
+        "pcm_sha256": "f15567948924069110853fe8fd4c25e720b3ce7dd08de19247352246f02725c8"
+      },
+      {
+        "request_number": 11,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.2809316480015696,
+        "ttfa_seconds": 0.41005903300174396,
+        "http_blocks": 5,
+        "pcm_sha256": "285eada67599084c0b6949dc7fa7f4601a6eb68166a1dac33f959936bb05f312"
+      },
+      {
+        "request_number": 12,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.3768076009982906,
+        "ttfa_seconds": 0.37660331599909114,
+        "http_blocks": 5,
+        "pcm_sha256": "01eeb80722bcb483f868fb944701870c0b1bf42181d85b89251d8a2a07c74eaf"
+      },
+      {
+        "request_number": 13,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 2.066748089000612,
+        "ttfa_seconds": 0.40685904300335096,
+        "http_blocks": 5,
+        "pcm_sha256": "b7b943b06f8671c5e2a40d3beddb366e1dac13df9afeb4a531e3e7511709f7f9"
+      },
+      {
+        "request_number": 14,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.3715446919995884,
+        "ttfa_seconds": 0.4082432659997721,
+        "http_blocks": 5,
+        "pcm_sha256": "2b6bec7bbdbaa62e5a6d21e700da0125d57162dd47300ce9dae06bbe6f499e4f"
+      },
+      {
+        "request_number": 15,
+        "concurrency": 32,
+        "bytes": 161280,
+        "audio_seconds": 3.36,
+        "elapsed_seconds": 2.096389899001224,
+        "ttfa_seconds": 0.4131887870025821,
+        "http_blocks": 5,
+        "pcm_sha256": "41351210769730eb6f8a07dd38bb91815233711b003a30f52cf17c62d1ac2de2"
+      },
+      {
+        "request_number": 16,
+        "concurrency": 32,
+        "bytes": 151680,
+        "audio_seconds": 3.16,
+        "elapsed_seconds": 1.9268121249988326,
+        "ttfa_seconds": 0.37679981799738016,
+        "http_blocks": 5,
+        "pcm_sha256": "7cabf50269ab350cd834be1848012fe82e79ed272b9e03c3edb10de2ae7b3322"
+      },
+      {
+        "request_number": 17,
+        "concurrency": 32,
+        "bytes": 203520,
+        "audio_seconds": 4.24,
+        "elapsed_seconds": 2.6818419999981415,
+        "ttfa_seconds": 0.37595703400074854,
+        "http_blocks": 6,
+        "pcm_sha256": "91cfd35ebd956b95992a21ca2c4533190e6a4ec0d9b5da630273682f7095d0b9"
+      },
+      {
+        "request_number": 18,
+        "concurrency": 32,
+        "bytes": 286080,
+        "audio_seconds": 5.96,
+        "elapsed_seconds": 3.6130649959995935,
+        "ttfa_seconds": 0.37689625999701093,
+        "http_blocks": 7,
+        "pcm_sha256": "14702f5208b85eaff5ac177a12717fee6c4bedc96cf3663b97e7577c89ee6117"
+      },
+      {
+        "request_number": 19,
+        "concurrency": 32,
+        "bytes": 234240,
+        "audio_seconds": 4.88,
+        "elapsed_seconds": 3.0006159559998196,
+        "ttfa_seconds": 0.4070968099986203,
+        "http_blocks": 6,
+        "pcm_sha256": "74d181708b2c2c6d250074f6763cbdfec5b44bd6211780c0e8f533539d361aa3"
+      },
+      {
+        "request_number": 20,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.143445440000505,
+        "ttfa_seconds": 0.4074963420025597,
+        "http_blocks": 7,
+        "pcm_sha256": "318ce91d07aa76260a59ff7f83fff6c60f451df3edba02a6776e28161e70f0ac"
+      },
+      {
+        "request_number": 21,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.840051883002161,
+        "ttfa_seconds": 0.40761834700242616,
+        "http_blocks": 4,
+        "pcm_sha256": "fe8f6950924e292e493f93b9ced07e36e2554b1e6eee6310c66bba6a92496a1a"
+      },
+      {
+        "request_number": 22,
+        "concurrency": 32,
+        "bytes": 207360,
+        "audio_seconds": 4.32,
+        "elapsed_seconds": 2.736541237001802,
+        "ttfa_seconds": 0.4063583080023818,
+        "http_blocks": 6,
+        "pcm_sha256": "bf63714ed6a3bf17a05f3768e7ac394787e7986fe7e2cd619e51593c5e5bb6f7"
+      },
+      {
+        "request_number": 23,
+        "concurrency": 32,
+        "bytes": 230400,
+        "audio_seconds": 4.8,
+        "elapsed_seconds": 2.943689824998728,
+        "ttfa_seconds": 0.3755795609977213,
+        "http_blocks": 6,
+        "pcm_sha256": "caf7b7ad361dc63e699b4605eaef0ca0f2c9ff84c2d12f188702b909a4933e4b"
+      },
+      {
+        "request_number": 24,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.2287339360009355,
+        "ttfa_seconds": 0.3750690870001563,
+        "http_blocks": 5,
+        "pcm_sha256": "eb36b390b94e1bf6c42a986e39e1648d09fffc5f3e2a28d0021a54a3a62f3377"
+      },
+      {
+        "request_number": 25,
+        "concurrency": 32,
+        "bytes": 193920,
+        "audio_seconds": 4.04,
+        "elapsed_seconds": 2.6016416830025264,
+        "ttfa_seconds": 0.40550209900175105,
+        "http_blocks": 5,
+        "pcm_sha256": "0f51a26ac5736a6f02dba51cd9d540dae65eac0a2b32a44f1a399c09579c7678"
+      },
+      {
+        "request_number": 26,
+        "concurrency": 32,
+        "bytes": 299520,
+        "audio_seconds": 6.24,
+        "elapsed_seconds": 3.76754721999896,
+        "ttfa_seconds": 0.4067715019991738,
+        "http_blocks": 8,
+        "pcm_sha256": "c0988ab0a2aefb78080dc2c4e28e368275e106869c7a38094a46111c24a0e703"
+      },
+      {
+        "request_number": 27,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 2.056056569002976,
+        "ttfa_seconds": 0.404343627000344,
+        "http_blocks": 5,
+        "pcm_sha256": "853d3420d64854aa414206d95c833c6988443dba9ddb49cae04294eb6e726cb9"
+      },
+      {
+        "request_number": 28,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.277007503002096,
+        "ttfa_seconds": 0.40431892800188507,
+        "http_blocks": 5,
+        "pcm_sha256": "f6173b422ff260bd581783a2c6755312f9471a2cada5658add0fdc82de55a0ce"
+      },
+      {
+        "request_number": 29,
+        "concurrency": 32,
+        "bytes": 193920,
+        "audio_seconds": 4.04,
+        "elapsed_seconds": 2.608685487997718,
+        "ttfa_seconds": 0.41086245699989377,
+        "http_blocks": 5,
+        "pcm_sha256": "fecf9df8b793580d25e601906297bc817547b9ac2c4c51328e8039eadae297eb"
+      },
+      {
+        "request_number": 30,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 3.2418559460020333,
+        "ttfa_seconds": 0.405646990002424,
+        "http_blocks": 7,
+        "pcm_sha256": "b2566fb8da4d3c28dbb5d1a4046b4d86bdc199836f92c425fc68062eaf1ee882"
+      },
+      {
+        "request_number": 31,
+        "concurrency": 32,
+        "bytes": 222720,
+        "audio_seconds": 4.64,
+        "elapsed_seconds": 2.8695197510023718,
+        "ttfa_seconds": 0.37415442600104143,
+        "http_blocks": 6,
+        "pcm_sha256": "a6b0d8e12edb32a6b92924c7fb1b838074987bd2c2ab763b26314a40f835df05"
+      },
+      {
+        "request_number": 32,
+        "concurrency": 32,
+        "bytes": 213120,
+        "audio_seconds": 4.44,
+        "elapsed_seconds": 2.4560223300031794,
+        "ttfa_seconds": 0.23923307200311683,
+        "http_blocks": 6,
+        "pcm_sha256": "6385e0233aca46267608baa3a5bc443ecde4667bc4faca413f2d55b9831e6b1b"
+      },
+      {
+        "request_number": 33,
+        "concurrency": 32,
+        "bytes": 232320,
+        "audio_seconds": 4.84,
+        "elapsed_seconds": 2.721511300998827,
+        "ttfa_seconds": 0.25772593899819185,
+        "http_blocks": 6,
+        "pcm_sha256": "10b6d3ed534c3c3f7f6e5ebe2ac163f1589b3767432323e49c8519420fa57d25"
+      },
+      {
+        "request_number": 34,
+        "concurrency": 32,
+        "bytes": 207360,
+        "audio_seconds": 4.32,
+        "elapsed_seconds": 2.3986481909996655,
+        "ttfa_seconds": 0.2706864339997992,
+        "http_blocks": 6,
+        "pcm_sha256": "99bab4e4c2dd548472c1d7887b55eeaa5acccda36b10dc7125525df395313c87"
+      },
+      {
+        "request_number": 35,
+        "concurrency": 32,
+        "bytes": 205440,
+        "audio_seconds": 4.28,
+        "elapsed_seconds": 2.3764332160026242,
+        "ttfa_seconds": 0.26973569199981284,
+        "http_blocks": 6,
+        "pcm_sha256": "bc4d9b2b4aa9661a6708d140386474d6d542928b2e909aa422cfc14f71f59718"
+      },
+      {
+        "request_number": 36,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.5586523080019106,
+        "ttfa_seconds": 0.2691278109996347,
+        "http_blocks": 4,
+        "pcm_sha256": "91b8d8e789e1aeef76b3dcfb72770e6e849a07f6adbba287e106263858bb2bd0"
+      },
+      {
+        "request_number": 37,
+        "concurrency": 32,
+        "bytes": 176640,
+        "audio_seconds": 3.68,
+        "elapsed_seconds": 1.9858098580007209,
+        "ttfa_seconds": 0.30119769100201665,
+        "http_blocks": 5,
+        "pcm_sha256": "77ddc97d40ce209fad135f48996de88645982f8e61d45579f3295c09ab13adc3"
+      },
+      {
+        "request_number": 38,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.12315118600236,
+        "ttfa_seconds": 0.26951917400219827,
+        "http_blocks": 5,
+        "pcm_sha256": "6b37188a81c53130ee1bce33d9d0b570ce88ef0cbec3b259f87648cfa3ce3c86"
+      },
+      {
+        "request_number": 39,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.6735839119974116,
+        "ttfa_seconds": 0.2687383939992287,
+        "http_blocks": 5,
+        "pcm_sha256": "a7ed56536ca7531639592c6fb973ff24120effdc1246385db159d9519e1c7376"
+      },
+      {
+        "request_number": 40,
+        "concurrency": 32,
+        "bytes": 255360,
+        "audio_seconds": 5.32,
+        "elapsed_seconds": 3.0199232999984815,
+        "ttfa_seconds": 0.3016080609995697,
+        "http_blocks": 7,
+        "pcm_sha256": "38fb1f497fbe971de376946ea66e7e08726a301deeff8692e8e6dcd512c7848c"
+      },
+      {
+        "request_number": 41,
+        "concurrency": 32,
+        "bytes": 176640,
+        "audio_seconds": 3.68,
+        "elapsed_seconds": 1.9907125099998666,
+        "ttfa_seconds": 0.2998909630005073,
+        "http_blocks": 5,
+        "pcm_sha256": "ed4ab9a6008e5d22c3c3acc13c03f7cefaf76c8ff6f8da1f45633bbef149cf6e"
+      },
+      {
+        "request_number": 42,
+        "concurrency": 32,
+        "bytes": 316800,
+        "audio_seconds": 6.6,
+        "elapsed_seconds": 3.708592568000313,
+        "ttfa_seconds": 0.2691608320019441,
+        "http_blocks": 8,
+        "pcm_sha256": "bed95ce2daab98e1bd73de1209763522a458620e29353a291df7b3d99f942ff0"
+      },
+      {
+        "request_number": 43,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.4810134760009532,
+        "ttfa_seconds": 0.30069256099886843,
+        "http_blocks": 6,
+        "pcm_sha256": "2d5ce861ef44127a9e102db2b2669adc75761cb373b0c4d255187735d8450ff3"
+      },
+      {
+        "request_number": 44,
+        "concurrency": 32,
+        "bytes": 163200,
+        "audio_seconds": 3.4,
+        "elapsed_seconds": 1.798833482000191,
+        "ttfa_seconds": 0.2681276600014826,
+        "http_blocks": 5,
+        "pcm_sha256": "9e4802e9c02151eb88d6c2fc76ba13beb59fda5b90409f65cf366e13c6f9564c"
+      },
+      {
+        "request_number": 45,
+        "concurrency": 32,
+        "bytes": 263040,
+        "audio_seconds": 5.48,
+        "elapsed_seconds": 3.073105523002596,
+        "ttfa_seconds": 0.29028550300063216,
+        "http_blocks": 7,
+        "pcm_sha256": "6b402e79b6f3ae9e46c54170d55ee8c866903274721684e4fbf75366cea3c947"
+      },
+      {
+        "request_number": 46,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.5889282989992353,
+        "ttfa_seconds": 0.2984814789997472,
+        "http_blocks": 6,
+        "pcm_sha256": "679227d9e2ceab49a2cd69a0c49c3fd73b0ab145856ac3a05e39eb12e7d92fb0"
+      },
+      {
+        "request_number": 47,
+        "concurrency": 32,
+        "bytes": 270720,
+        "audio_seconds": 5.64,
+        "elapsed_seconds": 3.1664997879997827,
+        "ttfa_seconds": 0.2997630179997941,
+        "http_blocks": 7,
+        "pcm_sha256": "50fbac3b1c385594fb318cb62226508a3b982f18c4aba8175e4f3bdc568c8011"
+      },
+      {
+        "request_number": 48,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.5175694179997663,
+        "ttfa_seconds": 0.2679424000016297,
+        "http_blocks": 6,
+        "pcm_sha256": "25f8f991182e8ca78e61e2cc552145255aff641f39804ee14e45a018d9811820"
+      },
+      {
+        "request_number": 49,
+        "concurrency": 32,
+        "bytes": 316800,
+        "audio_seconds": 6.6,
+        "elapsed_seconds": 3.7058260400008294,
+        "ttfa_seconds": 0.26716140899952734,
+        "http_blocks": 8,
+        "pcm_sha256": "98252a07f0f76d75d4cb18b579dfa43432b77f7a406a48dccdf692f5e17bf1f4"
+      },
+      {
+        "request_number": 50,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.4409506560004957,
+        "ttfa_seconds": 0.2890313200005039,
+        "http_blocks": 4,
+        "pcm_sha256": "dca8280655a25bea71712c4caabde7bf79650493a98e7387130014b582cc77e0"
+      },
+      {
+        "request_number": 51,
+        "concurrency": 32,
+        "bytes": 264960,
+        "audio_seconds": 5.52,
+        "elapsed_seconds": 3.1145025069999974,
+        "ttfa_seconds": 0.29722735899849795,
+        "http_blocks": 7,
+        "pcm_sha256": "9e2a118a58454722457896ff48f8430b515388646428f04685ba6ab3001801e5"
+      },
+      {
+        "request_number": 52,
+        "concurrency": 32,
+        "bytes": 193920,
+        "audio_seconds": 4.04,
+        "elapsed_seconds": 2.2675707080015854,
+        "ttfa_seconds": 0.29801391900036833,
+        "http_blocks": 5,
+        "pcm_sha256": "07b13fce59b5a450dfeab95a16242ec22e2cd409add86eb51811bc4ebd34998d"
+      },
+      {
+        "request_number": 53,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.349547319001431,
+        "ttfa_seconds": 0.2981127419989207,
+        "http_blocks": 6,
+        "pcm_sha256": "b19de6738c98695db4f6919becbc958d62c35c86184d5771e931739f75a61dad"
+      },
+      {
+        "request_number": 54,
+        "concurrency": 32,
+        "bytes": 113280,
+        "audio_seconds": 2.36,
+        "elapsed_seconds": 1.2895758349986863,
+        "ttfa_seconds": 0.2963669660020969,
+        "http_blocks": 4,
+        "pcm_sha256": "90314c799c5b9247a3195d5f92c11deadb1faa2fdba1fa18abe1c68e84de7afd"
+      },
+      {
+        "request_number": 55,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.114108694000606,
+        "ttfa_seconds": 0.28763446899756673,
+        "http_blocks": 5,
+        "pcm_sha256": "fb8c90ac821b5f8e79f19e25fb280bfb99a6fc2e28dd9ebe7904cb76e96895bc"
+      },
+      {
+        "request_number": 56,
+        "concurrency": 32,
+        "bytes": 366720,
+        "audio_seconds": 7.64,
+        "elapsed_seconds": 4.158432659001846,
+        "ttfa_seconds": 0.26618282799972803,
+        "http_blocks": 9,
+        "pcm_sha256": "df205424f5a0b7d667fc67ef0847d132879eca9daba019174efead1ba84ed6f2"
+      },
+      {
+        "request_number": 57,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.0119410599982075,
+        "ttfa_seconds": 0.2955579179979395,
+        "http_blocks": 5,
+        "pcm_sha256": "37b5d6c86c51a9772f6338838da8c3ec002d76903e4f9a85188a2bc5fbbf81b4"
+      },
+      {
+        "request_number": 58,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 1.9501839139993535,
+        "ttfa_seconds": 0.2972458039985213,
+        "http_blocks": 5,
+        "pcm_sha256": "61002e29eb6c662793684bd61ea27148d2af67fedefce70b1778b5d6333bb70b"
+      },
+      {
+        "request_number": 59,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.4445946980013105,
+        "ttfa_seconds": 0.28751629700127523,
+        "http_blocks": 6,
+        "pcm_sha256": "5886795971415eadef5d945e51b80301091b1afca8a649ed160954fe2419ec46"
+      },
+      {
+        "request_number": 60,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.508912710000004,
+        "ttfa_seconds": 0.2874581039977784,
+        "http_blocks": 6,
+        "pcm_sha256": "56e766b252b09cd262bbf1fcb35703fae663158dd16a8a21f9af9d6704ce16a8"
+      },
+      {
+        "request_number": 61,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.1419746989995474,
+        "ttfa_seconds": 0.297173543000099,
+        "http_blocks": 5,
+        "pcm_sha256": "f16111790ef60077e356280c9899ce17c25214990d1fc7abcfae9d8f7deab9e8"
+      },
+      {
+        "request_number": 62,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 2.795780984997691,
+        "ttfa_seconds": 0.29611691999889445,
+        "http_blocks": 6,
+        "pcm_sha256": "c13fd0026c819c1b8e5eeae7d15675ac7cf8a32b5448e8c6d380cf5f0228fde7"
+      },
+      {
+        "request_number": 63,
+        "concurrency": 32,
+        "bytes": 247680,
+        "audio_seconds": 5.16,
+        "elapsed_seconds": 2.9106061390011746,
+        "ttfa_seconds": 0.28615904900289024,
+        "http_blocks": 7,
+        "pcm_sha256": "3f0ff727db2aadd57f60ef0baf0f91335dfe1ae7cc957c62e92eacaf8d74e1dd"
+      }
+    ]
+  },
+  "base-a2": {
+    "wall_seconds": 7.251106898998842,
+    "requests": [
+      {
+        "request_number": 0,
+        "concurrency": 32,
+        "bytes": 105600,
+        "audio_seconds": 2.2,
+        "elapsed_seconds": 1.2861716299994441,
+        "ttfa_seconds": 0.2864756570015743,
+        "http_blocks": 4,
+        "pcm_sha256": "512c5fe77eaa3f6bf74d65bfc4ef03bf7f9174d79975451afabcb72bfcf5f868"
+      },
+      {
+        "request_number": 1,
+        "concurrency": 32,
+        "bytes": 245760,
+        "audio_seconds": 5.12,
+        "elapsed_seconds": 2.970457778999844,
+        "ttfa_seconds": 0.3122948499985796,
+        "http_blocks": 6,
+        "pcm_sha256": "a96dde78c301246dbd038e7786163ab9f2076076383da2ba5535e90d11301698"
+      },
+      {
+        "request_number": 2,
+        "concurrency": 32,
+        "bytes": 134400,
+        "audio_seconds": 2.8,
+        "elapsed_seconds": 1.5240568440021889,
+        "ttfa_seconds": 0.3405516040002112,
+        "http_blocks": 4,
+        "pcm_sha256": "b15f36597d1dff5d230387174488d5bd4d980ad73ab561b0cbf24235f0728a6c"
+      },
+      {
+        "request_number": 3,
+        "concurrency": 32,
+        "bytes": 238080,
+        "audio_seconds": 4.96,
+        "elapsed_seconds": 2.8846046010003192,
+        "ttfa_seconds": 0.3395425700000487,
+        "http_blocks": 6,
+        "pcm_sha256": "dfd08efede711c78a377953da6faf5dcfb2608a9c001ccf0c13a823bd706eb78"
+      },
+      {
+        "request_number": 4,
+        "concurrency": 32,
+        "bytes": 274560,
+        "audio_seconds": 5.72,
+        "elapsed_seconds": 3.3007458969987056,
+        "ttfa_seconds": 0.31181239600118715,
+        "http_blocks": 7,
+        "pcm_sha256": "d74ef3600209e35762c646ec60e98114700e5847c26f9c3a75082843eaabd433"
+      },
+      {
+        "request_number": 5,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.603718181999284,
+        "ttfa_seconds": 0.34840296900074463,
+        "http_blocks": 6,
+        "pcm_sha256": "da0c40391afac66e1a71ef0514530938bfaa5c2de7072c8829bf7b401d15c7f1"
+      },
+      {
+        "request_number": 6,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.6081640110023727,
+        "ttfa_seconds": 0.33937758799947915,
+        "http_blocks": 4,
+        "pcm_sha256": "20efb07edbbb128e11433c4a7b296bb28d49c1c175ccbdbe3e45c1301140e80e"
+      },
+      {
+        "request_number": 7,
+        "concurrency": 32,
+        "bytes": 159360,
+        "audio_seconds": 3.32,
+        "elapsed_seconds": 1.8470330749987625,
+        "ttfa_seconds": 0.3383565450021706,
+        "http_blocks": 5,
+        "pcm_sha256": "08ce47e9ea59e47ef017d60a067c63ac826cd9cd18a278faf95d6c113bcf7bf7"
+      },
+      {
+        "request_number": 8,
+        "concurrency": 32,
+        "bytes": 157440,
+        "audio_seconds": 3.28,
+        "elapsed_seconds": 1.8511126730008982,
+        "ttfa_seconds": 0.37014975400234107,
+        "http_blocks": 5,
+        "pcm_sha256": "0b4cff57b7e9b333dcbfff56417e3f0dcd0e600ca5ced911e8ef7959811dc4f9"
+      },
+      {
+        "request_number": 9,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.3222945449997496,
+        "ttfa_seconds": 0.34739420899859397,
+        "http_blocks": 5,
+        "pcm_sha256": "7afde1827c48728c6f87a28e62d7cf36860eca3888e9d5ea70436b80e04e2dc0"
+      },
+      {
+        "request_number": 10,
+        "concurrency": 32,
+        "bytes": 170880,
+        "audio_seconds": 3.56,
+        "elapsed_seconds": 2.044747653999366,
+        "ttfa_seconds": 0.3390137530004722,
+        "http_blocks": 5,
+        "pcm_sha256": "f7a839c3bdbe686576a15fa1e47287a5f733ca39dcca04da4c0ad289a322043c"
+      },
+      {
+        "request_number": 11,
+        "concurrency": 32,
+        "bytes": 192000,
+        "audio_seconds": 4.0,
+        "elapsed_seconds": 2.3404849280013877,
+        "ttfa_seconds": 0.34788521500013303,
+        "http_blocks": 5,
+        "pcm_sha256": "c0ab26fe979270d8dd6d11c4ab59736c3a750e458a24401572011dad20b2ef31"
+      },
+      {
+        "request_number": 12,
+        "concurrency": 32,
+        "bytes": 168960,
+        "audio_seconds": 3.52,
+        "elapsed_seconds": 1.9646179459996347,
+        "ttfa_seconds": 0.3379208199985442,
+        "http_blocks": 5,
+        "pcm_sha256": "6d2401c86ef0a5945ed3b2f98fa565e245ad8e57510e5081fe5af123695d5649"
+      },
+      {
+        "request_number": 13,
+        "concurrency": 32,
+        "bytes": 153600,
+        "audio_seconds": 3.2,
+        "elapsed_seconds": 1.8109734319987183,
+        "ttfa_seconds": 0.3447750970008201,
+        "http_blocks": 5,
+        "pcm_sha256": "e802411793a967a1f5f74b2dec1552d5d8cf61c5942bf93367ab291d0de3ba0c"
+      },
+      {
+        "request_number": 14,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.3205661950014473,
+        "ttfa_seconds": 0.3460212770005455,
+        "http_blocks": 5,
+        "pcm_sha256": "1671b9211be21c164ec9ba54c31edbf38ee304191832a26d03681d3a79d3b868"
+      },
+      {
+        "request_number": 15,
+        "concurrency": 32,
+        "bytes": 167040,
+        "audio_seconds": 3.48,
+        "elapsed_seconds": 1.9602221040004224,
+        "ttfa_seconds": 0.3682320440020703,
+        "http_blocks": 5,
+        "pcm_sha256": "cd80f3855c46b768b1af31193ebe62fdb31eb0fe3129596e59c04a6479ffdb3e"
+      },
+      {
+        "request_number": 16,
+        "concurrency": 32,
+        "bytes": 120960,
+        "audio_seconds": 2.52,
+        "elapsed_seconds": 1.406819727999391,
+        "ttfa_seconds": 0.3379216719986289,
+        "http_blocks": 4,
+        "pcm_sha256": "d14454686c39130dfdd9301e14e65f48b7fec63b641ade238cc0cd93dd0f4b8d"
+      },
+      {
+        "request_number": 17,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.0891301830015436,
+        "ttfa_seconds": 0.33709928700045566,
+        "http_blocks": 5,
+        "pcm_sha256": "e1c9fa983bec01fc4c91cab89dcab6d4ee5fcab4b7bf8a83be49e23cc13c7446"
+      },
+      {
+        "request_number": 18,
+        "concurrency": 32,
+        "bytes": 307200,
+        "audio_seconds": 6.4,
+        "elapsed_seconds": 3.5659341659993515,
+        "ttfa_seconds": 0.34352021900122054,
+        "http_blocks": 8,
+        "pcm_sha256": "ed481f13060a9b09d76741669d2933baba8a90af5ac9b0c60bbe990aac4c53a1"
+      },
+      {
+        "request_number": 19,
+        "concurrency": 32,
+        "bytes": 209280,
+        "audio_seconds": 4.36,
+        "elapsed_seconds": 2.551014626002143,
+        "ttfa_seconds": 0.3448193629992602,
+        "http_blocks": 6,
+        "pcm_sha256": "b7a5e53e6287693a2ad516736c93cf8e3595461393ea4a413dbcf3d294e523e7"
+      },
+      {
+        "request_number": 20,
+        "concurrency": 32,
+        "bytes": 255360,
+        "audio_seconds": 5.32,
+        "elapsed_seconds": 3.145102949001739,
+        "ttfa_seconds": 0.3452830520000134,
+        "http_blocks": 7,
+        "pcm_sha256": "564ef3e89acc8bfc500455d31662c7865cbab7c9ce6c4fd502517ba071c16639"
+      },
+      {
+        "request_number": 21,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.1485419679993356,
+        "ttfa_seconds": 0.34538294700178085,
+        "http_blocks": 5,
+        "pcm_sha256": "beb41b6e474f4d5a500c49be09bb51ba5740baec2b4b14879f864940228d224c"
+      },
+      {
+        "request_number": 22,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.433562145997712,
+        "ttfa_seconds": 0.3440500239994435,
+        "http_blocks": 6,
+        "pcm_sha256": "8af3fc562c43aacce55d0a4b4a75c3211f4098e0d043af4bd1ba96dd0784fc10"
+      },
+      {
+        "request_number": 23,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 3.0806335100023716,
+        "ttfa_seconds": 0.3366354589998082,
+        "http_blocks": 7,
+        "pcm_sha256": "9ae1e6ffd53d60d5e06bcb2117e5c4b662bfd85baada41f60f4700066feb27e9"
+      },
+      {
+        "request_number": 24,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 2.0845994009978313,
+        "ttfa_seconds": 0.33613209999748506,
+        "http_blocks": 5,
+        "pcm_sha256": "027f261c2771e72708a0d11d11383faf124fe15b050bbe2b25d176fbf4082cd6"
+      },
+      {
+        "request_number": 25,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.696748892998585,
+        "ttfa_seconds": 0.3432877269988239,
+        "http_blocks": 6,
+        "pcm_sha256": "b78d5bd3f244d598babd3b46740bf57af23f3d0467593dfc839201585e6024e9"
+      },
+      {
+        "request_number": 26,
+        "concurrency": 32,
+        "bytes": 215040,
+        "audio_seconds": 4.48,
+        "elapsed_seconds": 2.6247696240025107,
+        "ttfa_seconds": 0.3445187870020163,
+        "http_blocks": 6,
+        "pcm_sha256": "f4af42e1c660226c9a4905800e3fce4b39fe2b226c07c4547b5131578d734abc"
+      },
+      {
+        "request_number": 27,
+        "concurrency": 32,
+        "bytes": 144000,
+        "audio_seconds": 3.0,
+        "elapsed_seconds": 1.624215378997178,
+        "ttfa_seconds": 0.34213952999925823,
+        "http_blocks": 4,
+        "pcm_sha256": "33805a76b68492cae3df005f8c67521198c708c06b59e07e0b65a3f7a2f6f207"
+      },
+      {
+        "request_number": 28,
+        "concurrency": 32,
+        "bytes": 195840,
+        "audio_seconds": 4.08,
+        "elapsed_seconds": 2.3985314829988056,
+        "ttfa_seconds": 0.3420635119982762,
+        "http_blocks": 5,
+        "pcm_sha256": "ce26879df609c6196d6b6518bdc51dd20e03ea50ab97557a75453cb8dab825c8"
+      },
+      {
+        "request_number": 29,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.5993713659991045,
+        "ttfa_seconds": 0.3659002780004812,
+        "http_blocks": 6,
+        "pcm_sha256": "46c1f817ebdc4b9b53d72d550e1bccd66afbf1f08fbfc7ddef980eae47a9f255"
+      },
+      {
+        "request_number": 30,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.026467095998669,
+        "ttfa_seconds": 0.34343188099956024,
+        "http_blocks": 7,
+        "pcm_sha256": "bb3789f100af10d75ef8d13ca931000c5d89b6169b770fae807a023449b9f9a0"
+      },
+      {
+        "request_number": 31,
+        "concurrency": 32,
+        "bytes": 249600,
+        "audio_seconds": 5.2,
+        "elapsed_seconds": 3.0229901090024214,
+        "ttfa_seconds": 0.34042783100085217,
+        "http_blocks": 7,
+        "pcm_sha256": "20f9be19ccaf6729852baf4e619cb8d3407bd4aa172f55595bd9146172d2df92"
+      },
+      {
+        "request_number": 32,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.4663607369984675,
+        "ttfa_seconds": 0.2743369909985631,
+        "http_blocks": 6,
+        "pcm_sha256": "64d2defcabb4c14168d441bd4ef3104f05935ad5cbec5417349a36942f9821d4"
+      },
+      {
+        "request_number": 33,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.496634618000826,
+        "ttfa_seconds": 0.292060080999363,
+        "http_blocks": 6,
+        "pcm_sha256": "e661fa7fcb7f9237411a28d313bc87d4c89942ae2c846106b0c24e0e8894f01c"
+      },
+      {
+        "request_number": 34,
+        "concurrency": 32,
+        "bytes": 199680,
+        "audio_seconds": 4.16,
+        "elapsed_seconds": 2.262790029999451,
+        "ttfa_seconds": 0.32156152199968346,
+        "http_blocks": 6,
+        "pcm_sha256": "3d20b0d3c2a238810c917c28ca18dd35566a8bdc8a9f40e9597e7c8eb1237bda"
+      },
+      {
+        "request_number": 35,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.043480159001774,
+        "ttfa_seconds": 0.32055348200083245,
+        "http_blocks": 5,
+        "pcm_sha256": "e42065be9c113e28a8e3c3f4a3ae8a21c06b99a66ac60db638cbddb0668cd172"
+      },
+      {
+        "request_number": 36,
+        "concurrency": 32,
+        "bytes": 163200,
+        "audio_seconds": 3.4,
+        "elapsed_seconds": 1.7941157870009192,
+        "ttfa_seconds": 0.2915790270017169,
+        "http_blocks": 5,
+        "pcm_sha256": "d4bda0fc0db5e3c7803127fb3c363e3b8527a46ecdf3d598c6782d4c1895a366"
+      },
+      {
+        "request_number": 37,
+        "concurrency": 32,
+        "bytes": 151680,
+        "audio_seconds": 3.16,
+        "elapsed_seconds": 1.6955050450014824,
+        "ttfa_seconds": 0.33028843000283814,
+        "http_blocks": 5,
+        "pcm_sha256": "0202d441a0c19ee828fa9b23fadab8ed920cefd2bb179867af54ca50dcf79e20"
+      },
+      {
+        "request_number": 38,
+        "concurrency": 32,
+        "bytes": 167040,
+        "audio_seconds": 3.48,
+        "elapsed_seconds": 1.8431941350027046,
+        "ttfa_seconds": 0.3202826120032114,
+        "http_blocks": 5,
+        "pcm_sha256": "c2ef9fd223a239f34da9ff572d9cb5d11ee86c2f04015467c551189f6b708333"
+      },
+      {
+        "request_number": 39,
+        "concurrency": 32,
+        "bytes": 155520,
+        "audio_seconds": 3.24,
+        "elapsed_seconds": 1.710361161000037,
+        "ttfa_seconds": 0.3203008359996602,
+        "http_blocks": 5,
+        "pcm_sha256": "d0ad0ec8f9583aafa4b65ed0e2cfe73fed29730155fd6333f0897b980bf016a8"
+      },
+      {
+        "request_number": 40,
+        "concurrency": 32,
+        "bytes": 293760,
+        "audio_seconds": 6.12,
+        "elapsed_seconds": 3.2685930370025744,
+        "ttfa_seconds": 0.33092137499988894,
+        "http_blocks": 7,
+        "pcm_sha256": "7e428f5e69b1775a9a432194b962e879b771688ff206a8402943505f1be6e6a4"
+      },
+      {
+        "request_number": 41,
+        "concurrency": 32,
+        "bytes": 174720,
+        "audio_seconds": 3.64,
+        "elapsed_seconds": 1.9897675379979773,
+        "ttfa_seconds": 0.32894191199739,
+        "http_blocks": 5,
+        "pcm_sha256": "a7abaf82db476f17f6f21b3ffff4e92ae54aa93680b8fb86466ce7cc8b88cb78"
+      },
+      {
+        "request_number": 42,
+        "concurrency": 32,
+        "bytes": 337920,
+        "audio_seconds": 7.04,
+        "elapsed_seconds": 3.677000007002789,
+        "ttfa_seconds": 0.32003260900091846,
+        "http_blocks": 8,
+        "pcm_sha256": "ef9f48e10346e440dc567b793b7908dd4d3003efe7c9e5cb7ac077d1e2782367"
+      },
+      {
+        "request_number": 43,
+        "concurrency": 32,
+        "bytes": 240000,
+        "audio_seconds": 5.0,
+        "elapsed_seconds": 2.7052617330009525,
+        "ttfa_seconds": 0.32996741700117127,
+        "http_blocks": 6,
+        "pcm_sha256": "3b39cc03857f9dfe0568187bfd06065c42f173e985ad4f38989a73ecdb9141b4"
+      },
+      {
+        "request_number": 44,
+        "concurrency": 32,
+        "bytes": 134400,
+        "audio_seconds": 2.8,
+        "elapsed_seconds": 1.4844500750004954,
+        "ttfa_seconds": 0.3188635090009484,
+        "http_blocks": 4,
+        "pcm_sha256": "83e4de0d7f40f4b84113511b4a16f2a9fd1009c4e465aeab5d4ac3314d86b7e7"
+      },
+      {
+        "request_number": 45,
+        "concurrency": 32,
+        "bytes": 232320,
+        "audio_seconds": 4.84,
+        "elapsed_seconds": 2.631054307999875,
+        "ttfa_seconds": 0.3266743669992138,
+        "http_blocks": 6,
+        "pcm_sha256": "a5f23bcacfb13fe7b681513f0d4f76010945e34cb0e66ced803d7eede338ad56"
+      },
+      {
+        "request_number": 46,
+        "concurrency": 32,
+        "bytes": 253440,
+        "audio_seconds": 5.28,
+        "elapsed_seconds": 2.87021030699907,
+        "ttfa_seconds": 0.3275393770018127,
+        "http_blocks": 7,
+        "pcm_sha256": "6182f00c1756912aae5150e739dcaabc64a6f1e9a7078ea0848c5fc205cce896"
+      },
+      {
+        "request_number": 47,
+        "concurrency": 32,
+        "bytes": 180480,
+        "audio_seconds": 3.76,
+        "elapsed_seconds": 2.0642070449976018,
+        "ttfa_seconds": 0.3291326549988298,
+        "http_blocks": 5,
+        "pcm_sha256": "e08ebb62cefb3ad99a513e3650983cb83b8cd326d196b5a5199de96ad1447e20"
+      },
+      {
+        "request_number": 48,
+        "concurrency": 32,
+        "bytes": 168960,
+        "audio_seconds": 3.52,
+        "elapsed_seconds": 1.8982673149985203,
+        "ttfa_seconds": 0.3189127270015888,
+        "http_blocks": 5,
+        "pcm_sha256": "512d691ee4061e51712cec91ddf0eab8194bf4dbb6fa4ce70687da092d37e5a3"
+      },
+      {
+        "request_number": 49,
+        "concurrency": 32,
+        "bytes": 330240,
+        "audio_seconds": 6.88,
+        "elapsed_seconds": 3.60263548399962,
+        "ttfa_seconds": 0.31799444499847596,
+        "http_blocks": 8,
+        "pcm_sha256": "0dc0e42be609eda65c653ff75ed0e265bf62d58cc5761bfa74cdcbdf812baa59"
+      },
+      {
+        "request_number": 50,
+        "concurrency": 32,
+        "bytes": 157440,
+        "audio_seconds": 3.28,
+        "elapsed_seconds": 1.7236614559988084,
+        "ttfa_seconds": 0.3254607060007402,
+        "http_blocks": 5,
+        "pcm_sha256": "693e607f32ce79fbc63f2a014db3325e186b5811d1d39845e36a6c13332554c4"
+      },
+      {
+        "request_number": 51,
+        "concurrency": 32,
+        "bytes": 257280,
+        "audio_seconds": 5.36,
+        "elapsed_seconds": 2.9237240469992685,
+        "ttfa_seconds": 0.3264016339999216,
+        "http_blocks": 7,
+        "pcm_sha256": "2c8dfece446117a3a07d41604477eadc7821bea91c6d118fdf337818ef5927b5"
+      },
+      {
+        "request_number": 52,
+        "concurrency": 32,
+        "bytes": 178560,
+        "audio_seconds": 3.72,
+        "elapsed_seconds": 2.040502577998268,
+        "ttfa_seconds": 0.3272132949969091,
+        "http_blocks": 5,
+        "pcm_sha256": "b4216fc83835f0b625abb6b0ec70c549271b3b94785be903da09555b80e2e4f3"
+      },
+      {
+        "request_number": 53,
+        "concurrency": 32,
+        "bytes": 211200,
+        "audio_seconds": 4.4,
+        "elapsed_seconds": 2.4112744860030944,
+        "ttfa_seconds": 0.32730025300043053,
+        "http_blocks": 6,
+        "pcm_sha256": "2b79afab256c292b7a2d2cd25dd639bd27802348ace71c0c6e8e654da9b15e2b"
+      },
+      {
+        "request_number": 54,
+        "concurrency": 32,
+        "bytes": 130560,
+        "audio_seconds": 2.72,
+        "elapsed_seconds": 1.466620335002517,
+        "ttfa_seconds": 0.32565694300137693,
+        "http_blocks": 4,
+        "pcm_sha256": "8a793a32af4e858fbc0570914c8f9fd4845f0500665558641f4a3dc0769bda4a"
+      },
+      {
+        "request_number": 55,
+        "concurrency": 32,
+        "bytes": 201600,
+        "audio_seconds": 4.2,
+        "elapsed_seconds": 2.281611962996976,
+        "ttfa_seconds": 0.3240561219972733,
+        "http_blocks": 6,
+        "pcm_sha256": "e281d127963777721ba8e9245ec16f92a1d2abc5254d1d79015aeeb4eb174e55"
+      },
+      {
+        "request_number": 56,
+        "concurrency": 32,
+        "bytes": 257280,
+        "audio_seconds": 5.36,
+        "elapsed_seconds": 2.8902186710001843,
+        "ttfa_seconds": 0.3172005890010041,
+        "http_blocks": 7,
+        "pcm_sha256": "7eba5888349f453ab8a5ddc6305e79e76343fb9f21aaa71f368e9428db88f8dc"
+      },
+      {
+        "request_number": 57,
+        "concurrency": 32,
+        "bytes": 186240,
+        "audio_seconds": 3.88,
+        "elapsed_seconds": 2.110981838999578,
+        "ttfa_seconds": 0.32493703900036053,
+        "http_blocks": 5,
+        "pcm_sha256": "9a90221bdcf2a94cbf107d2b48a2b43ff01e3acc0f5a03c990c7d3fdbe9bc479"
+      },
+      {
+        "request_number": 58,
+        "concurrency": 32,
+        "bytes": 188160,
+        "audio_seconds": 3.92,
+        "elapsed_seconds": 2.1290607529990666,
+        "ttfa_seconds": 0.3265171309976722,
+        "http_blocks": 5,
+        "pcm_sha256": "560d3c9898d4ca08b52ae93764f4f08734165955f6c5160975a33f22b15d255c"
+      },
+      {
+        "request_number": 59,
+        "concurrency": 32,
+        "bytes": 209280,
+        "audio_seconds": 4.36,
+        "elapsed_seconds": 2.381164287999127,
+        "ttfa_seconds": 0.3241855980013497,
+        "http_blocks": 6,
+        "pcm_sha256": "39e30580272a93bf2a5fe75a0a1516f6acaaa353892231fc34f822bb69ed2364"
+      },
+      {
+        "request_number": 60,
+        "concurrency": 32,
+        "bytes": 236160,
+        "audio_seconds": 4.92,
+        "elapsed_seconds": 2.6652102549996926,
+        "ttfa_seconds": 0.3241549890008173,
+        "http_blocks": 6,
+        "pcm_sha256": "06818e9f9ca44b00ad5cd64f0fc3d04a55bddd68933b0639e9ef9f98e042e972"
+      },
+      {
+        "request_number": 61,
+        "concurrency": 32,
+        "bytes": 203520,
+        "audio_seconds": 4.24,
+        "elapsed_seconds": 2.32669603800241,
+        "ttfa_seconds": 0.32676933699985966,
+        "http_blocks": 6,
+        "pcm_sha256": "adc62f9dfe213f4b8869c599d5e9ea2bbca49a7a2416a345f5d1b9d18106ca71"
+      },
+      {
+        "request_number": 62,
+        "concurrency": 32,
+        "bytes": 264960,
+        "audio_seconds": 5.52,
+        "elapsed_seconds": 2.996139367998694,
+        "ttfa_seconds": 0.3254614979996404,
+        "http_blocks": 7,
+        "pcm_sha256": "ebcd77056cb0a40a769e418515e9fd05f2fd51e2fadf1791c016398477d6cd7b"
+      },
+      {
+        "request_number": 63,
+        "concurrency": 32,
+        "bytes": 220800,
+        "audio_seconds": 4.6,
+        "elapsed_seconds": 2.4852579639991745,
+        "ttfa_seconds": 0.3227968309984135,
+        "http_blocks": 6,
+        "pcm_sha256": "2fa5d52304a81f57cc819f96d6366bf6f4aa7bfa0ab69abc20c00390ecadca2f"
+      }
+    ]
+  }
+}
