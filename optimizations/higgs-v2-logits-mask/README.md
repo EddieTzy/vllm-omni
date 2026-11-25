@@ -1,6 +1,6 @@
 # Higgs Audio v2：BOS/EOS logits mask Triton 融合
 
-状态：`measured_tradeoff`。2026-11-25 在 RTX PRO 6000 上完成正确性和 C32 独立服务对照，有明确收益信号；尚未创建新上游 PR。
+状态：`pr_submitted`。2026-11-25 在 RTX PRO 6000 上完成正确性和 C32 独立服务对照，有明确收益信号；[PR #11119](https://github.com/vllm-project/vllm-omni/pull/11119) 已提交，尚未合并。
 
 [总索引](../../README.md) · [指标口径](../../records/performance-methodology.md) · [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask) · [完整 RESULTS](https://github.com/EddieTzy/vllm-omni/blob/075d70559532b27536786e1ebf54b2c96a1d19fb/benchmarks/higgs_delay_mask_experiment/RESULTS.txt)
 
@@ -56,4 +56,4 @@ base 吞吐两轮为 19.8867 /19.4744，candidate 为 22.0689 /24.9436，完整�
 
 首轮 correctness baseline 在新卡 JIT/autotune 期间超过继承的 240s 健康检查预算，尚未发送音频请求；保留失败日志，以新 r2 标签和 900s 启动预算完成。没有丢弃计时性能轮次。模型和采样配置未变。
 
-这项值得准备独立贡献；仍需正式上游自检和审查。原始日志、PCM 和完整逐步采样轨迹保留在隔离实验目录，公开归档只含摘要、hash 和复现材料。GPU 服务测完已停止、显存释放。后续可继续研究 RAS 重复检查，保持每请求重采样顺序，不能擅自改批量抽样语义。
+完整自检和最终 rebased 29 项回归测试通过（0.76s），PR #11119 已提交，head `0ee2017a6a59808544f7cacee49cd9d2dfce48e8`，base `a57d6d1a73c694476ae1cc1447bcd765dfd47dd7`；模型源码字节与实测一致，等待上游审查/CI。原始日志、PCM 和完整逐步采样轨迹保留在隔离实验目录，公开归档只含摘要、hash 和复现材料。GPU 服务测完已停止、显存释放。后续可继续研究 RAS 重复检查，保持每请求重采样顺序，不能擅自改批量抽样语义。

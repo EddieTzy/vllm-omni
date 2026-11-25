@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T03:15:05.305600+00:00",
+  "updated_at_utc": "2026-11-25T03:40:42.238327+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -13,7 +13,7 @@
       "status": "PR #11068 已合并进入上游 main",
       "branch": "perf/higgs-v2-audio-routing",
       "branch_published": true,
-      "head_commit": "130fbadf725639b467cb262a19e4aedaebffca92",
+      "head_commit": "655a515e4061ae7cd4893b048ba28ddf4ed74f4b",
       "measured_base_commit": "4dafb464442956996be9633ed036cd24ebfef1d0",
       "measured_source_commit": "30dcfdc205d17072734328e74c5ca96a882ec548",
       "pr": 11068,
@@ -36,7 +36,19 @@
       "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing",
       "merged_at_utc": "2026-11-24T17:58:56Z",
       "merged_at_shanghai": "2026-11-25T01:58:56+08:00",
-      "merge_commit": "14a01235186941ad7a26ce258a4ca27c45cb6ebf"
+      "merge_commit": "14a01235186941ad7a26ce258a4ca27c45cb6ebf",
+      "rtx_pro_6000_followup": {
+        "base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+        "concurrency": 32,
+        "audio_throughput_change_percent": 85.7204716168995,
+        "mean_request_rtf": [
+          1.8445461264795036,
+          1.150154102211987
+        ],
+        "mean_request_rtf_change_percent": -37.64568498988049,
+        "source_diff": "exactly three routing lines; no logits mask/state fusion",
+        "scope": "two independent boots per variant; supplementary data for merged PR11068, not a new PR"
+      }
     },
     {
       "id": "higgs-v2-triton-state",
@@ -106,17 +118,17 @@
       "project": "vllm-omni",
       "model": "Higgs Audio v2",
       "component": "BOS/EOS delay-pattern logits mask fusion",
-      "workflow_category": "measured_tradeoff",
-      "status": "已验证 C32 服务收益，准备独立贡献；尚未创建 PR",
+      "workflow_category": "pr_submitted",
+      "status": "PR #11119 开放，未合并",
       "branch": "perf/higgs-v2-logits-mask",
       "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask",
       "branch_published": true,
-      "head_commit": "075d70559532b27536786e1ebf54b2c96a1d19fb",
+      "head_commit": "4523338bbfb32eee96e28c4a599c6f9cf2b78b5f",
       "measured_code_commit": "273179aa656aba22a10ff760fbc927b389c857a4",
       "measured_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
       "baseline_contains": "merged routing PR11068; no experimental state fusion",
       "gpu": "RTX PRO 6000 Blackwell Server Edition 96GB SM120",
-      "pr": null,
+      "pr": 11119,
       "result": "同卡 C32 两轮独立启动：audio吞吐+19.439%、平均E2E-14.103%、平均RTF-12.147%、首包P50-11.827%、P95-19.881%；保留全部轮次",
       "validation": "29 passed; paired32/32PCM,32/32code histories,200/200sampling RNG events equal",
       "change": "单次GPU launch替代逐请求逐codebook mask，不改sampling/RAS/RNG；CPU路径保留",
@@ -135,7 +147,10 @@
           ]
         }
       ],
-      "details": "optimizations/higgs-v2-logits-mask/README.md"
+      "details": "optimizations/higgs-v2-logits-mask/README.md",
+      "pr_url": "https://github.com/vllm-project/vllm-omni/pull/11119",
+      "pr_head_commit": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
+      "pr_base_commit": "a57d6d1a73c694476ae1cc1447bcd765dfd47dd7"
     }
   ]
 }

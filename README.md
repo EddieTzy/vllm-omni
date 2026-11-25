@@ -4,16 +4,16 @@
 
 最后整理：2026-11-25（北京时间）。本次新增 RTX PRO 6000 上的 logits mask 独立实验，仅测既有 C32 条件，未补其他并发档位；与历史 B200 数据分开记录。
 
-最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；新增 logits mask 融合在 RTX PRO 6000 的 C32 吞吐提高 19.44%、平均端到端耗时下降 14.10%，29 项测试及受控音频配对通过，尚未创建新 PR。Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不提交第二个 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
+最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；logits mask 融合已提交 [PR #11119](https://github.com/vllm-project/vllm-omni/pull/11119)，RTX PRO 6000 C32 吞吐 +19.44%、平均端到端耗时 -14.10%、RTF 1.133→.996。旧路由优化的新卡补充对照为 C32 吞吐 +85.72%、RTF 1.845→1.150，单独归档。Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不单独提交状态融合 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
 
 ## 状态总览
 
 | 分类 | 数量 | 归类规则 |
 | --- | ---: | --- |
 | [已合并](#已合并) | 1 | 已核实进入上游 |
-| [已提 PR](#已提-pr) | 0 | 已创建且仍开放，不能记成已合并 |
+| [已提 PR](#已提-pr) | 1 | 已创建且仍开放，不能记成已合并 |
 | 进行中或待验证 | 0 | 尚未登记为独立实现的新方向不计数 |
-| [已测有收益或取舍](#已测有收益或取舍) | 2 | 已有实测信号，同时明确回退和限制 |
+| [已测有收益或取舍](#已测有收益或取舍) | 1 | 已有实测信号，同时明确回退和限制 |
 | [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 1 | 保留负面结果和停止原因 |
 | 已关闭或归档 | 0 | 已关闭 PR 或被替代的历史版本 |
 
@@ -23,17 +23,18 @@
 
 | 模型 | 改动 | 已观测结果与范围 | 入口 |
 | --- | --- | --- | --- |
-| Higgs Audio v2 | 统一纯音频 norm/MLP 路由 | B200、指定 eager MRv2 配置，C32 吞吐 +50.8%；受控 32/32 完整音频相同。带 profiler 的证据单独归档。 | [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068) · [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing) · [详情](optimizations/higgs-v2-audio-routing/README.md) |
+| Higgs Audio v2 | 统一纯音频 norm/MLP 路由 | B200 历史 C32 +50.8%；RTX PRO 6000 补充 C32 +85.72%、RTF 1.845→1.150；受控 32/32 完整音频相同。带 profiler 的证据单独归档。 | [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068) · [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing) · [详情](optimizations/higgs-v2-audio-routing/README.md) |
 
 ## 已提 PR
 
-当前登记项目没有仍开放的 PR。
+| 模型 | 改动 | 已观测结果与范围 | 入口 |
+| --- | --- | --- | --- |
+| Higgs Audio v2 | BOS/EOS logits mask Triton 融合 | RTX PRO 6000，C32 吞吐 +19.44%、平均耗时 -14.10%、RTF 1.133→.996；29 项测试通过，受控 32/32 音频相同，尚未合并。 | [PR #11119](https://github.com/vllm-project/vllm-omni/pull/11119) · [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask) · [详情](optimizations/higgs-v2-logits-mask/README.md) |
 
 ## 已测有收益或取舍
 
 | 模型 | 改动 | 已观测结果与决定 | 入口 |
 | --- | --- | --- | --- |
-| Higgs Audio v2 | BOS/EOS logits mask Triton 融合 | RTX PRO 6000；基线已含路由优化、不含状态融合。C32 吞吐 +19.44%，平均耗时 -14.10%，首包 P95 -19.88%；两轮各 arm 和限制全部保留，尚未提 PR。 | [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask) · [详情](optimizations/higgs-v2-logits-mask/README.md) |
 | Higgs Audio v2 | Triton delay/EOS/历史状态融合 | B200，基线已含音频路由优化；C32 吞吐额外 +1.64%，平均耗时 -2.01%，首包 P95 +2.43%。增益小且存在尾延迟回退，作为实验保留，尚未提 PR。 | [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-triton-state) · [详情](optimizations/higgs-v2-triton-state/README.md) |
 
 ## 无稳定收益或暂不采用

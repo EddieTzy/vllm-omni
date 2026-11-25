@@ -1,5 +1,5 @@
 {
-  "status": "Measured candidate; no upstream PR yet",
+  "status": "Upstream PR #11119 open",
   "base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
   "measured_code_commit": "273179aa656aba22a10ff760fbc927b389c857a4",
   "baseline_contains": "merged uniform-audio routing PR #11068",
@@ -34,5 +34,8 @@
     "corpus": "de15e0ea37b0b743e3e9a8fa0db27a328e5969b594b3a0af7a1e5df773bdfb42"
   },
   "archived_client_sha256": "7e6ac9f47b28ea7538d10b365d6a670ab805c8c2ee2746143594dbf2a9d26d4b",
-  "client_changes": "SPDX header and formatting only; parsed AST matches the measured client"
+  "client_changes": "SPDX header and formatting only; parsed AST matches the measured client",
+  "upstream_pr": "https://github.com/vllm-project/vllm-omni/pull/11119",
+  "pr_head": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
+  "pr_base": "a57d6d1a73c694476ae1cc1447bcd765dfd47dd7"
 }

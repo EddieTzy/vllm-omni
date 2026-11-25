@@ -59,3 +59,25 @@ MRv2 回归模块 16 passed /17 warnings；改动文件适用 pre-commit 全部�
 ## 结论与后续
 
 指定 B200 eager MRv2 工作负载中有明显收益，窄范围 PR 已合并；full repository CI、其他硬件、TP/multi-GPU、CUDA Graph 和一般质量结论分别保留边界。后续状态融合应以此优化版作为增量基线，不能重复计算 +50.8%。
+
+## RTX PRO 6000 补充实测（2026-11-25）
+
+这是用户要求查看旧优化在新卡上的表现，单独归档，不重提旧 PR。已在 [PR #11068 描述末尾](https://github.com/vllm-project/vllm-omni/pull/11068) 增加补充结果，原 B200 数据保留。
+
+一张 RTX PRO 6000 Blackwell Server Edition，97887MiB，SM120，driver 580.173.02；torch 2.14.0+cu130、vLLM .34.0、FlashInfer .7.3、transformers 5.22.0。双方都用 `649e7b3b9a5b93f9a33f753942df149ba939e523` runtime，A/A2 仅撤掉上次 3 行路由，B/B2 保留。核对双方各 2398 个 runtime Python 文件，只差 talker，没有 logits mask 或状态融合。
+
+同配置 C32、A/B/B2/A2 独立启动，每轮 32 warmup +64 measured，两波各 32，公开 EN/ZH 各 32 条，不发送 speech request seed，无 profiler。eager MRv2、BF16 engine、TP=PP=1、两阶段 max_num_seqs32/GPU 配额 .6/.25、采样默认值保持一致。
+
+| 两轮 boot 均值 | 原始路由 | 已合并路由 | 变化 |
+| --- | ---: | ---: | ---: |
+| audio秒/秒 | 10.5966 | 19.6801 | +85.72% |
+| 平均 cost / E2E（秒） | 7.8102 | 4.8206 | -38.28% |
+| **平均请求 RTF** | **1.8445** | **1.1502** | **-37.65%** |
+| 首包 P50（秒） | 7.5530 | 4.8841 | -35.34% |
+| 首包 P95（秒） | 11.4930 | 6.2978 | -45.20% |
+
+RTF 先逐请求计算 elapsed/audio_seconds，再取平均，不是总吞吐的倒数。各轮 mean RTF：原始 1.7451/1.9440，优化 1.1526/1.1477；各轮吞吐：原始 11.1379/10.0553，优化 20.6074/18.7528，全部保留。256 measured 请求全部成功，四轮 HTTP disconnect 后 WAV 恢复正常，不声明完整 abort/leak 资格。
+
+[全部四轮与均值](metrics/rtx_pro_6000_20261125/summary.json) · [源码身份](metrics/rtx_pro_6000_20261125/source-identity.json) · [文件比较/显存/恢复](metrics/rtx_pro_6000_20261125/validation.json) · [固定版独立报告](https://github.com/EddieTzy/vllm-omni/blob/655a515e4061ae7cd4893b048ba28ddf4ed74f4b/benchmarks/higgs_audio_routing_experiment/rtx_pro_6000_20261125/RESULTS.txt)。峰值显存原始 59598/59626MiB，优化 59568/59578MiB，含 warmup 和配置池，不宣称显存收益。
+
+仅针对本机本轮 C32 条件，未额外补其他并发点，未新增质量评测。随机长度和波次长尾有波动，两轮不是正式置信区间。与 B200 历史实验的硬件、runtime、先跑 native C16 的预热/负载序列不同，不把 +85.72% 当成硬件的普遍优势；也不与新 mask PR #11119 的增量 +19.44% 直接相加或相乘作实测累计收益。
