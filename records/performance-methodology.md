@@ -43,4 +43,4 @@ GPU 诊断与性能测量遵守用户当次授权，不能把本次允许理解�
 
 ## 本记录分支的维护边界
 
-结构与指标口径参考 [sglang-omni 的 contribution-log](https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log)。这里仅记录 vLLM-Omni 的独立证据；不将 SGLang 的结果作为 vLLM 的收益。用户已要求不追加并发档位补测，本次仅整理既有资料，没有连接 GPU 或启动实验。未来测量须重新满足当次 GPU 使用安排。
+结构与指标口径参考 [sglang-omni 的 contribution-log](https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log)。这里仅记录 vLLM-Omni 的独立证据；不将 SGLang 的结果作为 vLLM 的收益。用户已要求不追加并发档位补测。记录分支仅汇总已授权实验，文档维护本身不自动启动 GPU；后续测量遵守当次 GPU 使用安排。

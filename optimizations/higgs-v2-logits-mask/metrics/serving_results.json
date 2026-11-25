@@ -1,0 +1,68 @@
+{
+  "arms": {
+    "A": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 13.788102342999991,
+      "audio_seconds_per_second": 19.886710526137566,
+      "ttfa_p50_seconds": 4.875528275000079,
+      "ttfa_p95_seconds": 6.54072498354999,
+      "mean_e2e_s": 4.84570506585937,
+      "mean_rtf": 1.1532454038136692
+    },
+    "B": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 12.30145196400008,
+      "audio_seconds_per_second": 22.068939568636296,
+      "ttfa_p50_seconds": 4.197843668999894,
+      "ttfa_p95_seconds": 5.697685627749978,
+      "mean_e2e_s": 4.19573248843745,
+      "mean_rtf": 1.0056495684614137
+    },
+    "B2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 10.71376240399968,
+      "audio_seconds_per_second": 24.94361830352272,
+      "ttfa_p50_seconds": 4.183561623000287,
+      "ttfa_p95_seconds": 5.1008420566997525,
+      "mean_e2e_s": 4.066756317781277,
+      "mean_rtf": 0.9855906677390952
+    },
+    "A2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 14.414799789999961,
+      "audio_seconds_per_second": 19.474429342733227,
+      "ttfa_p50_seconds": 4.630106171500074,
+      "ttfa_p95_seconds": 6.937357185000155,
+      "mean_e2e_s": 4.773358783578097,
+      "mean_rtf": 1.1133093995183598
+    }
+  },
+  "means": {
+    "baseline": {
+      "audio_seconds_per_second": 19.680569934435397,
+      "mean_e2e_s": 4.809531924718733,
+      "mean_rtf": 1.1332774016660145,
+      "ttfa_p50_seconds": 4.7528172232500765,
+      "ttfa_p95_seconds": 6.7390410842750725
+    },
+    "fused": {
+      "audio_seconds_per_second": 23.506278936079507,
+      "mean_e2e_s": 4.131244403109363,
+      "mean_rtf": 0.9956201181002544,
+      "ttfa_p50_seconds": 4.190702646000091,
+      "ttfa_p95_seconds": 5.399263842224865
+    }
+  },
+  "changes_percent": {
+    "audio_seconds_per_second": 19.43901530488814,
+    "mean_e2e_s": -14.102984078830849,
+    "mean_rtf": -12.14683036680977,
+    "ttfa_p50_seconds": -11.82697652458009,
+    "ttfa_p95_seconds": -19.880829116422117
+  },
+  "scope": "Incremental C32: routing-only vs routing+Triton logits mask; two independent boots each, all requests retained"
+}

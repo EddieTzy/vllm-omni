@@ -2,9 +2,9 @@
 
 按状态查看进展，再按模型和优化位置查看实现、实验与取舍。此 `docs/contribution-log` 分支用于记录；实现保存在各自的 perf 分支，上游 PR 保持独立。[项目原始 README](https://github.com/vllm-project/vllm-omni/blob/main/README.md)。
 
-最后整理：2026-11-25（北京时间）。本次仅核对 GitHub 状态和既有资料，没有连接 GPU、重新测试或补测并发档位。
+最后整理：2026-11-25（北京时间）。本次新增 RTX PRO 6000 上的 logits mask 独立实验，仅测既有 C32 条件，未补其他并发档位；与历史 B200 数据分开记录。
 
-最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不提交第二个 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
+最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；新增 logits mask 融合在 RTX PRO 6000 的 C32 吞吐提高 19.44%、平均端到端耗时下降 14.10%，29 项测试及受控音频配对通过，尚未创建新 PR。Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不提交第二个 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
 
 ## 状态总览
 
@@ -13,7 +13,7 @@
 | [已合并](#已合并) | 1 | 已核实进入上游 |
 | [已提 PR](#已提-pr) | 0 | 已创建且仍开放，不能记成已合并 |
 | 进行中或待验证 | 0 | 尚未登记为独立实现的新方向不计数 |
-| [已测有收益或取舍](#已测有收益或取舍) | 1 | 已有实测信号，同时明确回退和限制 |
+| [已测有收益或取舍](#已测有收益或取舍) | 2 | 已有实测信号，同时明确回退和限制 |
 | [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 1 | 保留负面结果和停止原因 |
 | 已关闭或归档 | 0 | 已关闭 PR 或被替代的历史版本 |
 
@@ -33,7 +33,8 @@
 
 | 模型 | 改动 | 已观测结果与决定 | 入口 |
 | --- | --- | --- | --- |
-| Higgs Audio v2 | Triton delay/EOS/历史状态融合 | 基线已含音频路由优化；C32 吞吐额外 +1.64%，平均耗时 -2.01%，首包 P95 +2.43%。增益小且存在尾延迟回退，作为实验保留，尚未提 PR。 | [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-triton-state) · [详情](optimizations/higgs-v2-triton-state/README.md) |
+| Higgs Audio v2 | BOS/EOS logits mask Triton 融合 | RTX PRO 6000；基线已含路由优化、不含状态融合。C32 吞吐 +19.44%，平均耗时 -14.10%，首包 P95 -19.88%；两轮各 arm 和限制全部保留，尚未提 PR。 | [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask) · [详情](optimizations/higgs-v2-logits-mask/README.md) |
+| Higgs Audio v2 | Triton delay/EOS/历史状态融合 | B200，基线已含音频路由优化；C32 吞吐额外 +1.64%，平均耗时 -2.01%，首包 P95 +2.43%。增益小且存在尾延迟回退，作为实验保留，尚未提 PR。 | [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-triton-state) · [详情](optimizations/higgs-v2-triton-state/README.md) |
 
 ## 无稳定收益或暂不采用
 

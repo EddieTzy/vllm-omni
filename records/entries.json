@@ -1,6 +1,6 @@
 {
-  "updated_at_utc": "2026-11-25T01:27:47.575186+00:00",
-  "gpu_runs_performed_for_this_update": false,
+  "updated_at_utc": "2026-11-25T03:15:05.305600+00:00",
+  "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
     {
@@ -99,6 +99,43 @@
       ],
       "details": "optimizations/higgs-v2-packed-feedback/README.md",
       "branch_url": null
+    },
+    {
+      "id": "higgs-v2-logits-mask",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Higgs Audio v2",
+      "component": "BOS/EOS delay-pattern logits mask fusion",
+      "workflow_category": "measured_tradeoff",
+      "status": "已验证 C32 服务收益，准备独立贡献；尚未创建 PR",
+      "branch": "perf/higgs-v2-logits-mask",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-logits-mask",
+      "branch_published": true,
+      "head_commit": "075d70559532b27536786e1ebf54b2c96a1d19fb",
+      "measured_code_commit": "273179aa656aba22a10ff760fbc927b389c857a4",
+      "measured_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "baseline_contains": "merged routing PR11068; no experimental state fusion",
+      "gpu": "RTX PRO 6000 Blackwell Server Edition 96GB SM120",
+      "pr": null,
+      "result": "同卡 C32 两轮独立启动：audio吞吐+19.439%、平均E2E-14.103%、平均RTF-12.147%、首包P50-11.827%、P95-19.881%；保留全部轮次",
+      "validation": "29 passed; paired32/32PCM,32/32code histories,200/200sampling RNG events equal",
+      "change": "单次GPU launch替代逐请求逐codebook mask，不改sampling/RAS/RNG；CPU路径保留",
+      "code_locations": [
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/delay_pattern_mask.py",
+          "symbols": [
+            "mask_audio_logits_",
+            "_mask"
+          ]
+        },
+        {
+          "path": "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py",
+          "symbols": [
+            "_dispatch_audio_codes"
+          ]
+        }
+      ],
+      "details": "optimizations/higgs-v2-logits-mask/README.md"
     }
   ]
 }

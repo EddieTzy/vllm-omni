@@ -1,0 +1,93 @@
+{
+  "runtime_source_comparison": {
+    "baseline_python_files": 2398,
+    "candidate_python_files": 2399,
+    "modified": [
+      "model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py"
+    ],
+    "added": [
+      "model_executor/models/higgs_audio_v2/delay_pattern_mask.py"
+    ],
+    "removed": []
+  },
+  "gpu_memory": {
+    "A": {
+      "samples": 115,
+      "peak_MiB": 59596.0,
+      "scope": "sampled every 200ms, warmup+measured, configured pools included"
+    },
+    "B": {
+      "samples": 115,
+      "peak_MiB": 59640.0,
+      "scope": "sampled every 200ms, warmup+measured, configured pools included"
+    },
+    "B2": {
+      "samples": 100,
+      "peak_MiB": 59594.0,
+      "scope": "sampled every 200ms, warmup+measured, configured pools included"
+    },
+    "A2": {
+      "samples": 120,
+      "peak_MiB": 59586.0,
+      "scope": "sampled every 200ms, warmup+measured, configured pools included"
+    }
+  },
+  "recovery": {
+    "A": {
+      "headers_seconds": 5.837944850999975,
+      "close_seconds": 6.038611570999819,
+      "recovery_seconds": 2.5473844919997646,
+      "recovery": {
+        "rate": 24000,
+        "frames": 56640,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "B": {
+      "headers_seconds": 6.340066169000238,
+      "close_seconds": 6.540860705000341,
+      "recovery_seconds": 2.0762651099998948,
+      "recovery": {
+        "rate": 24000,
+        "frames": 43200,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "B2": {
+      "headers_seconds": 5.849906872999782,
+      "close_seconds": 6.050944232999882,
+      "recovery_seconds": 2.295758699999624,
+      "recovery": {
+        "rate": 24000,
+        "frames": 58560,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "A2": {
+      "headers_seconds": 7.071796241999891,
+      "close_seconds": 7.27269549499988,
+      "recovery_seconds": 2.5938651400001618,
+      "recovery": {
+        "rate": 24000,
+        "frames": 57600,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    }
+  },
+  "source_sha256": {
+    "baseline_talker": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a",
+    "candidate_talker": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673",
+    "candidate_kernel": "280ae31171207c877b9ea9b8e3f5fc739f2905c519b58b27b88070f548e87c45",
+    "config": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050",
+    "corpus": "de15e0ea37b0b743e3e9a8fa0db27a328e5969b594b3a0af7a1e5df773bdfb42"
+  },
+  "regression_log": "/data/venv-vllm/lib/python3.12/site-packages/pytest_asyncio/plugin.py:299: PytestDeprecationWarning: The configuration option \"asyncio_default_fixture_loop_scope\" is unset.\nThe event loop scope for asynchronous fixtures will default to the \"fixture\" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to \"function\" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: \"function\", \"class\", \"module\", \"package\", \"session\"\n\n  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))\n.............................                                            [100%]\n=============================== warnings summary ===============================\nvllm_omni/__init__.py:22\n  /data/vllm-higgs-mask-main/vllm_omni/__init__.py:22: RuntimeWarning: Failed to import version from _version.py: No module named 'vllm_omni._version'\n  This typically happens in development mode before building.\n  Using fallback version 'dev'.\n    from .version import __version__, __version_tuple__  # isort:skip # noqa: F401\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--- Running Summary\n29 passed, 1 warning in 1.29s\n",
+  "first_cold_start_failure": {
+    "log": "higgs-logits-mask/fixed-controller.log",
+    "reason": "readiness timeout 240s before any generated output; fresh r2 budget900s; original evidence retained"
+  }
+}

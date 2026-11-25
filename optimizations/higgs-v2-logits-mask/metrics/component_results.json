@@ -1,0 +1,42 @@
+{
+  "parity_state_rows": 1060,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.14.0+cu130",
+  "timings": {
+    "1": {
+      "original": {
+        "median_ms": 0.18254099995829165,
+        "min_ms": 0.15548900000794674,
+        "max_ms": 0.20565700015140465
+      },
+      "broadcast": {
+        "median_ms": 0.21882999999434105,
+        "min_ms": 0.20121300008213439,
+        "max_ms": 0.24733299983381585
+      },
+      "triton": {
+        "median_ms": 0.0351305000094726,
+        "min_ms": 0.03329499986648443,
+        "max_ms": 0.060051999980714754
+      }
+    },
+    "32": {
+      "original": {
+        "median_ms": 5.681324499846596,
+        "min_ms": 5.414890000110972,
+        "max_ms": 5.868077999821253
+      },
+      "broadcast": {
+        "median_ms": 0.22393550000288087,
+        "min_ms": 0.20512599985522684,
+        "max_ms": 0.2436990000660444
+      },
+      "triton": {
+        "median_ms": 0.04006599999684113,
+        "min_ms": 0.037948999988657306,
+        "max_ms": 0.06123000002844492
+      }
+    }
+  },
+  "scope": "component only; includes host metadata H2D, excludes model/head/sampling"
+}

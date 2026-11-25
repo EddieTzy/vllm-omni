@@ -1,0 +1,38 @@
+{
+  "status": "Measured candidate; no upstream PR yet",
+  "base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+  "measured_code_commit": "273179aa656aba22a10ff760fbc927b389c857a4",
+  "baseline_contains": "merged uniform-audio routing PR #11068",
+  "not_included": "experimental Triton decode state fusion",
+  "hardware": "one RTX PRO 6000 Blackwell Server Edition, 97887 MiB, SM120, driver580.173.02",
+  "software": {
+    "torch": "2.14.0+cu130",
+    "cuda_build": "13.0",
+    "vllm": "0.34.0",
+    "vllm_omni": "source649e7b3 + mask patch; public source archive reports dev version",
+    "triton": "3.8.0",
+    "flashinfer": "0.7.3",
+    "transformers": "5.22.0"
+  },
+  "model": "bosonai/higgs-audio-v2-generation-3B-base@d80c511612b3040ff2877ce3d408747df1739f11",
+  "codec": "bosonai/higgs-audio-v2-tokenizer@815a03f1b57dcb5ae918db415f22cd0c8a6f0f54",
+  "dataset": "zhaochenyang20/seed-tts-eval@8f5e1aa2a35d42f42e940074c1983358b9491f89",
+  "branch": "perf/higgs-v2-logits-mask",
+  "no_additional_concurrency_sweep": true,
+  "source_sha256": {
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673",
+    "vllm_omni/model_executor/models/higgs_audio_v2/delay_pattern_mask.py": "280ae31171207c877b9ea9b8e3f5fc739f2905c519b58b27b88070f548e87c45"
+  },
+  "input_sha256": {
+    "reproduction/public-corpus.json": "fe93bf8f5932e6ba1b12e411f543abe1e8aaabf28647361959f13f272aff6ca2",
+    "reproduction/c32.yaml": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050"
+  },
+  "original_measured_client_sha256": "7e51d1095734633600e28d3e570b1c797c5630f91c09aa1b9448b052386865eb",
+  "original_client_ast_sha256": "77f2c6d77e15ff370b53a803ef4937f7ba303a6342e2b82fe9c01cf7d04e2b40",
+  "measured_input_sha256": {
+    "config": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050",
+    "corpus": "de15e0ea37b0b743e3e9a8fa0db27a328e5969b594b3a0af7a1e5df773bdfb42"
+  },
+  "archived_client_sha256": "7e6ac9f47b28ea7538d10b365d6a670ab805c8c2ee2746143594dbf2a9d26d4b",
+  "client_changes": "SPDX header and formatting only; parsed AST matches the measured client"
+}
