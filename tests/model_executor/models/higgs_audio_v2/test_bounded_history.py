@@ -1,11 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM-Omni project
 
-from types import SimpleNamespace
 
 import pytest
 import torch
 
+from tests.model_executor.models.test_higgs_audio_v2_mrv2 import _Config, _SamplerOutput
 from vllm_omni.model_executor.models.higgs_audio_v2.higgs_audio_v2_talker import (
     HiggsAudioV2TalkerForConditionalGeneration,
 )
@@ -16,7 +16,7 @@ pytestmark = [pytest.mark.core_model, pytest.mark.cpu]
 @pytest.mark.parametrize("frames", [6, 7, 200])
 def test_dispatch_retains_exact_ras_window_and_emits_every_frame(frames):
     model = object.__new__(HiggsAudioV2TalkerForConditionalGeneration)
-    model.config = SimpleNamespace(
+    model.config = _Config(
         audio_token_id=4,
         audio_delay_token_id=9,
         audio_stream_bos_id=14,
@@ -30,7 +30,7 @@ def test_dispatch_retains_exact_ras_window_and_emits_every_frame(frames):
     for step in range(frames):
         value = step % 13
         model.__dict__["_sample_audio_codes_upstream"] = lambda logits, **_: torch.tensor([value, value])
-        output = SimpleNamespace(sampled_token_ids=torch.tensor([[4]]), num_sampled=None)
+        output = _SamplerOutput(sampled_token_ids=torch.tensor([[4]]), num_sampled=None)
         model._dispatch_audio_codes(output, hidden, None, request_ids=["live"])
         emitted.append(model._last_audio_codes[0].clone())
         history = model._audio_state["live"]["audio_out_ids"]
