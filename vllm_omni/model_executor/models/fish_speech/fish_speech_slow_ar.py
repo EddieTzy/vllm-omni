@@ -451,18 +451,23 @@ class FishSpeechSlowARForConditionalGeneration(nn.Module):
                     prompt_embeds = self._build_structured_voice_clone_prefill_embeds(info_dict)
                 else:
                     prompt_embeds = self._build_prefill_embeds(input_ids, info_dict)
-                prompt_embeds_buf = prompt_embeds.detach().to("cpu").contiguous()
-                if not prompt_embeds_buf.is_pinned():
-                    prompt_embeds_buf = prompt_embeds_buf.pin_memory()
-                total_prompt_len = int(prompt_embeds_buf.shape[0])
+                total_prompt_len = int(prompt_embeds.shape[0])
                 next_offset = min(span_len, total_prompt_len)
+                if span_len == total_prompt_len:
+                    take = prompt_embeds
+                    cached_prefill = None
+                else:
+                    prompt_embeds_buf = prompt_embeds.detach().to("cpu").contiguous()
+                    if not prompt_embeds_buf.is_pinned():
+                        prompt_embeds_buf = prompt_embeds_buf.pin_memory()
+                    take = prompt_embeds_buf[:span_len]
+                    cached_prefill = prompt_embeds_buf if next_offset < total_prompt_len else None
 
                 info_update: dict[str, Any] = {
-                    "embed": {"prefill": prompt_embeds_buf if next_offset < total_prompt_len else None},
+                    "embed": {"prefill": cached_prefill},
                     "meta": {"prefill_offset": next_offset},
                 }
 
-                take = prompt_embeds_buf[:span_len]
                 if int(take.shape[0]) < span_len:
                     pad_n = span_len - int(take.shape[0])
                     pad_embed = self.embed_input_ids(
