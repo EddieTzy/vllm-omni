@@ -1,0 +1,1 @@
+{"shape": [2, 80, 630], "dtype": "torch.bfloat16", "finite": true, "max_abs": 0.6875, "rms": 0.050825085490942, "relative_l2": 0.008665819652378559}

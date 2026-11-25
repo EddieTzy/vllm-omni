@@ -1,0 +1,36 @@
+[
+  {
+    "file": "q3/cq3bjyrtw5jtwqfm4honznqahlixblvn36j6gwis5bbzn5udxxws.py",
+    "sha256": "e032004c11a57f94a83ed27d57c91a58554ba05f99a4da0654c456087cc89170",
+    "calls": [
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_9.run(buf21, arg15_1, buf22, buf23, 57600, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_10.run(buf22, buf21, buf24, 921600, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_11.run(buf23, buf21, buf25, 921600, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_12.run(arg16_1, buf26, buf54, buf82, 900, stream=raw_stream0)",
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_9.run(buf49, arg15_1, buf50, buf51, 57600, stream=raw_stream0)"
+    ],
+    "static_counts": {
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_10": 22,
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_11": 22,
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_12": 7,
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_9": 22
+    }
+  },
+  {
+    "file": "yn/cyn7k5r6xvjdgwl4ql7zlortfjrsrnwhsnctkpwmo3mvup3eiuyk.py",
+    "sha256": "bc1006c5a5a9c3a12be46c62427e2e603ea48cce17f18ecb4fbd596522b0c040",
+    "calls": [
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_10.run(buf21, arg17_1, buf22, buf23, s3, triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_10_xnumel, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_11.run(buf22, buf21, buf24, triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_11_xnumel, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_12.run(buf23, buf21, buf25, triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_12_xnumel, stream=raw_stream0)",
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_13.run(arg18_1, buf26, buf54, buf82, triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_13_xnumel, stream=raw_stream0)",
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_10.run(buf49, arg17_1, buf50, buf51, s3, triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_10_xnumel, stream=raw_stream0)"
+    ],
+    "static_counts": {
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_11": 22,
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_12": 22,
+      "triton_poi_fused__scaled_dot_product_cudnn_attention__to_copy_cat_permute_scalar_tensor_select_slice_split_unsqueeze_view_where_13": 7,
+      "triton_poi_fused__to_copy_add_arange_div_mul_neg_permute_slice_split_stack_unbind_unsqueeze_view_10": 22
+    }
+  }
+]

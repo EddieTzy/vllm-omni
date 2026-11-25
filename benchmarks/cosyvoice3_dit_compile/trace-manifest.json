@@ -1,0 +1,76 @@
+[
+  {
+    "file": "traces/1-eager.json.gz",
+    "source_sha256": "a4aa138133efd7a59a4a4cafd64698b164cf056cd9830eeb3674c8467fb647a3",
+    "published_sha256": "e2a4b4e3255bf588d78bd904414b253c0c510eee2f5574a4b88b56aa09006786",
+    "events": 12448,
+    "categories": {
+      "metadata": 76,
+      "cpu_op": 5734,
+      "overhead": 1,
+      "kernel": 1334,
+      "ac2g": 3318,
+      "cuda_runtime": 1781,
+      "cuda_driver": 181,
+      "gpu_memcpy": 22,
+      "Trace": 1
+    },
+    "bytes": 231690,
+    "perfetto_imported_slices": 9056
+  },
+  {
+    "file": "traces/2-eager.json.gz",
+    "source_sha256": "ad0f5f4184508c275fa9a881831cfea6eaff9883adf557bfbfc8754c3c6a581b",
+    "published_sha256": "db3ed771cf7992421eb4b612c076f8bbd1a43054eef88825fab705d607937a29",
+    "events": 12448,
+    "categories": {
+      "metadata": 76,
+      "cpu_op": 5734,
+      "overhead": 1,
+      "kernel": 1334,
+      "ac2g": 3318,
+      "cuda_runtime": 1781,
+      "cuda_driver": 181,
+      "gpu_memcpy": 22,
+      "Trace": 1
+    },
+    "bytes": 232408,
+    "perfetto_imported_slices": 9056
+  },
+  {
+    "file": "traces/1-compiled.json.gz",
+    "source_sha256": "8c0ab0c6f5b66bf75975fc7399ac6114c7d3f29dd13bc948bfbe1d1ad3c0b7b5",
+    "published_sha256": "bb1921e68672caed4e8d57a5fff13bc91f2e777312403f044075bc767bedb33c",
+    "events": 3268,
+    "categories": {
+      "metadata": 76,
+      "cpu_op": 470,
+      "overhead": 1,
+      "kernel": 421,
+      "ac2g": 1360,
+      "cuda_driver": 293,
+      "cuda_runtime": 646,
+      "Trace": 1
+    },
+    "bytes": 50237,
+    "perfetto_imported_slices": 1834
+  },
+  {
+    "file": "traces/2-compiled.json.gz",
+    "source_sha256": "8f735d76e0bd6e2fa3888e79475a38556d38a35de1f3b5755c70d9287c5741c9",
+    "published_sha256": "7d03c08e66941fd56aa57cb39721f29854ea60e1691503bce7a43db9b999694d",
+    "events": 3278,
+    "categories": {
+      "metadata": 76,
+      "cpu_op": 472,
+      "overhead": 1,
+      "kernel": 423,
+      "ac2g": 1364,
+      "cuda_driver": 295,
+      "cuda_runtime": 646,
+      "Trace": 1
+    },
+    "bytes": 50267,
+    "perfetto_imported_slices": 1840
+  }
+]

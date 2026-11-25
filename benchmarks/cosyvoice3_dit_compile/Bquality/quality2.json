@@ -1,0 +1,1 @@
+{"samples": 17280, "final": false, "eager_repeat_wave": {"rel": 0.0, "rms": 0.0}, "eager_repeat_mel": {"rel": 0.0, "rms": 0.0}, "ab_wave": {"rel": 1.2129565477371216, "rms": 0.04650498181581497}, "ab_mel": {"rel": 0.008670192211866379, "rms": 0.04763549938797951}, "ab_magnitude": {"rel": 0.14786066114902496, "rms": 0.11067289859056473}}
