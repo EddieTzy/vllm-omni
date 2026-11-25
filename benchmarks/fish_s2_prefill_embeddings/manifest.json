@@ -1,0 +1,30 @@
+{
+  "base": "95988e77ed8862edf93f8eeaf906e984d9a5e424",
+  "measured_candidate": "b4336014bb0f53b92b48b8d71f6681db3bef7cfc",
+  "hardware": "RTX PRO 6000 Blackwell Server Edition, 96 GB",
+  "model": "fishaudio/s2-pro",
+  "runtime": "vLLM 0.34.0, torch 2.14.0+cu130",
+  "config": "vllm_omni/deploy/fish_qwen3_omni_high_concurrency_single_gpu.yaml",
+  "sample_rate": 44100,
+  "concurrency": 32,
+  "warmup_per_boot": 32,
+  "measured_per_boot": 64,
+  "formal_order": [
+    "base-a",
+    "cand-b",
+    "cand-b2",
+    "base-a2"
+  ],
+  "diagnostic_order": [
+    "diag-a",
+    "diag-b"
+  ],
+  "reference": "tests/assets/qwen3_tts/clone_2.wav",
+  "changes_percent": {
+    "audio_per_s": -0.5575188758247251,
+    "p50_ms": 3.459601547273383,
+    "p95_ms": 3.504581704275922,
+    "e2e_s": 0.7854521100650214,
+    "rtf": 0.4765075189873791
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "source_sha256": {
+    "source": "c98df682cbb95bceafbcd04376f6a6ce6d69997a2b5bbc80ddf1f92796590564",
+    "candidate": "810af6b9d39e3bd33529e51585592862b24e2bdcd4f4f833d0b93dea2afe2cb6"
+  },
+  "reference_sha256": "480f55f41c71c3d79c2a9acc48f0bfb3c5a46222e6e9ebf3e2888e93501a6b5c",
+  "trace_archive_sha256": "15d0a7af05d3c38c2d5a89fdce945763b824b61b8da39535af9420a3442812f0"
+}

@@ -1,0 +1,3470 @@
+{
+  "base-a": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 172032,
+      "audio_seconds": 1.9504761904761905,
+      "elapsed_seconds": 2.7225909369990404,
+      "ttfa_seconds": 0.5858077090015286,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 401408,
+      "audio_seconds": 4.551111111111111,
+      "elapsed_seconds": 4.3552185660009854,
+      "ttfa_seconds": 0.7918155260013009,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.46630636899863,
+      "ttfa_seconds": 1.7203133139992133,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 417792,
+      "audio_seconds": 4.73687074829932,
+      "elapsed_seconds": 4.5085473409999395,
+      "ttfa_seconds": 1.620867278001242,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 454656,
+      "audio_seconds": 5.154829931972789,
+      "elapsed_seconds": 4.664756986996508,
+      "ttfa_seconds": 1.5937534409968066,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.137621821999346,
+      "ttfa_seconds": 1.7165798870009894,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 176128,
+      "audio_seconds": 1.9969160997732427,
+      "elapsed_seconds": 2.758998404999147,
+      "ttfa_seconds": 1.6568449420010438,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.573830369998177,
+      "ttfa_seconds": 1.5856419199990341,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.7000601929976256,
+      "ttfa_seconds": 1.7072349089976342,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.161403930000233,
+      "ttfa_seconds": 1.7037117260006198,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 188416,
+      "audio_seconds": 2.136235827664399,
+      "elapsed_seconds": 2.8291397299981327,
+      "ttfa_seconds": 1.696213238999917,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.641942424001172,
+      "ttfa_seconds": 1.698185575001844,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.669434125000407,
+      "ttfa_seconds": 1.6379080790029548,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.3542318330000853,
+      "ttfa_seconds": 1.689289476002159,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 204800,
+      "audio_seconds": 2.3219954648526078,
+      "elapsed_seconds": 2.9935633309978584,
+      "ttfa_seconds": 1.6861783469976217,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.7597795670008054,
+      "ttfa_seconds": 1.6857888369995635,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 2.9873326840024674,
+      "ttfa_seconds": 1.6782365950020903,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.4209369239979424,
+      "ttfa_seconds": 1.6242045929975575,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 364544,
+      "audio_seconds": 4.133151927437642,
+      "elapsed_seconds": 4.17548218599768,
+      "ttfa_seconds": 1.6733924559994193,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 3.9806934670014016,
+      "ttfa_seconds": 1.671275411001261,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 450560,
+      "audio_seconds": 5.108390022675737,
+      "elapsed_seconds": 4.663095934996818,
+      "ttfa_seconds": 1.6682530649995897,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.318161852999765,
+      "ttfa_seconds": 1.6667336170030467,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.082623819002038,
+      "ttfa_seconds": 1.6617528940005286,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.194911676000629,
+      "ttfa_seconds": 1.65830430600181,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.445266063998133,
+      "ttfa_seconds": 1.6530489879987726,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 311296,
+      "audio_seconds": 3.5294331065759637,
+      "elapsed_seconds": 3.7798571250023087,
+      "ttfa_seconds": 1.65374044499913,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5145272800000384,
+      "ttfa_seconds": 1.6507078930007992,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5117220809988794,
+      "ttfa_seconds": 1.6462085649982328,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.454800023999269,
+      "ttfa_seconds": 1.6410122999986925,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 3.9207152759991004,
+      "ttfa_seconds": 1.6424355639974237,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.7116121889994247,
+      "ttfa_seconds": 1.637710409999272,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 401408,
+      "audio_seconds": 4.551111111111111,
+      "elapsed_seconds": 4.337266365000687,
+      "ttfa_seconds": 1.6328010450015427,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.553532237001491,
+      "ttfa_seconds": 0.6146001220004109,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.243392726999446,
+      "ttfa_seconds": 1.1822698840005614,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 241664,
+      "audio_seconds": 2.7399546485260773,
+      "elapsed_seconds": 3.391474399002618,
+      "ttfa_seconds": 1.7176613330011605,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.486581630000728,
+      "ttfa_seconds": 1.6702655650005909,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 237568,
+      "audio_seconds": 2.693514739229025,
+      "elapsed_seconds": 3.352240778000123,
+      "ttfa_seconds": 1.62298391999866,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.8436982140010514,
+      "ttfa_seconds": 1.7762487990003137,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.045571236001706,
+      "ttfa_seconds": 1.6573238470009528,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4003719620013726,
+      "ttfa_seconds": 1.6326030909986002,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 344064,
+      "audio_seconds": 3.900952380952381,
+      "elapsed_seconds": 4.114048611001635,
+      "ttfa_seconds": 1.7643055070002447,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.566304519001278,
+      "ttfa_seconds": 1.759177259002172,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 475136,
+      "audio_seconds": 5.38702947845805,
+      "elapsed_seconds": 4.829982233000919,
+      "ttfa_seconds": 1.6850054530004854,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.7387260109971976,
+      "ttfa_seconds": 1.7532291349998559,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 241664,
+      "audio_seconds": 2.7399546485260773,
+      "elapsed_seconds": 3.3513671309992787,
+      "ttfa_seconds": 1.6334628439981316,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 364544,
+      "audio_seconds": 4.133151927437642,
+      "elapsed_seconds": 4.21348660899821,
+      "ttfa_seconds": 1.7142503299983218,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.112335189001897,
+      "ttfa_seconds": 1.7099214920017403,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 393216,
+      "audio_seconds": 4.458231292517007,
+      "elapsed_seconds": 4.388892372997361,
+      "ttfa_seconds": 1.73818910999762,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.617875048003043,
+      "ttfa_seconds": 1.7010729810026533,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 475136,
+      "audio_seconds": 5.38702947845805,
+      "elapsed_seconds": 4.8047821930013015,
+      "ttfa_seconds": 1.660052948998782,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.462287288999505,
+      "ttfa_seconds": 1.6950665999975172,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.246696162001172,
+      "ttfa_seconds": 1.6937767279996478,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.3232621450006263,
+      "ttfa_seconds": 1.7189977320012986,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 344064,
+      "audio_seconds": 3.900952380952381,
+      "elapsed_seconds": 4.066799593001633,
+      "ttfa_seconds": 1.7170111980012734,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 2.9867230970012315,
+      "ttfa_seconds": 1.6819770350011822,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.6753417159998207,
+      "ttfa_seconds": 1.6783629540004767,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.227265318000718,
+      "ttfa_seconds": 1.6353468790002808,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.4825368570018327,
+      "ttfa_seconds": 1.67224655300015,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4352658450006857,
+      "ttfa_seconds": 1.6987708039996505,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.126313434000622,
+      "ttfa_seconds": 1.66484283599857,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.2329954730012105,
+      "ttfa_seconds": 1.6605647050018888,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 3.9672845259992755,
+      "ttfa_seconds": 1.689280606002285,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.425239649001014,
+      "ttfa_seconds": 1.6830694780001068,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 311296,
+      "audio_seconds": 3.5294331065759637,
+      "elapsed_seconds": 3.7464134100009687,
+      "ttfa_seconds": 1.6489843470008054,
+      "http_blocks": 7
+    }
+  ],
+  "cand-b": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 176128,
+      "audio_seconds": 1.9969160997732427,
+      "elapsed_seconds": 2.674607004999416,
+      "ttfa_seconds": 0.5718525359989144,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 389120,
+      "audio_seconds": 4.4117913832199545,
+      "elapsed_seconds": 4.3270423769972695,
+      "ttfa_seconds": 1.6490794370001822,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.44177829599721,
+      "ttfa_seconds": 1.7253350259998115,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 393216,
+      "audio_seconds": 4.458231292517007,
+      "elapsed_seconds": 4.370424735003326,
+      "ttfa_seconds": 1.6704310780005471,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 483328,
+      "audio_seconds": 5.479909297052155,
+      "elapsed_seconds": 4.8326412009992055,
+      "ttfa_seconds": 1.6383578729983128,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 315392,
+      "audio_seconds": 3.575873015873016,
+      "elapsed_seconds": 3.935309476000839,
+      "ttfa_seconds": 1.7444384010013891,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 188416,
+      "audio_seconds": 2.136235827664399,
+      "elapsed_seconds": 2.8246175889980805,
+      "ttfa_seconds": 1.6601963350003643,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.741698408000957,
+      "ttfa_seconds": 1.629582883000694,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.5266044870004407,
+      "ttfa_seconds": 1.7345449240019661,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.115809281000111,
+      "ttfa_seconds": 1.73116180299985,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 188416,
+      "audio_seconds": 2.136235827664399,
+      "elapsed_seconds": 2.840398369000468,
+      "ttfa_seconds": 1.6994647270003043,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.663013874000171,
+      "ttfa_seconds": 1.7256062389969884,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.6912055209977552,
+      "ttfa_seconds": 1.640944105998642,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.446237790998566,
+      "ttfa_seconds": 1.6920657849987037,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 200704,
+      "audio_seconds": 2.2755555555555556,
+      "elapsed_seconds": 2.9499814820010215,
+      "ttfa_seconds": 1.7143043810028757,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.5052872259984724,
+      "ttfa_seconds": 1.7138571700015746,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 217088,
+      "audio_seconds": 2.461315192743764,
+      "elapsed_seconds": 3.2693149570004607,
+      "ttfa_seconds": 1.683225549000781,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.522103526000137,
+      "ttfa_seconds": 1.6806169689989474,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.134721148002427,
+      "ttfa_seconds": 1.6787922460025584,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.202491040003224,
+      "ttfa_seconds": 1.6770697860010841,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 430080,
+      "audio_seconds": 4.876190476190477,
+      "elapsed_seconds": 4.598784887002694,
+      "ttfa_seconds": 1.6995774940005504,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.426423626999167,
+      "ttfa_seconds": 1.6981952499991166,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.05497208000088,
+      "ttfa_seconds": 1.6684748460029368,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.1912766759996885,
+      "ttfa_seconds": 1.6651558900011878,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.3237490079991403,
+      "ttfa_seconds": 1.6611002099998586,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.7253222440012905,
+      "ttfa_seconds": 1.6608499180001672,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.3714807420001307,
+      "ttfa_seconds": 1.6824096229975112,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.6846431759986444,
+      "ttfa_seconds": 1.6539884789999633,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.3331867000015336,
+      "ttfa_seconds": 1.6494310720008798,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 3.9680642899984377,
+      "ttfa_seconds": 1.6742538969992893,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 339968,
+      "audio_seconds": 3.8545124716553287,
+      "elapsed_seconds": 3.995246832000703,
+      "ttfa_seconds": 1.6685128509998322,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 417792,
+      "audio_seconds": 4.73687074829932,
+      "elapsed_seconds": 4.448906142999476,
+      "ttfa_seconds": 1.640106728002138,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.4504490079998504,
+      "ttfa_seconds": 0.5680607550020795,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 380928,
+      "audio_seconds": 4.31891156462585,
+      "elapsed_seconds": 4.297611228997994,
+      "ttfa_seconds": 1.6219980659989233,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.408555288999196,
+      "ttfa_seconds": 1.7194228500011377,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.7274580220000644,
+      "ttfa_seconds": 1.716163177999988,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.352070692999405,
+      "ttfa_seconds": 1.6664286609993724,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.686775681999279,
+      "ttfa_seconds": 1.7568665799990413,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 217088,
+      "audio_seconds": 2.461315192743764,
+      "elapsed_seconds": 3.1062458959968353,
+      "ttfa_seconds": 1.7077451309996832,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5075688020006055,
+      "ttfa_seconds": 1.6590269100015576,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 389120,
+      "audio_seconds": 4.4117913832199545,
+      "elapsed_seconds": 4.422436556000321,
+      "ttfa_seconds": 1.74926607299858,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 4.025556763001077,
+      "ttfa_seconds": 1.7451783799988334,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.492364327998075,
+      "ttfa_seconds": 1.6976681749983982,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5573748700007854,
+      "ttfa_seconds": 1.7412001039992901,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.7252357280012802,
+      "ttfa_seconds": 1.6906593140010955,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 393216,
+      "audio_seconds": 4.458231292517007,
+      "elapsed_seconds": 4.433974313000363,
+      "ttfa_seconds": 1.7309986020009092,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.179210941998463,
+      "ttfa_seconds": 1.7278999739974097,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.152029298998968,
+      "ttfa_seconds": 1.7281736980003188,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.457615748997341,
+      "ttfa_seconds": 1.7194344429990451,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 495616,
+      "audio_seconds": 5.61922902494331,
+      "elapsed_seconds": 4.929005203000997,
+      "ttfa_seconds": 1.6767113620007876,
+      "http_blocks": 11
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 188416,
+      "audio_seconds": 2.136235827664399,
+      "elapsed_seconds": 2.82294066599934,
+      "ttfa_seconds": 1.715058224999666,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 385024,
+      "audio_seconds": 4.365351473922902,
+      "elapsed_seconds": 4.357903526000882,
+      "ttfa_seconds": 1.71449131099871,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 237568,
+      "audio_seconds": 2.693514739229025,
+      "elapsed_seconds": 3.3191832960001193,
+      "ttfa_seconds": 1.7121280520004802,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.117128107001918,
+      "ttfa_seconds": 1.7106201409987989,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 221184,
+      "audio_seconds": 2.507755102040816,
+      "elapsed_seconds": 3.314624484999513,
+      "ttfa_seconds": 1.7048111600015545,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.6712104250000266,
+      "ttfa_seconds": 1.7014969080009905,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.259704882002552,
+      "ttfa_seconds": 1.6983538100030273,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.4873449970000365,
+      "ttfa_seconds": 1.6974485700011428,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.341093635001016,
+      "ttfa_seconds": 1.6963867099984782,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 344064,
+      "audio_seconds": 3.900952380952381,
+      "elapsed_seconds": 4.0779035720006505,
+      "ttfa_seconds": 1.691041521000443,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 380928,
+      "audio_seconds": 4.31891156462585,
+      "elapsed_seconds": 4.298549745002674,
+      "ttfa_seconds": 1.6873114090012677,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.7364411299968197,
+      "ttfa_seconds": 1.688603210997826,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 417792,
+      "audio_seconds": 4.73687074829932,
+      "elapsed_seconds": 4.532982977001666,
+      "ttfa_seconds": 1.6832525840000017,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.705604307997419,
+      "ttfa_seconds": 1.6774885899976653,
+      "http_blocks": 7
+    }
+  ],
+  "cand-b2": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 167936,
+      "audio_seconds": 1.9040362811791383,
+      "elapsed_seconds": 2.684240544000204,
+      "ttfa_seconds": 0.651835946002393,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.288502639999933,
+      "ttfa_seconds": 1.187614868998935,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.6966720189993794,
+      "ttfa_seconds": 1.9393082700007653,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 425984,
+      "audio_seconds": 4.829750566893424,
+      "elapsed_seconds": 4.665563522001321,
+      "ttfa_seconds": 1.9003329229999508,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 442368,
+      "audio_seconds": 5.015510204081632,
+      "elapsed_seconds": 4.71323758699873,
+      "ttfa_seconds": 1.7228809899970656,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 331776,
+      "audio_seconds": 3.7616326530612243,
+      "elapsed_seconds": 4.137333107999439,
+      "ttfa_seconds": 1.9322985210019397,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 3.0595452839988866,
+      "ttfa_seconds": 1.8875438679970102,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.779518133000238,
+      "ttfa_seconds": 1.7385784739999508,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.676095106999128,
+      "ttfa_seconds": 1.9206455939965963,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 385024,
+      "audio_seconds": 4.365351473922902,
+      "elapsed_seconds": 4.428785299998708,
+      "ttfa_seconds": 1.91686850699989,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 3.085143282998615,
+      "ttfa_seconds": 1.9087655840012303,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.7653340300021227,
+      "ttfa_seconds": 1.9100163050025003,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.780618263001088,
+      "ttfa_seconds": 1.8651961160030623,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.6072762199983117,
+      "ttfa_seconds": 1.899401537997619,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.3960214460021234,
+      "ttfa_seconds": 1.8967687510012183,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.6509187320007186,
+      "ttfa_seconds": 1.8959817879986076,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.1159985150006833,
+      "ttfa_seconds": 1.8888363929982006,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.4288135759998113,
+      "ttfa_seconds": 1.8501789100009773,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.161147853999864,
+      "ttfa_seconds": 1.8826109940018796,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.340925769000023,
+      "ttfa_seconds": 1.8787325490011426,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 413696,
+      "audio_seconds": 4.690430839002268,
+      "elapsed_seconds": 4.573660932001076,
+      "ttfa_seconds": 1.8749015020002844,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.4129799690017535,
+      "ttfa_seconds": 1.87290755900176,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.175512555000751,
+      "ttfa_seconds": 1.867277119999926,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.2776426279997395,
+      "ttfa_seconds": 1.8635091959986312,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.5168063739984063,
+      "ttfa_seconds": 1.857200307000312,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 4.030852650001179,
+      "ttfa_seconds": 1.8569522469988442,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.6628404219991353,
+      "ttfa_seconds": 1.8527234840003075,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.604357976000756,
+      "ttfa_seconds": 1.8475751910009421,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.4225541209998482,
+      "ttfa_seconds": 1.8418239450002147,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 331776,
+      "audio_seconds": 3.7616326530612243,
+      "elapsed_seconds": 4.0466727140010335,
+      "ttfa_seconds": 1.8420684400007303,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 323584,
+      "audio_seconds": 3.6687528344671203,
+      "elapsed_seconds": 4.009753378999449,
+      "ttfa_seconds": 1.8363826799977687,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 430080,
+      "audio_seconds": 4.876190476190477,
+      "elapsed_seconds": 4.594524301999627,
+      "ttfa_seconds": 1.8312090740000713,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.603248479001195,
+      "ttfa_seconds": 0.6570128300008946,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 364544,
+      "audio_seconds": 4.133151927437642,
+      "elapsed_seconds": 4.157410992000223,
+      "ttfa_seconds": 0.9667784679986653,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4521995350005454,
+      "ttfa_seconds": 1.7699387809989275,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.7778140929985966,
+      "ttfa_seconds": 1.715322322997963,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.003235448999476,
+      "ttfa_seconds": 1.6374311099971237,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 4.033976482998696,
+      "ttfa_seconds": 1.80950853199829,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 2.998752047002199,
+      "ttfa_seconds": 1.7057944020016294,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.525473301000602,
+      "ttfa_seconds": 1.6501820560006308,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.1976382349967025,
+      "ttfa_seconds": 1.80083328499677,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.6761620409997704,
+      "ttfa_seconds": 1.7969134380000469,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 413696,
+      "audio_seconds": 4.690430839002268,
+      "elapsed_seconds": 4.486703333997866,
+      "ttfa_seconds": 1.7446633929976088,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.570389533000707,
+      "ttfa_seconds": 1.792626137001207,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5249875240006077,
+      "ttfa_seconds": 1.6878666190023068,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.2584502559984685,
+      "ttfa_seconds": 1.7389325439980894,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.118314210001699,
+      "ttfa_seconds": 1.7821729900024366,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 4.039984266000829,
+      "ttfa_seconds": 1.7822146889993746,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.6564044099977764,
+      "ttfa_seconds": 1.73034138499861,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 442368,
+      "audio_seconds": 5.015510204081632,
+      "elapsed_seconds": 4.617016486001376,
+      "ttfa_seconds": 1.7271828560005815,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.4535344209980394,
+      "ttfa_seconds": 1.7257714660008787,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.1465017949994945,
+      "ttfa_seconds": 1.7706271579991153,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 237568,
+      "audio_seconds": 2.693514739229025,
+      "elapsed_seconds": 3.3031304760006606,
+      "ttfa_seconds": 1.767830282999057,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 4.023766326998157,
+      "ttfa_seconds": 1.7664159419982752,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 217088,
+      "audio_seconds": 2.461315192743764,
+      "elapsed_seconds": 3.2826426230021752,
+      "ttfa_seconds": 1.7607244240025466,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5385386800007836,
+      "ttfa_seconds": 1.7127776369998173,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.091004665999208,
+      "ttfa_seconds": 1.7080303389993787,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.476177145999827,
+      "ttfa_seconds": 1.7525367509988428,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.4717653329971654,
+      "ttfa_seconds": 1.7500230579971685,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.120760354002414,
+      "ttfa_seconds": 1.7443420790004893,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 380928,
+      "audio_seconds": 4.31891156462585,
+      "elapsed_seconds": 4.27340882900171,
+      "ttfa_seconds": 1.7389950260003388,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.7254431290020875,
+      "ttfa_seconds": 1.7399821990002238,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.407004429001972,
+      "ttfa_seconds": 1.7334141009996529,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 3.956153881001228,
+      "ttfa_seconds": 1.6826636000005237,
+      "http_blocks": 8
+    }
+  ],
+  "base-a2": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 172032,
+      "audio_seconds": 1.9504761904761905,
+      "elapsed_seconds": 2.6998833139987255,
+      "ttfa_seconds": 0.6408409450014005,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 393216,
+      "audio_seconds": 4.458231292517007,
+      "elapsed_seconds": 4.410044210999331,
+      "ttfa_seconds": 1.6551201969996328,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.5301799090011627,
+      "ttfa_seconds": 1.7701824340001622,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 430080,
+      "audio_seconds": 4.876190476190477,
+      "elapsed_seconds": 4.661989699001424,
+      "ttfa_seconds": 1.7140306010005588,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 434176,
+      "audio_seconds": 4.922630385487528,
+      "elapsed_seconds": 4.674549174000276,
+      "ttfa_seconds": 1.6783477700009826,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 4.116583193001134,
+      "ttfa_seconds": 1.80834540199794,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 200704,
+      "audio_seconds": 2.2755555555555556,
+      "elapsed_seconds": 2.9757604410006024,
+      "ttfa_seconds": 1.756691425001918,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.6286501070026134,
+      "ttfa_seconds": 1.7002189820013882,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.7104828259980422,
+      "ttfa_seconds": 1.7975958889983303,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.222003104998294,
+      "ttfa_seconds": 1.793748254996899,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 184320,
+      "audio_seconds": 2.089795918367347,
+      "elapsed_seconds": 2.864674329997797,
+      "ttfa_seconds": 1.7419797269976698,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.7545611140012625,
+      "ttfa_seconds": 1.7865595430012036,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 3.9302278049981396,
+      "ttfa_seconds": 1.7335192619975714,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.4917424750019563,
+      "ttfa_seconds": 1.7755129210017913,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 200704,
+      "audio_seconds": 2.2755555555555556,
+      "elapsed_seconds": 2.9805151199980173,
+      "ttfa_seconds": 1.77293748199736,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.5157593119984085,
+      "ttfa_seconds": 1.7721226829999068,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 204800,
+      "audio_seconds": 2.3219954648526078,
+      "elapsed_seconds": 3.0340844099991955,
+      "ttfa_seconds": 1.7637203429985675,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.538581600998441,
+      "ttfa_seconds": 1.7180950670008315,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 339968,
+      "audio_seconds": 3.8545124716553287,
+      "elapsed_seconds": 4.088191329999972,
+      "ttfa_seconds": 1.7573761450003076,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.299337454998749,
+      "ttfa_seconds": 1.7548048380012915,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.477214242000628,
+      "ttfa_seconds": 1.7511046120016545,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4638955039990833,
+      "ttfa_seconds": 1.7493445869986317,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 344064,
+      "audio_seconds": 3.900952380952381,
+      "elapsed_seconds": 4.096008190001157,
+      "ttfa_seconds": 1.7434942229992885,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 389120,
+      "audio_seconds": 4.4117913832199545,
+      "elapsed_seconds": 4.3712516329978826,
+      "ttfa_seconds": 1.7393881649986724,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.5112099759971898,
+      "ttfa_seconds": 1.6907269859984808,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 331776,
+      "audio_seconds": 3.7616326530612243,
+      "elapsed_seconds": 4.022147831001348,
+      "ttfa_seconds": 1.7337646029991447,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5575672180020774,
+      "ttfa_seconds": 1.7300898310022603,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.6195934339993983,
+      "ttfa_seconds": 1.7247937339998316,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.4361371459999646,
+      "ttfa_seconds": 1.7197406759987643,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.7993479299984756,
+      "ttfa_seconds": 1.7207157630000438,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.562363586999709,
+      "ttfa_seconds": 1.7151562350009044,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 434176,
+      "audio_seconds": 4.922630385487528,
+      "elapsed_seconds": 4.604930112000147,
+      "ttfa_seconds": 1.7096122260008997,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.4019905280001694,
+      "ttfa_seconds": 0.6471583790007571,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 348160,
+      "audio_seconds": 3.947392290249433,
+      "elapsed_seconds": 4.010069391002617,
+      "ttfa_seconds": 0.7669852470025944,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 237568,
+      "audio_seconds": 2.693514739229025,
+      "elapsed_seconds": 3.337061698999605,
+      "ttfa_seconds": 1.688603401002183,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.5871286490000784,
+      "ttfa_seconds": 1.6122082759975456,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.3115561199992953,
+      "ttfa_seconds": 1.5824701139972603,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.6471504799992545,
+      "ttfa_seconds": 1.7116169379987696,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.003386511998542,
+      "ttfa_seconds": 1.6325948669982608,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.427112316003331,
+      "ttfa_seconds": 1.5990936960006366,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 364544,
+      "audio_seconds": 4.133151927437642,
+      "elapsed_seconds": 4.182567406998714,
+      "ttfa_seconds": 1.7023056959988025,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.7548883790004766,
+      "ttfa_seconds": 1.6975118769987603,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 421888,
+      "audio_seconds": 4.783310657596372,
+      "elapsed_seconds": 4.538123820002511,
+      "ttfa_seconds": 1.6623061300015252,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.51587504300187,
+      "ttfa_seconds": 1.6930122710000433,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 311296,
+      "audio_seconds": 3.5294331065759637,
+      "elapsed_seconds": 3.777169478998985,
+      "ttfa_seconds": 1.6122702859975107,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 401408,
+      "audio_seconds": 4.551111111111111,
+      "elapsed_seconds": 4.419608113999857,
+      "ttfa_seconds": 1.6821829760010587,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.21016475000215,
+      "ttfa_seconds": 1.680078006000258,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.11624064300122,
+      "ttfa_seconds": 1.6807841210029437,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.4643550740001956,
+      "ttfa_seconds": 1.6450890579981206,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 462848,
+      "audio_seconds": 5.2477097505668935,
+      "elapsed_seconds": 4.708568559999549,
+      "ttfa_seconds": 1.642848226998467,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.288511841001309,
+      "ttfa_seconds": 1.668617659001029,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.197579676001624,
+      "ttfa_seconds": 1.668095617002109,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.282431109000754,
+      "ttfa_seconds": 1.6653049320011633,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.720315810998727,
+      "ttfa_seconds": 1.6638794539976516,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 217088,
+      "audio_seconds": 2.461315192743764,
+      "elapsed_seconds": 3.254901112999505,
+      "ttfa_seconds": 1.657673188001354,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.5272292400004517,
+      "ttfa_seconds": 1.6546129910020682,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.22027631599849,
+      "ttfa_seconds": 1.6514065689989366,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.375614337001025,
+      "ttfa_seconds": 1.6512213720016007,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.3727274850025424,
+      "ttfa_seconds": 1.6509372719992825,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.1084226359998866,
+      "ttfa_seconds": 1.6454407919991354,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.042894255999272,
+      "ttfa_seconds": 1.641839619998791,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.225527997001336,
+      "ttfa_seconds": 1.6443279060003988,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.394233164002799,
+      "ttfa_seconds": 1.6386222710025322,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.7265048139997816,
+      "ttfa_seconds": 1.6331681720002962,
+      "http_blocks": 7
+    }
+  ],
+  "diag-a": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 172032,
+      "audio_seconds": 1.9504761904761905,
+      "elapsed_seconds": 2.7448594649977167,
+      "ttfa_seconds": 0.7010507009981666,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 380928,
+      "audio_seconds": 4.31891156462585,
+      "elapsed_seconds": 4.328280581998115,
+      "ttfa_seconds": 1.6974541559975478,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4892711469983624,
+      "ttfa_seconds": 1.8641764669991971,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 425984,
+      "audio_seconds": 4.829750566893424,
+      "elapsed_seconds": 4.614778135997767,
+      "ttfa_seconds": 1.715047963996767,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 479232,
+      "audio_seconds": 5.433469387755102,
+      "elapsed_seconds": 4.886950274998526,
+      "ttfa_seconds": 1.6863041399992653,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 339968,
+      "audio_seconds": 3.8545124716553287,
+      "elapsed_seconds": 4.124212777001958,
+      "ttfa_seconds": 1.8941914030001499,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 200704,
+      "audio_seconds": 2.2755555555555556,
+      "elapsed_seconds": 2.9963257490016986,
+      "ttfa_seconds": 1.8508627849987533,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.765208619999612,
+      "ttfa_seconds": 1.7019111039990094,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.697916178000014,
+      "ttfa_seconds": 1.8845901530003175,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.199809020999965,
+      "ttfa_seconds": 1.8809322269989934,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 196608,
+      "audio_seconds": 2.2291156462585033,
+      "elapsed_seconds": 2.9841577779989166,
+      "ttfa_seconds": 1.872821353998006,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.8009818509999604,
+      "ttfa_seconds": 1.8748510090008494,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.6612829329969827,
+      "ttfa_seconds": 1.831307595999533,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.527648937997583,
+      "ttfa_seconds": 1.8649429519973637,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 204800,
+      "audio_seconds": 2.3219954648526078,
+      "elapsed_seconds": 3.0586827119986992,
+      "ttfa_seconds": 1.8624856700007513,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.6130375619977713,
+      "ttfa_seconds": 1.8619045489976997,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.105354973999056,
+      "ttfa_seconds": 1.8550812479988963,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.5159487319979235,
+      "ttfa_seconds": 1.8178829649987165,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.306504124000639,
+      "ttfa_seconds": 1.8511680269984936,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 4.014267796999775,
+      "ttfa_seconds": 1.849762253001245,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 413696,
+      "audio_seconds": 4.690430839002268,
+      "elapsed_seconds": 4.56125320800129,
+      "ttfa_seconds": 1.847397171000921,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.3848649999999907,
+      "ttfa_seconds": 1.8460148539998045,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.160234597999079,
+      "ttfa_seconds": 1.8416836599972157,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 385024,
+      "audio_seconds": 4.365351473922902,
+      "elapsed_seconds": 4.357825146002142,
+      "ttfa_seconds": 1.8375551489989448,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.6703406630003883,
+      "ttfa_seconds": 1.8333077719980793,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 389120,
+      "audio_seconds": 4.4117913832199545,
+      "elapsed_seconds": 4.385964113000227,
+      "ttfa_seconds": 1.8335584769993147,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.581900521996431,
+      "ttfa_seconds": 1.8312376009998843,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.578134235001926,
+      "ttfa_seconds": 1.826608227998804,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 241664,
+      "audio_seconds": 2.7399546485260773,
+      "elapsed_seconds": 3.328687405999517,
+      "ttfa_seconds": 1.8227875789998507,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.7494172009974136,
+      "ttfa_seconds": 1.82318529999975,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.5688258339978347,
+      "ttfa_seconds": 1.818280147999758,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 430080,
+      "audio_seconds": 4.876190476190477,
+      "elapsed_seconds": 4.622135714998876,
+      "ttfa_seconds": 1.8136801690016,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.6143873360015277,
+      "ttfa_seconds": 0.8251887229998829,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.283785442003136,
+      "ttfa_seconds": 1.6939269009999407,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.498426282996661,
+      "ttfa_seconds": 1.803335786997195,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.7628421609988436,
+      "ttfa_seconds": 1.723197490999155,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 233472,
+      "audio_seconds": 2.647074829931973,
+      "elapsed_seconds": 3.416407435997826,
+      "ttfa_seconds": 1.7028482099995017,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.805839641001512,
+      "ttfa_seconds": 1.8452082959993277,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 208896,
+      "audio_seconds": 2.36843537414966,
+      "elapsed_seconds": 3.0821137279999675,
+      "ttfa_seconds": 1.7902484369988088,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.4620219260032172,
+      "ttfa_seconds": 1.7093374210016918,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.321313204000035,
+      "ttfa_seconds": 1.8347879680004553,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 4.071093604001362,
+      "ttfa_seconds": 1.8308201790023304,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 389120,
+      "audio_seconds": 4.4117913832199545,
+      "elapsed_seconds": 4.4401543630010565,
+      "ttfa_seconds": 1.7769031370007724,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.8118588059987815,
+      "ttfa_seconds": 1.8254556649990263,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 262144,
+      "audio_seconds": 2.972154195011338,
+      "elapsed_seconds": 3.5270780739992915,
+      "ttfa_seconds": 1.718434171001718,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.358518302000448,
+      "ttfa_seconds": 1.8161651490008808,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 344064,
+      "audio_seconds": 3.900952380952381,
+      "elapsed_seconds": 4.16218260900132,
+      "ttfa_seconds": 1.8126618700007384,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.331453759998112,
+      "ttfa_seconds": 1.8122213559981901,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.66231447699829,
+      "ttfa_seconds": 1.7574884879977617,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 458752,
+      "audio_seconds": 5.201269841269841,
+      "elapsed_seconds": 4.772554275001312,
+      "ttfa_seconds": 1.754718274998595,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 237568,
+      "audio_seconds": 2.693514739229025,
+      "elapsed_seconds": 3.3789518989979115,
+      "ttfa_seconds": 1.7999555710011919,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 385024,
+      "audio_seconds": 4.365351473922902,
+      "elapsed_seconds": 4.413442570003099,
+      "ttfa_seconds": 1.7987139070028206,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 221184,
+      "audio_seconds": 2.507755102040816,
+      "elapsed_seconds": 3.372606656001153,
+      "ttfa_seconds": 1.7950494440010516,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 331776,
+      "audio_seconds": 3.7616326530612243,
+      "elapsed_seconds": 4.059637481001118,
+      "ttfa_seconds": 1.7924542000000656,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.144691415000125,
+      "ttfa_seconds": 1.7861491970033967,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 294912,
+      "audio_seconds": 3.3436734693877552,
+      "elapsed_seconds": 3.7709163300023647,
+      "ttfa_seconds": 1.7824175950008794,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 393216,
+      "audio_seconds": 4.458231292517007,
+      "elapsed_seconds": 4.425843867000367,
+      "ttfa_seconds": 1.7308750560005137,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.3791197699974873,
+      "ttfa_seconds": 1.7771462599994265,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.4816594190015167,
+      "ttfa_seconds": 1.7749618210000335,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 339968,
+      "audio_seconds": 3.8545124716553287,
+      "elapsed_seconds": 4.102478061999136,
+      "ttfa_seconds": 1.770377829001518,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 339968,
+      "audio_seconds": 3.8545124716553287,
+      "elapsed_seconds": 4.0768903069983935,
+      "ttfa_seconds": 1.7659664290004002,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 315392,
+      "audio_seconds": 3.575873015873016,
+      "elapsed_seconds": 3.8995453370007453,
+      "ttfa_seconds": 1.7659223929986183,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.487961733000702,
+      "ttfa_seconds": 1.7605558459981694,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.768098517000908,
+      "ttfa_seconds": 1.7557317190003232,
+      "http_blocks": 7
+    }
+  ],
+  "diag-b": [
+    {
+      "request_number": 0,
+      "concurrency": 32,
+      "bytes": 159744,
+      "audio_seconds": 1.811156462585034,
+      "elapsed_seconds": 2.7996469310019165,
+      "ttfa_seconds": 1.3184095850010635,
+      "http_blocks": 4
+    },
+    {
+      "request_number": 1,
+      "concurrency": 32,
+      "bytes": 425984,
+      "audio_seconds": 4.829750566893424,
+      "elapsed_seconds": 4.733081557998958,
+      "ttfa_seconds": 1.31551421399854,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 2,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.5156105249989196,
+      "ttfa_seconds": 2.0246505920003983,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 3,
+      "concurrency": 32,
+      "bytes": 430080,
+      "audio_seconds": 4.876190476190477,
+      "elapsed_seconds": 4.8405527629984135,
+      "ttfa_seconds": 1.9785397659979935,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 4,
+      "concurrency": 32,
+      "bytes": 471040,
+      "audio_seconds": 5.340589569160998,
+      "elapsed_seconds": 5.001023061002343,
+      "ttfa_seconds": 1.7882534500022302,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 5,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.482312963998993,
+      "ttfa_seconds": 2.0184954609976558,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 6,
+      "concurrency": 32,
+      "bytes": 188416,
+      "audio_seconds": 2.136235827664399,
+      "elapsed_seconds": 3.0055056029996194,
+      "ttfa_seconds": 1.9665072379975754,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 7,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.6404994490003446,
+      "ttfa_seconds": 1.8033279379997111,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 8,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.8666220619998057,
+      "ttfa_seconds": 2.0066120230003435,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 9,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 4.252040548999503,
+      "ttfa_seconds": 2.003079803998844,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 10,
+      "concurrency": 32,
+      "bytes": 184320,
+      "audio_seconds": 2.089795918367347,
+      "elapsed_seconds": 2.991384343000391,
+      "ttfa_seconds": 1.9953605429982417,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 11,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.7656600510017597,
+      "ttfa_seconds": 1.996968455001479,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 12,
+      "concurrency": 32,
+      "bytes": 299008,
+      "audio_seconds": 3.3901133786848074,
+      "elapsed_seconds": 3.897510638998938,
+      "ttfa_seconds": 1.9460896739983582,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 13,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.759041519002494,
+      "ttfa_seconds": 1.9886108989994682,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 14,
+      "concurrency": 32,
+      "bytes": 192512,
+      "audio_seconds": 2.182675736961451,
+      "elapsed_seconds": 3.033829448999313,
+      "ttfa_seconds": 1.9865071210006136,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 15,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.7547523620014545,
+      "ttfa_seconds": 1.9856965580001997,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 16,
+      "concurrency": 32,
+      "bytes": 212992,
+      "audio_seconds": 2.414875283446712,
+      "elapsed_seconds": 3.212995570000203,
+      "ttfa_seconds": 1.9796125440007017,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 17,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.6550820619995648,
+      "ttfa_seconds": 1.9338561499971547,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 18,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.2921885489995475,
+      "ttfa_seconds": 1.975136023000232,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 19,
+      "concurrency": 32,
+      "bytes": 319488,
+      "audio_seconds": 3.622312925170068,
+      "elapsed_seconds": 4.09193382200101,
+      "ttfa_seconds": 1.9737208590013324,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 20,
+      "concurrency": 32,
+      "bytes": 417792,
+      "audio_seconds": 4.73687074829932,
+      "elapsed_seconds": 4.742606758001784,
+      "ttfa_seconds": 1.9716311640004278,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 21,
+      "concurrency": 32,
+      "bytes": 253952,
+      "audio_seconds": 2.8792743764172335,
+      "elapsed_seconds": 3.5623081720004848,
+      "ttfa_seconds": 1.9700058519993036,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 22,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 4.140806101997441,
+      "ttfa_seconds": 1.9655267409980297,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 23,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.373125311998592,
+      "ttfa_seconds": 1.9621997630019905,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 24,
+      "concurrency": 32,
+      "bytes": 266240,
+      "audio_seconds": 3.01859410430839,
+      "elapsed_seconds": 3.6084091359989543,
+      "ttfa_seconds": 1.9586566959987977,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 25,
+      "concurrency": 32,
+      "bytes": 331776,
+      "audio_seconds": 3.7616326530612243,
+      "elapsed_seconds": 4.158818545998656,
+      "ttfa_seconds": 1.9584985279980174,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 26,
+      "concurrency": 32,
+      "bytes": 258048,
+      "audio_seconds": 2.9257142857142857,
+      "elapsed_seconds": 3.585731527000462,
+      "ttfa_seconds": 1.9559077759986394,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 27,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.685586626001168,
+      "ttfa_seconds": 1.9518390860030195,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 28,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.68265178799993,
+      "ttfa_seconds": 1.9487747409984877,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 29,
+      "concurrency": 32,
+      "bytes": 315392,
+      "audio_seconds": 3.575873015873016,
+      "elapsed_seconds": 4.122134922999976,
+      "ttfa_seconds": 1.9492280329977802,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 30,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.850188119999075,
+      "ttfa_seconds": 1.9447217829983856,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 31,
+      "concurrency": 32,
+      "bytes": 405504,
+      "audio_seconds": 4.597551020408163,
+      "elapsed_seconds": 4.577205604000483,
+      "ttfa_seconds": 1.940398812002968,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 32,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.6635637899998983,
+      "ttfa_seconds": 1.753461401000095,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 33,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.412150945998292,
+      "ttfa_seconds": 1.803164236000157,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 34,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.5033981160013354,
+      "ttfa_seconds": 1.838335853000899,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 35,
+      "concurrency": 32,
+      "bytes": 274432,
+      "audio_seconds": 3.111473922902494,
+      "elapsed_seconds": 3.677640316000179,
+      "ttfa_seconds": 1.8356773460000113,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 36,
+      "concurrency": 32,
+      "bytes": 217088,
+      "audio_seconds": 2.461315192743764,
+      "elapsed_seconds": 3.1598933189998206,
+      "ttfa_seconds": 1.7925241519988049,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 37,
+      "concurrency": 32,
+      "bytes": 307200,
+      "audio_seconds": 3.4829931972789114,
+      "elapsed_seconds": 3.954760382999666,
+      "ttfa_seconds": 1.868901720001304,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 38,
+      "concurrency": 32,
+      "bytes": 200704,
+      "audio_seconds": 2.2755555555555556,
+      "elapsed_seconds": 3.031774471997778,
+      "ttfa_seconds": 1.8260754739967524,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 39,
+      "concurrency": 32,
+      "bytes": 282624,
+      "audio_seconds": 3.2043537414965986,
+      "elapsed_seconds": 3.70349214199814,
+      "ttfa_seconds": 1.7847063999979582,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 40,
+      "concurrency": 32,
+      "bytes": 335872,
+      "audio_seconds": 3.8080725623582765,
+      "elapsed_seconds": 4.180444202000217,
+      "ttfa_seconds": 1.8599686409979768,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 41,
+      "concurrency": 32,
+      "bytes": 315392,
+      "audio_seconds": 3.575873015873016,
+      "elapsed_seconds": 4.1213194459996885,
+      "ttfa_seconds": 1.8559600320004392,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 42,
+      "concurrency": 32,
+      "bytes": 417792,
+      "audio_seconds": 4.73687074829932,
+      "elapsed_seconds": 4.704986171000201,
+      "ttfa_seconds": 1.8497825559970806,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 43,
+      "concurrency": 32,
+      "bytes": 278528,
+      "audio_seconds": 3.1579138321995464,
+      "elapsed_seconds": 3.7429150649986695,
+      "ttfa_seconds": 1.8507657429981919,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 44,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.316102225999202,
+      "ttfa_seconds": 1.8063558540015947,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 45,
+      "concurrency": 32,
+      "bytes": 368640,
+      "audio_seconds": 4.179591836734694,
+      "elapsed_seconds": 4.40338093399987,
+      "ttfa_seconds": 1.8414797760015063,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 46,
+      "concurrency": 32,
+      "bytes": 352256,
+      "audio_seconds": 3.9938321995464854,
+      "elapsed_seconds": 4.266649992998282,
+      "ttfa_seconds": 1.8381968199973926,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 47,
+      "concurrency": 32,
+      "bytes": 364544,
+      "audio_seconds": 4.133151927437642,
+      "elapsed_seconds": 4.368269877002604,
+      "ttfa_seconds": 1.837912552000489,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 48,
+      "concurrency": 32,
+      "bytes": 270336,
+      "audio_seconds": 3.0650340136054424,
+      "elapsed_seconds": 3.613287845000741,
+      "ttfa_seconds": 1.7947637280012714,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 49,
+      "concurrency": 32,
+      "bytes": 438272,
+      "audio_seconds": 4.96907029478458,
+      "elapsed_seconds": 4.757141917001718,
+      "ttfa_seconds": 1.7925178629993752,
+      "http_blocks": 10
+    },
+    {
+      "request_number": 50,
+      "concurrency": 32,
+      "bytes": 221184,
+      "audio_seconds": 2.507755102040816,
+      "elapsed_seconds": 3.454718432996742,
+      "ttfa_seconds": 1.8254947749992425,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 51,
+      "concurrency": 32,
+      "bytes": 356352,
+      "audio_seconds": 4.040272108843538,
+      "elapsed_seconds": 4.296589826000854,
+      "ttfa_seconds": 1.8245570159997442,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 52,
+      "concurrency": 32,
+      "bytes": 229376,
+      "audio_seconds": 2.6006349206349206,
+      "elapsed_seconds": 3.448464826000418,
+      "ttfa_seconds": 1.8218672920011159,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 53,
+      "concurrency": 32,
+      "bytes": 327680,
+      "audio_seconds": 3.7151927437641725,
+      "elapsed_seconds": 4.122866566001903,
+      "ttfa_seconds": 1.8202562250007759,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 54,
+      "concurrency": 32,
+      "bytes": 221184,
+      "audio_seconds": 2.507755102040816,
+      "elapsed_seconds": 3.4440470299996377,
+      "ttfa_seconds": 1.8152402000014263,
+      "http_blocks": 5
+    },
+    {
+      "request_number": 55,
+      "concurrency": 32,
+      "bytes": 286720,
+      "audio_seconds": 3.250793650793651,
+      "elapsed_seconds": 3.74484615700203,
+      "ttfa_seconds": 1.8121230520009703,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 56,
+      "concurrency": 32,
+      "bytes": 372736,
+      "audio_seconds": 4.2260317460317465,
+      "elapsed_seconds": 4.390299271999538,
+      "ttfa_seconds": 1.7724556559987832,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 57,
+      "concurrency": 32,
+      "bytes": 249856,
+      "audio_seconds": 2.8328344671201813,
+      "elapsed_seconds": 3.477911933998257,
+      "ttfa_seconds": 1.8076140099983604,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 58,
+      "concurrency": 32,
+      "bytes": 245760,
+      "audio_seconds": 2.786394557823129,
+      "elapsed_seconds": 3.4537142289991607,
+      "ttfa_seconds": 1.8063743370003067,
+      "http_blocks": 6
+    },
+    {
+      "request_number": 59,
+      "concurrency": 32,
+      "bytes": 376832,
+      "audio_seconds": 4.272471655328798,
+      "elapsed_seconds": 4.411192474002746,
+      "ttfa_seconds": 1.8022513380019518,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 60,
+      "concurrency": 32,
+      "bytes": 360448,
+      "audio_seconds": 4.08671201814059,
+      "elapsed_seconds": 4.29391761000079,
+      "ttfa_seconds": 1.7990854260024207,
+      "http_blocks": 8
+    },
+    {
+      "request_number": 61,
+      "concurrency": 32,
+      "bytes": 303104,
+      "audio_seconds": 3.436553287981859,
+      "elapsed_seconds": 3.839804806000757,
+      "ttfa_seconds": 1.7996505560004152,
+      "http_blocks": 7
+    },
+    {
+      "request_number": 62,
+      "concurrency": 32,
+      "bytes": 421888,
+      "audio_seconds": 4.783310657596372,
+      "elapsed_seconds": 4.681957592998515,
+      "ttfa_seconds": 1.7956672069994966,
+      "http_blocks": 9
+    },
+    {
+      "request_number": 63,
+      "concurrency": 32,
+      "bytes": 290816,
+      "audio_seconds": 3.297233560090703,
+      "elapsed_seconds": 3.7585922540019965,
+      "ttfa_seconds": 1.7913058160011133,
+      "http_blocks": 7
+    }
+  ]
+}

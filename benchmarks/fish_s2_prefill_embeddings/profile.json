@@ -1,0 +1,101 @@
+{
+  "diag-a": {
+    "calls": 96,
+    "eligible": 96,
+    "median_host_us": 664.474,
+    "byte_range": [
+      1274880,
+      1356800
+    ],
+    "traces": [
+      {
+        "file": "trace-4.json",
+        "region_us": 1200.331,
+        "cuda_runtime": {
+          "cudaStreamIsCapturing": 2,
+          "cudaMemcpyAsync": 2,
+          "cudaStreamSynchronize": 1,
+          "cudaPointerGetAttributes": 2
+        },
+        "copies": {
+          "Memcpy DtoH (Device -> Pageable)": 1,
+          "Memcpy HtoD (Pinned -> Device)": 1
+        },
+        "copy_bytes": {
+          "Memcpy DtoH (Device -> Pageable)": 1280000,
+          "Memcpy HtoD (Pinned -> Device)": 1280000
+        }
+      },
+      {
+        "file": "trace-40.json",
+        "region_us": 1126.088,
+        "cuda_runtime": {
+          "cudaStreamIsCapturing": 2,
+          "cudaMemcpyAsync": 2,
+          "cudaStreamSynchronize": 1,
+          "cudaPointerGetAttributes": 2
+        },
+        "copies": {
+          "Memcpy DtoH (Device -> Pageable)": 1,
+          "Memcpy HtoD (Pinned -> Device)": 1
+        },
+        "copy_bytes": {
+          "Memcpy DtoH (Device -> Pageable)": 1290240,
+          "Memcpy HtoD (Pinned -> Device)": 1290240
+        }
+      },
+      {
+        "file": "trace-78.json",
+        "region_us": 1497.276,
+        "cuda_runtime": {
+          "cudaStreamIsCapturing": 2,
+          "cudaMemcpyAsync": 2,
+          "cudaStreamSynchronize": 1,
+          "cudaPointerGetAttributes": 2
+        },
+        "copies": {
+          "Memcpy DtoH (Device -> Pageable)": 1,
+          "Memcpy HtoD (Pinned -> Device)": 1
+        },
+        "copy_bytes": {
+          "Memcpy DtoH (Device -> Pageable)": 1285120,
+          "Memcpy HtoD (Pinned -> Device)": 1285120
+        }
+      }
+    ]
+  },
+  "diag-b": {
+    "calls": 96,
+    "eligible": 96,
+    "median_host_us": 7.105,
+    "byte_range": [
+      1274880,
+      1356800
+    ],
+    "traces": [
+      {
+        "file": "trace-4.json",
+        "region_us": 97.853,
+        "cuda_runtime": {},
+        "copies": {},
+        "copy_bytes": {}
+      },
+      {
+        "file": "trace-40.json",
+        "region_us": 90.703,
+        "cuda_runtime": {},
+        "copies": {},
+        "copy_bytes": {}
+      },
+      {
+        "file": "trace-78.json",
+        "region_us": 100.955,
+        "cuda_runtime": {},
+        "copies": {},
+        "copy_bytes": {}
+      }
+    ]
+  },
+  "matched_embedding_hash_multiset": false,
+  "matched_occurrences": 94
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "dtype": "torch.bfloat16",
+    "clone": false,
+    "spans": [
+      17
+    ]
+  },
+  {
+    "dtype": "torch.bfloat16",
+    "clone": false,
+    "spans": [
+      5,
+      7,
+      5
+    ]
+  },
+  {
+    "dtype": "torch.bfloat16",
+    "clone": true,
+    "spans": [
+      17
+    ]
+  },
+  {
+    "dtype": "torch.bfloat16",
+    "clone": true,
+    "spans": [
+      5,
+      7,
+      5
+    ]
+  },
+  {
+    "dtype": "torch.float32",
+    "clone": false,
+    "spans": [
+      17
+    ]
+  },
+  {
+    "dtype": "torch.float32",
+    "clone": false,
+    "spans": [
+      5,
+      7,
+      5
+    ]
+  },
+  {
+    "dtype": "torch.float32",
+    "clone": true,
+    "spans": [
+      17
+    ]
+  },
+  {
+    "dtype": "torch.float32",
+    "clone": true,
+    "spans": [
+      5,
+      7,
+      5
+    ]
+  }
+]

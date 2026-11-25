@@ -1,0 +1,14 @@
+{
+  "warmup": {
+    "requests_per_arm": 32,
+    "matched_multiset_occurrences": 30
+  },
+  "timed_inputs_wave_1": {
+    "requests_per_arm": 32,
+    "matched_multiset_occurrences": 32
+  },
+  "timed_inputs_wave_2": {
+    "requests_per_arm": 32,
+    "matched_multiset_occurrences": 32
+  }
+}
