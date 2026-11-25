@@ -1,0 +1,45 @@
+[
+  {
+    "file": "traces/stage1.json.gz",
+    "source_sha256": "74652421e3f3ec5dd702f24da0671b2ad23d4f825ca89d870a5230b57ac8264c",
+    "published_sha256": "e54e86e5378a632546d85851a2e15e09506e884ed24b930755620bf60ddd2c47",
+    "events": 2712097,
+    "categories": {
+      "metadata": 78,
+      "user_annotation": 42585,
+      "cpu_op": 1203225,
+      "overhead": 82,
+      "cuda_runtime": 384568,
+      "ac2g": 713536,
+      "kernel": 285326,
+      "cuda_driver": 37750,
+      "gpu_memcpy": 5148,
+      "gpu_memset": 744,
+      "gpu_user_annotation": 39054,
+      "Trace": 1
+    },
+    "bytes": 54936747,
+    "perfetto_imported_slices": 1998485
+  },
+  {
+    "file": "traces/stage0.json.gz",
+    "source_sha256": "d59f9f0a79065a5cf32e60954a2b6d18d681d7139db1782d8407121819f5a152",
+    "published_sha256": "c20a766897eab27499cb20ba29730ec93e2ac7b748c838f05091b27bdf618717",
+    "events": 736091,
+    "categories": {
+      "metadata": 62,
+      "user_annotation": 893,
+      "cpu_op": 161478,
+      "overhead": 33,
+      "cuda_runtime": 39644,
+      "ac2g": 286366,
+      "gpu_memcpy": 4808,
+      "kernel": 234677,
+      "cuda_driver": 7237,
+      "gpu_user_annotation": 892,
+      "Trace": 1
+    },
+    "bytes": 12663657,
+    "perfetto_imported_slices": 449665
+  }
+]

@@ -1,0 +1,5 @@
+CosyVoice3 eager 流式 C4 诊断
+
+RTX PRO 6000 Blackwell Server Edition 96 GB，vLLM 0.34.0、PyTorch 2.14.0+cu130。通用 CosyVoice3 流式配置、Stage 0 FlashInfer、RAS。4 个英文文本共用一个参考音频。RTF 为逐请求端到端秒数除以生成音频秒数后取平均。C4 为客户端并发数。显式传 seed 时 stage 0 会隔离请求，不传 seed 才允许常规合批。数据仅覆盖本卡和这套语料。
+
+显式 seed=42，关闭 TRT 和 DiT 编译。先预热四条请求，再用相同文本采集 CPU/CUDA。20 次 Flow，200 次 estimator，4,400 个 RoPE 区域，105,600 个相关设备操作。Flow 相关设备操作时间总和 1.596 s，HiFT 0.064 s。带 profiler 的测量用于选择候选。
