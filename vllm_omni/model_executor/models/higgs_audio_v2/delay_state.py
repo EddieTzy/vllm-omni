@@ -12,7 +12,7 @@ def _update(
     states,
     output,
     next_states,
-    q: tl.constexpr,
+    num_codebooks: tl.constexpr,
     s0: tl.constexpr,
     s1: tl.constexpr,
     o0: tl.constexpr,
@@ -25,18 +25,18 @@ def _update(
     q = tl.arange(0, block)
     delay = tl.load(states + row * 2)
     remaining = tl.load(states + row * 2 + 1)
-    values = tl.load(codes + row * s0 + q * s1, mask=q < q, other=-1)
-    values = tl.where((delay + 1 < q) & (q >= delay + 1), bos, values)
-    next_delay = tl.where(delay + 1 < q, delay + 1, delay)
-    last_eos = tl.max(tl.where((q < q) & (values == eos), q, -1), 0)
+    values = tl.load(codes + row * s0 + q * s1, mask=q < num_codebooks, other=-1)
+    values = tl.where((delay + 1 < num_codebooks) & (q >= delay + 1), bos, values)
+    next_delay = tl.where(delay + 1 < num_codebooks, delay + 1, delay)
+    last_eos = tl.max(tl.where((q < num_codebooks) & (values == eos), q, -1), 0)
     ramp = remaining >= 0
-    values = tl.where(ramp & (q < q - remaining), eos, values)
+    values = tl.where(ramp & (q < num_codebooks - remaining), eos, values)
     values = tl.where(~ramp & (last_eos >= 0) & (q <= last_eos), eos, values)
-    next_remaining = tl.where(ramp, remaining - 1, tl.where(last_eos >= 0, q - last_eos - 1, -1))
-    terminate = tl.where(ramp, remaining - 1 <= 0, (last_eos >= 0) & (q - last_eos - 1 <= 0))
+    next_remaining = tl.where(ramp, remaining - 1, tl.where(last_eos >= 0, num_codebooks - last_eos - 1, -1))
+    terminate = tl.where(ramp, remaining - 1 <= 0, (last_eos >= 0) & (num_codebooks - last_eos - 1 <= 0))
     next_delay = tl.where(terminate, 0, next_delay)
     next_remaining = tl.where(terminate, -1, next_remaining)
-    tl.store(output + row * o0 + q * o1, values, mask=q < q)
+    tl.store(output + row * o0 + q * o1, values, mask=q < num_codebooks)
     tl.store(next_states + row * 3, next_delay)
     tl.store(next_states + row * 3 + 1, next_remaining)
     tl.store(next_states + row * 3 + 2, terminate.to(tl.int32))
