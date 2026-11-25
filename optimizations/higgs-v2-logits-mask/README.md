@@ -46,7 +46,11 @@ base 吞吐两轮为 19.8867 /19.4744，candidate 为 22.0689 /24.9436，完整�
 
 ## Profile 与机制证据
 
-本项未归档真实全模型 CPU/CUDA 服务 trace。独立原型组件测试含 metadata H2D，但不含真实请求状态 lookup、head 和 sampling；[component_results](metrics/component_results.json)。N32 原循环 / PyTorch broadcast / Triton 的中位耗时为 5.681/.224/.040ms；N1 为 .183/.219/.035ms，因此没有仅按广播实现在大 batch 的表现作决定。
+已补充[真实服务 C32 CPU/CUDA profile](https://github.com/EddieTzy/vllm-omni/blob/77a2b9b/benchmarks/higgs_delay_mask_experiment/profile_rtx_20261125/README.md)：RTX PRO 6000、相同配置，A/B/B2/A2 四次启动，各 32 warmup +32 诊断请求；128 个 measured 请求全部成功。两轮 CPU wall 中位数取均值，delay-pattern mask **6.2305→0.1313ms（-97.89%）**，MRv2 sample_step **15.9686→9.6047ms（-39.85%）**。稳态基线 trace 有 480 次标量 H2D 拷贝及 480 次流同步；优化版为一次状态表 H2D、一次同步和一个 Triton kernel。全部五个 trace 均保留，基线不同 delay 状态的拷贝/同步次数也有差异。
+
+归因位置为音频 head 之后、采样之前的 logits mask；RAS、状态更新代码不变。事件计时包含满足筛选条件的 warmup 和诊断流量，剔除 profiler 步骤及后两步，保留 A/B/B2/A2 各 97/96/101/107 个纯音频 C32 步骤。诊断周期 44.9565→36.7806ms，forward 等区域也存在运行波动，不能据此把正式端到端 +19.44% 精确拆分成 mask 单项贡献。原正式性能数据没有 profiler。[完整阶段摘要](metrics/profile_results.json)。
+
+以下为此前独立组件证据：独立原型组件测试含 metadata H2D，但不含真实请求状态 lookup、head 和 sampling；[component_results](metrics/component_results.json)。N32 原循环 / PyTorch broadcast / Triton 的中位耗时为 5.681/.224/.040ms；N1 为 .183/.219/.035ms，因此没有仅按广播实现在大 batch 的表现作决定。
 
 1060 组原型状态比较覆盖精度、计数边界、NaN/Inf、非连续布局和空输入，RNG 未变化。组件加速用于机制支持，不能当作真实服务阶段占比或整体加速倍数。
 
@@ -56,4 +60,4 @@ base 吞吐两轮为 19.8867 /19.4744，candidate 为 22.0689 /24.9436，完整�
 
 首轮 correctness baseline 在新卡 JIT/autotune 期间超过继承的 240s 健康检查预算，尚未发送音频请求；保留失败日志，以新 r2 标签和 900s 启动预算完成。没有丢弃计时性能轮次。模型和采样配置未变。
 
-完整自检和最终 rebased 29 项回归测试通过（0.76s），PR #11119 已提交，head `0ee2017a6a59808544f7cacee49cd9d2dfce48e8`，base `a57d6d1a73c694476ae1cc1447bcd765dfd47dd7`；模型源码字节与实测一致，等待上游审查/CI。原始日志、PCM 和完整逐步采样轨迹保留在隔离实验目录，公开归档只含摘要、hash 和复现材料。GPU 服务测完已停止、显存释放。后续可继续研究 RAS 重复检查，保持每请求重采样顺序，不能擅自改批量抽样语义。
+完整自检和最终 rebased 29 项回归测试通过（0.76s），PR #11119 已提交，head `0ee2017a6a59808544f7cacee49cd9d2dfce48e8`，base `a57d6d1a73c694476ae1cc1447bcd765dfd47dd7`；模型源码字节与实测一致，pre-commit、Python 3.11/3.12 构建、CodeQL、DCO 已通过，等待人工 review。原始日志、PCM 和完整逐步采样轨迹保留在隔离实验目录，公开归档只含摘要、hash 和复现材料。GPU 服务测完已停止、显存释放。后续可继续研究 RAS 重复检查，保持每请求重采样顺序，不能擅自改批量抽样语义。
