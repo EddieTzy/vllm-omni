@@ -1,0 +1,88 @@
+[
+  {
+    "file": "traces/seeded-stage0.json.gz",
+    "source_sha256": "2fba67f4c26383408d12c6e69657545e606836f9511f0ea4cdde65543d7acf2a",
+    "published_sha256": "1f0475bea55a9a9a4d9134082014f50da660a74b33b4b1cfde73ac767610c094",
+    "events": 736193,
+    "categories": {
+      "metadata": 62,
+      "user_annotation": 793,
+      "cpu_op": 161550,
+      "overhead": 33,
+      "cuda_runtime": 39759,
+      "ac2g": 286481,
+      "gpu_memcpy": 4808,
+      "kernel": 234677,
+      "cuda_driver": 7237,
+      "gpu_user_annotation": 792,
+      "Trace": 1
+    },
+    "bytes": 12186512,
+    "perfetto_imported_slices": 449652
+  },
+  {
+    "file": "traces/seeded-stage1.json.gz",
+    "source_sha256": "d5d8d2ffc5b7a9a31ffcd2dfb075c0773c72e38ed733c5e6e4e8749ea8eb2827",
+    "published_sha256": "ee068dea0c6c342954112dc81e2aba1cf920b1ae2ff9e0358e1f3530eec4faec",
+    "events": 394930,
+    "categories": {
+      "metadata": 64,
+      "user_annotation": 2537,
+      "cpu_op": 59795,
+      "overhead": 6297,
+      "kernel": 71872,
+      "ac2g": 162498,
+      "cuda_driver": 54180,
+      "cuda_runtime": 34522,
+      "gpu_memcpy": 1840,
+      "gpu_memset": 84,
+      "gpu_user_annotation": 1240,
+      "Trace": 1
+    },
+    "bytes": 6026173,
+    "perfetto_imported_slices": 232370
+  },
+  {
+    "file": "traces/unseeded-stage1.json.gz",
+    "source_sha256": "0d1ccfeb98dfbb23fe90056d6d15bae28cc0d7b36d7c96538372c277dc21d672",
+    "published_sha256": "1a26f6f1891d7b502879551b548433a4a288ce5f1ef5f3a7c16e042131a5e658",
+    "events": 371596,
+    "categories": {
+      "metadata": 64,
+      "user_annotation": 1099,
+      "cpu_op": 55796,
+      "overhead": 4411,
+      "kernel": 68175,
+      "ac2g": 154528,
+      "cuda_driver": 51426,
+      "cuda_runtime": 33551,
+      "gpu_memcpy": 1297,
+      "gpu_memset": 79,
+      "gpu_user_annotation": 1169,
+      "Trace": 1
+    },
+    "bytes": 5643473,
+    "perfetto_imported_slices": 217006
+  },
+  {
+    "file": "traces/unseeded-stage0.json.gz",
+    "source_sha256": "0cf348da8048ca00398e6a6aeef5c26b61fa7efee5501266ae9f3ccd0192b429",
+    "published_sha256": "1e263cb0092223c5f6ca435826227264a3fdbd274634ed01bda3c42b8bc87ffa",
+    "events": 228011,
+    "categories": {
+      "metadata": 62,
+      "user_annotation": 230,
+      "cpu_op": 50142,
+      "kernel": 73060,
+      "ac2g": 88668,
+      "overhead": 11,
+      "cuda_runtime": 12126,
+      "cuda_driver": 2283,
+      "gpu_memcpy": 1199,
+      "gpu_user_annotation": 229,
+      "Trace": 1
+    },
+    "bytes": 3700055,
+    "perfetto_imported_slices": 139283
+  }
+]

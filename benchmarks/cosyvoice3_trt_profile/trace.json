@@ -1,0 +1,294 @@
+{
+  "boots": 1,
+  "waves": 1,
+  "audio_s": 31.36,
+  "wall_s": 4.064813563,
+  "throughput": 7.714990986414398,
+  "chunk_matched_requests": 4,
+  "stages": {
+    "flow_call_ms": {
+      "count": 20,
+      "mean": 44.87289455,
+      "median": 42.8987185,
+      "p95": 62.4741714,
+      "max": 63.257454,
+      "min": 33.557715
+    },
+    "first_s": {
+      "count": 4,
+      "mean": 1.66129599425,
+      "median": 1.7478438560000003,
+      "p95": 2.7813685905999996,
+      "max": 2.875295602,
+      "min": 0.274200663
+    },
+    "rtf": {
+      "count": 4,
+      "mean": 0.34020773706050994,
+      "median": 0.3383289754601672,
+      "p95": 0.5231731201750318,
+      "max": 0.5400069118217053,
+      "min": 0.1441660855
+    },
+    "e2e_s": {
+      "count": 4,
+      "mean": 2.54133393075,
+      "median": 2.4783185735,
+      "p95": 3.8650297579499995,
+      "max": 4.055369892,
+      "min": 1.153328684
+    },
+    "tail_s": {
+      "count": 4,
+      "mean": 0.13005223125,
+      "median": 0.1216154265,
+      "p95": 0.15710336414999998,
+      "max": 0.162838791,
+      "min": 0.114139281
+    },
+    "client_start_to_first_ready_approx_s": {
+      "count": 4,
+      "mean": 1.5855580955,
+      "median": 1.670738195,
+      "p95": 2.709169331,
+      "max": 2.803655318,
+      "min": 0.197100674
+    },
+    "first_ready_to_start_s": {
+      "count": 4,
+      "mean": 0.008661974499999999,
+      "median": 0.008743128999999999,
+      "p95": 0.0118769333,
+      "max": 0.012079232,
+      "min": 0.005082408
+    },
+    "first_start_to_first_pcm_approx_s": {
+      "count": 4,
+      "mean": 0.06707592425,
+      "median": 0.0656270075,
+      "p95": 0.07265321934999999,
+      "max": 0.073762126,
+      "min": 0.063287556
+    },
+    "chunk_ready_to_start_s": {
+      "count": 20,
+      "mean": 0.0116864304,
+      "median": 0.0075605824999999995,
+      "p95": 0.029516176600000034,
+      "max": 0.078285065,
+      "min": 0.004013192
+    },
+    "other_flow_host_overlap_during_chunk_wait_s": {
+      "count": 20,
+      "mean": 0.00155952805,
+      "median": 0.0,
+      "p95": 0.001559528050000022,
+      "max": 0.031190561,
+      "min": 0.0
+    }
+  },
+  "activation": true,
+  "trace": {
+    "estimator_top_kernels": [
+      [
+        "sm80_xmma_gemm_f16f16_f16f16_f16_nn_n_tilesize64x128x32_stage5_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        8800,
+        253.99663099999904
+      ],
+      [
+        "sm80_xmma_gemm_f16f16_f16f32_f32_tn_n_tilesize128x160x32_stage3_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        4400,
+        248.2933810000006
+      ],
+      [
+        "_gemm_mha_v2_0x8ff2b840e9454f6c06ed3d033d2264f4",
+        4400,
+        171.70777700000002
+      ],
+      [
+        "sm80_xmma_gemm_f16f16_f16f32_f32_nn_n_tilesize96x128x32_stage4_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        4400,
+        151.24152399999988
+      ],
+      [
+        "sm80_xmma_gemm_f16f16_f16f16_f16_tn_n_tilesize64x128x32_stage5_warpsize2x2x1_tensor16x8x16_execute_kernel_trt",
+        200,
+        56.56131700000002
+      ],
+      [
+        "__myl_SlicReshAddSlicReshSlicReshTranReshSeleMulAddReshCastMeanSubMulMeanAddSqrtDivMulCastMulAddEtc_0xce333a28e459e1b16f69a10c09a33fb9_vec",
+        3800,
+        44.95318199999993
+      ],
+      [
+        "__myl_ReshReshMulMulReshSlicNegSlicConcReshMulMulAddConcReshTranReshMove_0x6649102189c246a42ff42cc12c8c1396",
+        4200,
+        37.001338000000054
+      ],
+      [
+        "__myl_ReshReshMulMulReshSlicNegSlicConcReshMulMulAddConcReshTranReshMove_0x826618c13eb436074f3b306d34d84bd4",
+        4200,
+        33.81132800000012
+      ],
+      [
+        "__myl_SlicReshAddSlicReshSlicReshTranReshMulAddReshMoveCastMeanSubMulMeanAddSqrtDivMulCastMulAddEtc_0x577a0fcce5dfc804a232778b47593ebf",
+        400,
+        24.261760999999996
+      ],
+      [
+        "__myl_SlicReshAddSlicReshSlicReshMulAddReshCastMeanSubMulMeanAddSqrtDivMulCastMulAddReshMulAdd_0x9ec8cc74fa86462eb1789832ad1ddf5b_vec",
+        3600,
+        22.863895999999997
+      ]
+    ],
+    "interstep_device_gap_ms": {
+      "count": 180,
+      "mean": 0.06587376302083334,
+      "median": 0.02724755859375,
+      "p95": 0.027391650390625,
+      "max": 1.49369921875,
+      "min": 0.0237763671875
+    },
+    "file": "trace_rank0.json.gz",
+    "device_events": 73796,
+    "correlated": 72716,
+    "stages": {
+      "cv3_flow_mel": {
+        "cpu_ms": {
+          "count": 20,
+          "mean": 45.761966199999996,
+          "median": 43.602765,
+          "p95": 62.952217149999996,
+          "max": 63.596168,
+          "min": 34.137274
+        },
+        "gpu_ms": {
+          "count": 20,
+          "mean": 58.2728431640625,
+          "median": 57.61229248046875,
+          "p95": 81.97766748046875,
+          "max": 84.0873818359375,
+          "min": 39.6066591796875
+        },
+        "activities": {
+          "count": 20,
+          "mean": 2835.8,
+          "median": 2836.0,
+          "p95": 2836.0,
+          "max": 2836,
+          "min": 2835
+        },
+        "span_ms": {
+          "count": 20,
+          "mean": 69.53618056640624,
+          "median": 65.873326171875,
+          "p95": 92.80074555664062,
+          "max": 92.8705751953125,
+          "min": 51.7170859375
+        }
+      },
+      "cosyvoice3_cfm_euler_10_steps": {
+        "cpu_ms": {
+          "count": 20,
+          "mean": 42.7323014,
+          "median": 40.8852755,
+          "p95": 60.4074099,
+          "max": 61.763742,
+          "min": 31.157858
+        },
+        "gpu_ms": {
+          "count": 20,
+          "mean": 58.16416713867187,
+          "median": 57.500324218749995,
+          "p95": 81.86694243164062,
+          "max": 83.9789306640625,
+          "min": 39.4992724609375
+        },
+        "activities": {
+          "count": 20,
+          "mean": 2776,
+          "median": 2776.0,
+          "p95": 2776.0,
+          "max": 2776,
+          "min": 2776
+        },
+        "span_ms": {
+          "count": 20,
+          "mean": 66.67715634765625,
+          "median": 62.8969228515625,
+          "p95": 90.72092441406251,
+          "max": 91.1499013671875,
+          "min": 48.9160263671875
+        }
+      },
+      "cosyvoice3_cfm_forward_estimator": {
+        "cpu_ms": {
+          "count": 200,
+          "mean": 3.838534425,
+          "median": 2.5027875,
+          "p95": 8.756108749999997,
+          "max": 10.531339,
+          "min": 1.298203
+        },
+        "gpu_ms": {
+          "count": 200,
+          "mean": 5.80246322265625,
+          "median": 5.6704755859375,
+          "p95": 8.731699609374997,
+          "max": 11.14567578125,
+          "min": 2.943619140625
+        },
+        "activities": {
+          "count": 200,
+          "mean": 266.4,
+          "median": 266.0,
+          "p95": 270.0,
+          "max": 270,
+          "min": 266
+        },
+        "span_ms": {
+          "count": 200,
+          "mean": 6.519552954101562,
+          "median": 6.26018310546875,
+          "p95": 9.36683759765624,
+          "max": 11.3462529296875,
+          "min": 3.389125
+        }
+      },
+      "cv3_hift_stream": {
+        "cpu_ms": {
+          "count": 20,
+          "mean": 41.17979015,
+          "median": 41.778704,
+          "p95": 51.95570115,
+          "max": 53.495824999999996,
+          "min": 23.929979
+        },
+        "gpu_ms": {
+          "count": 20,
+          "mean": 3.566091650390625,
+          "median": 3.64266943359375,
+          "p95": 4.025563085937501,
+          "max": 4.383123046875,
+          "min": 2.8522431640625
+        },
+        "activities": {
+          "count": 20,
+          "mean": 778,
+          "median": 778.0,
+          "p95": 784.0,
+          "max": 784,
+          "min": 770
+        },
+        "span_ms": {
+          "count": 20,
+          "mean": 17.075729541015626,
+          "median": 18.82098388671875,
+          "p95": 22.423179443359377,
+          "max": 24.425021484375,
+          "min": 6.0938310546875
+        }
+      }
+    }
+  }
+}

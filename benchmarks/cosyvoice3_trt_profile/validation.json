@@ -1,0 +1,208 @@
+{
+  "perf1": [
+    {
+      "name": "measure0-0.pcm",
+      "samples": 192000,
+      "peak": 26979,
+      "sha256": "0f7af9d4b9d028e8cbdffece7b62c13a1a4bce4b09721c6b7147d545cf98adf1"
+    },
+    {
+      "name": "measure0-1.pcm",
+      "samples": 209280,
+      "peak": 16842,
+      "sha256": "262117e17c6b3b7ad0e8ba5044333676c24838fb2a73112fa18340dbb91e57e8"
+    },
+    {
+      "name": "measure0-2.pcm",
+      "samples": 123840,
+      "peak": 21317,
+      "sha256": "5d3947af6fb83c1280c94d75f8df88e28e80cc8905069056db723f1dd9644988"
+    },
+    {
+      "name": "measure0-3.pcm",
+      "samples": 227520,
+      "peak": 20099,
+      "sha256": "9e520e26d412b1e8bfa067b918cfd48b6f837202fe3e2e2f7fe5ea3b84e668bd"
+    },
+    {
+      "name": "measure1-0.pcm",
+      "samples": 192000,
+      "peak": 32441,
+      "sha256": "ec62cbef31af0d2dc9c017d68c16c12f8344633c0297011352c6fbacb996c278"
+    },
+    {
+      "name": "measure1-1.pcm",
+      "samples": 209280,
+      "peak": 19259,
+      "sha256": "d8b7b2ffb540d25245f0d0a35c1d329d9bb9f74bba191042fecbff7ff99d3f63"
+    },
+    {
+      "name": "measure1-2.pcm",
+      "samples": 123840,
+      "peak": 23386,
+      "sha256": "d4d6b5214852d179186a55a0da54c239f36ba1040f397327c6d49df494a6f0ef"
+    },
+    {
+      "name": "measure1-3.pcm",
+      "samples": 227520,
+      "peak": 20668,
+      "sha256": "5d3e27e86db53c751158fe5d84cf5338bba0f2793ed7e490250b2af558d92656"
+    },
+    {
+      "name": "measure2-0.pcm",
+      "samples": 192000,
+      "peak": 28355,
+      "sha256": "c8fadb36f180c31118d182dcef7fdb7192afe4cd5e49d30d8ced6c842f395f1d"
+    },
+    {
+      "name": "measure2-1.pcm",
+      "samples": 209280,
+      "peak": 30616,
+      "sha256": "6421444665baf88d5fc944e160627b1931912256fb345d48cda41a18975a101e"
+    },
+    {
+      "name": "measure2-2.pcm",
+      "samples": 123840,
+      "peak": 29931,
+      "sha256": "0e415c8c367210ae023ff1ec837ff723230e1ed6812cfc3b7ea96f34b66e84c4"
+    },
+    {
+      "name": "measure2-3.pcm",
+      "samples": 227520,
+      "peak": 32441,
+      "sha256": "b5623e7a616a1a6ad8f13f8c4dbe0385399c52a9792672d35a4da83641094b39"
+    },
+    {
+      "name": "measure3-0.pcm",
+      "samples": 192000,
+      "peak": 32441,
+      "sha256": "57d090b58fc1a07e5e414f79500706184412827b9e92120cb8f512d7315890d3"
+    },
+    {
+      "name": "measure3-1.pcm",
+      "samples": 209280,
+      "peak": 16542,
+      "sha256": "036a8ca81a20d4ab4c850d6454c53a1ba89051c3ea5f1be3deeedb02687d0524"
+    },
+    {
+      "name": "measure3-2.pcm",
+      "samples": 123840,
+      "peak": 32440,
+      "sha256": "d57ad4db164c1534c8f36cd3365f5e72310f9092dad73b94abad7d333ea3602b"
+    },
+    {
+      "name": "measure3-3.pcm",
+      "samples": 227520,
+      "peak": 25044,
+      "sha256": "cab7de81c82616cc7f9a72b8886a858709a7e1226852cbcb03d57ddd3834e0c9"
+    }
+  ],
+  "unseed": [
+    {
+      "name": "measure0-0.pcm",
+      "samples": 249600,
+      "peak": 32441,
+      "sha256": "4dd4be34c1c4c2f54bddc59a85363b654726decbf19f69cbb9953ba76ab3e96d"
+    },
+    {
+      "name": "measure0-1.pcm",
+      "samples": 188160,
+      "peak": 32440,
+      "sha256": "9ec2163889db2b1bd28e0d6a19e20edf2b018c0b8934544e89da953d55744959"
+    },
+    {
+      "name": "measure0-2.pcm",
+      "samples": 168000,
+      "peak": 21586,
+      "sha256": "c4b5078c15372466d739b9754cd7f40e15ea3b689f4754658847973ae5ee61a0"
+    },
+    {
+      "name": "measure0-3.pcm",
+      "samples": 154560,
+      "peak": 27370,
+      "sha256": "40a83bc4e36cda3d5a0056a42c66d46ae40efb880ef5d268b78ba87afe4b2cce"
+    },
+    {
+      "name": "measure1-0.pcm",
+      "samples": 202560,
+      "peak": 32440,
+      "sha256": "89f57b6bdc40f7096146360ba6d308076a7fe7dcc62791d025f743a4f99f7add"
+    },
+    {
+      "name": "measure1-1.pcm",
+      "samples": 179520,
+      "peak": 32441,
+      "sha256": "04ac92cc0ad5f150a1e3f13e788ef7c0e7369130c2daa5245ba5d522d012ce37"
+    },
+    {
+      "name": "measure1-2.pcm",
+      "samples": 144000,
+      "peak": 17095,
+      "sha256": "92b2eb50f32e3a3d5f4cd28c8ae308df8a49e42a1fffafb3fececf5e2734cb67"
+    },
+    {
+      "name": "measure1-3.pcm",
+      "samples": 262080,
+      "peak": 32441,
+      "sha256": "f4dfb77048b8325ea04a47b46f4b91b2b06b8e9b2419adadd4a6dfb74e575606"
+    },
+    {
+      "name": "measure2-0.pcm",
+      "samples": 148800,
+      "peak": 32312,
+      "sha256": "40479e9080596c2ed146325cffa1313df19028233047e3f967556b941862c6a9"
+    },
+    {
+      "name": "measure2-1.pcm",
+      "samples": 210240,
+      "peak": 32441,
+      "sha256": "11e4d89961abb70867a7b9bd07cd1b87ce3a3d7b4feb7952e2a4e1cc8aa599aa"
+    },
+    {
+      "name": "measure2-2.pcm",
+      "samples": 203520,
+      "peak": 21446,
+      "sha256": "0cf1d0f901975b315473ccd478386daf7b207408eb2111df4e0bd9fb9fa5c0ea"
+    },
+    {
+      "name": "measure2-3.pcm",
+      "samples": 190080,
+      "peak": 32440,
+      "sha256": "bb69c52f26173aefd020703100c74a2f2f637c7c9b891de52fc9e4d12829d249"
+    },
+    {
+      "name": "measure3-0.pcm",
+      "samples": 225600,
+      "peak": 21968,
+      "sha256": "f4bb9a729fed50a23aa7112043e11f2bee42ec4863c83fd719f904cfa5be3e86"
+    },
+    {
+      "name": "measure3-1.pcm",
+      "samples": 173760,
+      "peak": 30320,
+      "sha256": "28eba53732535a41f9e4f81a71b66ef99e4238b7396c0ac7b6db3c695d7844cc"
+    },
+    {
+      "name": "measure3-2.pcm",
+      "samples": 166080,
+      "peak": 26144,
+      "sha256": "06f21e807611a634a76b093620ca11ddf8a05677d95072b6d959fe5dbefbd33e"
+    },
+    {
+      "name": "measure3-3.pcm",
+      "samples": 182400,
+      "peak": 22962,
+      "sha256": "b2d69dfd3dcfa6f2e161dbfe85c544855a454541c87dadbfec5cb3bc4f77a023"
+    }
+  ],
+  "plans": {
+    "campplus_706429fc150aabd1.plan": {
+      "bytes": 32441732,
+      "sha256": "b82068feddd8aa5f7a62b0642b7090867c4c27aa47c8a0a10f6527c3f2cb3ac5"
+    },
+    "flow_estimator_48d602568325d7fc.plan": {
+      "bytes": 666412780,
+      "sha256": "4e0103a2d10739fc60ef6957d6f337fa47ad1440e3f8e4c83e35384cebc7169a"
+    }
+  }
+}

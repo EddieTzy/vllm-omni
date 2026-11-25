@@ -1,0 +1,107 @@
+{
+  "boots": 1,
+  "waves": 4,
+  "audio_s": 125.44,
+  "wall_s": 12.325839586999999,
+  "throughput": 10.176994363313062,
+  "chunk_matched_requests": 16,
+  "stages": {
+    "flow_call_ms": {
+      "count": 80,
+      "mean": 45.7758834625,
+      "median": 44.5708685,
+      "p95": 63.6708691,
+      "max": 66.906748,
+      "min": 32.27679
+    },
+    "first_s": {
+      "count": 16,
+      "mean": 1.281437584,
+      "median": 1.191498784,
+      "p95": 2.3256132395,
+      "max": 2.373116339,
+      "min": 0.198277057
+    },
+    "rtf": {
+      "count": 16,
+      "mean": 0.2648015013341751,
+      "median": 0.26396869584800153,
+      "p95": 0.45078891749031,
+      "max": 0.4601030734496124,
+      "min": 0.116733334875
+    },
+    "e2e_s": {
+      "count": 16,
+      "mean": 1.9889583663125,
+      "median": 2.023759126,
+      "p95": 3.1179340664999997,
+      "max": 3.212292582,
+      "min": 0.933866679
+    },
+    "tail_s": {
+      "count": 16,
+      "mean": 0.1785575559375,
+      "median": 0.1932699425,
+      "p95": 0.224010342,
+      "max": 0.229165143,
+      "min": 0.116893588
+    },
+    "client_start_to_first_ready_approx_s": {
+      "count": 16,
+      "mean": 1.1862169629375,
+      "median": 1.0983718009999999,
+      "p95": 2.215692434,
+      "max": 2.27682344,
+      "min": 0.124582678
+    },
+    "first_ready_to_start_s": {
+      "count": 16,
+      "mean": 0.026039606125,
+      "median": 0.0247557795,
+      "p95": 0.06482637425,
+      "max": 0.081605753,
+      "min": 0.004912673
+    },
+    "first_start_to_first_pcm_approx_s": {
+      "count": 16,
+      "mean": 0.0691810149375,
+      "median": 0.0685011795,
+      "p95": 0.075542152,
+      "max": 0.077740561,
+      "min": 0.064318211
+    },
+    "chunk_ready_to_start_s": {
+      "count": 80,
+      "mean": 0.0164123409625,
+      "median": 0.0064466735,
+      "p95": 0.06757911165,
+      "max": 0.081605753,
+      "min": 0.003067469
+    },
+    "other_distinct_requests_ready_at_start": {
+      "count": 80,
+      "mean": 0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0,
+      "min": 0
+    },
+    "any_other_request_ready_at_start_fraction": {
+      "count": 80,
+      "mean": 0,
+      "median": 0.0,
+      "p95": 0.0,
+      "max": 0,
+      "min": 0
+    },
+    "other_flow_host_overlap_during_chunk_wait_s": {
+      "count": 80,
+      "mean": 0.002573379125,
+      "median": 0.0,
+      "p95": 0.028939708599999996,
+      "max": 0.03958972,
+      "min": 0.0
+    }
+  },
+  "activation": true
+}
