@@ -1,7 +1,9 @@
 Higgs v2 BOS/EOS delay-pattern logits mask fusion
 
-Decision: measured candidate with a clear C32 serving signal; prepare an
-independent contribution. No new upstream PR has been opened by this archive.
+Decision: submitted upstream as PR #11119 after the measured C32 signal.
+https://github.com/vllm-project/vllm-omni/pull/11119
+The upstream branch contains only implementation/test files; this perf branch
+retains the complete measurement archive.
 Branch: perf/higgs-v2-logits-mask.
 
 Hardware: one RTX PRO 6000 Blackwell Server Edition, 97887 MiB, SM120,

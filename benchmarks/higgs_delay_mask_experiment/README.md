@@ -1,6 +1,6 @@
 # Higgs v2 delay-pattern mask experiment
 
-This perf branch isolates the BOS/EOS logits mask change. Its base already contains merged audio-routing PR #11068; it does not contain the experimental decode-state fusion. No new upstream PR has been opened.
+This perf branch isolates the BOS/EOS logits mask change. Its base already contains merged audio-routing PR #11068; it does not contain the experimental decode-state fusion. Upstream PR [#11119](https://github.com/vllm-project/vllm-omni/pull/11119) is open; its branch contains only the three implementation/test files.
 
 [Full results and limitations](RESULTS.txt) · [Serving arms](serving_results.json) · [Paired output check](paired_results.json) · [Validation](validation.json) · [Source/model pins](manifest.json)
 
