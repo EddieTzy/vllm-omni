@@ -54,6 +54,8 @@
 
 ## 详细记录
 
+[Perfetto 原始时间线下载与打开方法](records/perfetto-traces.md)
+
 - [每项优化目录](optimizations/README.md)：动机、代码位置、原理、基线、profile、性能、正确性和取舍。
 - [记录模板](optimizations/TEMPLATE.md) · [RTF、cost、首包与 profile 口径](records/performance-methodology.md)。
 - [Higgs v2 模型记录](records/higgs-audio-v2.md) · [结构化索引](records/entries.json)。
