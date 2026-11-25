@@ -1,0 +1,239 @@
+{
+  "unseed": {
+    "count": 16,
+    "first": [
+      {
+        "id": "speech-8f1b64c898390e59",
+        "span_start_to_pcm_ms": 289.641027,
+        "flow_host_ms": 37.29768
+      },
+      {
+        "id": "speech-b7041aa3eaf28616",
+        "span_start_to_pcm_ms": 291.296965,
+        "flow_host_ms": 39.057635
+      },
+      {
+        "id": "speech-965f319445af124f",
+        "span_start_to_pcm_ms": 219.830276,
+        "flow_host_ms": 38.634771
+      },
+      {
+        "id": "speech-b76c2dcaf3f2b237",
+        "span_start_to_pcm_ms": 150.953964,
+        "flow_host_ms": 39.226948
+      },
+      {
+        "id": "speech-81b3fe33d5429289",
+        "span_start_to_pcm_ms": 276.079918,
+        "flow_host_ms": 40.98697
+      },
+      {
+        "id": "speech-98ef5de8f55c41d9",
+        "span_start_to_pcm_ms": 280.969655,
+        "flow_host_ms": 38.235381
+      },
+      {
+        "id": "speech-a66b51d5b8744745",
+        "span_start_to_pcm_ms": 209.195736,
+        "flow_host_ms": 35.511692
+      },
+      {
+        "id": "speech-97638ba5b6052bb1",
+        "span_start_to_pcm_ms": 148.067517,
+        "flow_host_ms": 34.248438
+      },
+      {
+        "id": "speech-9c90539b85b97c66",
+        "span_start_to_pcm_ms": 268.626004,
+        "flow_host_ms": 37.755598
+      },
+      {
+        "id": "speech-92e907f078a82d75",
+        "span_start_to_pcm_ms": 277.099344,
+        "flow_host_ms": 32.68373
+      },
+      {
+        "id": "speech-bb11234620f37d4b",
+        "span_start_to_pcm_ms": 219.517181,
+        "flow_host_ms": 35.98259
+      },
+      {
+        "id": "speech-87b35938b40248e0",
+        "span_start_to_pcm_ms": 150.903725,
+        "flow_host_ms": 35.382256
+      },
+      {
+        "id": "speech-b92d83b86af7e8d2",
+        "span_start_to_pcm_ms": 258.759247,
+        "flow_host_ms": 33.800259
+      },
+      {
+        "id": "speech-8d35438f1183d34f",
+        "span_start_to_pcm_ms": 276.522503,
+        "flow_host_ms": 34.603038
+      },
+      {
+        "id": "speech-9b892fdfb5b27372",
+        "span_start_to_pcm_ms": 218.785646,
+        "flow_host_ms": 32.905451
+      },
+      {
+        "id": "speech-bcdf4b3904f39350",
+        "span_start_to_pcm_ms": 157.57734,
+        "flow_host_ms": 34.319016
+      }
+    ],
+    "means": {
+      "span_start_to_pcm_ms": 230.864128,
+      "flow_host_ms": 36.2894658125
+    },
+    "followup_trace_means": {}
+  },
+  "unseed2": {
+    "count": 16,
+    "first": [
+      {
+        "id": "speech-85d93cbf13aef45f",
+        "span_start_to_pcm_ms": 270.136342,
+        "flow_host_ms": 34.950008
+      },
+      {
+        "id": "speech-9d0e58e13191648a",
+        "span_start_to_pcm_ms": 279.718362,
+        "flow_host_ms": 38.714292
+      },
+      {
+        "id": "speech-9f48ef89834d67c6",
+        "span_start_to_pcm_ms": 213.376257,
+        "flow_host_ms": 31.58176
+      },
+      {
+        "id": "speech-83b6a7d87b0bb4a3",
+        "span_start_to_pcm_ms": 154.333221,
+        "flow_host_ms": 42.0636
+      },
+      {
+        "id": "speech-995d2120bd2d3ac8",
+        "span_start_to_pcm_ms": 256.868053,
+        "flow_host_ms": 33.522716
+      },
+      {
+        "id": "speech-ac5cec27ff7b80f4",
+        "span_start_to_pcm_ms": 265.067979,
+        "flow_host_ms": 32.850187
+      },
+      {
+        "id": "speech-92745c9ddff5cbe0",
+        "span_start_to_pcm_ms": 207.955902,
+        "flow_host_ms": 32.479729
+      },
+      {
+        "id": "speech-80e6946c4d8207ce",
+        "span_start_to_pcm_ms": 142.114823,
+        "flow_host_ms": 33.241371
+      },
+      {
+        "id": "speech-81b1888d84dfeb72",
+        "span_start_to_pcm_ms": 275.216816,
+        "flow_host_ms": 41.000921
+      },
+      {
+        "id": "speech-bd38b674e467b046",
+        "span_start_to_pcm_ms": 282.343099,
+        "flow_host_ms": 37.709699
+      },
+      {
+        "id": "speech-b512075e97f57fa8",
+        "span_start_to_pcm_ms": 215.342655,
+        "flow_host_ms": 31.226833
+      },
+      {
+        "id": "speech-958c4df1b3690130",
+        "span_start_to_pcm_ms": 159.589138,
+        "flow_host_ms": 41.727718
+      },
+      {
+        "id": "speech-aab7bfcff7d06761",
+        "span_start_to_pcm_ms": 240.761195,
+        "flow_host_ms": 34.783832
+      },
+      {
+        "id": "speech-ab7d896efbdcce93",
+        "span_start_to_pcm_ms": 247.464071,
+        "flow_host_ms": 32.785447
+      },
+      {
+        "id": "speech-a3d25f81277c7e5d",
+        "span_start_to_pcm_ms": 189.540054,
+        "flow_host_ms": 30.579829
+      },
+      {
+        "id": "speech-bfa76218ba0a8f0d",
+        "span_start_to_pcm_ms": 134.038558,
+        "flow_host_ms": 32.875275
+      }
+    ],
+    "means": {
+      "span_start_to_pcm_ms": 220.8666578125,
+      "flow_host_ms": 35.1308260625
+    },
+    "followup_trace_means": {}
+  },
+  "unseedtrace": {
+    "count": 4,
+    "first": [
+      {
+        "id": "speech-98bed0173b3d3d23",
+        "span_start_to_pcm_ms": 272.117843,
+        "flow_host_ms": 35.93772,
+        "flow_scope_ms": 36.40828,
+        "hift_scope_ms": 23.661755,
+        "group": "execute_context_1(25)_generation_0(0)",
+        "group_tail_ms": 0.10839636718749898,
+        "post_hift_est_ms": 212.0362619453125
+      },
+      {
+        "id": "speech-8256487b17861bf6",
+        "span_start_to_pcm_ms": 298.540805,
+        "flow_host_ms": 35.321754,
+        "flow_scope_ms": 35.781832,
+        "hift_scope_ms": 29.553877,
+        "group": "execute_context_3(75)_generation_0(0)",
+        "group_tail_ms": 136.9459911640625,
+        "post_hift_est_ms": 233.19581281249998
+      },
+      {
+        "id": "speech-bc427dd91025939f",
+        "span_start_to_pcm_ms": 232.793753,
+        "flow_host_ms": 39.138676,
+        "flow_scope_ms": 39.502970999999995,
+        "hift_scope_ms": 31.019015,
+        "group": "execute_context_3(75)_generation_0(0)",
+        "group_tail_ms": 66.3470133203125,
+        "post_hift_est_ms": 162.2657832734375
+      },
+      {
+        "id": "speech-ab52216977ffb387",
+        "span_start_to_pcm_ms": 163.271732,
+        "flow_host_ms": 34.90784,
+        "flow_scope_ms": 35.312686,
+        "hift_scope_ms": 30.838797,
+        "group": "execute_context_3(75)_generation_0(0)",
+        "group_tail_ms": 0.09075475781250134,
+        "post_hift_est_ms": 97.11157184374999
+      }
+    ],
+    "means": {
+      "span_start_to_pcm_ms": 241.68103324999998,
+      "flow_host_ms": 36.3264975,
+      "flow_scope_ms": 36.75144225,
+      "hift_scope_ms": 28.768361,
+      "group_tail_ms": 50.87303890234375,
+      "post_hift_est_ms": 176.15235746874998
+    },
+    "followup_trace_means": {
+      "flow_scope_ms": 40.54818253333333,
+      "hift_scope_ms": 44.0333824
+    }
+  }
+}

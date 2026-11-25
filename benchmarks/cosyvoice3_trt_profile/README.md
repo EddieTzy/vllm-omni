@@ -22,3 +22,5 @@
 在 [Perfetto](https://ui.perfetto.dev/) 点击 **Open trace file**，选择下载的 `.json.gz`。公开版保留全部事件、时间、轨道、算子名及数值关联 ID，裁去了宿主机名、输入值、自由文本参数等字段。文件指纹和逐类事件数量见 [trace-manifest.json](trace-manifest.json)。
 
 [复现步骤和负载客户端](REPRODUCE.md)
+
+[首块 Flow、HiFT 与结果交付的离线拆分](first-pcm/README.md)
