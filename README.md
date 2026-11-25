@@ -64,6 +64,7 @@
 [Perfetto 原始时间线下载与打开方法](records/perfetto-traces.md)
 
 - [每项优化目录](optimizations/README.md)：动机、代码位置、原理、基线、profile、性能、正确性和取舍。
+- [PR 评审经验与提交前检查](records/pr-lessons.md)：非法输入、平台分发、kernel 读写和证据版本。
 - [记录模板](optimizations/TEMPLATE.md) · [RTF、cost、首包与 profile 口径](records/performance-methodology.md)。
 - [Higgs v2 模型记录](records/higgs-audio-v2.md) · [结构化索引](records/entries.json)。
 - [路由 profiling 证据分支](https://github.com/EddieTzy/vllm-omni/tree/higgs-routing-profiling-evidence)：八份真实 CPU/CUDA trace、阶段统计和复现资料。它不替代原始无 profiler 性能对照。

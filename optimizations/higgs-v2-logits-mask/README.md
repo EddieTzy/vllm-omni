@@ -61,3 +61,15 @@ base 吞吐两轮为 19.8867 /19.4744，candidate 为 22.0689 /24.9436，完整�
 首轮 correctness baseline 在新卡 JIT/autotune 期间超过继承的 240s 健康检查预算，尚未发送音频请求；保留失败日志，以新 r2 标签和 900s 启动预算完成。没有丢弃计时性能轮次。模型和采样配置未变。
 
 完整自检和最终 rebased 29 项回归测试通过（0.76s），PR #11119 已提交，head `0ee2017a6a59808544f7cacee49cd9d2dfce48e8`，base `a57d6d1a73c694476ae1cc1447bcd765dfd47dd7`；模型源码字节与实测一致，pre-commit、Python 3.11/3.12 构建、CodeQL、DCO 已通过，等待人工 review。原始日志、PCM 和完整逐步采样轨迹保留在隔离实验目录，公开归档只含摘要、hash 和复现材料。GPU 服务测完已停止、显存释放。后续可继续研究 RAS 重复检查，保持每请求重采样顺序，不能擅自改批量抽样语义。
+
+## 评审修正与经验（2026-11-25）
+
+针对 [Sy0307 的评审](https://github.com/vllm-project/vllm-omni/pull/11119#pullrequestreview-6055542476)，已推送 [`b19471884`](https://github.com/EddieTzy/vllm-omni/commit/b19471884f41310fc1429357a5eca95bdcbcb0db)：
+
+- 配置初始化时一次性校验 BOS/EOS 在 `[0, codebook_size)`，非法值明确抛 `ValueError`；补充 6 个越界用例及合法边界、配置 round-trip 检查。
+- 新 kernel 限定 NVIDIA CUDA、Triton 可用且 logits 在 CUDA 设备。ROCm/HIP 保留原路径，补充模拟 HIP 张量特征及无 Triton 的回退检查；未做 AMD 实机验证。
+- 采纳 masked-store 简化，只写禁止的 logits，删除原有 logits `tl.load`，允许的值留在原处。
+
+修正后的 RTX PRO 6000 定点测试 **38 passed, 1 warning in 1.63s**，本地 pre-commit 检查通过。此前的 29 项测试和完整 PCM 配对、端到端性能数字均属于前一版；本次没有重跑完整服务性能 A/B，也不宣称这次简化带来额外端到端收益。当前修正 head 为 `b19471884`；上节的 `0ee2017` 和当时 CI 状态属于历史记录。
+
+本次遗漏与后续检查项见 [PR 评审经验](../../records/pr-lessons.md)。已在对应 review thread 回复修正内容，留待 reviewer 复查。

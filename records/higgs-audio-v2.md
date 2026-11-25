@@ -16,3 +16,7 @@
 路由 profiling 是路由优化的独立证据附件，不是第四项优化。真实 32 行 all-audio forward 的 route/index/sync 操作减少，支持路由机制解释；forward 外的 interval 不能标成纯 sampler。
 
 各项实验分别保留基线与适用条件；packed feedback 没有混入 state fusion，状态融合也不重复累计路由的收益。带 profiler 的数据与无 profiler 服务测量分开，动态合批和未配对随机输出的差异不能冒充算术质量回归。
+
+## Logits mask 评审修正
+
+PR #11119 已在 `b19471884` 补充 BOS/EOS 越界配置校验、NVIDIA/Triton 快路径限制和 masked-store 简化，定点测试 38 项通过。原端到端性能数字来自修正前版本，本次未重跑服务压测。见 [修正记录](../optimizations/higgs-v2-logits-mask/README.md#评审修正与经验2026-11-25) 与 [可复用的 PR 检查经验](pr-lessons.md)。
