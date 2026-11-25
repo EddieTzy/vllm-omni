@@ -326,11 +326,11 @@
       "status": "配置对照已归档",
       "branch": "perf/cosyvoice3-stage1-scheduling",
       "branch_published": true,
-      "head_commit": "e7e3b11ad2c4ab91215a5fb452e58ac166265f9c",
+      "head_commit": "dedfe5666df83018f5886f236791a4721ffac90b",
       "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
       "result": "普通流式 C4，96 个请求。Stage 1 关闭异步调度后，首包 P95 从 573.2 降至 497.9 ms，音频吞吐 18.58 → 18.59 秒/秒。第一块到第二块间隔 P95 从 344.0 升至 500.8 ms。",
       "details": "records/cosyvoice3.md",
-      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/dedfe5666df83018f5886f236791a4721ffac90b/benchmarks/cosyvoice3_stage1_scheduling",
       "trace_count": 4,
       "pr": null
     },
