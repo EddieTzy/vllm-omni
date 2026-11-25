@@ -1513,21 +1513,15 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
         # row that hits the repeat threshold over the last ras_win_len audio
         # frames of that codebook's history (from state.audio_out_ids).
         if codes_flat.shape[0] > 0:
-            audio_idx_to_batch = audio_row_indices  # already a list[int]
-            for local_i in range(codes_flat.shape[0]):
-                bi = int(audio_idx_to_batch[local_i])
-                req_state = self._audio_state.get(self._audio_state_key_for_row(bi, request_ids))
-                if req_state is None:
-                    continue
-                aoi = req_state.get("audio_out_ids")
-                if not isinstance(aoi, torch.Tensor) or aoi.shape[-1] < ras_win_len:
-                    continue
-                window = aoi[:, -ras_win_len:].to(codes_flat.device)  # [Q, W]
-                this_codes = codes_flat[local_i]  # [Q]
-                rep_count = (window == this_codes.unsqueeze(-1)).sum(dim=-1)  # [Q]
-                row_indices = torch.nonzero(rep_count >= ras_win_max_num_repeat, as_tuple=False).reshape(-1)
-                if row_indices.numel() == 0:
-                    continue
+            from .ras_repeat import repeated_codebooks
+
+            histories = []
+            for batch_i in audio_row_indices:
+                state = self._audio_state.get(self._audio_state_key_for_row(int(batch_i), request_ids))
+                histories.append(state.get("audio_out_ids") if state is not None else None)
+            repeat_rows = repeated_codebooks(codes_flat, histories, ras_win_len, ras_win_max_num_repeat)
+            for local_i, repeated in repeat_rows:
+                row_indices = torch.tensor(repeated, dtype=torch.long, device=codes_flat.device)
                 # Re-sample those codebooks from cb_logits directly (no top-k/top-p
                 # in RAS resample per upstream — pure softmax + multinomial).
                 resample_logits = cb_logits[local_i, row_indices].float()
