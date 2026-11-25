@@ -2,13 +2,13 @@
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM-Omni project
 
 import copy
-from types import SimpleNamespace
 
 import pytest
 import torch
 from vllm.platforms import current_platform
 
 from tests.helpers.mark import hardware_marks
+from tests.model_executor.models.test_higgs_audio_v2_mrv2 import _Config
 from vllm_omni.model_executor.models.higgs_audio_v2.higgs_audio_v2_talker import (
     HiggsAudioV2TalkerForConditionalGeneration,
 )
@@ -33,9 +33,7 @@ def _model(config, states):
 @pytest.mark.parametrize("vocab", [0, 8, 1026])
 @pytest.mark.parametrize("invalid", [False, True])
 def test_mrv2_audio_bias_matches_legacy(dtype, strided, vocab, invalid):
-    config = SimpleNamespace(
-        audio_bos_token_id=3, audio_token_id=-3 if invalid else 4, audio_eos_token_id=-4 if invalid else 5
-    )
+    config = _Config(audio_bos_token_id=3, audio_token_id=-3 if invalid else 4, audio_eos_token_id=-4 if invalid else 5)
     previous = [config.audio_token_id, 3, 1, 9, 3, config.audio_token_id]
     request_ids = ["a", "a", "b", "c", "d", "e"]
     states = {key: {"should_terminate": key in ("a", "d")} for key in request_ids}
@@ -60,6 +58,6 @@ def test_mrv2_audio_bias_matches_legacy(dtype, strided, vocab, invalid):
 
 
 def test_empty_rows():
-    model = _model(SimpleNamespace(audio_bos_token_id=3, audio_token_id=4, audio_eos_token_id=5), {})
+    model = _model(_Config(audio_bos_token_id=3, audio_token_id=4, audio_eos_token_id=5), {})
     model._apply_audio_mode_bias(torch.empty(0, 8, device="cuda"), None, request_ids=[], row_prev_tokens=[])
     assert model._last_first_audio_after_bos.numel() == 0
