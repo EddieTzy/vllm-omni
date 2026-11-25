@@ -1,0 +1,16 @@
+{
+  "scope": "Private instrumentation; diagnostic runs, not replacement serving benchmark",
+  "order": [
+    "A",
+    "B"
+  ],
+  "source_baseline": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+  "baseline_talker_sha256": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673",
+  "candidate_talker_sha256": "d6829a1b63cb42436ca276a54e35384dc4b1b5369a7c7904fed130041739a6ac",
+  "instrumentation_sha256": "151b42a8bb105a85af5c5d568d6f5e2766781e8db11c601bde1c46a36f1b0d29",
+  "config_sha256": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050",
+  "corpus_sha256": "de15e0ea37b0b743e3e9a8fa0db27a328e5969b594b3a0af7a1e5df773bdfb42",
+  "concurrency": 32,
+  "warmup_requests": 32,
+  "measured_requests": 32
+}

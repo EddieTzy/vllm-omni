@@ -1,0 +1,68 @@
+{
+  "arms": {
+    "A": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 12.270178675000352,
+      "audio_seconds_per_second": 22.118667314352876,
+      "ttfa_p50_seconds": 3.8462002025007678,
+      "ttfa_p95_seconds": 5.318068549000418,
+      "mean_e2e_s": 3.913045951218919,
+      "mean_rtf": 0.9357230558257459
+    },
+    "B": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 11.316233722000106,
+      "audio_seconds_per_second": 24.135238517477966,
+      "ttfa_p50_seconds": 3.804205231999731,
+      "ttfa_p95_seconds": 5.339015984301477,
+      "mean_e2e_s": 3.734497061140587,
+      "mean_rtf": 0.8851510945993389
+    },
+    "B2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 15.44470413199997,
+      "audio_seconds_per_second": 18.600550554075227,
+      "ttfa_p50_seconds": 3.700913250000667,
+      "ttfa_p95_seconds": 5.289889355500509,
+      "mean_e2e_s": 3.873107284031221,
+      "mean_rtf": 0.8792778462265254
+    },
+    "A2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 12.900756250000995,
+      "audio_seconds_per_second": 21.79717177432744,
+      "ttfa_p50_seconds": 3.816658097499385,
+      "ttfa_p95_seconds": 5.4683786413008395,
+      "mean_e2e_s": 3.9472215523906016,
+      "mean_rtf": 0.9120842664558847
+    }
+  },
+  "means": {
+    "baseline": {
+      "audio_seconds_per_second": 21.957919544340157,
+      "mean_e2e_s": 3.9301337518047603,
+      "mean_rtf": 0.9239036611408153,
+      "ttfa_p50_seconds": 3.8314291500000763,
+      "ttfa_p95_seconds": 5.393223595150628
+    },
+    "fused": {
+      "audio_seconds_per_second": 21.367894535776596,
+      "mean_e2e_s": 3.803802172585904,
+      "mean_rtf": 0.8822144704129322,
+      "ttfa_p50_seconds": 3.752559241000199,
+      "ttfa_p95_seconds": 5.314452669900993
+    }
+  },
+  "changes_percent": {
+    "audio_seconds_per_second": -2.6870715477944507,
+    "mean_e2e_s": -3.214434601897287,
+    "mean_rtf": -4.512287642242507,
+    "ttfa_p50_seconds": -2.058498432624689,
+    "ttfa_p95_seconds": -1.4605536718422574
+  },
+  "scope": "Incremental C32: routing+mask vs routing+Triton logits mask+fused LM audio-mode bias; two independent boots each, all requests retained"
+}

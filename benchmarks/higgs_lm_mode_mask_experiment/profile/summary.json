@@ -1,0 +1,665 @@
+{
+  "scope": "Real-service C32 all-audio single-token steps; CPU wall and CUDA event intervals (including launch gaps), profiler steps and next 2 excluded. Event-timed runs diagnostic only. Codec excluded because input work is not matched.",
+  "arms": {
+    "A": {
+      "stages": {
+        "talker.forward": {
+          "host_ms": {
+            "n": 95,
+            "mean": 21.053749884210525,
+            "median": 21.163369,
+            "p95": 26.921717
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 21.12353687286377,
+            "median": 21.23504066467285,
+            "p95": 26.990079879760742
+          }
+        },
+        "talker.compute_logits": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.10339657894736842,
+            "median": 0.100078,
+            "p95": 0.15241
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.6381557910065901,
+            "median": 0.635968029499054,
+            "p95": 0.6817600131034851
+          }
+        },
+        "talker.audio_mode_bias": {
+          "host_ms": {
+            "n": 95,
+            "mean": 1.0630615578947369,
+            "median": 1.092363,
+            "p95": 1.314816
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 1.0783511575899627,
+            "median": 1.1057599782943726,
+            "p95": 1.334656000137329
+          }
+        },
+        "talker.audio_head": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.19379926315789472,
+            "median": 0.192999,
+            "p95": 0.252477
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.22631039995896188,
+            "median": 0.22540800273418427,
+            "p95": 0.28569599986076355
+          }
+        },
+        "mask.delay_pattern": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.13110115789473684,
+            "median": 0.128144,
+            "p95": 0.174498
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.1391551997316511,
+            "median": 0.13817599415779114,
+            "p95": 0.19023999571800232
+          }
+        },
+        "audio.sample_codes": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.8735221789473684,
+            "median": 0.895698,
+            "p95": 1.15767
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.909041176344219,
+            "median": 0.9362559914588928,
+            "p95": 1.2110079526901245
+          }
+        },
+        "audio.ras": {
+          "host_ms": {
+            "n": 95,
+            "mean": 2.486347547368421,
+            "median": 2.553511,
+            "p95": 3.369175
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 2.516038735563818,
+            "median": 2.584383964538574,
+            "p95": 3.4078400135040283
+          }
+        },
+        "audio.state_update": {
+          "host_ms": {
+            "n": 95,
+            "mean": 2.0943505263157896,
+            "median": 2.15657,
+            "p95": 2.5552
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 2.120573296045002,
+            "median": 2.1822400093078613,
+            "p95": 2.592223882675171
+          }
+        },
+        "audio.assemble_output": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.128675,
+            "median": 0.128232,
+            "p95": 0.166995
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.13964496858810124,
+            "median": 0.13900800049304962,
+            "p95": 0.18115200102329254
+          }
+        },
+        "talker.dispatch_audio": {
+          "host_ms": {
+            "n": 95,
+            "mean": 6.5090783684210525,
+            "median": 6.766981,
+            "p95": 8.370372
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 6.401553179088392,
+            "median": 6.680704116821289,
+            "p95": 8.301216125488281
+          }
+        },
+        "talker.deliver_codes": {
+          "host_ms": {
+            "n": 95,
+            "mean": 0.1940159894736842,
+            "median": 0.19398,
+            "p95": 0.255745
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 0.2055484628991077,
+            "median": 0.20537599921226501,
+            "p95": 0.2702080011367798
+          }
+        },
+        "talker.sample_step": {
+          "host_ms": {
+            "n": 95,
+            "mean": 9.224421410526316,
+            "median": 9.574346,
+            "p95": 11.79088
+          },
+          "cuda_interval_ms": {
+            "n": 95,
+            "mean": 9.234410737690173,
+            "median": 9.584992408752441,
+            "p95": 11.805888175964355
+          }
+        }
+      },
+      "decode_cycle_ms": {
+        "n": 92,
+        "mean": 35.326435923913046,
+        "median": 35.019044,
+        "p95": 43.242673
+      },
+      "traces": [
+        {
+          "profiled_region": "talker.audio_mode_bias",
+          "region_details": [
+            {
+              "correlated_memcpy_count": 66,
+              "correlated_memcpy_busy_ms": 0.062658,
+              "cpu_ops": {
+                "aten::detach": 2,
+                "aten::to": 2,
+                "aten::_to_copy": 2,
+                "aten::empty_strided": 34,
+                "aten::copy_": 66,
+                "aten::resolve_conj": 2,
+                "aten::resolve_neg": 2,
+                "aten::zeros": 1,
+                "aten::empty": 1,
+                "aten::zero_": 1,
+                "aten::fill_": 33,
+                "aten::select": 128,
+                "aten::as_strided": 128,
+                "aten::full_like": 32,
+                "aten::empty_like": 32
+              },
+              "cuda_driver": {},
+              "cuda_runtime": {
+                "cudaStreamIsCapturing": 3,
+                "cudaMemcpyAsync": 66,
+                "cudaStreamSynchronize": 2,
+                "cudaLaunchKernel": 33,
+                "cudaEventRecordWithFlags": 1
+              },
+              "correlated_kernel_count": 33,
+              "correlated_kernel_busy_ms": 0.027202999999999998,
+              "kernels": {
+                "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<bool>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<bool>, std::array<char*, 1ul>)": 1,
+                "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<c10::BFloat16>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<c10::BFloat16>, std::array<char*, 1ul>)": 32
+              }
+            }
+          ],
+          "metadata": {
+            "step": 189,
+            "shape": [
+              32,
+              3072
+            ],
+            "num_reqs": 32,
+            "output_rows": 32,
+            "c32_occurrence": 64,
+            "input_ids": [
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016
+            ]
+          },
+          "annotation_host_ms": {
+            "talker.sample_step": {
+              "n": 1,
+              "mean": 13.858848,
+              "median": 13.858848,
+              "p95": 13.858848
+            },
+            "talker.compute_logits": {
+              "n": 1,
+              "mean": 0.184145,
+              "median": 0.184145,
+              "p95": 0.184145
+            },
+            "talker.audio_mode_bias": {
+              "n": 1,
+              "mean": 1.815395,
+              "median": 1.815395,
+              "p95": 1.815395
+            },
+            "talker.dispatch_audio": {
+              "n": 1,
+              "mean": 9.953241,
+              "median": 9.953241,
+              "p95": 9.953241
+            },
+            "talker.audio_head": {
+              "n": 1,
+              "mean": 0.249998,
+              "median": 0.249998,
+              "p95": 0.249998
+            },
+            "mask.delay_pattern": {
+              "n": 1,
+              "mean": 0.147214,
+              "median": 0.147214,
+              "p95": 0.147214
+            },
+            "audio.sample_codes": {
+              "n": 1,
+              "mean": 1.182989,
+              "median": 1.182989,
+              "p95": 1.182989
+            },
+            "audio.ras": {
+              "n": 1,
+              "mean": 4.157675,
+              "median": 4.157675,
+              "p95": 4.157675
+            },
+            "audio.state_update": {
+              "n": 1,
+              "mean": 3.312274,
+              "median": 3.312274,
+              "p95": 3.312274
+            },
+            "audio.assemble_output": {
+              "n": 1,
+              "mean": 0.205519,
+              "median": 0.205519,
+              "p95": 0.205519
+            },
+            "talker.deliver_codes": {
+              "n": 1,
+              "mean": 0.407991,
+              "median": 0.407991,
+              "p95": 0.407991
+            }
+          },
+          "kernel_count": 504,
+          "cuda_runtime_calls": 1241
+        }
+      ]
+    },
+    "B": {
+      "stages": {
+        "talker.forward": {
+          "host_ms": {
+            "n": 93,
+            "mean": 21.1185228172043,
+            "median": 19.920418,
+            "p95": 27.904229
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 21.179347889397732,
+            "median": 19.9683837890625,
+            "p95": 27.97279930114746
+          }
+        },
+        "talker.compute_logits": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.10069118279569893,
+            "median": 0.096549,
+            "p95": 0.139404
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.6361661944338071,
+            "median": 0.6329920291900635,
+            "p95": 0.6706879734992981
+          }
+        },
+        "talker.audio_mode_bias": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.18018001075268816,
+            "median": 0.173607,
+            "p95": 0.245634
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.1921338499874197,
+            "median": 0.18624000251293182,
+            "p95": 0.26099199056625366
+          }
+        },
+        "talker.audio_head": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.1951644623655914,
+            "median": 0.189417,
+            "p95": 0.27487
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.2274129908251506,
+            "median": 0.2221439927816391,
+            "p95": 0.3043839931488037
+          }
+        },
+        "mask.delay_pattern": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.13430551612903227,
+            "median": 0.124997,
+            "p95": 0.203683
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.14170425793816965,
+            "median": 0.13337600231170654,
+            "p95": 0.2165440022945404
+          }
+        },
+        "audio.sample_codes": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.8835593440860215,
+            "median": 0.83617,
+            "p95": 1.218575
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.9198929936655106,
+            "median": 0.8736000061035156,
+            "p95": 1.270367980003357
+          }
+        },
+        "audio.ras": {
+          "host_ms": {
+            "n": 93,
+            "mean": 2.5616429784946235,
+            "median": 2.533892,
+            "p95": 3.410141
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 2.592915272560491,
+            "median": 2.556607961654663,
+            "p95": 3.4596800804138184
+          }
+        },
+        "audio.state_update": {
+          "host_ms": {
+            "n": 93,
+            "mean": 2.076773806451613,
+            "median": 2.047821,
+            "p95": 2.633084
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 2.1039624906355336,
+            "median": 2.0730559825897217,
+            "p95": 2.671328067779541
+          }
+        },
+        "audio.assemble_output": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.1308934946236559,
+            "median": 0.127972,
+            "p95": 0.178172
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.14149023648551715,
+            "median": 0.13779200613498688,
+            "p95": 0.19433599710464478
+          }
+        },
+        "talker.dispatch_audio": {
+          "host_ms": {
+            "n": 93,
+            "mean": 6.5956088279569896,
+            "median": 6.285491,
+            "p95": 8.560487
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 6.487314252443211,
+            "median": 6.176447868347168,
+            "p95": 8.493247985839844
+          }
+        },
+        "talker.deliver_codes": {
+          "host_ms": {
+            "n": 93,
+            "mean": 0.1975740752688172,
+            "median": 0.189706,
+            "p95": 0.274381
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 0.2100817205444459,
+            "median": 0.20160000026226044,
+            "p95": 0.29094401001930237
+          }
+        },
+        "talker.sample_step": {
+          "host_ms": {
+            "n": 93,
+            "mean": 8.40946593548387,
+            "median": 8.013613,
+            "p95": 10.78266
+          },
+          "cuda_interval_ms": {
+            "n": 93,
+            "mean": 8.41974260473764,
+            "median": 8.02348804473877,
+            "p95": 10.797887802124023
+          }
+        }
+      },
+      "decode_cycle_ms": {
+        "n": 90,
+        "mean": 34.64251092222222,
+        "median": 33.314628,
+        "p95": 44.968407
+      },
+      "traces": [
+        {
+          "profiled_region": "talker.audio_mode_bias",
+          "region_details": [
+            {
+              "correlated_memcpy_count": 1,
+              "correlated_memcpy_busy_ms": 0.00032,
+              "cpu_ops": {
+                "aten::empty": 2,
+                "aten::to": 1,
+                "aten::_to_copy": 1,
+                "aten::empty_strided": 1,
+                "aten::copy_": 1,
+                "aten::lift_fresh": 1,
+                "aten::detach_": 1
+              },
+              "cuda_driver": {
+                "cuLaunchKernelEx": 1
+              },
+              "cuda_runtime": {
+                "cudaStreamIsCapturing": 2,
+                "cudaMemcpyAsync": 1,
+                "cudaStreamSynchronize": 1,
+                "cudaEventRecordWithFlags": 1
+              },
+              "correlated_kernel_count": 1,
+              "correlated_kernel_busy_ms": 0.003648,
+              "kernels": {
+                "_force_audio_mode": 1
+              }
+            }
+          ],
+          "metadata": {
+            "step": 302,
+            "shape": [
+              32,
+              3072
+            ],
+            "num_reqs": 32,
+            "output_rows": 32,
+            "c32_occurrence": 64,
+            "input_ids": [
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016,
+              128016
+            ]
+          },
+          "annotation_host_ms": {
+            "talker.sample_step": {
+              "n": 1,
+              "mean": 8.714663,
+              "median": 8.714663,
+              "p95": 8.714663
+            },
+            "talker.compute_logits": {
+              "n": 1,
+              "mean": 0.197827,
+              "median": 0.197827,
+              "p95": 0.197827
+            },
+            "talker.audio_mode_bias": {
+              "n": 1,
+              "mean": 0.204486,
+              "median": 0.204486,
+              "p95": 0.204486
+            },
+            "talker.dispatch_audio": {
+              "n": 1,
+              "mean": 6.498209,
+              "median": 6.498209,
+              "p95": 6.498209
+            },
+            "talker.audio_head": {
+              "n": 1,
+              "mean": 0.272818,
+              "median": 0.272818,
+              "p95": 0.272818
+            },
+            "mask.delay_pattern": {
+              "n": 1,
+              "mean": 0.155675,
+              "median": 0.155675,
+              "p95": 0.155675
+            },
+            "audio.sample_codes": {
+              "n": 1,
+              "mean": 1.170529,
+              "median": 1.170529,
+              "p95": 1.170529
+            },
+            "audio.ras": {
+              "n": 1,
+              "mean": 0.042067,
+              "median": 0.042067,
+              "p95": 0.042067
+            },
+            "audio.state_update": {
+              "n": 1,
+              "mean": 4.033547,
+              "median": 4.033547,
+              "p95": 4.033547
+            },
+            "audio.assemble_output": {
+              "n": 1,
+              "mean": 0.22356399999999998,
+              "median": 0.22356399999999998,
+              "p95": 0.22356399999999998
+            },
+            "talker.deliver_codes": {
+              "n": 1,
+              "mean": 0.36165800000000004,
+              "median": 0.36165800000000004,
+              "p95": 0.36165800000000004
+            }
+          },
+          "kernel_count": 280,
+          "cuda_runtime_calls": 693
+        }
+      ]
+    }
+  }
+}
