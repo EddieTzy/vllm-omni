@@ -1731,6 +1731,32 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
             return
         audio_bos = int(self.config.audio_bos_token_id)
         audio_id = int(self.config.audio_token_id)
+        # MRv2 already supplies the previous token for every output row.
+        # Resolve CPU-owned request state once, avoiding the legacy stash read.
+        if (
+            logits.is_cuda
+            and sampling_metadata is None
+            and row_prev_tokens is not None
+            and len(row_prev_tokens) == logits.shape[0]
+        ):
+            from .audio_mode_mask import mask_audio_mode_
+
+            audio_eos = int(getattr(self.config, "audio_eos_token_id", -1))
+            audio_state = getattr(self, "_audio_state", {}) or {}
+            decisions = []
+            for i, prev in enumerate(row_prev_tokens):
+                target = -1
+                if prev in (audio_bos, audio_id):
+                    state = audio_state.get(self._audio_state_key_for_row(i, request_ids))
+                    terminate = bool(isinstance(state, dict) and state.get("should_terminate"))
+                    if terminate and 0 <= audio_eos < logits.shape[1]:
+                        target = audio_eos
+                        state["should_terminate"] = False
+                    else:
+                        target = audio_id if 0 <= audio_id < logits.shape[1] else -2
+                decisions.append((target, prev == audio_bos))
+            self._last_first_audio_after_bos = mask_audio_mode_(logits, decisions)
+            return
         # (PyTorch align, corrected): upstream NEVER lets the model
         # naturally emit ``audio_eos_token_id`` in the LM stream. The LM
         # next-token is force-set to ``audio_out_token_idx`` every step;
