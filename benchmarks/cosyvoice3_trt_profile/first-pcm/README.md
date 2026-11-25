@@ -33,3 +33,9 @@ RTX PRO 6000，TensorRT，无显式 seed，C4。使用已有两次服务计时�
 这批数据把排查范围缩到 Stage 1 的结果交付：工作组结束后，首块数据迅速拷到主机；繁忙时，客户端读到这份数据往往已在下一次模型执行之后。记录中没有逐请求的引擎结果出队、API 收到模型输出、ASGI 首次 body 写出时刻。尚不能据此判定是哪一层延后转交，也不能把重叠的整段时间当成可节省的延迟。后续若做定点验证，在上述三个边界携带相同请求 ID 即可区分。
 
 [配对结果与八波原始偏移](delivery.json) · [离线复现脚本](delivery.py)
+
+### 引擎何时取结果
+
+vLLM 0.34 的批队列有一种与现象相符的执行顺序。当多批并行已启用且队列还有空间时，引擎先执行新批，再从队尾取最早批的 future。单进程执行器在调用线程运行 worker 方法；对于异步模型结果，取 future 时才调用 `get_output()`。Omni 的 generation runner 在这里同步输出拷贝事件，再按请求组织 CPU 上的音频张量。GPU 侧拷贝完成与引擎把结果交给下一层是两个独立时点。[核心调度](https://github.com/vllm-project/vllm/blob/v0.34.0/vllm/v1/engine/core.py#L758) · [单进程执行器](https://github.com/vllm-project/vllm/blob/v0.34.0/vllm/v1/executor/uniproc_executor.py#L32) · [Omni generation 输出](../../../vllm_omni/worker_v2/omni_generation_model_runner.py)
+
+无 seed 诊断中，两组首块之后的下一次 forward 分别持续 207.33 ms 和 81.25 ms。下一次 forward 结束后，在同一 Stage 1 工作线程上分别过了 0.54 和 0.68 ms 就出现一次 CUDA 事件同步调用，调用本身仅用 6.5 和 9.1 微秒。显式 seed 对照中的下一次 forward 为空，四组也都在其结束后出现同步。历史启动日志确认使用 MRv2 generation runner，但没有逐请求的 future 出队记录或 CUDA 事件句柄映射。因此该顺序是优先验证的候选机制；两次同步的具体请求归属仍需验证。最小验证是在批队列取 future、Omni 取到同批请求的 CPU 结果以及 HTTP 首次写出时记录同一组请求 ID 与单调时钟。[计数与时间](collect-order.json) · [离线提取脚本](collect-order.py)
