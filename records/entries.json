@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T05:47:15.118044+00:00",
+  "updated_at_utc": "2026-11-25T07:03:51.400498+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -247,6 +247,74 @@
         "ttfa_p50_seconds": 15.535372492053767,
         "ttfa_p95_seconds": 28.274907008813365
       }
+    },
+    {
+      "id": "cosyvoice3-eager-profile",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "CosyVoice3",
+      "component": "eager Flow 热点",
+      "workflow_category": "diagnostic",
+      "status": "实验归档",
+      "branch": "perf/cosyvoice3-eager-profile",
+      "branch_published": true,
+      "head_commit": "0ab458950d9952f49bb803bbb8633102089a93cb",
+      "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "result": "带 profiler 的 C4 路径诊断，确认每次 RoPE 平均 24 个设备操作。",
+      "details": "records/cosyvoice3.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/0ab458950d9952f49bb803bbb8633102089a93cb/benchmarks/cosyvoice3_eager_profile",
+      "trace_count": 2
+    },
+    {
+      "id": "cosyvoice3-dit-compile",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "CosyVoice3",
+      "component": "已有 DiT 编译开关",
+      "workflow_category": "existing_option_tradeoff",
+      "status": "实验归档",
+      "branch": "perf/cosyvoice3-dit-compile",
+      "branch_published": true,
+      "head_commit": "d2816876f001e882ce8dcdab45ffb69437c55fcc",
+      "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "result": "显式 seed C4，吞吐 5.20→12.10；相同输入的音频块存在可测差异。",
+      "details": "records/cosyvoice3.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/d2816876f001e882ce8dcdab45ffb69437c55fcc/benchmarks/cosyvoice3_dit_compile",
+      "trace_count": 4
+    },
+    {
+      "id": "cosyvoice3-trt-profile",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "CosyVoice3",
+      "component": "TRT 基线与排队",
+      "workflow_category": "diagnostic",
+      "status": "实验归档",
+      "branch": "perf/cosyvoice3-trt-profile",
+      "branch_published": true,
+      "head_commit": "b457e2975322a1b3acb8defb06e60c74c4b5c0fa",
+      "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "result": "无 seed C4，首包 P95 0.553 秒，79 个语音块的平均等待为 348 ms。",
+      "details": "records/cosyvoice3.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/b457e2975322a1b3acb8defb06e60c74c4b5c0fa/benchmarks/cosyvoice3_trt_profile",
+      "trace_count": 4
+    },
+    {
+      "id": "cosyvoice3-trt-multistream",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "CosyVoice3",
+      "component": "TRT 多 stream 原型",
+      "workflow_category": "experimental_no_stable_gain",
+      "status": "实验归档",
+      "branch": "perf/cosyvoice3-trt-multistream",
+      "branch_published": true,
+      "head_commit": "bbc194bbcfff516fba3445f6e33a5668867919e6",
+      "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "result": "无 seed C4，64 请求对照，吞吐 +1.01%，首包 P95 +0.85%，实验留档。",
+      "details": "records/cosyvoice3.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream",
+      "trace_count": 0
     }
   ]
 }
