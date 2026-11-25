@@ -27,6 +27,8 @@ RTX PRO 6000 Blackwell，流式 C4。点击下面的 trace 下载到本地，然
 - [unseeded-stage1.json.gz](https://raw.githubusercontent.com/EddieTzy/vllm-omni/b457e2975322a1b3acb8defb06e60c74c4b5c0fa/benchmarks/cosyvoice3_trt_profile/traces/unseeded-stage1.json.gz)
 - [unseeded-stage0.json.gz](https://raw.githubusercontent.com/EddieTzy/vllm-omni/b457e2975322a1b3acb8defb06e60c74c4b5c0fa/benchmarks/cosyvoice3_trt_profile/traces/unseeded-stage0.json.gz)
 
+在既有无 seed C4 时间线中，首块开始解码到客户端收到 PCM 的两次均值为 231 ms 和 221 ms。独立诊断里，同组三个首块完成 HiFT 后到该组执行结束的等待分别约为 137、66、0 ms。[离线拆分、原始计时和复现脚本](https://github.com/EddieTzy/vllm-omni/tree/d180e50b86c4131c7c06c133e227f7d2f4e2edfb/benchmarks/cosyvoice3_trt_profile/first-pcm)
+
 ## TRT 多 stream 原型
 
 无 seed C4，64 请求对照，吞吐 +1.01%，首包 P95 +0.85%，实验留档。 [独立分支归档](https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream)
