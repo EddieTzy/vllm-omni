@@ -1,0 +1,138 @@
+{
+  "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+  "common_model_base_pr_head": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
+  "independent_candidate": true,
+  "not_stacked_on_other_followup_candidates": true,
+  "runtime_python_counts": [
+    2399,
+    2400
+  ],
+  "modified": [
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py"
+  ],
+  "added": [
+    "vllm_omni/model_executor/models/higgs_audio_v2/ras_repeat.py"
+  ],
+  "removed": [],
+  "baseline_hashes": {
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673"
+  },
+  "candidate_hashes": {
+    "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "d1c96531dabefe0146c54dc6d5b1d504cfa9ac2a77f655b0e197eb19839f7fe7",
+    "vllm_omni/model_executor/models/higgs_audio_v2/ras_repeat.py": "c8a008cf41159338c90fc9dabf736b6fe619059322da1b4fbbc163eda56d4206"
+  },
+  "paired_attempt": "r1",
+  "paired_talker_hashes": [
+    "84039a083ea65be627b97fd1a7b4f7ac613b308cc6f7ce5b604a84bf4a355c4e",
+    "4694affe5a12571ef81a4b24a69b66ae0869b0e54814c45beca9b5fdf7f0bcb4"
+  ],
+  "formal_perf_label": "higgs-ras-perf",
+  "sampled_peak_gpu_memory_mib": {
+    "A": 59552,
+    "B": 59604,
+    "B2": 59630,
+    "A2": 59634
+  },
+  "request_tail_diagnostics": {
+    "A": {
+      "per_wave_max_e2e_s": [
+        5.5895987629992305,
+        6.833643870000742
+      ],
+      "max_audio_s": 8.68,
+      "median_audio_s": 4.08,
+      "longest_requests": [
+        {
+          "request_number": 46,
+          "elapsed_seconds": 6.833643870000742,
+          "audio_seconds": 8.68
+        },
+        {
+          "request_number": 51,
+          "elapsed_seconds": 5.828161188999729,
+          "audio_seconds": 7.16
+        },
+        {
+          "request_number": 42,
+          "elapsed_seconds": 5.822639510000954,
+          "audio_seconds": 7.16
+        }
+      ]
+    },
+    "B": {
+      "per_wave_max_e2e_s": [
+        5.955265372000213,
+        5.9193882139989
+      ],
+      "max_audio_s": 8.08,
+      "median_audio_s": 4.44,
+      "longest_requests": [
+        {
+          "request_number": 3,
+          "elapsed_seconds": 5.955265372000213,
+          "audio_seconds": 8.08
+        },
+        {
+          "request_number": 52,
+          "elapsed_seconds": 5.9193882139989,
+          "audio_seconds": 7.8
+        },
+        {
+          "request_number": 20,
+          "elapsed_seconds": 5.735301587999857,
+          "audio_seconds": 7.64
+        }
+      ]
+    },
+    "B2": {
+      "per_wave_max_e2e_s": [
+        6.392822994999733,
+        5.580471495000893
+      ],
+      "max_audio_s": 8.24,
+      "median_audio_s": 4.0600000000000005,
+      "longest_requests": [
+        {
+          "request_number": 20,
+          "elapsed_seconds": 6.392822994999733,
+          "audio_seconds": 8.24
+        },
+        {
+          "request_number": 42,
+          "elapsed_seconds": 5.580471495000893,
+          "audio_seconds": 6.84
+        },
+        {
+          "request_number": 62,
+          "elapsed_seconds": 5.353009229998861,
+          "audio_seconds": 6.36
+        }
+      ]
+    },
+    "A2": {
+      "per_wave_max_e2e_s": [
+        5.04687445899981,
+        4.490671614999883
+      ],
+      "max_audio_s": 6.24,
+      "median_audio_s": 3.78,
+      "longest_requests": [
+        {
+          "request_number": 31,
+          "elapsed_seconds": 5.04687445899981,
+          "audio_seconds": 6.24
+        },
+        {
+          "request_number": 20,
+          "elapsed_seconds": 4.731956232999437,
+          "audio_seconds": 5.6
+        },
+        {
+          "request_number": 4,
+          "elapsed_seconds": 4.710894632999043,
+          "audio_seconds": 5.64
+        }
+      ]
+    }
+  }
+}

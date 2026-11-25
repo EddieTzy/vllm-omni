@@ -1,50 +1,87 @@
-# Higgs v2 batched RAS repeat detection — RTX PRO 6000
+# Higgs v2：RAS 重复检测批量化
 
-Experimental, **no upstream PR**: component gain did not establish serving gain.
-Branch `perf/higgs-v2-ras-repeat`; measured code commit d509d6e. All new follow-up
-experiments independently start from mask PR11119 head0ee2017, including merged
-routing; RAS is not stacked with LM mode mask, bounded history or state fusion.
-Runtime uses649e+identical mask model bytes. Rebased PR's a57 changes WebSocket
-ping/pong, not this HTTP workload. Same model/runtime/C32 YAML/public corpus as
-`perf/higgs-v2-logits-mask`, never combine percentage gains across experiments.
+分支 `perf/higgs-v2-ras-repeat`；代码提交 `d509d6e6a6b69fd8d8f06fdbf93e38dd494b04a0`。尚未提交上游PR；吞吐/延迟取舍和波动全部保留，不能宣称稳定服务加速。
 
-The change stacks each eligible seven-frame history window, compares all
-codebook repeat counts together, and transfers the small flags table once.
-Request/codebook ordering of softmax and multinomial is preserved. GPU sampling
-is still per request. No persistent state pool or new public config.
+## 改动与基线
 
-Validation:30 CPU/GPU component cases compare flags, sampled codes and RNG;
-43 initial regression tests passed. Actual model, controlled admission and first
-audio RNG:32/32 full PCM and code histories equal, all200normalized sample/RNG
-events equal. This is not a broad ASR, speaker or perceptual quality guarantee.
-N32 component medians: no-repeat detection1.8888->.1310ms; repeat-heavy whole
-RAS6.1686->4.5589ms. These synthetic component workloads do not prove serving
-speedup. N1 component timing is not C1 serving.
+堆叠有效历史窗口，批量计算重复标记并一次回传；保持逐请求 softmax/multinomial 的顺序。没有合并随机抽样调用。
 
-C32 A/B/B2/A2, two fresh boots per variant,32 warmup+64 measured requests each,
-all256measured successful, same unseeded HTTP client and pinned configuration:
+四个新候选独立从 mask PR #11119 的 `0ee2017a6a59808544f7cacee49cd9d2dfce48e8` 出发，**不彼此叠加**。
+基线已经有路由 PR #11068 和 audio delay-pattern logits mask。GPU运行源码
+为649e加与#11119相同的模型文件；PR rebased基线a57的额外变更仅涉及WebSocket
+ping/pong。source-validation.json记录完整runtime Python清单的比较结果及差异文件哈希。
+最新上游95513b5的Higgs文件与a57一致；本表没有冒充在新runtime main上重测。
 
-| Metric | Baseline | Candidate | Change |
+## 条件
+
+单张RTX PRO 6000 Blackwell Server Edition，97887MiB，SM120，driver580.173.02。
+Torch2.14.0+cu130、CUDA build13.0、vLLM0.34.0、Triton3.8.0、FlashInfer0.7.3、
+transformers5.22.0，详见manifest.json的模型和codec版本。
+BF16、eager MRv2、TP=PP=1、max_num_seqs=32、GPU配额.6/.25，
+async_scheduling=false、async_chunk=false、无prefix caching。
+同一公开语料，中英各32条，固定两波各32，HTTP请求不传seed；
+temperature1、top_k50、top_p.95、max_tokens1024。
+A/B/B2/A2四次独立启动，每次32warmup+64measured；256个measured全部成功。
+仅C32；未补其他服务并发。四次disconnect/WAV恢复探针通过，不等于服务端
+abort确认或无泄露证明。
+
+## 无profiler的服务数据
+
+以下是两次boot指标的算术均值。完整各轮数据见perf-result.json。
+原脚本JSON中的`means.fused`字段泛指本项candidate，不意味着所有候选都有融合kernel。
+200ms采样的各轮GPU显存峰值见source-validation.json；它覆盖预热和配置池，
+不用于证明内部历史buffer之外的显存节省。
+
+| 指标 | 基线 | 候选 | 变化 |
 | --- | ---: | ---: | ---: |
-| audio seconds/s |24.4329|22.8563|-6.45%|
-| mean E2E s |3.6682|3.7123|+1.20%|
-| mean request RTF |.89573|.88216|-1.52%|
-| first PCM P50 s |3.57661|3.71442|+3.85%|
-| first PCM P95 s |5.06970|5.13055|+1.20%|
+| 吞吐（audio秒/秒） | 24.432894 | 22.856305 | -6.45% |
+| 平均E2E（秒） | 3.668240 | 3.712324 | +1.20% |
+| 平均请求RTF | 0.895734 | 0.882159 | -1.52% |
+| 首个PCM P50（秒） | 3.576614 | 3.714423 | +3.85% |
+| 首个PCM P95（秒） | 5.069702 | 5.130552 | +1.20% |
 
-Boot throughput baseline22.20995/26.65583, candidate23.26700/22.44561. Preserve
-this variance and negative result; do not infer a confirmed regression cause.
-E2E includes queueing/talker/codec; first PCM is near completion here. RTF is
-mean per-request E2E/audio duration, not throughput's inverse. No concurrency
-other than the existing C32 was measured. Four disconnect/WAV recovery probes
-passed (not proof of server cancellation acknowledgement or memory leak absence).
+各轮吞吐与RTF：
 
-First fixed controller refused a pre-existing inherited directory before any
-service boot; corrected using fresh r1 labels and retained failure log. Initial
-pytest command named a nonexistent old-module path and collected no tests;
-corrected command passed43tests. No performance run was discarded.
+- A: 22.209953 audio秒/秒，RTF 0.898087，平均E2E 3.826358秒。
+- B: 23.267002 audio秒/秒，RTF 0.875559，平均E2E 3.729840秒。
+- B2: 22.445608 audio秒/秒，RTF 0.888759，平均E2E 3.694808秒。
+- A2: 26.655835 audio秒/秒，RTF 0.893381，平均E2E 3.510122秒。
 
-JSON artifacts preserve each boot and the paired controls. Stage profiling is
-pending separately, never substituted for unprofiled serving numbers. Do not
-submit this candidate until it demonstrates reproducible deployment value.
-AI assistance: Codex assisted with implementation, experiments and writing.
+吞吐=实际生成audio秒/完整测量wall time；RTF=每请求E2E/audio时长再平均，
+不能由吞吐倒算。E2E包含HTTP、排队、talker和codec；首包为首个非空PCM，
+在此async_chunk=false部署中接近完成。保留不同输出时长和批处理产生的波动，
+两轮结果不是置信区间。不挑最好一轮、不删除长尾，不把这项百分比加到旧PR上。
+
+## 正确性与阶段归因
+
+59 项最终适用回归（初轮43项）；30组独立 CPU/GPU 组件检测/采样/RNG比较。受控相同admission、行顺序与首个audio RNG的真实模型：
+32/32完整PCM、32/32逐帧历史、全部200个normalized采样/RNG事件一致。
+这不等于通用ASR、speaker similarity或感知质量非劣证明。
+阶段profile若存在，单独放在profile/，不替代上述无profiler服务结果。
+事件计时包含launch gap；不同state/history/batching下未改动阶段也可能波动。
+
+## 复现与限制
+
+reproduction/c32.yaml、public-corpus.json及scripts/benchmark_client.py来自相同的
+固定公开语料/客户端。需要同版本runtime和已下载的上述generation/codec权重。
+把源码候选挂载到/opt/vllm-omni，runtime根挂载到/data，使用相同YAML启动
+vllm serve /data/models/higgs-v2 --omni --deploy-config /data/reproduction/c32.yaml
+--host 127.0.0.1 --port 18874 --trust-remote-code。
+模型与codec路径需与YAML一致；固定服务port后运行：
+
+    python scripts/benchmark_client.py --port 18874 --label independent-C32 \
+      --concurrency 32 --count 64 --corpus reproduction/public-corpus.json \
+      --omit-request-seed --request-timeout 360
+
+每轮换新label并重启服务，顺序A/B/B2/A2。正确性诊断的canonical gate、初始RNG
+控制和逐帧打印独立于正式benchmark，不能把其计时当作服务性能。
+源码与窄回归测试保存在本perf分支；没有增加公共配置或依赖。
+其他硬件、多GPU、CUDA graph、全仓硬件矩阵未测。
+公开归档不包含凭据、生成音频或服务日志；原始日志/PCM保留在隔离实验目录。
+AI assistance: Codex assisted with code, validation, measurements and writing.
+
+## 停止原因
+
+N32组件检测明显变快，但服务吞吐未改善；当前不提交上游性能PR。
+初次fixed controller因继承的目标目录已存在而在启动服务前退出，保留记录，
+用新r1标签重跑。首次pytest命令使用了错误旧模块路径，纠正后43项通过。
