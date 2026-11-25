@@ -1574,6 +1574,20 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
         # None (silent CUDA error). Instead, ``max_tokens`` (set in the deploy
         # yaml) is the stop bound while the audio span ramps down naturally.
         new_codes_flat: list[torch.Tensor] = []
+        fused_codes = None
+        fused_states = None
+        if codes_flat.is_cuda and len(
+            set(self._audio_state_key_for_row(int(i), request_ids) for i in audio_row_indices)
+        ) == len(audio_row_indices):
+            from .delay_state import update_audio_codes
+
+            delay_states = []
+            for batch_i in audio_row_indices:
+                existing = self._audio_state.get(self._audio_state_key_for_row(int(batch_i), request_ids))
+                delay = int(existing["num_delay"]) if existing is not None else 0
+                remaining = existing["num_remaining_delays"] if existing is not None else None
+                delay_states.append((delay, -1 if remaining is None else int(remaining)))
+            fused_codes, fused_states = update_audio_codes(codes_flat, delay_states, bos, eos_stream)
         for local_i, batch_i in enumerate(audio_row_indices):
             state_key = self._audio_state_key_for_row(int(batch_i), request_ids)
             state = self._audio_state.setdefault(
@@ -1587,33 +1601,40 @@ class HiggsAudioV2TalkerForConditionalGeneration(nn.Module):
             )
             num_delay: int = state["num_delay"]
             num_remaining_delays: int | None = state["num_remaining_delays"]
-            this_codes = codes_flat[local_i].clone()  # [Q]
-
-            # Leading delay-pattern BOS pad.
-            if num_delay + 1 < num_codebooks:
-                this_codes[num_delay + 1 :] = bos
-                num_delay += 1
-
-            # Trailing eos ramp-down.
-            if num_remaining_delays is not None:
-                this_codes[: num_codebooks - num_remaining_delays] = eos_stream
-                num_remaining_delays -= 1
+            if fused_codes is not None and fused_states is not None:
+                this_codes = fused_codes[local_i]
+                num_delay, remaining_value, terminate = fused_states[local_i]
+                num_remaining_delays = None if remaining_value == -1 else remaining_value
+                if terminate:
+                    state["should_terminate"] = True
             else:
-                eos_positions = (this_codes == eos_stream).nonzero(as_tuple=False).reshape(-1)
-                if eos_positions.numel() > 0:
-                    last_eos_idx = int(eos_positions[-1].item())
-                    this_codes[: last_eos_idx + 1] = eos_stream
-                    num_remaining_delays = num_codebooks - last_eos_idx - 1
+                this_codes = codes_flat[local_i].clone()  # [Q]
 
-            if num_remaining_delays is not None and num_remaining_delays <= 0:
-                # Keep the completed ramp-down frame, then force audio_eos on
-                # the next LM step. Upstream appends this final codec frame
-                # before applying its LM-token stop override.
-                num_delay = 0
-                num_remaining_delays = None
-                state["num_delay"] = num_delay
-                state["num_remaining_delays"] = num_remaining_delays
-                state["should_terminate"] = True
+                # Leading delay-pattern BOS pad.
+                if num_delay + 1 < num_codebooks:
+                    this_codes[num_delay + 1 :] = bos
+                    num_delay += 1
+
+                # Trailing eos ramp-down.
+                if num_remaining_delays is not None:
+                    this_codes[: num_codebooks - num_remaining_delays] = eos_stream
+                    num_remaining_delays -= 1
+                else:
+                    eos_positions = (this_codes == eos_stream).nonzero(as_tuple=False).reshape(-1)
+                    if eos_positions.numel() > 0:
+                        last_eos_idx = int(eos_positions[-1].item())
+                        this_codes[: last_eos_idx + 1] = eos_stream
+                        num_remaining_delays = num_codebooks - last_eos_idx - 1
+
+                if num_remaining_delays is not None and num_remaining_delays <= 0:
+                    # Keep the completed ramp-down frame, then force audio_eos on
+                    # the next LM step. Upstream appends this final codec frame
+                    # before applying its LM-token stop override.
+                    num_delay = 0
+                    num_remaining_delays = None
+                    state["num_delay"] = num_delay
+                    state["num_remaining_delays"] = num_remaining_delays
+                    state["should_terminate"] = True
 
             state["num_delay"] = num_delay
             state["num_remaining_delays"] = num_remaining_delays
