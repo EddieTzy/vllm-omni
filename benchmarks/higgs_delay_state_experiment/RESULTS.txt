@@ -1,0 +1,81 @@
+# Higgs v2：当前帧 BOS/EOS 修正与状态转移融合
+
+分支 `perf/higgs-v2-delay-state`；代码提交 `a3e1f766f8c39c29209a6dc144946bff7b2710f8`。尚未提交上游PR；吞吐/延迟取舍和波动全部保留，不能宣称稳定服务加速。
+
+## 改动与基线
+
+一次 Triton launch 完成 leading BOS、EOS ramp、最后 EOS 检测和终止计数回传。CPU 请求字典继续拥有状态，未引入 GPU 状态池或环形队列；重复 request key 和非 CUDA 保留串行路径。
+
+四个新候选独立从 mask PR #11119 的 `0ee2017a6a59808544f7cacee49cd9d2dfce48e8` 出发，**不彼此叠加**。
+基线已经有路由 PR #11068 和 audio delay-pattern logits mask。GPU运行源码
+为649e加与#11119相同的模型文件；PR rebased基线a57的额外变更仅涉及WebSocket
+ping/pong。source-validation.json记录完整runtime Python清单的比较结果及差异文件哈希。
+最新上游95513b5的Higgs文件与a57一致；本表没有冒充在新runtime main上重测。
+
+## 条件
+
+单张RTX PRO 6000 Blackwell Server Edition，97887MiB，SM120，driver580.173.02。
+Torch2.14.0+cu130、CUDA build13.0、vLLM0.34.0、Triton3.8.0、FlashInfer0.7.3、
+transformers5.22.0，详见manifest.json的模型和codec版本。
+BF16、eager MRv2、TP=PP=1、max_num_seqs=32、GPU配额.6/.25，
+async_scheduling=false、async_chunk=false、无prefix caching。
+同一公开语料，中英各32条，固定两波各32，HTTP请求不传seed；
+temperature1、top_k50、top_p.95、max_tokens1024。
+A/B/B2/A2四次独立启动，每次32warmup+64measured；256个measured全部成功。
+仅C32；未补其他服务并发。四次disconnect/WAV恢复探针通过，不等于服务端
+abort确认或无泄露证明。
+
+## 无profiler的服务数据
+
+以下是两次boot指标的算术均值。完整各轮数据见perf-result.json。
+原脚本JSON中的`means.fused`字段泛指本项candidate，不意味着所有候选都有融合kernel。
+200ms采样的各轮GPU显存峰值见source-validation.json；它覆盖预热和配置池，
+不用于证明内部历史buffer之外的显存节省。
+
+| 指标 | 基线 | 候选 | 变化 |
+| --- | ---: | ---: | ---: |
+| 吞吐（audio秒/秒） | 25.730876 | 22.897685 | -11.01% |
+| 平均E2E（秒） | 3.378959 | 4.021558 | +19.02% |
+| 平均请求RTF | 0.816802 | 0.933925 | +14.34% |
+| 首个PCM P50（秒） | 3.389894 | 3.916526 | +15.54% |
+| 首个PCM P95（秒） | 4.474241 | 5.739328 | +28.27% |
+
+各轮吞吐与RTF：
+
+- A: 23.656677 audio秒/秒，RTF 0.927519，平均E2E 3.871282秒。
+- B: 23.836619 audio秒/秒，RTF 0.893687，平均E2E 3.818210秒。
+- B2: 21.958751 audio秒/秒，RTF 0.974164，平均E2E 4.224906秒。
+- A2: 27.805074 audio秒/秒，RTF 0.706084，平均E2E 2.886636秒。
+
+吞吐=实际生成audio秒/完整测量wall time；RTF=每请求E2E/audio时长再平均，
+不能由吞吐倒算。E2E包含HTTP、排队、talker和codec；首包为首个非空PCM，
+在此async_chunk=false部署中接近完成。保留不同输出时长和批处理产生的波动，
+两轮结果不是置信区间。不挑最好一轮、不删除长尾，不把这项百分比加到旧PR上。
+
+## 正确性与阶段归因
+
+36项回归，包含Q1/2/8、delay/ramp/EOS边界、stride及空输入。受控相同admission、行顺序与首个audio RNG的真实模型：
+32/32完整PCM、32/32逐帧历史、全部200个normalized采样/RNG事件一致。
+这不等于通用ASR、speaker similarity或感知质量非劣证明。
+阶段profile若存在，单独放在profile/，不替代上述无profiler服务结果。
+事件计时包含launch gap；不同state/history/batching下未改动阶段也可能波动。
+
+## 复现与限制
+
+reproduction/c32.yaml、public-corpus.json及scripts/benchmark_client.py来自相同的
+固定公开语料/客户端。需要同版本runtime和已下载的上述generation/codec权重。
+把源码候选挂载到/opt/vllm-omni，runtime根挂载到/data，使用相同YAML启动
+vllm serve /data/models/higgs-v2 --omni --deploy-config /data/reproduction/c32.yaml
+--host 127.0.0.1 --port 18874 --trust-remote-code。
+模型与codec路径需与YAML一致；固定服务port后运行：
+
+    python scripts/benchmark_client.py --port 18874 --label independent-C32 \
+      --concurrency 32 --count 64 --corpus reproduction/public-corpus.json \
+      --omit-request-seed --request-timeout 360
+
+每轮换新label并重启服务，顺序A/B/B2/A2。正确性诊断的canonical gate、初始RNG
+控制和逐帧打印独立于正式benchmark，不能把其计时当作服务性能。
+源码与窄回归测试保存在本perf分支；没有增加公共配置或依赖。
+其他硬件、多GPU、CUDA graph、全仓硬件矩阵未测。
+公开归档不包含凭据、生成音频或服务日志；原始日志/PCM保留在隔离实验目录。
+AI assistance: Codex assisted with code, validation, measurements and writing.
