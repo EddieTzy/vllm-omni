@@ -36,3 +36,9 @@ RTX PRO 6000 Blackwell，流式 C4。点击下面的 trace 下载到本地，然
 无 seed C4，64 请求对照，吞吐 +1.01%，首包 P95 +0.85%，实验留档。 [独立分支归档](https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream)
 
 候选服务以无 profiler 的四轮对照为准，保留了实现、16 个相同输入的状态/音频块检查及微基准。该项使用上一节的 TRT 基线诊断。
+
+## Stage 1 调度与首包
+
+普通流式 C4，96 个请求。Stage 1 关闭异步调度后，首包 P95 从 573.2 降至 497.9 ms，音频吞吐 18.58 → 18.59 秒/秒。第一块到第二块间隔 P95 从 344.0 升至 500.8 ms。 [逐启动指标、数据与复现](https://github.com/EddieTzy/vllm-omni/tree/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling)
+
+[A1 时间线](https://raw.githubusercontent.com/EddieTzy/vllm-omni/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling/A1.perfetto.json.gz) · [B1 时间线](https://raw.githubusercontent.com/EddieTzy/vllm-omni/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling/B1.perfetto.json.gz) · [B2 时间线](https://raw.githubusercontent.com/EddieTzy/vllm-omni/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling/B2.perfetto.json.gz) · [A2 时间线](https://raw.githubusercontent.com/EddieTzy/vllm-omni/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling/A2.perfetto.json.gz)

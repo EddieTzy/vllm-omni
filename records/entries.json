@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T07:56:10.935302+00:00",
+  "updated_at_utc": "2026-11-25T09:48:48.885559+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -292,12 +292,12 @@
       "status": "实验归档",
       "branch": "perf/cosyvoice3-trt-profile",
       "branch_published": true,
-      "head_commit": "b457e2975322a1b3acb8defb06e60c74c4b5c0fa",
+      "head_commit": "51420dec3593988903084ee02663ffe8e033784b",
       "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
       "result": "无 seed C4，首包 P95 0.553 秒，79 个语音块的平均等待为 348 ms。",
       "details": "records/cosyvoice3.md",
-      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/b457e2975322a1b3acb8defb06e60c74c4b5c0fa/benchmarks/cosyvoice3_trt_profile",
-      "trace_count": 4
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/51420dec3593988903084ee02663ffe8e033784b/benchmarks/cosyvoice3_trt_profile",
+      "trace_count": 5
     },
     {
       "id": "cosyvoice3-trt-multistream",
@@ -315,6 +315,24 @@
       "details": "records/cosyvoice3.md",
       "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream",
       "trace_count": 0
+    },
+    {
+      "id": "cosyvoice3-stage1-scheduling",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "CosyVoice3",
+      "component": "流式 Stage 1 调度与首包",
+      "workflow_category": "measured_tradeoff",
+      "status": "配置对照已归档",
+      "branch": "perf/cosyvoice3-stage1-scheduling",
+      "branch_published": true,
+      "head_commit": "e7e3b11ad2c4ab91215a5fb452e58ac166265f9c",
+      "archive_base_commit": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+      "result": "普通流式 C4，96 个请求。Stage 1 关闭异步调度后，首包 P95 从 573.2 降至 497.9 ms，音频吞吐 18.58 → 18.59 秒/秒。第一块到第二块间隔 P95 从 344.0 升至 500.8 ms。",
+      "details": "records/cosyvoice3.md",
+      "branch_url": "https://github.com/EddieTzy/vllm-omni/tree/e7e3b11ad2c4ab91215a5fb452e58ac166265f9c/benchmarks/cosyvoice3_stage1_scheduling",
+      "trace_count": 4,
+      "pr": null
     },
     {
       "id": "higgs-v3-codec-validation",
