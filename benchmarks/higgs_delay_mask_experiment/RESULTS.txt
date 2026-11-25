@@ -1,0 +1,103 @@
+Higgs v2 BOS/EOS delay-pattern logits mask fusion
+
+Decision: measured candidate with a clear C32 serving signal; prepare an
+independent contribution. No new upstream PR has been opened by this archive.
+Branch: perf/higgs-v2-logits-mask.
+
+Hardware: one RTX PRO 6000 Blackwell Server Edition, 97887 MiB, SM120,
+driver580.173.02. These are new-machine measurements, not B200 results.
+Software: torch2.14.0+cu130, CUDA build13.0, vLLM0.34.0, Triton3.8.0,
+FlashInfer0.7.3, transformers5.22.0. vLLM-Omni runs from the source below;
+the public git archive lacks generated version metadata and reports dev.
+
+Baseline: upstream649e7b3b9a5b93f9a33f753942df149ba939e523, already containing
+merged uniform-audio routing PR#11068. Candidate code commit:
+273179aa656aba22a10ff760fbc927b389c857a4. No decode-state fusion is included.
+Runtime inventory checks2398 baseline Python files versus2399 candidate files:
+only the talker is modified and delay_pattern_mask.py is added. Exact hashes
+are in manifest.json and validation.json.
+
+Change:
+Keep the original CPU/non-CUDA tensor path. On CUDA tensors gather the
+existing CPU delay/remaining counters in request order, transfer one small
+int32 table, and apply the existing BOS/EOS allowed-token rules in one
+Triton launch. One program handles one request/codebook. Original head,
+sampling, RAS order, RNG, delay-state updates and output delivery stay intact.
+The kernel supports non-overlapping strided layouts and preserves allowed
+logit values. No weights, public APIs, deployment defaults or dependencies
+change. Other GPU platforms, graph modes and multi-GPU were not qualified.
+
+Component comparison, prototypes, synchronized host wall intervals:
+Includes metadata H2D but excludes model/head/sampling and real request-state
+lookup.32 measurements per shape/variant after8 warmups; BF16,8x1026 logits.
+  N1 median: original .182541ms, broadcast PyTorch .218830ms, Triton .035131ms.
+  N32 median: original5.681324ms, broadcast .223936ms, Triton .040066ms.
+1060 state-row comparisons cover boundary counters, FP32/FP16/BF16, strided
+inputs, NaN/Inf and empty batches. RNG snapshots unchanged. These prototype
+numbers are not integrated full-model latency or serving-speed claims.
+
+Correctness:
+Integrated GPU kernel tests plus the existing MRv2 module:29 passed,
+1 warning in1.29s. Covers exhaustive delay/ramp states, forbidden tokens,
+in-place mutation, non-contiguous padding preservation and empty rows.
+Real public-model C32 A/B with common canonical admission and initial audio
+RNG:32/32 complete PCM byte-identical,32/32 emitted-code histories equal,
+200/200 normalized sampling/RNG events equal. All32 samples retained.
+Common diagnostic hooks are excluded from performance runs.
+All applicable pre-commit checks passed on the three production/test files.
+
+Serving protocol:
+C32 only, no extra concurrency sweep. A/B/B2/A2 independent boots, each
+32 warmups then64 measured requests in two waves of32. Fixed public SeedTTS
+EN/ZH targets,32 distinct per language; no reference voice cloning and no
+speech-request seed.32 max sequences in both stages, eager MRv2, BF16 engine
+configuration, TP=PP=1, async_chunk=false, GPU fractions.6/.25, prefix cache
+and async scheduling disabled. Stage max_model_len4096/65536 and batched
+token budgets2048/65536. Temperature1,top_k50,top_p.95,max_tokens1024.
+Attention backend selected FlashAttention2 on this GPU. Exact config/corpus
+and source pins are archived. No profiler in the timed serving comparison.
+
+Both boots retained:
+  audio seconds/s: baseline[19.886711,19.474429], candidate[22.068940,24.943618].
+  mean E2E s: baseline[4.845705,4.773359], candidate[4.195732,4.066756].
+  mean RTF: baseline[1.153245,1.113309], candidate[1.005650,.985591].
+  TTFA p50 s: baseline[4.875528,4.630106], candidate[4.197844,4.183562].
+  TTFA p95 s: baseline[6.540725,6.937357], candidate[5.697686,5.100842].
+Boot-mean changes:
+  audio seconds/s19.680570->23.506279,+19.439%.
+  mean E2E4.809532s->4.131244s,-14.103%.
+  mean RTF1.133277->.995620,-12.147%.
+  TTFA p504.752817s->4.190703s,-11.827%.
+  TTFA p956.739041s->5.399264s,-19.881%.
+All256 measured requests succeeded; four HTTP-disconnect/WAV-recovery probes
+passed. This is not an abort-acknowledgement or leak-proof guarantee.
+Sampled peak memory MiB: baseline[59596,59586],candidate[59640,59594].
+Sampling200ms includes warmups and configured pools; no memory-saving claim.
+
+Definitions and interpretation:
+Audio throughput is actual audio seconds/full measured client wall time.
+RTF is the arithmetic mean of each request's E2E/audio duration, not inverse
+aggregate throughput. E2E includes HTTP, server queueing, talker and codec;
+TTFA means first nonempty PCM bytes, near completion in this deployment.
+Unseeded outputs differ in length; both candidate boots and their spread are
+reported. Two boots are descriptive evidence, not a confidence interval.
+No general perceptual/speaker-quality, multi-GPU, CUDA-graph or hardware-wide
+speed guarantee. No new full ASR/SIM sweep or full repository CI was run.
+The controlled waveform equality applies to its stated32-prompt workload.
+Do not add this percentage to the earlier B200 routing/state-fusion results.
+
+Setup failures retained:
+The first correctness baseline timed out at the inherited240s readiness
+limit during new-card JIT/autotune, before any audio was requested. Fresh r2
+labels with900s readiness completed both arms; no sampling/config change.
+This was not a discarded performance result. The original log is retained.
+A broad worktree-transfer command was rejected before execution; the source
+was instead copied as a fixed public git archive plus two reviewed files.
+
+Artifacts:
+serving_results.json, paired_results.json, component_results.json,
+validation.json, manifest.json; exact deployment YAML and public corpus under
+reproduction/, reusable benchmark client under scripts/. Complete controller
+logs, normalized sampling traces, original clients and generated PCM stay in
+the isolated experiment workspace. No generated audio or credentials uploaded.
+AI assistance: Codex assisted with code, validation, measurements and writing.
