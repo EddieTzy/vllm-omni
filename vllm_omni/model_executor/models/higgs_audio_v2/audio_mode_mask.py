@@ -11,13 +11,13 @@ def _force_audio_mode(
     logits, decisions, first, v: tl.constexpr, s0: tl.constexpr, s1: tl.constexpr, block: tl.constexpr
 ):
     row = tl.program_id(0)
-    block = tl.program_id(1)
+    block_index = tl.program_id(1)
     target = tl.load(decisions + row * 2)
-    if block == 0:
+    if block_index == 0:
         tl.store(first + row, tl.load(decisions + row * 2 + 1) != 0)
     if target != -1:
         keep = tl.load(logits + row * s0 + target * s1, mask=(target >= 0) & (target < v), other=-float("inf"))
-        indices = block * block + tl.arange(0, block)
+        indices = block_index * block + tl.arange(0, block)
         values = tl.where(indices == target, keep, -float("inf"))
         tl.store(logits + row * s0 + indices * s1, values, mask=indices < v)
 
