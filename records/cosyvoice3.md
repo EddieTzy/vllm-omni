@@ -29,6 +29,8 @@ RTX PRO 6000 Blackwell，流式 C4。点击下面的 trace 下载到本地，然
 
 在既有无 seed C4 时间线中，首块开始解码到客户端收到 PCM 的两次均值为 231 ms 和 221 ms。独立诊断里，同组三个首块完成 HiFT 后到该组执行结束的等待分别约为 137、66、0 ms。普通 C4 的四个首块均在组结束 0.36–0.51 ms 内完成设备回传，回传结束至客户端首读仍有约 95–211 ms。[离线拆分、原始计时和复现脚本](https://github.com/EddieTzy/vllm-omni/tree/0acba25a58e3c224b9577f657b672de552434aef/benchmarks/cosyvoice3_trt_profile/first-pcm)
 
+后续两波普通采样 C4 采集了 8 个请求。Stage 1 提交首块拷贝后，先运行下一组音频计算，再取上一组结果。期间经过 78.6–195.2 ms，其中下一组模型执行占 92.9%–98.0%。8/8 取结果时拷贝均已就绪。从组织好主机音频到客户端首读为 5.9–9.2 ms。尚未运行调度改动的性能对照。[逐请求数据及复现](https://github.com/EddieTzy/vllm-omni/tree/51420dec3593988903084ee02663ffe8e033784b/benchmarks/cosyvoice3_trt_profile/first-pcm/request-delivery) · [下载交付时间线](https://raw.githubusercontent.com/EddieTzy/vllm-omni/51420dec3593988903084ee02663ffe8e033784b/benchmarks/cosyvoice3_trt_profile/first-pcm/request-delivery/delivery.perfetto.json.gz)
+
 ## TRT 多 stream 原型
 
 无 seed C4，64 请求对照，吞吐 +1.01%，首包 P95 +0.85%，实验留档。 [独立分支归档](https://github.com/EddieTzy/vllm-omni/tree/bbc194bbcfff516fba3445f6e33a5668867919e6/benchmarks/cosyvoice3_trt_multistream)

@@ -8,7 +8,7 @@
 
 ## CosyVoice3 实验
 
-[四个 perf 分支和 10 份可直接下载的 Perfetto 时间线](records/cosyvoice3.md)。普通合批流量与显式 seed 流量分别记录；已有开关的收益与新增原型的结果分别归档。
+[四个 perf 分支和 11 份可直接下载的 Perfetto 时间线](records/cosyvoice3.md)。普通合批流量与显式 seed 流量分别记录；已有开关的收益与新增原型的结果分别归档。
 
 ## 状态总览
 
