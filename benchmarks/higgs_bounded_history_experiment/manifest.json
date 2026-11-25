@@ -1,0 +1,168 @@
+{
+  "branch": "perf/higgs-v2-history-buffer",
+  "measured_code_commit": "e62a057054e7b2ad386bbf65325a418c2b1a8452",
+  "common_base": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
+  "independent_changes": true,
+  "runtime_source": {
+    "measured_runtime_base": "649e7b3b9a5b93f9a33f753942df149ba939e523 + mask PR11119 model bytes",
+    "common_model_base_pr_head": "0ee2017a6a59808544f7cacee49cd9d2dfce48e8",
+    "independent_candidate": true,
+    "not_stacked_on_other_followup_candidates": true,
+    "runtime_python_counts": [
+      2399,
+      2399
+    ],
+    "modified": [
+      "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py"
+    ],
+    "added": [],
+    "removed": [],
+    "baseline_hashes": {
+      "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673"
+    },
+    "candidate_hashes": {
+      "vllm_omni/model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py": "3c5fb371ee1d7f35b307584b4f088c7117eddda1ebf9f3e2713e8d4e616549c8"
+    },
+    "paired_attempt": "r1",
+    "paired_talker_hashes": [
+      "84039a083ea65be627b97fd1a7b4f7ac613b308cc6f7ce5b604a84bf4a355c4e",
+      "36d884933789dac756dbf31ed24a7ae01347b1168d77a02fac9ee7b48d551de8"
+    ],
+    "formal_perf_label": "higgs-history-perf",
+    "sampled_peak_gpu_memory_mib": {
+      "A": 60346,
+      "B": 59594,
+      "B2": 59542,
+      "A2": 59626
+    },
+    "request_tail_diagnostics": {
+      "A": {
+        "per_wave_max_e2e_s": [
+          5.556490740998925,
+          26.54100569699949
+        ],
+        "max_audio_s": 40.6,
+        "median_audio_s": 4.36,
+        "longest_requests": [
+          {
+            "request_number": 37,
+            "elapsed_seconds": 26.54100569699949,
+            "audio_seconds": 40.6
+          },
+          {
+            "request_number": 63,
+            "elapsed_seconds": 18.406094540001504,
+            "audio_seconds": 27.32
+          },
+          {
+            "request_number": 45,
+            "elapsed_seconds": 5.651625045000401,
+            "audio_seconds": 6.6
+          }
+        ]
+      },
+      "B": {
+        "per_wave_max_e2e_s": [
+          6.628639361000751,
+          5.881648023998423
+        ],
+        "max_audio_s": 8.64,
+        "median_audio_s": 4.32,
+        "longest_requests": [
+          {
+            "request_number": 20,
+            "elapsed_seconds": 6.628639361000751,
+            "audio_seconds": 8.64
+          },
+          {
+            "request_number": 42,
+            "elapsed_seconds": 5.881648023998423,
+            "audio_seconds": 7.08
+          },
+          {
+            "request_number": 49,
+            "elapsed_seconds": 5.672645168000599,
+            "audio_seconds": 6.72
+          }
+        ]
+      },
+      "B2": {
+        "per_wave_max_e2e_s": [
+          5.801230574001238,
+          5.8393590439991385
+        ],
+        "max_audio_s": 7.04,
+        "median_audio_s": 4.0,
+        "longest_requests": [
+          {
+            "request_number": 42,
+            "elapsed_seconds": 5.8393590439991385,
+            "audio_seconds": 7.04
+          },
+          {
+            "request_number": 1,
+            "elapsed_seconds": 5.801230574001238,
+            "audio_seconds": 6.56
+          },
+          {
+            "request_number": 45,
+            "elapsed_seconds": 5.767165190000014,
+            "audio_seconds": 6.92
+          }
+        ]
+      },
+      "A2": {
+        "per_wave_max_e2e_s": [
+          10.527673390999553,
+          5.343079753998609
+        ],
+        "max_audio_s": 14.88,
+        "median_audio_s": 4.140000000000001,
+        "longest_requests": [
+          {
+            "request_number": 3,
+            "elapsed_seconds": 10.527673390999553,
+            "audio_seconds": 14.88
+          },
+          {
+            "request_number": 4,
+            "elapsed_seconds": 5.746661060000406,
+            "audio_seconds": 6.6
+          },
+          {
+            "request_number": 5,
+            "elapsed_seconds": 5.676154286000383,
+            "audio_seconds": 6.44
+          }
+        ]
+      }
+    }
+  },
+  "hardware": "RTX PRO 6000 Blackwell Server Edition 97887MiB SM120 driver580.173.02",
+  "runtime": {
+    "python": "3.12.15",
+    "torch": "2.14.0+cu130",
+    "cuda_build": "13.0",
+    "vllm": "0.34.0",
+    "triton": "3.8.0",
+    "flashinfer": "0.7.3",
+    "transformers": "5.22.0"
+  },
+  "model": "bosonai/higgs-audio-v2-generation-3B-base@d80c511612b3040ff2877ce3d408747df1739f11",
+  "codec": "bosonai/higgs-audio-v2-tokenizer@815a03f1b57dcb5ae918db415f22cd0c8a6f0f54",
+  "order": [
+    "A",
+    "B",
+    "B2",
+    "A2"
+  ],
+  "concurrency": 32,
+  "warmup_per_boot": 32,
+  "measured_per_boot": 64,
+  "request_seed": null,
+  "reproduction_sha256": {
+    "reproduction/public-corpus.json": "fe93bf8f5932e6ba1b12e411f543abe1e8aaabf28647361959f13f272aff6ca2",
+    "reproduction/c32.yaml": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050",
+    "scripts/benchmark_client.py": "7e6ac9f47b28ea7538d10b365d6a670ab805c8c2ee2746143594dbf2a9d26d4b"
+  }
+}
