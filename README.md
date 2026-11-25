@@ -2,7 +2,7 @@
 
 按状态查看进展，再按模型和优化位置查看实现、实验与取舍。此 `docs/contribution-log` 分支用于记录；实现保存在各自的 perf 分支，上游 PR 保持独立。[项目原始 README](https://github.com/vllm-project/vllm-omni/blob/main/README.md)。
 
-最后整理：2026-11-25（北京时间）。本次增加四项基于 logits mask 的独立实验，仅测既有 C32 条件，未补其他并发档位；与历史 B200 数据分开记录。
+最后整理：2026-11-25（北京时间）。本次增加 Fish S2-Pro 首次完整 prefill 的 C32 流式克隆对照和六份 Perfetto 时间线。
 
 最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；logits mask 融合已提交 [PR #11119](https://github.com/vllm-project/vllm-omni/pull/11119)，RTX PRO 6000 C32 吞吐 +19.44%、平均端到端耗时 -14.10%、RTF 1.133→.996。旧路由优化的新卡补充对照为 C32 吞吐 +85.72%、RTF 1.845→1.150，单独归档。Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不单独提交状态融合 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
 
@@ -18,7 +18,7 @@
 | [已提 PR](#已提-pr) | 1 | 已创建且仍开放，不能记成已合并 |
 | 待验收 | 1 | 有界历史已完成独立分支回归 |
 | [已测有收益或取舍](#已测有收益或取舍) | 2 | 已有实测信号，同时明确回退和限制 |
-| [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 4 | 保留负面结果和停止原因 |
+| [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 5 | 保留负面结果和停止原因 |
 | [CosyVoice3 独立实验归档](records/cosyvoice3.md) | 4 | 含路径诊断、已有选项和原型对照 |
 | 已关闭或归档 | 0 | 已关闭 PR 或被替代的历史版本 |
 
@@ -57,6 +57,7 @@
 | Higgs Audio v2 | 批量 RAS 重复检测 | 重复检测变快，C32 吞吐下降 6.45%。 | [详情](optimizations/higgs-v2-ras-repeat/README.md) |
 | Higgs Audio v2 | 保留 CPU 请求状态的 delay 更新融合 | 阶段耗时下降，C32 吞吐下降 11.01%，平均耗时增加 19.02%。 | [详情](optimizations/higgs-v2-delay-state/README.md) |
 | Higgs Audio v3 | 流式 codec 输入校验 | C32 校验同步由两次减为一次。吞吐 36.85 → 35.11 音频秒/秒，首包 P95 373 → 402 毫秒。保留实验，暂不提交。 | [详情](optimizations/higgs-v3-codec-validation/README.md) |
+| Fish S2-Pro | 首次完整 prefill embedding | RTX PRO 6000，C32 吞吐 23.47 → 23.34 音频秒/秒（−0.56%），首包 P95 增加 3.50%。三组 trace 均消除了完整 prefill 的双向拷贝，保留实验。 | [详情](optimizations/fish-s2-mrv2-prefill-embeddings/README.md) |
 
 ## 详细记录
 

@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-11-25T07:15:30.545261+00:00",
+  "updated_at_utc": "2026-11-25T07:56:10.935302+00:00",
   "gpu_runs_performed_for_this_update": true,
   "reference_layout": "https://github.com/EddieTzy/sglang-omni/tree/docs/contribution-log",
   "entries": [
@@ -332,6 +332,23 @@
       "pr": null,
       "details": "optimizations/higgs-v3-codec-validation/README.md",
       "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/737f2c47ef0025bf34b5c4dfa4186fb5e2687b8b/benchmarks/higgs_v3_codec_validation"
+    },
+    {
+      "id": "fish-s2-mrv2-prefill-embeddings",
+      "framework": "vLLM",
+      "project": "vllm-omni",
+      "model": "Fish Speech S2-Pro",
+      "component": "首次完整 prefill embedding",
+      "workflow_category": "not_adopted",
+      "result": "RTX PRO 6000，C32 吞吐 23.47 → 23.34 音频秒/秒（−0.56%），首包 P95 增加 3.50%。三组 trace 均消除了完整 prefill 的双向拷贝，保留实验。",
+      "branch": "perf/fish-s2-mrv2-prefill-embeddings",
+      "branch_published": true,
+      "head_commit": "057079b9654f37dedc90967cee470b76cea31c93",
+      "measured_code_commit": "b4336014bb0f53b92b48b8d71f6681db3bef7cfc",
+      "measured_base_commit": "95988e77ed8862edf93f8eeaf906e984d9a5e424",
+      "pr": null,
+      "details": "optimizations/fish-s2-mrv2-prefill-embeddings/README.md",
+      "archive_url": "https://github.com/EddieTzy/vllm-omni/tree/057079b9654f37dedc90967cee470b76cea31c93/benchmarks/fish_s2_prefill_embeddings"
     }
   ]
 }

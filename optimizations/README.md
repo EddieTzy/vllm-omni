@@ -12,3 +12,4 @@
 - [限制每个请求的音频历史](higgs-v2-bounded-history/README.md) · 内部历史在 200 帧时由 12,800 B 降至 448 B。基线有 40.6 秒长音频，吞吐差异无法归因。
 - [保留 CPU 请求状态的 delay 更新融合](higgs-v2-delay-state/README.md) · 阶段耗时下降，C32 吞吐下降 11.01%，平均耗时增加 19.02%。
 - [Higgs v3 / 流式 codec 校验](higgs-v3-codec-validation/README.md) · C32 校验同步由两次减为一次。吞吐 36.85 → 35.11 音频秒/秒，首包 P95 373 → 402 毫秒。保留实验，暂不提交。
+- [Fish S2-Pro / 首次完整 prefill embedding](fish-s2-mrv2-prefill-embeddings/README.md) · RTX PRO 6000，C32 吞吐 23.47 → 23.34 音频秒/秒（−0.56%），首包 P95 增加 3.50%。三组 trace 均消除了完整 prefill 的双向拷贝，保留实验。

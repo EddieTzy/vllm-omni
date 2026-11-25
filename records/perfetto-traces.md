@@ -1,6 +1,6 @@
-# Higgs Audio 的 Perfetto 时间线
+# TTS 实验的 Perfetto 时间线
 
-已核对 7 项实验的 28 份 PyTorch Profiler Chrome JSON 时间线。每份文件的 `traceEvents` 都含 CPU 算子和 GPU kernel。下列下载链接固定到各自的 Git 提交。
+Higgs Audio 已核对 7 项实验的 28 份 PyTorch Profiler Chrome JSON 时间线。每份文件的 `traceEvents` 都含 CPU 算子和 GPU kernel。下列下载链接固定到各自的 Git 提交。
 
 | 实验 | 归档内的时间线 | 原始数据 |
 | --- | --- | --- |
@@ -11,6 +11,10 @@
 | 限制每个请求的音频历史 | A × 1、B × 1 | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/8a33ea3776e29937bde8da11becb2d06811e257b/benchmarks/higgs_bounded_history_experiment/profile/evidence.tar.gz) |
 | 保留 CPU 请求状态的 delay 更新融合 | A × 2、B × 1 | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/7b27a036dbfd2fe97b5369c0100b74fee7e3c492/benchmarks/higgs_delay_state_experiment/profile/evidence.tar.gz) |
 | Higgs v3 流式 codec 校验 | A × 3、B × 3（trace-3、24、80） | [下载归档](https://raw.githubusercontent.com/EddieTzy/vllm-omni/737f2c47ef0025bf34b5c4dfa4186fb5e2687b8b/benchmarks/higgs_v3_codec_validation/profile/evidence.tar.gz) |
+
+## Fish S2-Pro
+
+首次完整 prefill embedding：分别记录基线和候选各 3 次真实语音克隆 prefill。候选时间线直接标记 GPU 张量复用的 CPU 区间；该区间可以没有 GPU 工作。[下载 Perfetto 文件](https://raw.githubusercontent.com/EddieTzy/vllm-omni/057079b9654f37dedc90967cee470b76cea31c93/benchmarks/fish_s2_prefill_embeddings/evidence.tar.gz)
 
 ## 打开一份 trace
 
