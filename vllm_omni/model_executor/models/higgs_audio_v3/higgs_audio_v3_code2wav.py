@@ -695,13 +695,15 @@ class HiggsAudioV3Code2Wav(nn.Module):
             )
         if int(audio_codes.shape[1]) != self.num_codebooks:
             raise ValueError(f"dim 1 must equal num_codebooks={self.num_codebooks}; got {int(audio_codes.shape[1])}")
-        # ``.item()`` triggers a GPU->CPU sync and is illegal inside CUDA-graph
+        # Reading the bounds on the host synchronizes and is illegal inside CUDA-graph
         # capture (the dummy run before warmup hits this path). Skip the
         # range check while a graph is being captured; the per-step validator
         # still fires at real inference time.
         if audio_codes.numel() > 0 and not torch.cuda.is_current_stream_capturing():
-            max_val = int(audio_codes.max().item())
-            min_val = int(audio_codes.min().item())
+            # Place both extrema in one buffer for a single device-to-host copy.
+            bounds = audio_codes.new_empty(2)
+            torch.aminmax(audio_codes, out=(bounds[0], bounds[1]))
+            min_val, max_val = map(int, bounds.tolist())
             if max_val >= self.num_real_codes or min_val < 0:
                 raise ValueError(
                     f"audio_codes out of range: min={min_val}, max={max_val}; expected [0, {self.num_real_codes - 1}]"
