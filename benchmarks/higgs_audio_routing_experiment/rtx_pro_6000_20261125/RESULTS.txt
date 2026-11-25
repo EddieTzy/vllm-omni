@@ -1,0 +1,69 @@
+Uniform-audio routing: RTX PRO 6000 follow-up for merged PR #11068
+
+Purpose: characterize the already merged three-line routing optimization on
+the replacement machine. This is supplementary measurement only, not a new
+optimization PR or an implementation update to PR #11068.
+
+One RTX PRO 6000 Blackwell Server Edition,97887MiB,SM120,driver580.173.02.
+torch2.14.0+cu130,CUDA build13.0,vLLM0.34.0,FlashInfer0.7.3,
+transformers5.22.0. Active Omni source is exported current-main649e7b3;
+generated version metadata is absent, so its runtime version reports dev.
+
+Both arms use source649e7b3b9a5b93f9a33f753942df149ba939e523. Original A/A2
+removes exactly the three published routing lines; routed B/B2 retains them.
+All2398 runtime Python files were compared: only the talker differs, no
+added or removed runtime files. No logits-mask kernel or decode-state fusion.
+Original talker SHA256:
+df54c3435cafadef9f600babacd90ae3e9ab4bc4064bf0afe6b437772e25f336.
+Routed talker SHA256:
+9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a.
+The perf branch's historical model file has that same routed hash, while
+this follow-up's surrounding runtime uses the explicitly stated newer base.
+
+Same pinned Higgs v2 generation/codec snapshots and public corpus as the
+historical report and mask experiment. Eager two-stage MRv2,BF16 engine,
+TP=PP=1,no quantization,async_chunk=false,max_num_seqs32 in both stages,
+GPU fractions.6/.25, prefix cache/async scheduling disabled. Stage lengths
+4096/65536, batched token limits2048/65536. Temperature1,top_k50,top_p.95,
+max_tokens1024. Clients omit the speech-request seed to permit co-batching.
+
+C32 ONLY. A/B/B2/A2 independent boots;32 warmups and64 measured requests
+per boot in two waves of32, fixed EN/ZH targets32 each. No profiler. This
+follow-up does not run the historical native C16 phases before raw C32.
+
+Per-boot results, all retained:
+  audio seconds/s: original[11.137948,10.055331],routed[20.607442,18.752816].
+  mean E2E s: original[7.438485,8.181912],routed[4.896680,4.744467].
+  mean request RTF: original[1.745079,1.944013],routed[1.152569,1.147739].
+  first PCM p50 s: original[7.305101,7.800852],routed[5.033112,4.735055].
+  first PCM p95 s: original[10.239775,12.746149],routed[6.478405,6.117212].
+
+Boot means:
+  audio seconds/s10.596639->19.680129,+85.720%.
+  mean request E2E7.810198s->4.820573s,-38.278%.
+  mean request RTF1.844546->1.150154,-37.646%.
+  first PCM p507.552977s->4.884084s,-35.336%.
+  first PCM p9511.492962s->6.297809s,-45.203%.
+
+All256 measured requests succeeded. All4 HTTP-disconnect then WAV-recovery
+probes passed, without an abort-acknowledgement/leak-proof claim. Sampled peak
+GPU memory MiB original[59598,59626],routed[59568,59578],200ms sampling
+including warmup and configured pools; no memory-saving claim.
+
+RTF definition: compute each request's elapsed/audio_seconds ratio, then take
+the mean. It is not1/aggregate_audio_throughput. E2E includes HTTP/queueing,
+talker and codec; first PCM arrives near completion in this deployment.
+Unseeded generation lengths and wave tails vary; two boots provide descriptive
+ranges, not a confidence interval or universal hardware speedup. This is a
+performance-only follow-up, not a new paired quality evaluation.
+
+Keep this separate from the historical B200+50.8% report: hardware, surrounding
+runtime and warmup/workload sequence differ. Also keep it separate from the
+mask PR#11119 increment of+19.44%. Do not add/multiply percentages to claim a
+directly measured cumulative improvement.
+
+summary.json retains all four arms/means,source-identity.json records exact
+source restoration,validation.json includes2398-file comparison, input
+checksums, memory and recovery outcomes. Raw PCM/logs/configs remain in the
+isolated experiment workspace. No weights/audio/credentials uploaded.
+All experimental GPU services stopped; memory verified0MiB after completion.

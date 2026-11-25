@@ -1,0 +1,68 @@
+{
+  "arms": {
+    "A": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 24.758599790000062,
+      "audio_seconds_per_second": 11.137948120611359,
+      "ttfa_p50_seconds": 7.305101392999859,
+      "ttfa_p95_seconds": 10.239774598950019,
+      "mean_e2e_s": 7.43848492328123,
+      "mean_rtf": 1.7450788515552114
+    },
+    "B": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 13.494154488000277,
+      "audio_seconds_per_second": 20.60744155903088,
+      "ttfa_p50_seconds": 5.033111712000164,
+      "ttfa_p95_seconds": 6.4784053270503135,
+      "mean_e2e_s": 4.896680467750002,
+      "mean_rtf": 1.1525689724665953
+    },
+    "B2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 14.34024647699971,
+      "audio_seconds_per_second": 18.752815750504723,
+      "ttfa_p50_seconds": 4.735055386500335,
+      "ttfa_p95_seconds": 6.117212034550129,
+      "mean_e2e_s": 4.7444665306250045,
+      "mean_rtf": 1.1477392319573787
+    },
+    "A2": {
+      "concurrency": 32,
+      "requests": 64,
+      "wall_seconds": 27.2611621799997,
+      "audio_seconds_per_second": 10.055330663822895,
+      "ttfa_p50_seconds": 7.800852148499871,
+      "ttfa_p95_seconds": 12.746148790599536,
+      "mean_e2e_s": 8.181912048953137,
+      "mean_rtf": 1.944013401403796
+    }
+  },
+  "means": {
+    "original": {
+      "audio_seconds_per_second": 10.596639392217128,
+      "mean_e2e_s": 7.810198486117184,
+      "mean_rtf": 1.8445461264795036,
+      "ttfa_p50_seconds": 7.552976770749865,
+      "ttfa_p95_seconds": 11.492961694774777
+    },
+    "routed": {
+      "audio_seconds_per_second": 19.680128654767802,
+      "mean_e2e_s": 4.820573499187503,
+      "mean_rtf": 1.150154102211987,
+      "ttfa_p50_seconds": 4.884083549250249,
+      "ttfa_p95_seconds": 6.297808680800221
+    }
+  },
+  "changes_percent": {
+    "audio_seconds_per_second": 85.7204716168995,
+    "mean_e2e_s": -38.27847643365032,
+    "mean_rtf": -37.64568498988049,
+    "ttfa_p50_seconds": -35.33564715616948,
+    "ttfa_p95_seconds": -45.20290897981943
+  },
+  "scope": "Incremental C32: original routing vs merged uniform-audio routing; two independent boots each, all requests retained"
+}

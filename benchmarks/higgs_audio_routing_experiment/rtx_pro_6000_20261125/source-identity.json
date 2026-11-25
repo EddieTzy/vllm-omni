@@ -1,0 +1,6 @@
+{
+  "original_talker": "df54c3435cafadef9f600babacd90ae3e9ab4bc4064bf0afe6b437772e25f336",
+  "routed_talker": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a",
+  "base": "649e7b3b9a5b93f9a33f753942df149ba939e523",
+  "difference": "Remove exactly the three published uniform-audio routing lines from the current-main baseline, no logits mask or state fusion"
+}

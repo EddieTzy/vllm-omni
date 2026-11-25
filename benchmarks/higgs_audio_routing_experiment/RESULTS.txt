@@ -1,6 +1,6 @@
 Higgs v2 uniform-audio routing
 
-Status: submitted upstream as PR #11068.
+Status: merged upstream as PR #11068.
 https://github.com/vllm-project/vllm-omni/pull/11068
 This perf branch freezes the measured source and its evidence; the upstream
 PR branch was rebased separately. No second optimization is included here.
@@ -86,3 +86,7 @@ Raw PCM, transcripts, full logs, deployment assets and local controllers
 remain in the experiment workspace; no generated audio is uploaded here.
 This branch adds only this optimization and its aggregate evidence.
 AI assistance: Codex assisted with implementation, validation and writing.
+
+RTX PRO 6000 follow-up (2026-11-25) is recorded separately in
+rtx_pro_6000_20261125/RESULTS.txt; it does not replace the historical B200
+protocol or amend/reopen the merged upstream PR.

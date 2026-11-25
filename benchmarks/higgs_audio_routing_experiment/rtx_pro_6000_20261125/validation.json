@@ -1,0 +1,80 @@
+{
+  "gpu_memory": {
+    "A": {
+      "samples": 194,
+      "peak_MiB": 59598.0
+    },
+    "B": {
+      "samples": 115,
+      "peak_MiB": 59568.0
+    },
+    "B2": {
+      "samples": 118,
+      "peak_MiB": 59578.0
+    },
+    "A2": {
+      "samples": 215,
+      "peak_MiB": 59626.0
+    }
+  },
+  "recovery": {
+    "A": {
+      "headers_seconds": 10.420893949999936,
+      "close_seconds": 10.622043777999806,
+      "recovery_seconds": 4.262182550000034,
+      "recovery": {
+        "rate": 24000,
+        "frames": 57600,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "B": {
+      "headers_seconds": 5.461224158000277,
+      "close_seconds": 5.662131835999844,
+      "recovery_seconds": 2.374727455000084,
+      "recovery": {
+        "rate": 24000,
+        "frames": 60480,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "B2": {
+      "headers_seconds": 4.735710253999969,
+      "close_seconds": 4.9366352329998335,
+      "recovery_seconds": 2.658911096999873,
+      "recovery": {
+        "rate": 24000,
+        "frames": 61440,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    },
+    "A2": {
+      "headers_seconds": 13.194957200000317,
+      "close_seconds": 13.396127226000317,
+      "recovery_seconds": 4.316002345000015,
+      "recovery": {
+        "rate": 24000,
+        "frames": 48000,
+        "channels": 1
+      },
+      "scope": "Close HTTP stream 200ms after headers without reading audio, then verify a new WAV request. This does not prove server-side abort acknowledgement or absence of leaks."
+    }
+  },
+  "source_comparison": {
+    "original_files": 2398,
+    "routed_files": 2398,
+    "modified": [
+      "model_executor/models/higgs_audio_v2/higgs_audio_v2_talker.py"
+    ],
+    "added": [],
+    "removed": []
+  },
+  "input_sha256": {
+    "c32.yaml": "e26754d7cb01dd6347865b6c9fcd576a6643467df7aa5cbd0c6e460e23758050",
+    "public-corpus.json": "de15e0ea37b0b743e3e9a8fa0db27a328e5969b594b3a0af7a1e5df773bdfb42",
+    "screen.py": "7e51d1095734633600e28d3e570b1c797c5630f91c09aa1b9448b052386865eb"
+  }
+}
