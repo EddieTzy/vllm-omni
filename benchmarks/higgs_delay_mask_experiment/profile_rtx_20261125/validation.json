@@ -1,0 +1,13 @@
+{
+  "diagnostic_measured_requests_successful": 128,
+  "warmup_requests": 128,
+  "service_stopped": true,
+  "source_model_matches_pr": true,
+  "baseline": {
+    "higgs_audio_v2_talker.py": "9dda0618f1a76b6f4b8c750ad6d4b6c095058945f05ec78b27ee35be9663a37a"
+  },
+  "candidate": {
+    "higgs_audio_v2_talker.py": "8fa8301a82b6b53f5d4f44daa3fade6a7670b27582868b3243049fa3f4ab5673",
+    "delay_pattern_mask.py": "280ae31171207c877b9ea9b8e3f5fc739f2905c519b58b27b88070f548e87c45"
+  }
+}
