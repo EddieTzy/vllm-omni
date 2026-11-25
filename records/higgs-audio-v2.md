@@ -1,10 +1,10 @@
 # Higgs Audio v2 优化记录
 
-最后整理：2026-11-24（北京时间）。本页为既有实验索引，本次没有运行 GPU。
+最后整理：2026-11-25（北京时间）。本页为既有实验索引，本次没有运行 GPU。
 
 | 项目 | 增量基线 | 当前结论 | 详细记录 |
 | --- | --- | --- | --- |
-| 纯音频路由 | 原始 masked norm/MLP 路径 | C32 指定工作负载吞吐 +50.8%；PR #11068 仍开放 | [详情](../optimizations/higgs-v2-audio-routing/README.md) |
+| 纯音频路由 | 原始 masked norm/MLP 路径 | C32 指定工作负载吞吐 +50.8%；PR #11068 已合并（2026-11-25 北京时间，`14a01235`） | [详情](../optimizations/higgs-v2-audio-routing/README.md) |
 | 批量反馈 embedding | 已优化音频路由 | 组件加速但服务无稳定收益，停止单独 PR；未发布源码分支 | [详情](../optimizations/higgs-v2-packed-feedback/README.md) |
 | Triton 状态更新融合 | 已优化音频路由 | C32 增量吞吐 +1.64%，首包 P95 +2.43%；保留实验 | [详情](../optimizations/higgs-v2-triton-state/README.md) |
 

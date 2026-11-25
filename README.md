@@ -2,26 +2,32 @@
 
 按状态查看进展，再按模型和优化位置查看实现、实验与取舍。此 `docs/contribution-log` 分支用于记录；实现保存在各自的 perf 分支，上游 PR 保持独立。[项目原始 README](https://github.com/vllm-project/vllm-omni/blob/main/README.md)。
 
-最后整理：2026-11-24（北京时间）。本次仅核对 GitHub 状态和既有资料，没有连接 GPU、重新测试或补测并发档位。
+最后整理：2026-11-25（北京时间）。本次仅核对 GitHub 状态和既有资料，没有连接 GPU、重新测试或补测并发档位。
 
-最新进展：Higgs v2 音频路由已提交 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，仍开放、未合并；Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不提交第二个 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
+最新进展：Higgs v2 音频路由已合并 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068)，于北京时间 2026-11-25 01:58:56 进入上游 `main`；Triton 状态融合已完成实际采样路径接入和配对验证，但增量服务收益较小，暂不提交第二个 PR。批量反馈嵌入实验未形成稳定收益，保留不采用记录。
 
 ## 状态总览
 
 | 分类 | 数量 | 归类规则 |
 | --- | ---: | --- |
-| 已合并 | 0 | 已核实进入上游 |
-| [已提 PR](#已提-pr) | 1 | 已创建且仍开放，不能记成已合并 |
+| [已合并](#已合并) | 1 | 已核实进入上游 |
+| [已提 PR](#已提-pr) | 0 | 已创建且仍开放，不能记成已合并 |
 | 进行中或待验证 | 0 | 尚未登记为独立实现的新方向不计数 |
 | [已测有收益或取舍](#已测有收益或取舍) | 1 | 已有实测信号，同时明确回退和限制 |
 | [无稳定收益或暂不采用](#无稳定收益或暂不采用) | 1 | 保留负面结果和停止原因 |
 | 已关闭或归档 | 0 | 已关闭 PR 或被替代的历史版本 |
 
-## 已提 PR
+## 已合并
+
+上游合并提交：[`14a01235186941ad7a26ce258a4ca27c45cb6ebf`](https://github.com/vllm-project/vllm-omni/commit/14a01235186941ad7a26ce258a4ca27c45cb6ebf)。
 
 | 模型 | 改动 | 已观测结果与范围 | 入口 |
 | --- | --- | --- | --- |
 | Higgs Audio v2 | 统一纯音频 norm/MLP 路由 | B200、指定 eager MRv2 配置，C32 吞吐 +50.8%；受控 32/32 完整音频相同。带 profiler 的证据单独归档。 | [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068) · [perf 分支](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing) · [详情](optimizations/higgs-v2-audio-routing/README.md) |
+
+## 已提 PR
+
+当前登记项目没有仍开放的 PR。
 
 ## 已测有收益或取舍
 

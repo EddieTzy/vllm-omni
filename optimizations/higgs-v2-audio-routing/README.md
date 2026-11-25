@@ -1,6 +1,6 @@
 # Higgs Audio v2：纯音频路由
 
-状态：`pr_submitted`。2026-11-24 核实 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068) 仍开放，非草稿、未合并。
+状态：`merged`。已核实 [PR #11068](https://github.com/vllm-project/vllm-omni/pull/11068) 于北京时间 2026-11-25 01:58:56 合并进入上游 `main`，合并提交 [`14a01235186941ad7a26ce258a4ca27c45cb6ebf`](https://github.com/vllm-project/vllm-omni/commit/14a01235186941ad7a26ce258a4ca27c45cb6ebf)。
 
 [总索引](../../README.md) · [指标口径](../../records/performance-methodology.md) · [实现与实测记录](https://github.com/EddieTzy/vllm-omni/tree/perf/higgs-v2-audio-routing)
 
@@ -21,7 +21,7 @@ Higgs v2 TTS 需要同时降低响应延迟和提高并发吞吐。原路径在�
 | 实测 base | `4dafb464442956996be9633ed036cd24ebfef1d0` |
 | 实测路由提交 | `30dcfdc205d17072734328e74c5ca96a882ec548` |
 | perf 归档 head | `130fbadf725639b467cb262a19e4aedaebffca92` |
-| 当前 PR head | `c70831d97aea6a1ad038706b2b58af6609cefb26`，rebase 后 talker 字节相同 |
+| 提交时 PR head | `c70831d97aea6a1ad038706b2b58af6609cefb26`，rebase 后 talker 字节相同 |
 | profile 证据 head | `30aa5bc7d9007cbddbb9ca0cfbd7680526970f49` |
 
 源码 SHA256、公开模型/codec/数据集版本：[manifest](metrics/manifest.json)。GPU 为一张 B200（183359 MiB），driver 580.173.02，torch 2.14.0+cu130、vLLM 0.34.0、FlashInfer 0.7.3、transformers 5.22.0。
@@ -58,4 +58,4 @@ MRv2 回归模块 16 passed /17 warnings；改动文件适用 pre-commit 全部�
 
 ## 结论与后续
 
-指定 B200 eager MRv2 工作负载中有明显收益，已提交窄范围 PR；full repository CI、其他硬件、TP/multi-GPU、CUDA Graph 和一般质量结论分别保留边界。后续状态融合应以此优化版作为增量基线，不能重复计算 +50.8%。
+指定 B200 eager MRv2 工作负载中有明显收益，窄范围 PR 已合并；full repository CI、其他硬件、TP/multi-GPU、CUDA Graph 和一般质量结论分别保留边界。后续状态融合应以此优化版作为增量基线，不能重复计算 +50.8%。
