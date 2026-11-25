@@ -48,7 +48,8 @@ def prepare():
             (
                 pop,
                 pop
-                + f'\n        {marker}("queue_pop", scheduler_output.num_scheduled_tokens, depth=self.batch_queue_size, executor=type(self.model_executor).__name__)',
+                + f'\n        {marker}("queue_pop", scheduler_output.num_scheduled_tokens, '
+                "depth=self.batch_queue_size, executor=type(self.model_executor).__name__)",
             )
         ],
     )
@@ -80,7 +81,9 @@ def prepare():
             (at, at + f'\n                {marker}("group_begin", {group})'),
             (
                 end,
-                f'            if streaming_flow_items:\n                {marker}("group_end", {group}, samples=[audios[item["index"]].numel() for item in streaming_flow_items])\n'
+                "            if streaming_flow_items:\n"
+                f'                {marker}("group_end", {group}, '
+                'samples=[audios[item["index"]].numel() for item in streaming_flow_items])\n'
                 + end,
             ),
         ],
@@ -94,7 +97,8 @@ def prepare():
         [
             (
                 send,
-                '            await __import__("cv3_delivery_marks").instrument_send(self, send, super().stream_response)',
+                '            await __import__("cv3_delivery_marks").instrument_send('
+                "self, send, super().stream_response)",
             ),
             (extract, f'                {marker}("api_audio", [request_id])\n' + extract),
             (yielding, f'            {marker}("yield_audio", [request_id], size=len(audio_bytes))\n' + yielding),
